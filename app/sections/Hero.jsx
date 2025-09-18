@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export default function Hero() {
   return (
-    <section className="relative h-screen bg-black text-white flex items-center justify-center overflow-hidden">
+    <section className="relative w-full h-screen bg-black text-white flex items-center justify-center overflow-hidden">
       {/* Background Image/Video - Use a imagem da primeira página */}
       <div
         className="absolute inset-0 z-0 bg-cover bg-center"
