@@ -4,13 +4,13 @@ import Link from 'next/link';
 
 export default function Hero() {
   return (
-    <section className="relative w-full h-screen bg-black text-white flex items-center justify-center overflow-hidden">
+    <section className="relative w-full h-screen bg-black text-white flex items-center justify-start overflow-hidden">
       {/* Background Image/Video - Use a imagem da primeira página */}
-      
+
       {/* Conteúdo da Seção Hero */}
-      <div className="relative z-10 text-center px-4">
+      <div className="relative z-10 text-center w-1/2 h-full flex flex-col justify-center items-center bg-[#10151ba1] backdrop-blur-[1px] p-8 ">
         {/* Título Principal */}
-        <h1 className="text-4xl md:text-6xl font-bold mb-4">
+        <h1 className="font-title text-4xl md:text-6xl font-bold mb-4">
           Etti Project
         </h1>
 
@@ -35,17 +35,20 @@ export default function Hero() {
           </Link>
         </div>
       </div>
-      <div className='flex lg:w-1/3'>
+
       <Image
-        src="/images/hero-image.jpg"
+        src="/assets/hero-image.png"
         alt="Hero Image"
-        layout="responsive"
-        width={500}
-        height={500}
-        className="object-cover"
+        quality={100}
+        fill
+        sizes="100vw"
+        style={{
+          objectFit: 'cover',
+          objectPosition: 'bottom',
+        }}
       />
 
-      </div>
+
     </section>
   );
 }
