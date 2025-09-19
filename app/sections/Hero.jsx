@@ -8,7 +8,7 @@ export default function Hero() {
 
 
       
-      <div className="relative z-10 text-center w-1/2 h-full flex flex-col justify-around items-center bg-[#0f141a94] backdrop-blur-[1px] p-8 ">
+      <div className="relative z-10 text-center w-full md:w-1/2 h-full flex flex-col justify-around items-center bg-[#0f141a94] backdrop-blur-[1px] md:p-8 ">
       <div className='flex flex-col items-center bg-[#0f141a94] rounded-[220px]'>
         <Image
           src="/assets/ettiColor.png"
@@ -16,7 +16,7 @@ export default function Hero() {
           quality={100}
           width={683}
           height={683}
-          className="mb-4 w-65 h-65 "
+          className="mb-4 w-50 h-50 md:w-65 md:h-65 "
         />
 
       </div>

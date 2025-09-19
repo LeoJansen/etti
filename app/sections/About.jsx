@@ -6,7 +6,7 @@ const About = () => {
     <section className="py-16 bg-gray-50 h-screen" id="about">
       <div className="container mx-auto px-4 md:px-8 lg:px-16">
         <div className="flex flex-col md:flex-row items-center md:space-x-12">
-          <div className="md:w-1/2 mb-8 md:mb-0">
+          <div className="w-full md:w-1/2 mb-8 md:mb-0">
             <div className="relative w-full h-96 rounded-lg overflow-hidden shadow-lg">
               <Image
                 src="/assets/about.png"
