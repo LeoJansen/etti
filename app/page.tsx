@@ -1,10 +1,11 @@
 
-import Hero from "./sections/Hero"; 
+import App from "./App";
+
 
 export default function Home() {
   return (
-   <div className="flex min-h-screen flex-col items-center justify-center">
-<Hero/>
-   </div>
+    <div className="relative w-screen h-full overflow-hidden ">
+      <App />
+    </div>
   );
 }
