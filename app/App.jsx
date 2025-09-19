@@ -4,7 +4,7 @@ import Services from "./sections/Services";
 
 const App = () => {
   return (
-    <div>
+    <div className="relative w-screen h-full overflow-hidden text-white">
       <Hero />
       <About />
       <Services />
