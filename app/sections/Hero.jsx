@@ -1,17 +1,12 @@
 // components/HeroSection.js
+import Image from 'next/image';
 import Link from 'next/link';
 
 export default function Hero() {
   return (
     <section className="relative w-full h-screen bg-black text-white flex items-center justify-center overflow-hidden">
       {/* Background Image/Video - Use a imagem da primeira página */}
-      <div
-        className="absolute inset-0 z-0 bg-cover bg-center"
-        style={{ backgroundImage: "url('/images/hero-background.jpg')" }} // Certifique-se de adicionar a imagem ao diretório /public/images
-      >
-        <div className="absolute inset-0 bg-black opacity-50"></div>
-      </div>
-
+      
       {/* Conteúdo da Seção Hero */}
       <div className="relative z-10 text-center px-4">
         {/* Título Principal */}
@@ -39,6 +34,17 @@ export default function Hero() {
             Conhecer Serviços
           </Link>
         </div>
+      </div>
+      <div className='flex lg:w-1/3'>
+      <Image
+        src="/images/hero-image.jpg"
+        alt="Hero Image"
+        layout="responsive"
+        width={500}
+        height={500}
+        className="object-cover"
+      />
+
       </div>
     </section>
   );
