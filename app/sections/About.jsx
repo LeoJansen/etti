@@ -21,10 +21,10 @@ const About = () => {
           <div className="md:w-1/2">
             <h2 className="text-4xl font-bold text-gray-800 mb-2">Sobre a Etti Project</h2>
             <p className="text-xl text-gray-600 mb-6">Quem somos e a nossa missão</p>
-            <p className="text-gray-700 leading-relaxed mb-4">
+            <p className="text-gray-700 leading-relaxed mb-4 text-justify">
                Etti Project é uma empresa especializada em **soluções elétricas e automação**. Nossa missão é transformar espaços através de tecnologia avançada e instalações seguras, oferecendo soluções inovadoras e sustentáveis que melhoram a qualidade de vida dos nossos clientes.
             </p>
-            <p className="text-gray-700 leading-relaxed">
+            <p className="text-gray-700 leading-relaxed text-justify">
               Com uma equipe experiente e certificada, oferecemos um serviço completo, desde o projeto inicial até a certificação final. Isso garante a qualidade e a conformidade em cada instalação que realizamos.
             </p>
           </div>
