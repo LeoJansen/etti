@@ -10,13 +10,7 @@
   --color-foreground: var(--foreground);
 
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+/* Services section card backgrounds */
 
 /* Headings use Poppins */
 h1, h2, h3, h4, h5, h6 {
@@ -32,4 +26,19 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans), system-ui, -apple-system, Segoe UI, Roboto, Arial, Noto Sans, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+
+.metalicCards {
+  background-image: url('/assets/metalCard.png');
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  object-position: center;
+  filter: contrast(1.345)  ;
+  
+
+  
+
 }

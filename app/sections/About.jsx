@@ -11,9 +11,10 @@ const About = () => {
               <Image
                 src="/assets/about.png"
                 alt="Equipe da Etti Project em reunião"
-                layout="fill"
-                objectFit="cover"
+                fill
                 quality={100}
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 600px"
+                style={{ objectFit: 'cover' }}
               />
             </div>
           </div>
