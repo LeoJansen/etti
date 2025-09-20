@@ -30,15 +30,53 @@ body {
 
 
 .metalicCards {
-  background-image: url('/assets/metalCard.png');
+  background-image: url('/assets/steelText3.png');
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
   object-fit: cover;
   object-position: center;
-  filter: contrast(1.345)  ;
-  
 
-  
 
 }
+
+/* Gradient text helper */
+.text-gradient {
+  /* Default: blue → cyan → violet */
+  background: linear-gradient(90deg, #60a5fa 0%, #22d3ee 50%, #a78bfa 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Optional: stronger contrast in dark mode */
+@media (prefers-color-scheme: dark) {
+  .text-gradient {
+    background: linear-gradient(90deg, #93c5fd 0%, #22d3ee 50%, #c4b5fd 100%);
+  }
+}
+
+/* Text with image background (mask the text with an image) */
+.text-image {
+  /* Replace with your desired image from /public */
+  /* background-image: url('/assets/steelTexture.png');
+  background-size: cover; /* or contain for patterns */
+  background-position: 10% 10%; /* adjust as needed */
+  background-repeat: no-repeat;
+
+  /*-webkit-background-clip: text;
+  background-clip: text;
+  color: rgba(228, 228, 228, 0.082);
+  
+  --text-image-shadow: 1px 1px 1px rgba(24, 24, 24, 0.507);
+  text-shadow: var(--text-image-shadow); */
+  
+}
+
+/* Optional: High DPI/retina tweak for sharper look on dense screens */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .text-image {
+    background-size: 150% auto;
+  }
+}
+
