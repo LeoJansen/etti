@@ -20,11 +20,11 @@ const Services = () => {
             <div className='flex w-full xl:w-1/4 justify-center items-start '>
               <Image src="/assets/services1.png" alt="Eletricista" quality={100} width={500} height={500} className='w-25 h-25 drop-shadow-[1.1582px_1.1582px_0.51px_rgba(200,200,200,0.95)] rounded-tl-[20px]' />
             </div>
-            <div className='w-full xl:w-3/4 flex flex-col pr-0 lg:pr-16 gap-8  h-full justify-stretch'>
+            <div className='w-full h-full xl:w-3/4 flex flex-col pr-0 lg:pr-16 gap-8   justify-center items-center bg-[#151618] rounded-[8px]'>
               <div className='h-10 w-full flex justify-center '>
                 <h3 className="text-2xl font-semibold">Instalações Elétricas</h3>
               </div>
-              <div className='flex w-full h-full rounded-[8px] p-4 '>
+              <div className='flex w-full h-full  p-4 '>
                 <p className=" text-image text-[18px] ">
                   Projetos completos para habitação, edifícios e comércios com as mais recentes normas de segurança.
                 </p>
@@ -43,7 +43,7 @@ const Services = () => {
              <div className='h-10 w-full flex justify-center '>
                 <h3 className="text-2xl font-semibold  mb">Sistemas de Segurança</h3>
               </div>
-              <div className='bg-[#151618] flex w-full h-full rounded-[8px] p-4 '>
+              <div className=' flex w-full h-full rounded-[8px] p-4 '>
                 <p className="text-justify text-image">
                   Proteção contra incêndios e sistemas de segurança integrados para máxima tranquilidade.
                 </p>
