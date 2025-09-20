@@ -18,14 +18,14 @@ const Services = () => {
           {/* Cartão de Instalações Elétricas */}
           <div className="metalicCards flex p-6  items-center h-full rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 bg-[#2c2f33] ">
             <div className='flex w-full xl:w-1/4 justify-center items-start '>
-              <Image src="/assets/services1.png" alt="Eletricista" quality={100} width={500} height={500} className='w-25 h-25 drop-shadow-[1.1582px_1.1582px_0.51px_rgba(200,200,200,0.95)] rounded-tl-[20px]' />
+              <Image src="/assets/services1.png" alt="Eletricista" quality={100} width={500} height={500} className='w-25 h-25 drop-shadow-[1.1582px_1.1582px_0.51px_rgba(255,255,255,0.95)] rounded-tl-[20px]' />
             </div>
-            <div className='w-full h-full xl:w-3/4 flex flex-col pr-0 lg:pr-16 gap-8   justify-center items-center bg-[#151618] rounded-[8px]'>
+            <div className='w-full h-full xl:w-3/4 flex flex-col gap-8   justify-center items-center bg-[#151618] rounded-[8px] terminal-text p-8'>
               <div className='h-10 w-full flex justify-center '>
-                <h3 className="text-2xl font-semibold">Instalações Elétricas</h3>
+                <h3 className="text-2xl font-medium ">Instalações Elétricas</h3>
               </div>
-              <div className='flex w-full h-full  p-4 '>
-                <p className=" text-image text-[18px] ">
+              <div className='flex w-full h-full'>
+                <p className=" text-justify text-[22px] tracking-wide">
                   Projetos completos para habitação, edifícios e comércios com as mais recentes normas de segurança.
                 </p>
 
@@ -37,14 +37,14 @@ const Services = () => {
           {/* Cartão de Sistemas de Segurança */}
           <div className="metalicCards flex p-6  items-center  h-full rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 bg-[#2c2f33] ">
             <div className='flex w-full xl:w-1/4 justify-center items-start'>
-              <Image src="/assets/services2.png" alt="Eletricista" quality={100} width={500} height={500} className='w-25 h-25 drop-shadow-[1.1582px_1.1582px_0.51px_rgba(200,200,200,0.95)] rounded-tl-[20px]' />
+              <Image src="/assets/services2.png" alt="Eletricista" quality={100} width={500} height={500} className='w-25 h-25 drop-shadow-[1.1582px_1.1582px_0.51px_rgba(255,255,255,0.95)] rounded-tl-[20px]' />
             </div>
-             <div className='w-full xl:w-3/4 flex flex-col pr-0 lg:pr-16 gap-8  h-full justify-stretch'>
+             <div className='w-full xl:w-3/4 flex flex-col gap-8  h-full justify-stretch bg-[#151618] rounded-[8px]  p-8 terminal-text'>
              <div className='h-10 w-full flex justify-center '>
-                <h3 className="text-2xl font-semibold  mb">Sistemas de Segurança</h3>
+                <h3 className="text-2xl font-medium  tracking-wide">Sistemas de Segurança</h3>
               </div>
-              <div className=' flex w-full h-full rounded-[8px] p-4 '>
-                <p className="text-justify text-image">
+              <div className=' flex w-full h-full rounded-[8px]  '>
+                <p className="text-justify text-[22px] tracking-wide">
                   Proteção contra incêndios e sistemas de segurança integrados para máxima tranquilidade.
                 </p>
               </div>
@@ -55,14 +55,14 @@ const Services = () => {
           {/* Cartão de Automação Residencial */}
           <div className="metalicCards flex  p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 bg-[#2c2f33]">
             <div className='flex w-full xl:w-1/4 justify-center items-start'>
-              <Image src="/assets/services3.png" alt="Eletricista" quality={100} width={500} height={500} className='w-25 h-25 drop-shadow-[1.1582px_1.1582px_0.51px_rgba(200,200,200,0.95)] rounded-tl-[20px]' />
+              <Image src="/assets/services3.png" alt="Eletricista" quality={100} width={500} height={500} className='w-25 h-25 drop-shadow-[1.1582px_1.1582px_0.51px_rgba(255,255,255,0.95)] rounded-tl-[20px]' />
             </div>
-             <div className='w-full xl:w-3/4 flex flex-col pr-0 lg:pr-16 gap-8  h-full justify-stretch'>
+             <div className='w-full xl:w-3/4 flex flex-col gap-8  h-full justify-stretch bg-[#151618] rounded-[8px]  p-8 terminal-text '>
               <div className='h-10 w-full flex justify-center'>
-                <h3 className="text-2xl font-semibold  mb">Automação Residencial</h3>
+                <h3 className="text-2xl font-semibold tracking-wide ">Automação Residencial</h3>
               </div>
-              <div className='bg-[#151618] flex w-full h-full rounded-[8px] p-4 '>
-                <p className="text-justify text-image">
+              <div className='flex w-full h-full '>
+                <p className="text-justify text-[22px] tracking-wide">
                   Domótica avançada com protocolo KNX para controle inteligente de toda a habitação.
                 </p>
               </div>
@@ -72,14 +72,14 @@ const Services = () => {
           {/* Cartão de Certificação Técnica */}
           <div className="metalicCards flex p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 bg-[#2c2f33]">
             <div className='flex w-full xl:w-1/4 justify-center items-start'>
-              <Image src="/assets/services4.png" alt="Eletricista" quality={100} width={500} height={500} className='w-25 h-25 drop-shadow-[1.1582px_1.1582px_0.51px_rgba(200,200,200,0.95)] rounded-tl-[20px]' />
+              <Image src="/assets/services4.png" alt="Eletricista" quality={100} width={500} height={500} className='w-25 h-25 drop-shadow-[1.1582px_1.1582px_0.51px_rgba(255,255,255,0.95)] rounded-tl-[20px]' />
             </div>
-               <div className='w-full xl:w-3/4 flex flex-col pr-0 lg:pr-16 gap-8  h-full justify-stretch'>
+               <div className='w-full xl:w-3/4 flex flex-col gap-8  h-full justify-stretch bg-[#151618] rounded-[8px]  p-8 terminal-text'>
               <div className='h-10 w-full flex justify-center'>
-                <h3 className="text-2xl font-semibold  mb">Certificação Técnica</h3>
+                <h3 className="text-2xl font-semibold tracking-wide">Certificação Técnica</h3>
               </div>
-              <div className='bg-[#151618] flex w-full h-full rounded-[8px] p-4 '>
-                <p className="text-justify text-image">
+              <div className='flex w-full h-full '>
+                <p className="text-justify text-[22px] tracking-wide">
                   Documentação completa, certificações e vistorias para garantir conformidade regulamentar.
                 </p>
               </div>

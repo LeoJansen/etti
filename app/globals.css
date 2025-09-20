@@ -26,7 +26,8 @@ body {
   /* Map project font aliases to next/font variables */
   --font-title: var(--font-poppins);
   --font-sans: var(--font-open-sans);
-  --font-display: var(--font-encode-sans);
+  --font-display-title: var(--font-michroma);
+  --font-display: var(--font-poppins);
 
   background: var(--background);
   color: var(--foreground);
@@ -62,30 +63,37 @@ body {
 }
 
 /* Text with image background (mask the text with an image) */
-.text-image {
+.terminal-text {
   /* Replace with your desired image from /public */
   /* background-image: url('/assets/steelTexture.png'); */
   /* background-size: cover;  or contain for patterns */
 
-  font-family: var(--font-display), system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-family: var(--font-display-title), system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   
-  background-clip: text;
-  color: rgba(156, 156, 156, 0.466);
+ 
+  color: rgba(255, 255, 255, 0.568);
   
-  --text-image-shadow: 1px 1px 15px rgba(230, 230, 230, 0.747);
-  text-shadow: var(--text-image-shadow); 
-  text-transform: uppercase;
-  font-weight: 100;
-  letter-spacing: 0.85px;
+  
+  text-shadow: 1px 1px 15px rgba(230, 230, 230, 0.651);
+ 
+  
+ 
+  text-transform: none;
+
     
 
+}
+
+.terminal-text h3 {
+  font-family: var(--font-display-title), system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+
+ 
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  text-transform: none;
 }
 
 /* Optional helper for display font usage */
 .font-display { font-family: var(--font-display), system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
 
-/* Optional sizing/spacing helpers for text-image */
-.text-image-xl { font-size: clamp(2.5rem, 6vw, 6rem); line-height: 0.95; }
-.text-image-wide { letter-spacing: 0.06em; }
-.text-image-tight { letter-spacing: -0.01em; }
+
 

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Open_Sans, Poppins, Encode_Sans } from "next/font/google";
+import { Open_Sans, Poppins, Encode_Sans_SC, Oxanium, Michroma } from "next/font/google";
 import "./globals.css";
 
 
@@ -17,12 +17,21 @@ const poppins = Poppins({
   display: "swap",
 });
 
-const encodeSans = Encode_Sans({
+const encodeSans = Encode_Sans_SC({
   variable: "--font-encode-sans-sc",
   subsets: ["latin"],
   weight: ["100", "200","300", "400", "500", "600", "700"],
   display: "swap",
 });
+
+const michroma = Michroma({
+  variable: "--font-michroma",
+  subsets: ["latin"],
+  weight: [ "400"],
+  display: "swap",
+}); 
+
+
 
 export const metadata: Metadata = {
   title: "ETTI — Engenharia & Tecnologia",
@@ -37,7 +46,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-         className={`${openSans.variable} ${poppins.variable} ${encodeSans.variable} antialiased`}
+         className={`${openSans.variable} ${poppins.variable} ${encodeSans.variable} ${michroma.variable} antialiased`}
       >
         {children}
       </body>
