@@ -23,6 +23,11 @@ h1, h2, h3, h4, h5, h6 {
 
 
 body {
+  /* Map project font aliases to next/font variables */
+  --font-title: var(--font-poppins);
+  --font-sans: var(--font-open-sans);
+  --font-display: var(--font-encode-sans);
+
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans), system-ui, -apple-system, Segoe UI, Roboto, Arial, Noto Sans, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -59,24 +64,28 @@ body {
 /* Text with image background (mask the text with an image) */
 .text-image {
   /* Replace with your desired image from /public */
-  /* background-image: url('/assets/steelTexture.png');
-  background-size: cover; /* or contain for patterns */
-  background-position: 10% 10%; /* adjust as needed */
-  background-repeat: no-repeat;
+  /* background-image: url('/assets/steelTexture.png'); */
+  /* background-size: cover;  or contain for patterns */
 
-  /*-webkit-background-clip: text;
+  font-family: var(--font-display), system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  
   background-clip: text;
-  color: rgba(228, 228, 228, 0.082);
+  color: rgba(156, 156, 156, 0.466);
   
-  --text-image-shadow: 1px 1px 1px rgba(24, 24, 24, 0.507);
-  text-shadow: var(--text-image-shadow); */
-  
+  --text-image-shadow: 1px 1px 15px rgba(230, 230, 230, 0.747);
+  text-shadow: var(--text-image-shadow); 
+  text-transform: uppercase;
+  font-weight: 100;
+  letter-spacing: 0.85px;
+    
+
 }
 
-/* Optional: High DPI/retina tweak for sharper look on dense screens */
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  .text-image {
-    background-size: 150% auto;
-  }
-}
+/* Optional helper for display font usage */
+.font-display { font-family: var(--font-display), system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+
+/* Optional sizing/spacing helpers for text-image */
+.text-image-xl { font-size: clamp(2.5rem, 6vw, 6rem); line-height: 0.95; }
+.text-image-wide { letter-spacing: 0.06em; }
+.text-image-tight { letter-spacing: -0.01em; }
 
