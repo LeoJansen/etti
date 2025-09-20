@@ -86,9 +86,8 @@ body {
 
 .terminal-text h3 {
   font-family: var(--font-display-title), system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-
- 
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  /* Avoid strong heading-level text-shadow that can override per-letter glow */
+  text-shadow: none;
   text-transform: none;
 }
 

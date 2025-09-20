@@ -1,9 +1,125 @@
+"use client"
+
+import { useRef } from 'react'
 import Image from 'next/image'
 import React from 'react'
+import { gsap } from 'gsap'
+import { useGSAP } from '@gsap/react'
+
+// Register once at module scope
+gsap.registerPlugin(useGSAP)
 
 const Services = () => {
+  const sectionRef = useRef(null)
+
+  useGSAP((context) => {
+    const headings = context.selector('.metalicCards h3')
+    const cards = context.selector('.metalicCards')
+
+    const baseShadow = '0 0 3px rgba(0,255,255,0.45), 0 0 8px rgba(0,255,255,0.25)'
+    const strongShadow = '0 0 12px rgba(0,255,255,1), 0 0 28px rgba(0,255,255,0.85)'
+    const hoverShadow = '0 0 16px rgba(0,255,255,1), 0 0 36px rgba(0,255,255,0.9)'
+    const baseColor = '#b7edf2'
+    const strongColor = '#eaffff'
+
+    const headingToTween = new Map()
+
+    // Split each heading into per-letter spans and create a left-to-right sweep
+    headings.forEach((h) => {
+      const el = h
+      // Remove any heading-level shadow that could conflict with per-letter glow
+      gsap.set(el, { textShadow: 'none' })
+      // Avoid double-splitting during hot reload/StrictMode
+      if (!el.dataset.original) {
+        const original = el.textContent || ''
+        el.dataset.original = original
+      }
+
+      // If already split, skip
+      if (!el.querySelector('.char')) {
+        const chars = Array.from(el.dataset.original)
+        el.innerHTML = chars
+          .map((c) => `<span class="char inline-block align-baseline">${c === ' ' ? '&nbsp;' : c}</span>`) 
+          .join('')
+      }
+
+      const spans = el.querySelectorAll('.char')
+
+      // Base style for each letter
+      gsap.set(spans, {
+        color: baseColor,
+        textShadow: baseShadow,
+      })
+
+      // Wave sweep timeline: brighten each letter then return to base, left-to-right
+      const tween = gsap.timeline({ repeat: -1, repeatDelay: 0.2 })
+        .to(spans, {
+          color: strongColor,
+          textShadow: strongShadow,
+          duration: 0.18,
+          ease: 'sine.inOut',
+          stagger: { each: 0.06, from: 'start' }
+        })
+        .to(spans, {
+          color: baseColor,
+          textShadow: baseShadow,
+          duration: 0.18,
+          ease: 'sine.inOut',
+          stagger: { each: 0.06, from: 'start' }
+        }, '>-0.12')
+
+      headingToTween.set(el, tween)
+    })
+
+    // Hover: pause sweep and boost all letters; resume on leave
+    cards.forEach((card) => {
+      const title = card.querySelector('h3')
+      if (!title) return
+
+      const enter = () => {
+        const spans = title.querySelectorAll('.char')
+        headingToTween.get(title)?.pause()
+        gsap.to(spans, {
+          textShadow: hoverShadow,
+          duration: 0.2,
+          ease: 'power2.out',
+        })
+        gsap.to(title, { scale: 1.03, duration: 0.25, ease: 'power2.out' })
+      }
+
+      const leave = () => {
+        const spans = title.querySelectorAll('.char')
+        gsap.to(spans, {
+          textShadow: baseShadow,
+          duration: 0.2,
+          ease: 'power2.out',
+          onComplete: () => headingToTween.get(title)?.resume(),
+        })
+        gsap.to(title, { scale: 1, duration: 0.25, ease: 'power2.out' })
+      }
+
+      card.addEventListener('mouseenter', enter)
+      card.addEventListener('mouseleave', leave)
+
+      context.add(() => {
+        card.removeEventListener('mouseenter', enter)
+        card.removeEventListener('mouseleave', leave)
+      })
+    })
+
+    // Cleanup: kill tweens and restore original text
+    context.add(() => {
+      headingToTween.forEach((tw) => tw.kill())
+      headings.forEach((h) => {
+        const el = h
+        if (el.dataset.original) {
+          el.textContent = el.dataset.original
+        }
+      })
+    })
+  }, { scope: sectionRef })
   return (
-    <section id="services" className="bg-[#141414] py-16 h-screen w-full max-w-screen">
+    <section id="services" ref={sectionRef} className="bg-[#141414] py-16 h-screen w-full max-w-screen">
 
       <div className=" flex flex-col w-full h-full items-center justify-center  px-4 md:px-8 lg:px-16">
         <h3 className="text-4xl font-bold text-center text-[#b1b1b1] mb-4">
@@ -59,7 +175,7 @@ const Services = () => {
             </div>
              <div className='w-full xl:w-3/4 flex flex-col gap-8  h-full justify-stretch bg-[#151618] rounded-[8px]  p-8 terminal-text '>
               <div className='h-10 w-full flex justify-center'>
-                <h3 className="text-2xl font-semibold tracking-wide ">Automação Residencial</h3>
+                <h3 className="text-2xl font-medium tracking-wide ">Automação Residencial</h3>
               </div>
               <div className='flex w-full h-full '>
                 <p className="text-justify text-[22px] tracking-wide">
@@ -76,7 +192,7 @@ const Services = () => {
             </div>
                <div className='w-full xl:w-3/4 flex flex-col gap-8  h-full justify-stretch bg-[#151618] rounded-[8px]  p-8 terminal-text'>
               <div className='h-10 w-full flex justify-center'>
-                <h3 className="text-2xl font-semibold tracking-wide">Certificação Técnica</h3>
+                <h3 className="text-2xl font-medium tracking-wide">Certificação Técnica</h3>
               </div>
               <div className='flex w-full h-full '>
                 <p className="text-justify text-[22px] tracking-wide">
