@@ -2,7 +2,7 @@ import React from 'react'
 
 const Services = () => {
   return (
-      <section id="services" className="bg-[#141414] py-16 h-screen w-full">
+      <section id="services" className="bg-[#141414] py-16 h-screen w-full max-w-screen">
       <div className="flex flex-col w-full h-full items-center justify-center  px-4 md:px-8 lg:px-16">
         <h2 className="text-4xl font-bold text-center text-[#b1b1b1] mb-4">
           Nossos Serviços Especializados
