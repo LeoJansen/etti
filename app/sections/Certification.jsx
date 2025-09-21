@@ -3,7 +3,7 @@
 
 const Certification = () => {
   return (
-    <section className="py-16 bg-white lg:h-screen">
+    <section className="py-16 bg-[#ffffff] lg:h-screen">
       <div className="container mx-auto px-6">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-extrabold text-gray-900 dark:text-white">
