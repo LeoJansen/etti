@@ -55,7 +55,7 @@ const Services = () => {
       // Set initial state for all characters
       gsap.set(allChars, {
         color: '#b1b1b1',
-        filter: 'drop-shadow(0 0 2px rgba(255,255,200,0.4))'
+        filter: 'drop-shadow(0 0 2px rgba(255,255,255,0.4))'
       })
 
       // Get the image element for this card
@@ -76,7 +76,7 @@ const Services = () => {
         if (image) {
           gsap.to(image, {
             duration: 0.6,
-            filter: 'drop-shadow(1.1582px 1.1582px 0.51px rgba(255,255,255,0.95)) drop-shadow(0 0 1px rgba(255,255,255,0.6)) drop-shadow(0 0 2px rgba(255,255,255,0.4))',
+            filter: 'drop-shadow(1.1582px 1.1582px 0.51px rgba(255,255,255,0.95)) drop-shadow(0 0 1px rgba(255,255,255,0.6)) drop-shadow(0 0 1px rgba(255,255,255,0.4))',
             scale: 1.01,
             ease: 'power1.out'
           })
