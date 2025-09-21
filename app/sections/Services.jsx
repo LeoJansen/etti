@@ -99,7 +99,8 @@ const Services = () => {
             </div>
             <div className='w-full h-full xl:w-3/4 flex flex-col gap-8   justify-center items-center bg-[#151618] rounded-[8px] terminal-text p-8'>
               <div className='h-10 w-full flex justify-center '>
-                <h3 className="lg:text-2xl font-medium text-center drop-shadow-[_1px_1px_12px_rgba(0,231,255,0.85)]">Instalações Elétricas</h3>
+                <h3 className="lg:text-2xl font-medium text-center drop-shadow-[_1px_1px_12px_rgba(0,231,255,0.85)]">Instalaçeões<br/> Elétricas</h3>
+                
               </div>
               <div className='flex w-full h-full'>
                 <p className=" text-justify lg:text-[18px] tracking-wide">
