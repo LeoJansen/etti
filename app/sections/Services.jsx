@@ -54,8 +54,8 @@ const Services = () => {
       
       // Set initial state for all characters
       gsap.set(allChars, {
-        color: '#b1b1b1',
-        filter: 'drop-shadow(0 0 2px rgba(255,255,255,0.4))'
+        color: 'rgba(210,210,255,1)',
+        filter: 'drop-shadow(0 0 2px rgba(230,230,255,0.4))'
       })
 
       // Get the image element for this card
@@ -66,8 +66,8 @@ const Services = () => {
         // Animate all title characters from both h3 elements
         gsap.to(allChars, {
           duration: 0.32,
-          color: '#e8fcff',
-          filter: 'drop-shadow(0 0 6px rgba(255,255,255,0.4)) drop-shadow(0 0 12px rgba(255,255,255,0.3))',
+          color: 'rgba(240,240,255,1)',
+          filter: 'drop-shadow(0 0 6px rgba(130,150,255,0.4)) drop-shadow(0 0 12px rgba(130,155,255,0.3))',
           stagger: { each: 0.03, from: 'start' },
           ease: 'power1.out'
         })
@@ -88,7 +88,7 @@ const Services = () => {
         // Animate all title characters back
         gsap.to(allChars, {
           duration: 0.22,
-          color: 'rgba(177,177,177,1)',
+          color: 'rgba(210,210,255,1)',
           filter: 'drop-shadow(0 0 2px rgba(255,255,255,0.4))',
           stagger: { each: 0.03, from: 'start' },
           ease: 'power1.in'
@@ -118,7 +118,7 @@ const Services = () => {
   }, { scope, dependencies: [isMobile] })
   
   return (
-    <section id="services" className="bg-[#141414] relative py-16 h-full  w-full max-w-screen" ref={scope}>
+    <section id="services" className="bg-[#0a0a0a] relative py-16 h-full  w-full max-w-screen" ref={scope}>
 
       <div className=" flex flex-col w-full h-full items-center justify-center  px-4 md:px-8 lg:px-16">
         <h3 className="text-4xl font-bold text-center text-[#b1b1b1] mb-4">
