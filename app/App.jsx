@@ -1,5 +1,6 @@
 import About from "./sections/About";
 import Hero from "./sections/Hero";
+import Projects from "./sections/Projects/Projects";
 import Services from "./sections/Services";
 
 const App = () => {
@@ -8,6 +9,7 @@ const App = () => {
       <Hero />
       <About />
       <Services />
+      <Projects />
     </div>
   )
 }

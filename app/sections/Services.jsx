@@ -4,12 +4,15 @@ import Image from 'next/image'
 import React from 'react'
 import { gsap } from 'gsap'
 import { useGSAP } from '@gsap/react'
+import { useMediaQuery } from 'react-responsive'
  
 // Register the React hook with GSAP (safe in client components)
 gsap.registerPlugin(useGSAP)
 
 const Services = () => {
   const scope = React.useRef(null)
+  // Consider mobile when width <= 767px
+  const isMobile = useMediaQuery({ maxWidth: 767 })
 
   // Neon sweep across each <h3> using a lightweight SplitText-like routine
   useGSAP(() => {
@@ -69,12 +72,12 @@ const Services = () => {
           },
           '>-0.08'
         )
-        // small pause before moving to the next card
-        .to({}, { duration: 0.3 })
+        // pause before moving to the next card (shorter on mobile)
+        .to({}, { duration: isMobile ? 0.012 : 0.3 })
 
       master.add(segment)
     })
-  }, { scope })
+  }, { scope, dependencies: [isMobile] })
   
   return (
     <section id="services" className="bg-[#141414] relative py-16 h-full  w-full max-w-screen" ref={scope}>
