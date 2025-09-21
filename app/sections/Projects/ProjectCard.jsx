@@ -6,12 +6,12 @@ const ProjectCard = ({ title, description, imageSrc }) => {
   return (
     <div className="bg-white rounded-xl shadow-lg overflow-hidden transform transition duration-500 hover:scale-105 hover:shadow-2xl">
       <div className="relative h-64 w-full">
-        <Image 
-          src={imageSrc} 
-          alt={title} 
-          layout="fill" 
-          objectFit="cover" 
-          className="rounded-t-xl"
+        <Image
+          src={imageSrc}
+          alt={title}
+          fill
+          sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+          className="rounded-t-xl object-cover"
         />
       </div>
       <div className="p-6">

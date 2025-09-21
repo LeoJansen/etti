@@ -41,7 +41,7 @@ const Services = () => {
         const chars = h3.querySelectorAll('.neon-char')
         gsap.set(chars, {
           color: '#b1b1b1',
-          filter: 'drop-shadow(0 0 6px #00e7ff80)'
+          filter: 'drop-shadow(0 0 6px rgba(255,255,200,0.4))'
         })
       }
     })
@@ -58,7 +58,7 @@ const Services = () => {
         .to(chars, {
           duration: 0.32,
           color: '#e8fcff',
-          filter: 'drop-shadow(0 0 6px #00e7ff80) drop-shadow(0 0 12px #00e7ff80)',
+          filter: 'drop-shadow(0 0 6px rgba(255,255,180,0.4)) drop-shadow(0 0 12px rgba(255,255,180,0.3))',
           stagger: { each: 0.03, from: 'start' }
         })
         .to(
@@ -66,11 +66,11 @@ const Services = () => {
           {
             duration: 0.22,
             color: '#b1b1b1',
-            filter: 'drop-shadow(0 0 6px #00e7ff80)',
+            filter: 'drop-shadow(0 0 6px rgba(255,255,200,0.4))',
             ease: 'power1.in',
             stagger: { each: 0.03, from: 'start' }
           },
-          '>-0.08'
+          isMobile ? '-1.08' : '-0.08'
         )
         // pause before moving to the next card (shorter on mobile)
         .to({}, { duration: isMobile ? 0.012 : 0.3 })
@@ -99,7 +99,7 @@ const Services = () => {
             </div>
             <div className='w-full h-full xl:w-3/4 flex flex-col gap-8   justify-center items-center bg-[#151618] rounded-[8px] terminal-text p-8'>
               <div className='h-10 w-full flex justify-center '>
-                <h3 className="lg:text-2xl font-medium text-center drop-shadow-[_1px_1px_12px_rgba(0,231,255,0.85)]">Instalaçeões<br/> Elétricas</h3>
+                <h3 className="lg:text-2xl font-medium text-center drop-shadow-[_1px_1px_12px_rgba(255,255,200,0.85)]">Instalaçeões<br/> Elétricas</h3>
                 
               </div>
               <div className='flex w-full h-full'>
@@ -119,7 +119,7 @@ const Services = () => {
             </div>
              <div className='w-full xl:w-3/4 flex flex-col gap-8  h-full justify-stretch bg-[#151618] rounded-[8px]  p-8 terminal-text'>
              <div className='h-10 w-full flex justify-center '>
-                <h3 className="lg:text-2xl font-medium text-center tracking-wide drop-shadow-[_1px_1px_12px_rgba(0,231,255,0.85)]">Sistemas de Segurança</h3>
+                <h3 className="lg:text-2xl font-medium text-center tracking-wide drop-shadow-[_1px_1px_12px_rgba(255,255,200,0.85)]">Sistemas de Segurança</h3>
               </div>
               <div className=' flex w-full h-full rounded-[8px]  '>
                 <p className="text-justify lg:text-[18px] tracking-wide">
@@ -137,7 +137,7 @@ const Services = () => {
             </div>
              <div className='w-full xl:w-3/4 flex flex-col gap-8  h-full justify-stretch bg-[#151618] rounded-[8px]  p-8 terminal-text '>
               <div className='h-10 w-full flex justify-center'>
-                <h3 className="lg:text-2xl font-medium text-center tracking-wide drop-shadow-[_1px_1px_12px_rgba(0,231,255,0.85)]">Automação Residencial</h3>
+                <h3 className="lg:text-2xl font-medium text-center tracking-wide drop-shadow-[_1px_1px_12px_rgba(255,255,200,0.85)]">Automação Residencial</h3>
               </div>
               <div className='flex w-full h-full '>
                 <p className="text-justify lg:text-[18px] tracking-wide">
@@ -154,7 +154,7 @@ const Services = () => {
             </div>
                <div className='w-full xl:w-3/4 flex flex-col gap-8  h-full justify-stretch bg-[#151618] rounded-[8px]  p-8 terminal-text'>
               <div className='h-10 w-full flex justify-center'>
-                <h3 className="lg:text-2xl font-medium text-center tracking-wide drop-shadow-[_1px_1px_12px_rgba(0,231,255,0.85)]">Certificação Técnica</h3>
+                <h3 className="lg:text-2xl font-medium text-center tracking-wide drop-shadow-[_1px_1px_12px_rgba(255,255,200,0.85)]">Certificação Técnica</h3>
               </div>
               <div className='flex w-full h-full '>
                 <p className="text-justify lg:text-[18px] tracking-wide">
