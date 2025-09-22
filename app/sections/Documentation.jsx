@@ -5,7 +5,16 @@ import Image from "next/image";
 
 const Documentation = () => {
   return (
-    <section className="relative py-16 w-screen max-w-screen h-full lg:h-screen overflow-hidden bg-[#191A1D]" id="documentation">
+    <section className="relative py-16 w-screen max-w-screen h-full lg:h-screen overflow-hidden bg-[#0000002a]" id="documentation">
+      <Image
+        src="/assets/docBackground.png"
+        alt="Background"
+        fill
+        style={{ objectFit: "cover", objectPosition: "center" }}
+        quality={100}
+        priority
+        className="-z-10 "
+      />
     
       <div className=" px-6">
         <div className="text-center">
@@ -18,8 +27,8 @@ const Documentation = () => {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Ficha Eletrotécnica */}
-          <div className=" bg-[#141414] p-8 rounded-lg shadow-lg transform transition duration-500 hover:scale-105">
-            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+          <div className=" bg-[#111111] vv p-8 rounded-lg shadow-lg transform transition duration-500 hover:scale-105">
+            <h3 className="text-2xl font-bold text-[#a7a7a7] mb-4">
               Ficha Eletrotécnica
             </h3>
             <p className="text-gray-600 dark:text-gray-400">
@@ -27,7 +36,7 @@ const Documentation = () => {
             </p>
           </div>
           {/* Memória Descritiva */}
-          <div className="bg-[#141414] p-8 rounded-lg shadow-lg transform transition duration-500 hover:scale-105 ">
+          <div className="bg-[#111111] p-8 rounded-lg shadow-lg transform transition duration-500 hover:scale-105 ">
             <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
               Memória Descritiva
             </h3>
@@ -36,7 +45,7 @@ const Documentation = () => {
             </p>
           </div>
           {/* Termo de Responsabilidade */}
-          <div className="bg-[#141414] p-8 rounded-lg shadow-lg transform transition duration-500 hover:scale-105">
+          <div className="bg-[#111111] p-8 rounded-lg shadow-lg transform transition duration-500 hover:scale-105">
             <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
               Termo de Responsabilidade
             </h3>

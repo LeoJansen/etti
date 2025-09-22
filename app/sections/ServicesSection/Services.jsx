@@ -97,7 +97,7 @@ const Services = () => {
         gsap.to(allChars, {
           duration: 0.32,
           color: 'rgba(200,200,255,1)',
-          filter: 'drop-shadow(0 0 6px rgba(130,150,255,0.4)) drop-shadow(0 0 12px rgba(130,155,255,0.3))',
+          filter: 'drop-shadow(0 0 6px rgba(230,250,255,0.4)) drop-shadow(0 0 12px rgba(230,255,255,0.3))',
           stagger: { each: 0.03, from: 'start' },
           ease: 'power1.out'
         })
@@ -116,7 +116,7 @@ const Services = () => {
         gsap.to(allChars, {
           duration: 0.22,
           color: 'rgba(140,140,150,1)',
-          filter: 'drop-shadow(0 0 0.2px rgba(230,230,255,0.3))',
+          filter: 'drop-shadow(0 0 0.2px rgba(245,245,255,0.3))',
           stagger: { each: 0.02, from: 'start' },
           ease: 'power1.in'
         })

@@ -8,7 +8,7 @@ export default function Hero() {
 
 
       
-      <div className="relative z-10 text-center w-full md:w-1/2 h-full flex flex-col justify-around items-center bg-[#0f141a94] backdrop-blur-[1px] md:p-8 ">
+      <div className="relative z-10 text-center w-full md:w-fit h-full flex flex-col justify-around items-center bg-[#0f141a94] backdrop-blur-[1px] md:p-8 ">
       <div className='flex flex-col items-center bg-[#0f141a59] backdrop-blur-[1px] rounded-[22px] mb-4'>
         <Image
           src="/assets/ettiColor.png"
