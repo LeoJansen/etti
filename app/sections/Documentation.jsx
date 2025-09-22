@@ -3,7 +3,7 @@
 
 const Documentation = () => {
   return (
-    <section className="py-16 bg-[#27292e]">
+    <section className="py-16 bg-[#27292e] w-screen max-w-screen overflow-hidden" id="documentation">
       <div className="container mx-auto px-6">
         <div className="text-center">
           <h2 className="text-4xl font-extrabold text-gray-900 dark:text-white mb-4">
