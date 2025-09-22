@@ -43,26 +43,29 @@ const Services = () => {
     }
   ]
 
-  // Setup neon effect on hover for each card
+  // Setup neon effect: only animate the card under the mouse
   useGSAP(() => {
     const root = scope.current
     if (!root) return
 
-    const cards = gsap.utils.toArray(root.querySelectorAll('.metalicCards'))
+    // Skip hover bindings on small screens if desired
+    if (isMobile) return
+
+    const cards = gsap.utils.toArray(root.querySelectorAll('.service-card'))
+
+    const cleanups = []
 
     cards.forEach((card) => {
       if (!(card instanceof HTMLElement)) return
-      
+
       const h3Elements = card.querySelectorAll('h3')
       if (h3Elements.length === 0) return
 
       let allChars = []
 
-      // Process each h3 element
+      // Prepare each h3 inside this card (split into chars once)
       h3Elements.forEach((h3) => {
         if (!(h3 instanceof HTMLElement)) return
-
-        // Split text into characters for animation
         if (h3.dataset.split !== 'true') {
           const original = h3.textContent || ''
           h3.textContent = ''
@@ -76,23 +79,21 @@ const Services = () => {
           h3.appendChild(frag)
           h3.dataset.split = 'true'
         }
-
         const chars = h3.querySelectorAll('.neon-char')
         allChars = [...allChars, ...chars]
       })
-      
-      // Set initial state for all characters
+
+      // Baseline state for this card's title chars
       gsap.set(allChars, {
         color: 'rgba(140,140,150,1)',
-        filter: 'drop-shadow(0 0 0.2px rgba(230,230,255,0.3))'
+        filter: 'drop-shadow(0 0 0.2px rgba(20,114,190,0.3))'
       })
 
       // Get the image element for this card
-      const image = card.querySelector('img')
+      const image = card.querySelector('.service-image')
 
-      // Mouse enter animation
+      // Mouse enter animation (only this card)
       const handleMouseEnter = () => {
-        // Animate all title characters from both h3 elements
         gsap.to(allChars, {
           duration: 0.32,
           color: 'rgba(200,200,255,1)',
@@ -100,8 +101,6 @@ const Services = () => {
           stagger: { each: 0.03, from: 'start' },
           ease: 'power1.out'
         })
-        
-        // Animate image with glow effect
         if (image) {
           gsap.to(image, {
             duration: 0.6,
@@ -112,44 +111,45 @@ const Services = () => {
         }
       }
 
-      // Mouse leave animation
+      // Mouse leave animation (revert this card only)
       const handleMouseLeave = () => {
-        // Animate all title characters back
         gsap.to(allChars, {
           duration: 0.22,
-          color: 'rgba(210,210,255,1)',
-          filter: 'drop-shadow(0 0 2px rgba(255,255,255,0.4))',
-          stagger: { each: 0.03, from: 'start' },
+          color: 'rgba(140,140,150,1)',
+          filter: 'drop-shadow(0 0 0.2px rgba(230,230,255,0.3))',
+          stagger: { each: 0.02, from: 'start' },
           ease: 'power1.in'
         })
-        
-        // Animate image back to normal
         if (image) {
           gsap.to(image, {
             duration: 0.3,
-            filter: 'drop-shadow(1.1582px 1.1582px 0.51px rgba(255,255,255,0.85))',
+            // Revert to the baseline drop shadow declared in class
+            filter: 'drop-shadow(1.1582px 1.1582px 0.51px rgba(255,255,255,0.95))',
             scale: 1,
             ease: 'power1.in'
           })
         }
       }
 
-      // Add event listeners
       card.addEventListener('mouseenter', handleMouseEnter)
       card.addEventListener('mouseleave', handleMouseLeave)
 
-      // Cleanup function for event listeners
-      return () => {
+      cleanups.push(() => {
         card.removeEventListener('mouseenter', handleMouseEnter)
         card.removeEventListener('mouseleave', handleMouseLeave)
-      }
+      })
     })
+
+    // Proper cleanup when component unmounts or deps change
+    return () => {
+      cleanups.forEach((fn) => fn())
+    }
   }, { scope, dependencies: [isMobile] })
   
   return (
-    <section id="services" className="bg-[#0a0a0a] relative py-16 h-full  w-full max-w-screen overflow-hidden" ref={scope}>
+    <section id="services" className="bg-[#0f0f11] relative py-16 h-full  w-full max-w-screen overflow-hidden" ref={scope}>
 
-      <div className=" flex flex-col w-full h-full items-center justify-center  px-4 md:px-8 lg:px-16">
+      <div className="flex flex-col w-full h-full items-center justify-center  px-4 md:px-8 lg:px-16">
         <h3 className="text-4xl font-bold text-center text-[#b1b1b1] mb-4">
           Nossos Serviços Especializados
         </h3>

@@ -1,10 +1,13 @@
 // components/DocumentationSection.js
 
+import Image from "next/image";
+
 
 const Documentation = () => {
   return (
-    <section className="py-16 bg-[#27292e] w-screen max-w-screen overflow-hidden" id="documentation">
-      <div className="container mx-auto px-6">
+    <section className="relative py-16 w-screen max-w-screen h-full lg:h-screen overflow-hidden bg-[#191A1D]" id="documentation">
+    
+      <div className=" px-6">
         <div className="text-center">
           <h2 className="text-4xl font-extrabold text-gray-900 dark:text-white mb-4">
             Documentação Técnica Completa
@@ -15,7 +18,7 @@ const Documentation = () => {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Ficha Eletrotécnica */}
-          <div className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg transform transition duration-500 hover:scale-105">
+          <div className=" bg-[#141414] p-8 rounded-lg shadow-lg transform transition duration-500 hover:scale-105">
             <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
               Ficha Eletrotécnica
             </h3>
@@ -24,7 +27,7 @@ const Documentation = () => {
             </p>
           </div>
           {/* Memória Descritiva */}
-          <div className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg transform transition duration-500 hover:scale-105">
+          <div className="bg-[#141414] p-8 rounded-lg shadow-lg transform transition duration-500 hover:scale-105 ">
             <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
               Memória Descritiva
             </h3>
@@ -33,7 +36,7 @@ const Documentation = () => {
             </p>
           </div>
           {/* Termo de Responsabilidade */}
-          <div className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg transform transition duration-500 hover:scale-105">
+          <div className="bg-[#141414] p-8 rounded-lg shadow-lg transform transition duration-500 hover:scale-105">
             <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
               Termo de Responsabilidade
             </h3>

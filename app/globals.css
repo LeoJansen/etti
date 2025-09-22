@@ -36,12 +36,14 @@ body {
 
 
 .metalicCards {
-  background-image: url('/assets/steelText3.png');
+  background-image: linear-gradient(rgba(31, 31, 31, 0.825), rgba(36, 36, 36, 0.725)), /* ajuste a opacidade */
+    url('/assets/steelText3.png');
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
   object-fit: cover;
   object-position: center;
+ 
 
 
 }
