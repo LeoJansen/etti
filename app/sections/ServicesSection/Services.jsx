@@ -149,7 +149,7 @@ const Services = () => {
   return (
     <section id="services" className="bg-[#0f0f11] relative py-16 h-full  w-full max-w-screen overflow-hidden" ref={scope}>
 
-      <div className="flex flex-col w-full h-full items-center justify-center  px-4 md:px-8 lg:px-16">
+      <div className="flex flex-col w-full h-full items-center justify-center  px-4 md:px-8 lg:px-10">
         <h3 className="text-4xl font-bold text-center text-[#b1b1b1] mb-4">
           Nossos Serviços Especializados
         </h3>
@@ -157,7 +157,7 @@ const Services = () => {
           Transforme seu projeto com tecnologia e segurança.
         </p>
 
-        <div className="w-full h-full grid grid-cols-1 md:grid-cols-2 gap-8 lg:px-10 lg:py-20 text-[#b1b4b9]">
+        <div className="w-full h-full grid grid-cols-1 md:grid-cols-4 gap-4  lg:py-20 text-[#b1b4b9]">
           {servicesData.map((service, index) => (
             <ServiceCard
               key={index}

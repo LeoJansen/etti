@@ -1,59 +1,53 @@
+"use client";
 // components/HeroSection.js
 import Image from 'next/image';
 import Link from 'next/link';
+import { useMediaQuery } from 'react-responsive';
 
 export default function Hero() {
+  // Responsive breakpoints (client-only)
+  const isMobile = useMediaQuery({ maxWidth: 767 });
+  const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1023 });
+  const isDesktop = useMediaQuery({ minWidth: 1024 });
+
+
   return (
-    <section className="relative max-w-screen w-screen h-screen bg-black text-white flex items-center justify-start overflow-hidden">
+    <section className="relative max-w-screen w-screen h-screen  text-white flex items-center justify-start overflow-hidden">
 
 
       
-      <div className="relative z-10 text-center w-full md:w-fit h-full flex flex-col justify-around items-center bg-[#0f141a94] backdrop-blur-[1px] md:p-8 ">
-      <div className='flex flex-col items-center bg-[#0f141a59] backdrop-blur-[1px] rounded-[22px] mb-4'>
-        <Image
-          src="/assets/ettiColor.png"
-          alt="Hero Image"
-          quality={100}
-          width={683}
-          height={683}
-          className=" w-50 h-50 md:w-65 md:h-65 "
-        />
+     
 
-      </div>
-        
-        
+      
 
-<div className='flex flex-col items-center'>
+<div className='absolute top-2/3 left-1/2 flex flex-col items-center'>
  {/* Proposta de Valor */}
-        <p className="text-lg md:text-2xl mb-8 text-[#b9b9b9] font-light tracking-wide">
-          Soluções completas em instalações elétricas e automação
-        </p>
-
+       
         {/* Botões de Ação */}
         <div className="flex flex-col sm:flex-row justify-center gap-4">
           <Link
             href="/orcamento"
-            className="bg-[#cfcfd8] text-[#131313] font-semibold py-3 px-8 rounded-full hover:bg-gray-200 transition-colors duration-300"
+            className="bg-[#cfcfd8] text-[#131313] font-semibold py-3 px-8 rounded-[3px] hover:bg-gray-200 transition-colors duration-300"
           >
             Solicitar Orçamento
           </Link>
           <Link
             href="/servicos"
-            className="bg-transparent text-white border border-white font-semibold py-3 px-8 rounded-full hover:bg-white hover:text-black transition-colors duration-300"
+            className="bg-transparent text-white border border-white font-semibold py-3 px-8 rounded-[3px] hover:bg-white hover:text-black transition-colors duration-300"
           >
             Conhecer Serviços
           </Link>
         </div>
 </div>
        
-      </div>
+
 
      
      
      
-     
+     <div className='fixed w-full h-full top-0 -z-10'>
       <Image
-        src="/assets/hero-image.png"
+        src="/assets/hero-bg.png"
         alt="Hero Image"
         quality={100}
         fill
@@ -61,9 +55,13 @@ export default function Hero() {
         style={{
           objectFit: 'cover',
           objectPosition: 'bottom',
+      
         }}
       />
 
+
+     </div>
+      
 
     </section>
   );
