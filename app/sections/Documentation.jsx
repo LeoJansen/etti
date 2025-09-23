@@ -13,7 +13,7 @@ const Documentation = () => {
         style={{ objectFit: "cover", objectPosition: "center" }}
         quality={100}
         priority
-        className="-z-10 "
+        className="-z-10 brightness-[0.8] saturate-[0.7] contrast-[0.85]"
       />
     
       <div className=" px-6">
