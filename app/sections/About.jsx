@@ -6,7 +6,7 @@ const About = () => {
     <section className="py-16 bg-gray-50 min-h-screen max-w-screen overflow-hidden z-120" id="about">
       <div className="flex flex-col w-full h-full px-4 md:px-8 lg:px-16 text-[#313131] ">
           <div className='border-2 p-4 rounded-[4px]  border-[#313131]  mb-16 flex justify-center w-full'>
-<h2 className="text-[30px] md:text-4xl font-semibold text-[#313131]">Sobre a Etti</h2>
+<h2 className="text-[30px] md:text-[60px] font-semibold text-[#313131] tracking-tight">Sobre a Etti</h2>
           </div>
         <div className="flex flex-col md:flex-row w-full h-full justify-center items-center md:space-x-12">
         

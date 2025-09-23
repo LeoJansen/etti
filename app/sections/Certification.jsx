@@ -38,16 +38,7 @@ const Certification = () => {
           </div>
         </div>
         </div>
-          <div className="w-full flex">
-            <Image
-              src="/assets/certification2.png"
-              alt="Certificação e Vistoria"
-              width={600}
-              height={600}
-              className="w-full h-auto object-cover rounded-lg mt-12 lg:mt-0 lg:ml-12"
-            />
-          
-        </div>
+      
       </div>
     </section>
   );
