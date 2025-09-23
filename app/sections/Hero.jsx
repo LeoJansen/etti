@@ -2,13 +2,9 @@
 // components/HeroSection.js
 import Image from 'next/image';
 import Link from 'next/link';
-import { useMediaQuery } from 'react-responsive';
 
 export default function Hero() {
-  // Responsive breakpoints (client-only)
-  const isMobile = useMediaQuery({ maxWidth: 767 });
-  const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1023 });
-  const isDesktop = useMediaQuery({ minWidth: 1024 });
+  // No runtime media-query logic; use responsive CSS classes to avoid hydration mismatches
 
 
   return (
@@ -20,20 +16,20 @@ export default function Hero() {
 
       
 
-<div className='absolute top-2/3 left-1/2 flex flex-col items-center'>
+<div className='absolute top-3/4 left-1/2 transform -translate-x-1/2 flex flex-col items-center'>
  {/* Proposta de Valor */}
        
         {/* Botões de Ação */}
         <div className="flex flex-col sm:flex-row justify-center gap-4">
           <Link
             href="/orcamento"
-            className="bg-[#cfcfd8] text-[#131313] font-semibold py-3 px-8 rounded-[3px] hover:bg-gray-200 transition-colors duration-300"
+            className="bg-[#0f0f11] text-[#e9e9e9] font-semibold py-3 px-8 rounded-[3px] hover:bg-gray-200 transition-colors duration-300 text-center"
           >
             Solicitar Orçamento
           </Link>
           <Link
             href="/servicos"
-            className="bg-transparent text-white border border-white font-semibold py-3 px-8 rounded-[3px] hover:bg-white hover:text-black transition-colors duration-300"
+            className="bg-transparent text-white border border-white font-semibold py-3 px-8 rounded-[3px] hover:bg-white hover:text-black transition-colors duration-300 text-center"
           >
             Conhecer Serviços
           </Link>
@@ -52,11 +48,15 @@ export default function Hero() {
         quality={100}
         fill
         sizes="100vw"
-        style={{
-          objectFit: 'cover',
-          objectPosition: 'bottom',
-      
-        }}
+        className="object-cover object-[25%_100%] md:object-center lg:object-bottom hidden md:block"
+      />
+       <Image
+        src="/assets/hero-bgMobile.png"
+        alt="Hero Image"
+        quality={100}
+        fill
+        sizes="100vw"
+        className="object-cover object-[25%_100%] md:object-center lg:object-bottom md:hidden"
       />
 
 

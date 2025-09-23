@@ -85,8 +85,8 @@ const Services = () => {
 
       // Baseline state for this card's title chars
       gsap.set(allChars, {
-        color: 'rgba(140,140,150,1)',
-        filter: 'drop-shadow(0 0 0.2px rgba(20,114,190,0.3))'
+        color: 'rgba(255,255,220,1)',
+        filter: 'drop-shadow(0 0 0.2px rgba(255,255,210,0.3))'
       })
 
       // Get the image element for this card
@@ -96,15 +96,15 @@ const Services = () => {
       const handleMouseEnter = () => {
         gsap.to(allChars, {
           duration: 0.32,
-          color: 'rgba(200,200,255,1)',
-          filter: 'drop-shadow(0 0 6px rgba(230,250,255,0.4)) drop-shadow(0 0 12px rgba(230,255,255,0.3))',
+          color: 'rgba(255,255,210,1)',
+          filter: 'drop-shadow(0 0 6px rgba(255,255,210,0.4)) drop-shadow(0 0 12px rgba(255,255,210,0.3))',
           stagger: { each: 0.03, from: 'start' },
           ease: 'power1.out'
         })
         if (image) {
           gsap.to(image, {
             duration: 0.6,
-            filter: 'drop-shadow(1.1582px 1.1582px 0.51px rgba(255,255,255,0.95)) drop-shadow(0 0 1px rgba(255,255,255,0.6)) drop-shadow(0 0 1px rgba(255,255,255,0.4))',
+            filter: 'drop-shadow(1.1582px 1.1582px 0.51px rgba(255,255,255,0.95)) drop-shadow(0 0 1px rgba(255,255,255,0.6)) drop-shadow(0 0 1px rgba(255,255,210,0.4))',
             scale: 1.01,
             ease: 'power1.out'
           })
@@ -115,7 +115,7 @@ const Services = () => {
       const handleMouseLeave = () => {
         gsap.to(allChars, {
           duration: 0.22,
-          color: 'rgba(140,140,150,1)',
+          color: 'rgba(255,255,210,1)',
           filter: 'drop-shadow(0 0 0.2px rgba(245,245,255,0.3))',
           stagger: { each: 0.02, from: 'start' },
           ease: 'power1.in'
@@ -149,7 +149,7 @@ const Services = () => {
   return (
     <section id="services" className="bg-[#0f0f11] relative py-16 h-full  w-full max-w-screen overflow-hidden" ref={scope}>
 
-      <div className="flex flex-col w-full h-full items-center justify-center  px-4 md:px-8 lg:px-10">
+      <div className="flex flex-col w-full h-full items-center justify-center  px-4 md:px-8 lg:px-10 xl:px-20">
         <h3 className="text-4xl font-bold text-center text-[#b1b1b1] mb-4">
           Nossos Serviços Especializados
         </h3>
@@ -157,7 +157,7 @@ const Services = () => {
           Transforme seu projeto com tecnologia e segurança.
         </p>
 
-        <div className="w-full h-full grid grid-cols-1 md:grid-cols-4 gap-4  lg:py-20 text-[#b1b4b9]">
+        <div className="w-full h-full grid grid-cols-1 md:grid-cols-4 gap-4 px-4 lg:px-0  lg:py-20 text-[#cecece]">
           {servicesData.map((service, index) => (
             <ServiceCard
               key={index}
