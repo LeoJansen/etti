@@ -47,7 +47,7 @@ export default function Hero() {
      
      <div className='fixed w-full h-full top-0 -z-10'>
       <Image
-        src="/assets/hero-bg.png"
+        src="/assets/hero-bg3.png"
         alt="Hero Image"
         quality={100}
         fill
