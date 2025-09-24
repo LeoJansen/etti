@@ -5,7 +5,7 @@ import Services from "./sections/ServicesSection/Services";
 import Documentation from "./sections/Documentation";
 import Certification from "./sections/Certification";
 import Automation from "./sections/Automation/Automation";
-import SystemsSection from "./sections/SystemsSection";
+import SystemsSection from "./sections/SystemsSection/SystemsSection";
 import WhyEtti from "./sections/WhyEtti";
 import Contact from "./sections/Contact";
 
