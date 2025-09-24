@@ -14,6 +14,9 @@ const Services = () => {
   const scope = React.useRef(null)
   // Consider mobile when width <= 767px
   const isMobile = useMediaQuery({ maxWidth: 767 })
+  const color1 = '#fffdc8'
+  const color2 = '#fff5a1'
+  const color3 = '#fffcc2'
 
   // Services data
   const servicesData = [

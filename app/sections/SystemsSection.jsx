@@ -3,7 +3,7 @@ import React from 'react';
 
 const SystemsSection = () => {
   return (
-    <section className="py-16 bg-[#666666]">
+    <section className="py-16 bg-[rgb(15,15,15)] min-h-screen">
       <div className="container mx-auto px-6">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-extrabold text-gray-900 dark:text-white">
