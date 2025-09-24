@@ -36,6 +36,14 @@ const michroma = Michroma({
 export const metadata: Metadata = {
   title: "ETTI — Engenharia & Tecnologia",
   description: "Projetos, automação, segurança e documentação técnica com excelência.",
+  icons: {
+    icon: "/assets/ettiIcon2.ico",
+    shortcut: "/assets/ettiIcon2.svg",
+    apple: "/assets/ettiIcon2.svg",
+  },
+  openGraph: {
+    title: "ETTI — Engenharia & Tecnologia",
+  },
 };
 
 export default function RootLayout({
