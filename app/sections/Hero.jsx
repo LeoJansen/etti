@@ -51,7 +51,7 @@ export default function Hero() {
         className="object-cover object-[25%_100%] md:object-center lg:object-bottom hidden md:block"
       />
        <Image
-        src="/assets/hero-bgMobile.png"
+        src="/assets/heroMobile.png"
         alt="Hero Image"
         quality={100}
         fill

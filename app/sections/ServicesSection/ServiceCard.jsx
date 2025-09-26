@@ -5,7 +5,7 @@ import React from 'react'
 
 const ServiceCard = ({ imageSrc, imageAlt, title, description }) => {
   return (
-    <div className="service-card flex flex-col  p-6 md:p-0 md:py-6 items-center h-full w-full  rounded-[6px]  duration-300  gap-6 md:gap-0  bg-[#141414] ">
+    <div className="service-card flex flex-col  p-6 md:p-0 md:py-6 items-center h-full w-full  rounded-[6px]  duration-300  gap-6 md:gap-0  bg-[#141414] z-10 ">
       <div className='flex w-full md:ml-8 justify-start items-start'>
         <Image 
           src={imageSrc} 

@@ -150,8 +150,16 @@ const Services = () => {
   }, { scope, dependencies: [isMobile] })
   
   return (
-    <section id="services" className=" bg-[#101111] relative py-16 h-full  w-full min-h-screen max-w-screen overflow-hidden" ref={scope}>
-
+    <section id="services" className="  relative py-16 h-full  w-full min-h-screen max-w-screen overflow-hidden" ref={scope}>
+      <Image 
+        src="/assets/servicesBg3.png"
+        alt="Background Gradient"
+        fill
+        style={{ objectFit: 'cover'}}
+        quality={100} 
+        sizes='100vw'
+        priority
+      />
       <div className="flex flex-col w-full h-full items-center justify-center  px-4 md:px-8 lg:px-10 xl:px-20">
         <h3 className="text-4xl font-bold text-center text-[#b1b1b1] mb-4">
           Nossos Serviços Especializados
