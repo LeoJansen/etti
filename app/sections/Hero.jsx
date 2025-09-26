@@ -43,7 +43,7 @@ export default function Hero() {
      
      <div className='fixed w-full h-full top-0 -z-10'>
       <Image
-        src="/assets/hero-bg3.png"
+        src="/assets/hero-bg4.png"
         alt="Hero Image"
         quality={100}
         fill
@@ -51,7 +51,7 @@ export default function Hero() {
         className="object-cover object-[25%_100%] md:object-center lg:object-bottom hidden md:block"
       />
        <Image
-        src="/assets/heroMobile.png"
+        src="/assets/hero-bg4.png"
         alt="Hero Image"
         quality={100}
         fill

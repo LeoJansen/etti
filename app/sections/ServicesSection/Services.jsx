@@ -152,10 +152,10 @@ const Services = () => {
   return (
     <section id="services" className="  relative py-16 h-full  w-full min-h-screen max-w-screen overflow-hidden" ref={scope}>
       <Image 
-        src="/assets/servicesBg3.png"
+        src="/assets/servicesBg4.png"
         alt="Background Gradient"
         fill
-        style={{ objectFit: 'cover'}}
+        style={{ objectFit: 'cover', objectPosition: 'left center'}}
         quality={100} 
         sizes='100vw'
     
