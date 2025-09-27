@@ -6,30 +6,17 @@ import "./globals.css";
 const openSans = Open_Sans({
   variable: "--font-open-sans",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["300",  "400", "500", "600", "700", "800"],
   display: "swap",
 });
 
 const poppins = Poppins({
   variable: "--font-poppins",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
+  weight: ["100", "200","300",  "400", "500", "600", "700", "800"],
   display: "swap",
 });
 
-const encodeSans = Encode_Sans_SC({
-  variable: "--font-encode-sans-sc",
-  subsets: ["latin"],
-  weight: ["100", "200","300", "400", "500", "600", "700"],
-  display: "swap",
-});
-
-const michroma = Michroma({
-  variable: "--font-michroma",
-  subsets: ["latin"],
-  weight: [ "400"],
-  display: "swap",
-}); 
 
 
 
@@ -54,7 +41,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-         className={`${openSans.variable} ${poppins.variable} ${encodeSans.variable} ${michroma.variable} antialiased`}
+         className={`${openSans.variable} ${poppins.variable}antialiased`}
       >
         {children}
       </body>

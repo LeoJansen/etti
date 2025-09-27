@@ -6,8 +6,13 @@ const About = () => {
     <section className="py-16 bg-gray-50 min-h-screen max-w-screen overflow-hidden z-120" id="about">
       <div className="flex flex-col w-full h-full px-4 md:px-8 lg:px-16 text-[#313131] ">
         <div className='p-4 rounded-[4px]    mb-16 flex flex-col justify-start w-full'>
-          <h3 className="text-[30px] md:text-[40px] font-medium   text-[#313131] tracking-tight uppercase">Sobre a Etti</h3>
-          <h2 className="text-[48px] md:text-[70px] tracking-[-0.05em]  font-extralight leading-10  mb-6 text-[#a8a8a8] ">Quem somos e a nossa missão</h2>
+
+          <div className='flex gap-4 items-center'>
+            <h3 className="text-[30px] md:text-[40px] font-bold text-[#EB9948] tracking-tight uppercase">Sobre a Etti</h3>
+            <div className='h-[8px] w-[165px] bg-[#4991EB]' />
+          </div>
+
+          <h2 className="text-[48px] md:text-[70px] lg:text-[95px] tracking-[-0.08em]  font-regular leading-14  mb-6 text-[#565555] ">Quem somos e a nossa missão</h2>
         </div>
         <div className="flex flex-col md:flex-row w-full h-full justify-center items-center md:space-x-12">
 
@@ -26,7 +31,7 @@ const About = () => {
           <div className="md:w-1/2 h-full flex flex-col justify-center items-center">
 
 
-            <p className="text-xl  mb-6">Quem somos e a nossa missão</p>
+
             <p className=" leading-relaxed mb-4 text-justify">
               Etti Project é uma empresa especializada em <strong>soluções elétricas e automação</strong>. Nossa missão é transformar espaços através de tecnologia avançada e instalações seguras, oferecendo soluções inovadoras e sustentáveis que melhoram a qualidade de vida dos nossos clientes.
             </p>

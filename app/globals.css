@@ -3,6 +3,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --main-color: #EB9948;
 }
 
 @theme inline {
@@ -26,13 +27,17 @@ body {
   /* Map project font aliases to next/font variables */
   --font-title: var(--font-poppins);
   --font-sans: var(--font-open-sans);
-  --font-display-title: var(--font-michroma);
-  --font-display: var(--font-poppins);
+
+   
 
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans), system-ui, -apple-system, Segoe UI, Roboto, Arial, Noto Sans, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
+
+.text-color-main {
+  color: var(--mainColor);
+} 
 
 
 .metalicCards {
