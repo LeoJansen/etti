@@ -6,11 +6,11 @@
 // - titleClassName: optional extra classes for the title element
 
 const baseCardClass =
-  "bg-[#111111] p-8 rounded-lg shadow-lg transform transition duration-500 hover:scale-105";
+  "p-8 rounded-lg shadow-lg transform transition duration-500 hover:scale-105";
 
 export default function DocCard({ title, description, className = "", titleClassName = "" }) {
   return (
-    <div className={`${baseCardClass} ${className}`.trim()}>
+    <div className={`flex flex-col items-center ${baseCardClass} ${className}`.trim()}>
       <h3 className={`text-2xl font-bold text-gray-900  mb-4 ${titleClassName}`.trim()}>
         {title}
       </h3>

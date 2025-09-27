@@ -21,15 +21,15 @@ const poppins = Poppins({
 
 
 export const metadata: Metadata = {
-  title: "ETTI — Engenharia & Tecnologia",
-  description: "Projetos, automação, segurança e documentação técnica com excelência.",
+  title: "ETTI — Engenharia & Projetos",
+  description: "Projetos e inspeções de instalações elétricas, sistemas de segurança, automação e mais.",
   icons: {
     icon: "/assets/ettiIcon2.ico",
     shortcut: "/assets/ettiIcon2.svg",
     apple: "/assets/ettiIcon2.svg",
   },
   openGraph: {
-    title: "ETTI — Engenharia & Tecnologia",
+    title: "ETTI — Engenharia & Projetos",
   },
 };
 
