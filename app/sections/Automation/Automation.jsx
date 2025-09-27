@@ -8,7 +8,7 @@ import Image from "next/image";
 
 const Automation = () => {
   return (
-    <section className="relative py-16  w-screen max-w-screen overflow-hidden min-h-screen" id="automation">
+  <section className="relative py-16 w-full overflow-hidden min-h-screen" id="automation">
       <Image
         src="/assets/automation-bg.png"
         alt="Background"

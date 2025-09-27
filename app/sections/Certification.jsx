@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const Certification = () => {
   return (
-    <section className="py-16 bg-[#F1F2F2] lg:h-screen w-screen max-w-screen" id="certification">
+  <section className="py-16 bg-[#F1F2F2] lg:h-screen w-full" id="certification">
       <div className="flex flex-col lg:flex-row w-full px-6">
       
         <div>

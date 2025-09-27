@@ -8,7 +8,7 @@ import DocCard from "./DocCard";
 
 const Documentation = () => {
   return (
-    <section className="relative py-16 w-screen max-w-screen h-full lg:h-screen overflow-hidden " id="documentation">
+  <section className="relative py-16 w-full h-full lg:h-screen overflow-hidden " id="documentation">
       <Image
         src="/assets/doc-bg2.png"
         alt="Background"

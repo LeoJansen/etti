@@ -3,7 +3,7 @@
 
 const Contact = () => {
   return (
-    <section className="py-16 bg-[#0a0a0a] w-screen max-w-screen overflow-hidden" id="contact">
+  <section className="py-16 bg-[#0a0a0a] w-full overflow-hidden" id="contact">
       <div className="container mx-auto px-6 text-center">
         <h2 className="text-4xl font-extrabold text-gray-900 dark:text-white mb-4">
           Contacte-nos

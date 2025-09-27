@@ -17,16 +17,16 @@ const About = () => {
         <div className="flex flex-col md:flex-row w-full h-full justify-center items-center md:space-x-12">
 
           <div className="w-full h-full md:w-1/2 flex items-center mb-8 md:mb-0">
-            <div className="relative w-full h-96 rounded-lg overflow-hidden shadow-lg">
+            
               <Image
-                src="/assets/about3.png"
+                src="/assets/about2.png"
                 alt="Equipe da Etti Project em reunião"
-                fill
+               
                 quality={100}
-                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 600px"
-                style={{ objectFit: 'cover' }}
+                width={864}
+                height={1184}
               />
-            </div>
+            
           </div>
           <div className="md:w-1/2 h-full flex flex-col justify-center items-center">
 

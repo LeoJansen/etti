@@ -41,7 +41,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-         className={`${openSans.variable} ${poppins.variable}antialiased`}
+         className={`${openSans.variable} ${poppins.variable} antialiased`}
       >
         {children}
       </body>

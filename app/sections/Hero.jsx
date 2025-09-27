@@ -8,7 +8,7 @@ export default function Hero() {
 
 
   return (
-    <section className="relative max-w-screen w-screen h-screen  text-white flex items-center justify-start overflow-hidden">
+  <section className="relative w-full h-screen  text-white flex items-center justify-start overflow-hidden">
 
 
       

@@ -11,7 +11,7 @@ import Contact from "./sections/Contact";
 
 const App = () => {
   return (
-    <div className="relative max-w-screen w-screen h-full overflow-hidden">
+    <div className="relative w-full h-full overflow-hidden">
       <Hero />
       <About />
       <Services />
