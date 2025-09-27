@@ -8,11 +8,11 @@ const About = () => {
         <div className='p-4 rounded-[4px]    mb-16 flex flex-col justify-start w-full'>
 
           <div className='flex gap-4 items-center'>
-            <h3 className="text-[30px] md:text-[40px] font-bold text-[#EB9948] tracking-tight uppercase">Sobre a Etti</h3>
+            <h3 className="text-[30px] md:text-[40px]  text-[#EB9948] tracking-tight uppercase">Sobre a Etti</h3>
             <div className='h-[8px] w-[165px] bg-[#4991EB]' />
           </div>
 
-          <h2 className="text-[48px] md:text-[70px] lg:text-[95px] tracking-[-0.08em]  font-regular leading-14  mb-6 text-[#565555] ">Quem somos e a nossa missão</h2>
+          <h2 className="text-[48px] md:text-[70px] lg:text-[95px] tracking-[-0.08em]  font-extralight leading-14  mb-6 text-[#929292] ">Quem somos e a nossa missão</h2>
         </div>
         <div className="flex flex-col md:flex-row w-full h-full justify-center items-center md:space-x-12">
 
