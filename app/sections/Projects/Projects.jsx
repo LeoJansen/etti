@@ -22,7 +22,7 @@ const projects = [
 
 const Projects = () => {
   return (
-    <section id="projects" className="bg-gray-100 py-20 w-screen lg:h-screen px-4 max-w-screen overflow-hidden">
+    <section id="projects" className="bg-[#F1F1F1] py-20 w-screen lg:h-screen px-4 max-w-screen overflow-hidden">
       <div className="container mx-auto text-center">
         <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
           Projetos de Instalação Elétrica

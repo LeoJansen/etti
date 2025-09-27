@@ -2,15 +2,25 @@
 import React from 'react';
 import AutomationCard from './AutomationCard';
 import { automationContent } from './AutomationContent';
+import Image from "next/image";
 
 
 
 const Automation = () => {
   return (
-    <section className="py-16 bg-[#0a0a0a] w-screen max-w-screen overflow-hidden min-h-screen" id="automation">
-      <div className="container mx-auto px-6">
+    <section className="relative py-16  w-screen max-w-screen overflow-hidden min-h-screen" id="automation">
+      <Image
+        src="/assets/automation-bg.png"
+        alt="Background"
+        fill
+        style={{ objectFit: "cover", objectPosition: "center" }}
+        quality={100}
+        className='-z-10'
+
+      />
+      <div className="container mx-auto px-6 z-200">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-extrabold text-gray-900 dark:text-white">
+          <h2 className="text-4xl font-extrabold text-white">
             Automação Residencial com KNX
           </h2>
           <p className="mt-4 text-lg text-gray-600 dark:text-gray-400">
