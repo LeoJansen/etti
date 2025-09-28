@@ -2,19 +2,31 @@
 
 import Image from 'next/image'
 import React from 'react'
+import IconServices1 from '../../components/icons/IconServices1'
+import IconServices2 from '../../components/icons/IconServices2'
+import IconServices3 from '../../components/icons/IconServices3'
+import IconServices4 from '../../components/icons/IconServices4'
 
-const ServiceCard = ({ imageSrc, imageAlt, title, description }) => {
+const ICON_COMPONENTS = {
+  services1: IconServices1,
+  services2: IconServices2,
+  services3: IconServices3,
+  services4: IconServices4
+}
+
+const ServiceCard = ({  title, description, icon, iconColor, iconSize }) => {
+  const IconComponent = icon?.name ? ICON_COMPONENTS[icon.name] : null
+
   return (
     <div className="service-card flex flex-col  p-2 md:p-6  md:py-6 items-center h-full w-full  rounded-[6px]  duration-300  gap-6 md:gap-0  bg-[#040404] z-10 ">
       <div className='flex w-full md:ml-8 justify-start items-start'>
-        <Image 
-          src={imageSrc} 
-          alt={imageAlt} 
-          quality={100} 
-          width={500} 
-          height={500} 
-          className='service-image w-18 h-18 lg:w-15 lg:h-15 rounded-tl-[20px] drop-shadow-[1.1582px_1.1582px_0.51px_rgba(255,255,255,0.95)]' 
-        /> 
+          <IconComponent
+            color={iconColor}
+            size={iconSize ?? 72}
+            title={icon?.title}
+            className='drop-shadow-[1.1582px_1.1582px_0.51px_rgba(255,255,255,0.95)]'
+          />
+       
       </div>
       <div className='w-full h-full xl:w-3/4 flex flex-col gap-8 justify-center items-center  rounded-[6px] p-8 md:px-0 md:py-2'>
         <div className='h-10 w-full flex flex-col justify-center text-[20px] text-[hsl(28,80%,60%)] font-normal text-center  leading-6'>
@@ -25,7 +37,7 @@ const ServiceCard = ({ imageSrc, imageAlt, title, description }) => {
           ))}
         </div>
         <div className='flex w-full h-full'>
-          <p className=" text-[16px] tracking-wide">
+          <p className=" text-[16px] tracking-wide text-[#8d8d8d]">
             {description}
           </p>
         </div>
