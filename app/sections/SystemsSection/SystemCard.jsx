@@ -13,7 +13,7 @@ const SystemCard = ({index, title, description, className = '', children }) => {
  
 
   return (
-    <div className={` p-8   flex w-full h-full flex-col justify-center ${index % 2 === 0 ? 'bg-[#0a0a0a] ' : 'bg-[#ffffff] '}`.trim()}>
+    <div className={` p-8   flex w-full h-full flex-col justify-center bg-[#ffffff]`.trim()}>
         <div className='flex flex-col gap-6 justify-start items-center  w-full h-[300px]'>
       {title && (
         <h3 className={`text-2xl font-bold ${index % 2 ==! 0 ? 'text-[#0a0a0a] ' : 'text-[#ffffff] '}`}>{title}</h3>

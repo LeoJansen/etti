@@ -11,7 +11,7 @@ const Documentation = () => {
   return (
     <section className="relative py-16 w-full h-full lg:h-screen overflow-hidden " id="documentation">
       <Image
-        src="/assets/doc-bg2.png"
+        src="/assets/doc-bg.png"
         alt="Background"
         fill
         style={{ objectFit: "cover", objectPosition: "center" }}
