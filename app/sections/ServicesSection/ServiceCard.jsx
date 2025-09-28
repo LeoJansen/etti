@@ -18,8 +18,8 @@ const ServiceCard = ({  title, description, icon, iconColor, iconSize }) => {
   const IconComponent = icon?.name ? ICON_COMPONENTS[icon.name] : null
 
   return (
-    <div className="service-card flex flex-col  p-2 md:p-6  md:py-6 items-center h-full w-full  rounded-[6px]  duration-300  gap-6 md:gap-0  bg-[#040404] z-10 ">
-      <div className='flex w-full md:ml-8 justify-start items-start'>
+    <div className="service-card flex flex-col  items-center h-full w-full  rounded-[6px]  duration-300  gap-2 md:gap-0  bg-[#040404] z-10 ">
+      <div className='flex w-full md:ml-8 justify-start items-start px-6 mt-6'>
           <IconComponent
             color={iconColor}
             size={iconSize ?? 72}
@@ -28,7 +28,7 @@ const ServiceCard = ({  title, description, icon, iconColor, iconSize }) => {
           />
        
       </div>
-      <div className='w-full h-full xl:w-3/4 flex flex-col gap-8 justify-center items-center  rounded-[6px] p-8 md:px-0 md:py-2'>
+      <div className='w-full h-full xl:w-3/4 flex flex-col  md:gap-8 justify-center items-center  rounded-[6px]  '>
         <div className='h-10 w-full flex flex-col justify-center text-[20px] text-[hsl(28,80%,60%)] font-normal text-center  leading-6'>
           {title.map((line, index) => (
             <h3 key={index} className="">
