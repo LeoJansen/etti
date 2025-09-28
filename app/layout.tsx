@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Open_Sans, Poppins, Encode_Sans_SC, Oxanium, Michroma } from "next/font/google";
+import { Open_Sans, Poppins } from "next/font/google";
 import "./globals.css";
 
 
