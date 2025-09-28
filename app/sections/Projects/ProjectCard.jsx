@@ -8,14 +8,7 @@ const ProjectCard = ({ title, description, imageSrc }) => {
       <div className='p-1'>
 
       
-      <Image
-        src="/assets/steelText.png"
-        alt={title}
-        fill
-        quality={100}
-        sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
-        className=" object-cover "
-      />
+   
       <div>
          <div className="relative h-64 w-full">
         <Image
