@@ -20,13 +20,13 @@ const Services = () => {
 
       />
       <div className="flex flex-col w-full h-full items-center justify-center  py-16">
-        <div className='bg-[#040404] place-self-end'>
+        <div className='bg-[#040404] place-self-end p-8 rounded-l-[6px]'>
           <div className='flex gap-4 items-center'>
-            <div className='h-[8px] w-[165px] bg-[#4991EB]' />
-            <h3 className="text-[30px] md:text-[40px] font-bold text-[#EB9948] tracking-tight uppercase">Nossos</h3>
+            <div className='h-[7px] w-[145px] rounded-[1.5px] bg-[#4991EB]' />
+            <h3 className="text-[30px] md:text-[40px] font-semibold text-[#EB9948] tracking-tight uppercase">Nossos</h3>
 
           </div>
-          <h2 className="text-[48px] md:text-[70px] lg:text-[95px] tracking-[-0.08em]  font-regular leading-14  mb-6 text-[#565555] ">
+          <h2 className="text-[48px] md:text-[70px] lg:text-[95px] tracking-[-0.08em]  font-extralight leading-14  mb-6 text-[#c2c2c2] ">
             Serviços
           </h2>
         </div>

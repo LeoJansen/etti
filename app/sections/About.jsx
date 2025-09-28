@@ -5,14 +5,14 @@ const About = () => {
   return (
     <section className="py-16 bg-gray-50 min-h-screen max-w-screen overflow-hidden z-120" id="about">
       <div className="flex flex-col w-full h-full px-4 md:px-8 lg:px-16 text-[#313131] ">
-        <div className='p-4 rounded-[4px]    mb-16 flex flex-col justify-start w-full'>
+        <div className='p-4 rounded-[4px]    mb-4 md:mb-8 flex flex-col justify-start w-full'>
 
-          <div className='flex gap-4 items-center'>
-            <h3 className="text-[30px] md:text-[40px]  text-[#EB9948] tracking-tight uppercase">Sobre a Etti</h3>
-            <div className='h-[8px] w-[165px] bg-[#4991EB]' />
+          <div className='flex gap-6 md:gap-8 items-center'>
+            <h3 className="text-[35px] md:text-[40px]  text-[#EB9948] leading-10 md:leading-14 font-semibold tracking-tight uppercase">Sobre a Etti</h3>
+            <div className='h-[7px] w-[70px] md:w-[165px] rounded-[1.5px] bg-[#4991EB]' />
           </div>
 
-          <h2 className="text-[48px] md:text-[70px] lg:text-[95px] tracking-[-0.08em]  font-extralight leading-14  mb-6 text-[#929292] ">Quem somos e a nossa missão</h2>
+          <h2 className="text-[48px] md:text-[70px] lg:text-[95px] tracking-[-0.08em]  font-extralight leading-11 md:leading-14  mb-6 text-[#929292] ">Quem somos e a nossa missão</h2>
         </div>
         <div className="flex flex-col md:flex-row w-full h-full justify-center items-center md:space-x-12">
 

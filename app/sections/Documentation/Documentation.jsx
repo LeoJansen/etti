@@ -21,11 +21,18 @@ const Documentation = () => {
 
       <div className=" px-6">
         <div className="flex w-full flex-col items-center">
-          <div className="flex flex-col items-center">
-            <h2 className="text-[80px] tracking-[-0.05em] font-light  text-[#929292] mb-4">
-              Documentação Técnica
+          <div className="flex flex-col items-end  self-end ">
+
+            <h2 className="lg:text-[80px] text-[40px] tracking-[-0.05em] font-light  text-[#656565] ">
+              Documentação
             </h2>
-            <h3>Completa</h3>
+            <h2 className="lg:text-[80px] text-[40px] tracking-[-0.05em] font-light  text-[#656565] leading-4">
+              Técnica
+            </h2>
+            <div className="flex gap-4 items-center">
+              <div className='h-[7px] w-[125px] rounded-[1.5px] bg-[#4991EB]' />
+              <h3 className="lg:text-[40px] text-[30px] tracking-[-0.03em] font-semibold uppercase  text-[#EB9948] leading-20">Completa</h3>
+            </div>
 
           </div>
 
