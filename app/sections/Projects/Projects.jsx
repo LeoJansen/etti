@@ -22,16 +22,19 @@ const projects = [
 
 const Projects = () => {
   return (
-  <section id="projects" className="bg-[#F1F1F1] py-20 w-full lg:h-screen px-4 overflow-hidden">
-      <div className="container mx-auto text-center">
-        <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
-          Projetos de Instalação Elétrica
+  <section id="projects" className="bg-[#F1F1F1] py-10 w-full lg:h-screen px-4 overflow-hidden">
+      <div className="flex flex-col items-center justify-center px-[2%] ">
+        <h3 className="text-[22px]  font-bold text-gray-800 mb-4">
+          Projetos de
+        </h3>
+           <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+         Instalação Elétrica
         </h2>
         <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-12">
           Desenvolvemos soluções elétricas personalizadas para habitação, edifícios e espaços comerciais, seguindo rigorosamente as normas técnicas e de segurança mais atuais.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-15 md:gap-10">
           {projects.map((project) => (
             <ProjectCard
               key={project.title}

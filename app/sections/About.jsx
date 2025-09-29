@@ -9,7 +9,7 @@ const About = () => {
 
           <div className='flex gap-6 md:gap-8 items-center'>
             <h3 className="text-[35px] md:text-[40px]  text-[#EB9948] leading-10 md:leading-14 font-semibold tracking-tight uppercase">Sobre a Etti</h3>
-            <div className='h-[7px] w-[70px] md:w-[165px] rounded-[1.5px] bg-[#4991EB]' />
+            <div className='h-[6px] w-[70px] md:w-[165px] rounded-[1.5px] bg-[#4991EB]' />
           </div>
 
           <h2 className="text-[48px] md:text-[70px] lg:text-[95px] tracking-[-0.08em]  font-extralight leading-11 md:leading-14  mb-6 text-[#929292] ">Quem somos e a nossa missão</h2>

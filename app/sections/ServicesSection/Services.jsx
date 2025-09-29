@@ -20,9 +20,9 @@ const Services = () => {
 
       />
       <div className="flex flex-col w-full h-full  py-16">
-        <div className='flex flex-col justify-end items-end bg-[#00000091] backdrop-blur-[40px] shadow-[0_2px_2px_2px_rgba(20,20,20,0.8)] place-self-end  p-8 px-16 rounded-l-[6px] '>
+        <div className='flex flex-col justify-end items-end bg-[#00000091] backdrop-blur-[40px] shadow-[0_2px_2px_2px_rgba(20,20,20,0.4)] place-self-end  p-8 px-16 rounded-l-[6px] '>
           <div className='flex w-full justify-end gap-4 items-center '>
-            <div className='h-[7px] w-[70px] md:w-[145px] rounded-[1.5px] bg-[#4991EB]' />
+            <div className='h-[6px] w-[70px] md:w-[145px] rounded-[1.5px] bg-[#4991EB]' />
             <h3 className="text-[35px] md:text-[40px] font-semibold text-[#EB9948] tracking-tight uppercase">Nossos</h3>
 
           </div>

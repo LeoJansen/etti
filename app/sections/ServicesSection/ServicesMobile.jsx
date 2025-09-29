@@ -6,6 +6,7 @@ import { gsap } from 'gsap'
 import { useGSAP } from '@gsap/react'
 import ServiceCard from './ServiceCard'
 import { servicesData } from './ServicesContent'
+import { BiSolidChevronLeftSquare, BiSolidChevronRightSquare, } from 'react-icons/bi'
 
 gsap.registerPlugin(useGSAP)
 
@@ -99,7 +100,7 @@ const ServicesMobile = () => {
   return (
     <section id="services" className="flex md:hidden relative md:h-screen w-full min-h-screen max-w-screen overflow-hidden">
       <Image
-        src="/assets/servicesBgMobile.png"
+        src="/assets/servicesBgMobile3.png"
         alt="Background Gradient"
         fill                                                     
         style={{ objectFit: 'cover', objectPosition: 'left center' }}
@@ -111,7 +112,7 @@ const ServicesMobile = () => {
       <div className="flex flex-col w-full h-full items-center justify-end py-8">
         <div className='flex flex-col justify-end items-end bg-[#00000001] backdrop-blur-[40px] shadow-[0_2px_2px_2px_rgba(20,20,20,0.2)]  place-self-end p-1.5 px-7 md:p-8 md:px-16 rounded-l-[6px]'>
           <div className='flex w-full justify-end gap-4 items-center'>
-            <div className='h-[7px] w-[70px] md:w-[145px] rounded-[1.5px] bg-[#4991EB]' />
+            <div className='h-[6px] w-[70px] md:w-[145px] rounded-[1.5px] bg-[#4991EB]' />
             <h3 className="text-[35px] md:text-[40px] font-semibold text-[#EB9948] tracking-tight uppercase">Nossos</h3>
 
           </div>
@@ -126,18 +127,21 @@ const ServicesMobile = () => {
               <button
                 type="button"
                 onClick={() => handleManualNavigation(activeIndex - 1)}
-                className="rounded-full   bg-[#EB7D49] text-white w-[40px] h-[40px] text-3xl font-bold leading-none shadow-[0_2px_4px_rgba(20,20,20,0.8)]  transition border-[#EB7D49] border-3  "
+                className=" text-[#888888]   transition   "
                 aria-label="Slide anterior"
               >
-                ‹
+               <BiSolidChevronLeftSquare className='w-[37px] h-[37px]' />
+
               </button>
               <button
                 type="button"
                 onClick={() => handleManualNavigation(activeIndex + 1)}
-                className="rounded-full   bg-[#EB7D49] text-white w-[40px] h-[40px] text-3xl font-bold leading-none shadow-[0_2px_4px_rgba(20,20,20,0.8)] transition border-[#EB7D49] border-3  "
+               className=" text-[#888888]    transition   "
                 aria-label="Próximo slide"
               >
-                ›
+            
+            <BiSolidChevronRightSquare className='w-[37px] h-[37px]' />
+
               </button>
             </div>
           )}

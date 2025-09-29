@@ -18,10 +18,10 @@ const ServiceCard = ({  title, description, icon, iconColor, iconSize }) => {
   const IconComponent = icon?.name ? ICON_COMPONENTS[icon.name] : null
 
   return (
-    <div className="service-card flex flex-col  items-center h-full self-end pb-8 md:h-3/4 w-full  rounded-[6px]  duration-300  gap-2 md:gap-0  bg-[#00000091] backdrop-blur-[40px] shadow-[0_2px_4px_2px_rgba(20,20,20,0.8)] z-10 ">
+    <div className="service-card flex flex-col  items-center h-full self-end pb-8 md:h-3/4 w-full  rounded-[2px]  duration-300  gap-2 md:gap-0  bg-[#00000095] backdrop-blur-[40px] shadow-[0_2px_4px_2px_rgba(20,20,20,0.5)] z-10 ">
       <div className='flex w-full justify-start items-end  mt-6'>
-        <div className='bg-[#888888] h-[7px] w-[238px] rounded-r-[2px]'/>
-        <div className='flex w-[calc(100%-238px)] justify-center  items-end '>
+        <div className='bg-[#888888] h-[6px] w-full rounded-r-[2px]'/>
+        <div className='flex w-15 h-15  mb-3 mx-4 justify-center  items-end '>
           <IconComponent
             color={iconColor}
             size={iconSize ?? 72}
