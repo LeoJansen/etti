@@ -18,18 +18,23 @@ const ServiceCard = ({  title, description, icon, iconColor, iconSize }) => {
   const IconComponent = icon?.name ? ICON_COMPONENTS[icon.name] : null
 
   return (
-    <div className="service-card flex flex-col  items-center h-full w-full  rounded-[6px]  duration-300  gap-2 md:gap-0  bg-[#040404] z-10 ">
-      <div className='flex w-full md:ml-8 justify-start items-start px-6 mt-6'>
+    <div className="service-card flex flex-col  items-center h-full self-end pb-8 md:h-3/4 w-full  rounded-[6px]  duration-300  gap-2 md:gap-0  bg-[#00000091] backdrop-blur-[40px] shadow-[0_2px_4px_2px_rgba(20,20,20,0.8)] z-10 ">
+      <div className='flex w-full justify-start items-end  mt-6'>
+        <div className='bg-[#888888] h-[7px] w-[238px] rounded-r-[2px]'/>
+        <div className='flex w-[calc(100%-238px)] justify-center  items-end '>
           <IconComponent
             color={iconColor}
             size={iconSize ?? 72}
             title={icon?.title}
             className='drop-shadow-[1.1582px_1.1582px_0.51px_rgba(255,255,255,0.95)]'
           />
+
+        </div>
+          
        
       </div>
-      <div className='w-full h-full xl:w-3/4 flex flex-col  md:gap-8 justify-center items-center  rounded-[6px]  '>
-        <div className='h-10 w-full flex flex-col justify-center text-[20px] text-[hsl(28,80%,60%)] font-normal text-center  leading-6'>
+      <div className='w-full h-full flex flex-col  gap-8 justify-center items-center  rounded-[6px]  px-8'>
+        <div className='h-10 w-full flex flex-col justify-center text-[20px] text-[#EB7D49] font-medium text-center  leading-6  pt-6'>
           {title.map((line, index) => (
             <h3 key={index} className="">
               {line}

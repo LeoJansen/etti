@@ -8,6 +8,7 @@ import Automation from "./sections/Automation/Automation";
 import SystemsSection from "./sections/SystemsSection/SystemsSection";
 import WhyEtti from "./sections/WhyEtti";
 import Contact from "./sections/Contact";
+import ServicesMobile from "./sections/ServicesSection/ServicesMobile";
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
       <Hero />
       <About />
       <Services />
+      <ServicesMobile />
       <Projects />
       <Documentation />
       <Certification />
