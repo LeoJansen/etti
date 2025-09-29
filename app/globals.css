@@ -11,16 +11,27 @@
   --color-foreground: var(--foreground);
 
 }
+
 /* Services section card backgrounds */
 
 /* Headings use Poppins */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-title), ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
 }
 
 /* Optional helpers */
-.font-title { font-family: var(--font-title), ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial; }
-.font-body { font-family: var(--font-sans), system-ui, -apple-system, Segoe UI, Roboto, Arial, Noto Sans; }
+.font-title {
+  font-family: var(--font-title), ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+}
+
+.font-body {
+  font-family: var(--font-sans), system-ui, -apple-system, Segoe UI, Roboto, Arial, Noto Sans;
+}
 
 
 body {
@@ -28,7 +39,7 @@ body {
   --font-title: var(--font-poppins);
   --font-sans: var(--font-open-sans);
 
-   
+
 
   background: var(--background);
   color: var(--foreground);
@@ -37,18 +48,19 @@ body {
 
 .text-color-main {
   color: var(--mainColor);
-} 
+}
 
 
 .metalicCards {
-  background-image: linear-gradient(rgba(31, 31, 31, 0.825), rgba(36, 36, 36, 0.725)), /* ajuste a opacidade */
+  background-image: linear-gradient(rgba(31, 31, 31, 0.825), rgba(36, 36, 36, 0.725)),
+    /* ajuste a opacidade */
     url('/assets/steelText3.png');
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
   object-fit: cover;
   object-position: center;
- 
+
 
 
 }
@@ -76,18 +88,18 @@ body {
   /* background-size: cover;  or contain for patterns */
 
   font-family: var(--font-display-title), system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  
- 
+
+
   color: rgba(100, 100, 100, 0.63);
-  
-  
+
+
   text-shadow: 1px 1px 15px rgba(230, 230, 255, 0.651);
- 
-  
- 
+
+
+
   text-transform: none;
 
-    
+
 
 }
 
@@ -99,7 +111,15 @@ body {
 }
 
 /* Optional helper for display font usage */
-.font-display { font-family: var(--font-display), system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+.font-display {
+  font-family: var(--font-display), system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
 
 
-
+.projects-section {
+background: #E7E7E7;
+background: -webkit-linear-gradient(90deg, rgba(231, 231, 231, 1) 0%, rgba(254, 254, 254, 1) 50%, rgba(242, 242, 242, 1) 100%);
+background: -moz-linear-gradient(90deg, rgba(231, 231, 231, 1) 0%, rgba(254, 254, 254, 1) 50%, rgba(242, 242, 242, 1) 100%);
+background: linear-gradient(90deg, rgba(231, 231, 231, 1) 0%, rgba(254, 254, 254, 1) 50%, rgba(242, 242, 242, 1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#E7E7E7", endColorstr="#F2F2F2", GradientType=1);
+}

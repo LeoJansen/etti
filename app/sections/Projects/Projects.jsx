@@ -22,15 +22,20 @@ const projects = [
 
 const Projects = () => {
   return (
-  <section id="projects" className="bg-[#F1F1F1] py-10 w-full lg:h-screen px-4 overflow-hidden">
-      <div className="flex flex-col items-center justify-center px-[2%] ">
-        <h3 className="text-[22px]  font-bold text-gray-800 mb-4">
+  <section id="projects" className="projects-section py-16 w-full  px-4 overflow-hidden">
+      <div className="flex flex-col items-start justify-center px-[2%] ">
+        <div className='flex gap-4 items-center '>
+          <div className='h-[4px] w-20 bg-[#4991EB] '/>
+          <h3 className="text-[35px] md:text-[40px] font-semibold text-[#EB9948] tracking-tight uppercase">
           Projetos de
         </h3>
-           <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+
+        </div>
+        
+           <h2 className="text-[70px] lg:text-[95px] tracking-[-0.08em]  font-extralight leading-14  mb-6 text-[#8f8f8f] ">
          Instalação Elétrica
         </h2>
-        <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-12">
+        <p className="text-lg text-gray-600 max-w-3xl mx-auto my-12">
           Desenvolvemos soluções elétricas personalizadas para habitação, edifícios e espaços comerciais, seguindo rigorosamente as normas técnicas e de segurança mais atuais.
         </p>
 
