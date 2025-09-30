@@ -25,7 +25,7 @@ const Projects = () => {
   <section id="projects" className="projects-section py-16 w-full  px-4 overflow-hidden">
       <div className="flex flex-col items-start justify-center px-[2%] ">
         <div className='flex gap-4 items-center '>
-          <div className='h-[4px] w-20 bg-[#4991EB] '/>
+          <div className='h-[4px] w-15 md:w-20 bg-[#4991EB] '/>
           <h3 className="text-[35px] md:text-[40px] font-semibold text-[#EB9948] tracking-tight uppercase">
           Projetos de
         </h3>
