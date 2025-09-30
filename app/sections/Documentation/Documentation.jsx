@@ -65,6 +65,9 @@ const Documentation = () => {
               description={card.description}
               className={card.className}
               titleClassName={card.titleClassName}
+              icon={card.icon}
+              
+              iconSize={card.iconSize}
             />
           ))}
 

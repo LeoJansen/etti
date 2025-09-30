@@ -1,29 +1,43 @@
-          
-          export const documentationCards = [
-            {
-              title: "Ficha Eletrotécnica",
-              description:
-                "Documento oficial com especificações técnicas detalhadas da instalação elétrica. Essencial para licenciamentos.",
-              className: "bg-[#E7E7E7]",
-            },
 
-            {
-              title: "Memória Descritiva",
-              description:
-                "Contém cálculos de dimensionamento pormenorizados e justificação técnica de todas as soluções implementadas.",
-              className: "bg-[#EFEFEF]",
-            },
+export const documentationCards = [
+  {
+    title: "Ficha Eletrotécnica",
+    description:
+      "Documento oficial com especificações técnicas detalhadas da instalação elétrica. Essencial para licenciamentos.",
+    className: "bg-[#E7E7E7]",
+    icon: {
+      name: "services1",
 
-            {
-              title: "Termo de Responsabilidade",
-              description:
-                "Emissão de termo de responsabilidade técnica pelo projeto, garantindo conformidade regulamentar.",
-              className: "bg-[#EFEFEF]",
-            },
-          ];
+      title: "Ícone de instalações elétricas"
+    },
+  },
 
-          
-          
+  {
+    title: "Memória Descritiva",
+    description:
+      "Contém cálculos de dimensionamento pormenorizados e justificação técnica de todas as soluções implementadas.",
+    className: "bg-[#EFEFEF]",
+    icon: {
+      name: "services1",
 
-          
-          
+      title: "Ícone de instalações elétricas"
+    },
+  },
+
+  {
+    title: "Termo de Responsabilidade",
+    description:
+      "Emissão de termo de responsabilidade técnica pelo projeto, garantindo conformidade regulamentar.",
+    className: "bg-[#EFEFEF]",
+    icon: {
+      name: "services1",
+
+      title: "Ícone de instalações elétricas"
+    },
+  },
+];
+
+
+
+
+
