@@ -155,7 +155,8 @@ const ServicesMobile = () => {
                     description={service.description}
                     icon={service.icon}
                     iconColor="#EB9948"
-                    iconSize={55}
+                       iconWidth={service.icon.iconWidth}
+              iconHeight={service.icon.iconHeight}
                   />
                 </article>
               ))}

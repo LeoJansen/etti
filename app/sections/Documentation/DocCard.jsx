@@ -2,20 +2,11 @@
 
 import Image from 'next/image'
 import React from 'react'
-import IconServices1 from '../../components/icons/IconServices1'
-import IconServices2 from '../../components/icons/IconServices2'
-import IconServices3 from '../../components/icons/IconServices3'
-import IconServices4 from '../../components/icons/IconServices4'
 
-const ICON_COMPONENTS = {
-  services1: IconServices1,
-  services2: IconServices2,
-  services3: IconServices3,
-  services4: IconServices4
-}
+
+
 
 const DocCard = ({  title, description, icon,  iconSize }) => {
-  const IconComponent = icon?.name ? ICON_COMPONENTS[icon.name] : null
 
   return (
     <div className="flex flex-col  items-center h-full self-end pb-12  w-full  rounded-[2px]  duration-300  gap-2 md:gap-0  bg-[#e4e4e4] backdrop-blur-[40px] shadow-[0_2px_4px_2px_rgba(20,20,20,0.15)] z-10 ">
@@ -23,17 +14,13 @@ const DocCard = ({  title, description, icon,  iconSize }) => {
         <div className='flex flex-col gap-2 w-full h-full justify-center'>
           
         <div className='bg-[#bebebe] h-[3px] w-full rounded-r-[2px]'/>
+        
        
 
         </div>
         
         <div className='flex w-15 h-15  mb-3 mx-8 justify-center  items-end '>
-          <IconComponent
-            color="rgba(150, 150, 150, 1)"
-            size={iconSize ?? 72}
-            title={icon?.title}
-            className='drop-shadow-[1.1582px_1.1582px_0.51px_rgba(255,255,255,0.95)]'
-          />
+      
 
         </div>
           

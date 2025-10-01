@@ -40,8 +40,11 @@ const Services = () => {
               title={service.title}
               description={service.description}
               icon={service.icon}
+              iconPath={service.icon.path}
               iconColor ="#EB9948"
-              iconSize={55}
+              iconWidth={service.icon.iconWidth}
+              iconHeight={service.icon.iconHeight}
+                pulseOffset={index}
 
             />
           ))}

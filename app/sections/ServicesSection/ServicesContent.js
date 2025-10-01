@@ -3,7 +3,10 @@
       icon: {
         name: "services1",
      
-        title: "Ícone de instalações elétricas"
+        title: "Ícone de instalações elétricas",
+        path: "/assets/iconServices1.svg",
+        iconWidth: 45,
+        iconHeight: 45
       },
   
       imageAlt: "Eletricista",
@@ -13,8 +16,11 @@
      {
         icon: {
         name: "services2",
-  
-        title: "Ícone de instalações elétricas"
+        title: "Ícone de instalações elétricas",
+        path: "/assets/iconServices2.svg",
+        iconWidth: 50,
+        iconHeight: 50
+
       },
     
       imageAlt: "Certificação Técnica",
@@ -25,8 +31,10 @@
     {
         icon: {
         name: "services3",
-    
-        title: "Ícone de instalações elétricas"
+        title: "Ícone de instalações elétricas",
+        path: "/assets/iconServices3.svg",
+        iconWidth: 61,
+        iconHeight: 61
       },
     
       imageAlt: "Automação Residencial",
@@ -36,8 +44,10 @@
         {
             icon: {
         name: "services4",
-       
-        title: "Ícone de instalações elétricas"
+        title: "Ícone de instalações elétricas",
+        path: "/assets/iconServices4.svg",
+        iconWidth: 42,
+        iconHeight: 42
       },
      
       imageAlt: "Sistemas de Segurança",
