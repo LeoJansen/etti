@@ -36,9 +36,9 @@ const Documentation = () => {
         className="-z-10 "
       />
 
-      <div className=" px-6 ">
-        <div className="flex w-full flex-col items-center">
-          <div className="flex flex-col items-end  self-end ">
+      <div className=" px-6 flex flex-col gap-[10px] md:gap-[40px]">
+        <div className="flex flex-col w-full md:h-[50vh] md:flex-row-reverse ">
+          <div className="flex flex-col justify-start items-end  ">
 
             <h2 className="lg:text-[80px] text-[40px] tracking-[-0.05em] font-light  text-[#8f8f8f] ">
               Documentação
@@ -52,12 +52,20 @@ const Documentation = () => {
             </div>
 
           </div>
+          <div className="flex w-full h-full justify-center md:justify-start md:items-end ">
+            <div className="flex w-full md:bg-[#464646] md:ml-[-24px] px-2 md:px-12 rounded-r-[4px] md:w-[33vw]">
 
-          <p className="text-lg text-[#363636] my-12">
-            A Etti Engenharia oferece uma documentação técnica completa para garantir que cada projeto esteja em total conformidade com as normas regulamentares. Nossos documentos detalhados e técnicos são essenciais para licenciamentos e garantem a segurança e a qualidade das instalações elétricas.
-          </p>
+              <p className="text-md md:text-[#c4c4c4] my-12 leading-snug  text-justify">
+                A Etti Engenharia oferece uma documentação técnica completa para garantir que cada projeto esteja em total conformidade com as normas regulamentares. Nossos documentos detalhados e técnicos são essenciais para licenciamentos e garantem a segurança e a qualidade das instalações elétricas.
+              </p>
+
+            </div>
+
+          </div>
+
+
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-9 xl:px-[4%]">
           {documentationCards.map((card, index) => (
             <DocCard
               key={index}
@@ -66,7 +74,7 @@ const Documentation = () => {
               className={card.className}
               titleClassName={card.titleClassName}
               icon={card.icon}
-              
+
               iconSize={card.iconSize}
             />
           ))}
