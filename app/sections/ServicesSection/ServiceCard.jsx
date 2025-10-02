@@ -67,7 +67,7 @@ const ServiceCard = ({  title, description, icon, iconWidth, iconHeight, pulseOf
         borderColor: '#D6CDC3'
       })
       .to(iconWrapperRef.current, {
-        filter: 'drop-shadow(0 0 16px rgba(235, 153, 72, 0.85))',
+        filter: 'drop-shadow(0 0 16px rgba(235, 153, 72, 0.45)) drop-shadow(2px 6px 6px rgba(255,233,152,0.50))',
         scale: 1.05
       }, '<')
       .to(dividerRef.current, {
