@@ -28,7 +28,7 @@ const Certification = () => {
             Garantimos a qualidade e a conformidade das suas instalações elétricas com serviços de certificação e vistoria.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 px-10 md:px-[10%]">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12  px-10 md:px-[10%]">
           {certificationCards.map((card) => (
             <CertificationCard
               key={card.title}

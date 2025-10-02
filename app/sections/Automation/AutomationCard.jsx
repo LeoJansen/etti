@@ -13,12 +13,12 @@ import React from 'react';
  */
 const AutomationCard = ({ title, description, className = '', children }) => {
   return (
-    <div className={`${className}`.trim()}>
+    <div className="bg-[#000000] p-8">
       {title && (
-        <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">{title}</h3>
+        <h3 className="text-2xl font-bold text-white mb-4">{title}</h3>
       )}
       {description ? (
-        <p className="text-gray-600 dark:text-gray-400">{description}</p>
+        <p className="text-gray-400">{description}</p>
       ) : (
         children || null
       )}
