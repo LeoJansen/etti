@@ -18,7 +18,7 @@ const Certification = () => {
 
             </div>
             
-          <h2 className="font-extralight tracking-[-0.02em] text-[50px] xl:text-[90px] leading-[1.2]">
+          <h2 className="font-extralight tracking-[-0.032em] text-[50px] xl:text-[90px] leading-[1.2]">
             e Vistoria
           </h2>
 

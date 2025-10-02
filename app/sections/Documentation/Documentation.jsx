@@ -56,7 +56,7 @@ const Documentation = () => {
             <div className="flex w-full md:bg-[#464646] md:ml-[-24px] px-2 md:px-12 rounded-r-[4px] md:w-[33vw]">
 
               <p className="text-md md:text-[#c4c4c4] my-12 leading-snug  text-justify">
-                A Etti Engenharia oferece uma documentação técnica completa para garantir que cada projeto esteja em total conformidade com as normas regulamentares. Nossos documentos detalhados e técnicos são essenciais para licenciamentos e garantem a segurança e a qualidade das instalações elétricas.
+                A <strong className="text-[#EB9948]">Etti Engenharia</strong>  oferece uma documentação técnica completa para garantir que cada projeto esteja em total conformidade com as normas regulamentares. Nossos documentos detalhados e técnicos são essenciais para licenciamentos e garantem a segurança e a qualidade das instalações elétricas.
               </p>
 
             </div>
