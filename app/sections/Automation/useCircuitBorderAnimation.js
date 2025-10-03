@@ -21,7 +21,8 @@ export function useCircuitBorderAnimation(containerRef, {
   highlightDuration = 0.6,
   resetDuration = 0.6,
   intersectionThreshold = 0.35,
-  intersectionRootMargin = "0px"
+  intersectionRootMargin = "0px",
+  shouldActivate = true
 } = {}) {
   useGSAP(() => {
     const container = containerRef.current;
@@ -227,7 +228,16 @@ export function useCircuitBorderAnimation(containerRef, {
       });
     };
 
-    resetCards(0);
+  resetCards(0);
+    hasPlayedWhileVisible = false;
+
+    if (!shouldActivate) {
+      killActiveTimeline();
+      return () => {
+        killActiveTimeline();
+        resetCards(0);
+      };
+    }
 
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -259,6 +269,6 @@ export function useCircuitBorderAnimation(containerRef, {
     };
   }, {
     scope: containerRef,
-    dependencies: [selector, highlightDuration, resetDuration, intersectionThreshold, intersectionRootMargin]
+    dependencies: [selector, highlightDuration, resetDuration, intersectionThreshold, intersectionRootMargin, shouldActivate]
   });
 }

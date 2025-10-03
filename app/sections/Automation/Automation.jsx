@@ -6,6 +6,8 @@ import AutomationCard from './AutomationCard';
 import { automationContent } from './AutomationContent';
 import Image from "next/image";
 import { useCircuitBorderAnimation } from "./useCircuitBorderAnimation";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 const AutomationMobile = dynamic(() => import('./mobile/AutomationMobile'), { ssr: false });
 
@@ -23,13 +25,56 @@ function useIsMobile() {
 const Automation = () => {
    const isMobile = useIsMobile();
    const cardsContainerRef = React.useRef(null);
+   const sectionRef = React.useRef(null);
+   const bgRef = React.useRef(null);
+   const [cardsReady, setCardsReady] = React.useState(false);
 
-   useCircuitBorderAnimation(cardsContainerRef);
+   useCircuitBorderAnimation(cardsContainerRef, { shouldActivate: cardsReady });
+
+   React.useEffect(() => {
+      if (isMobile) {
+         setCardsReady(false);
+      }
+   }, [isMobile]);
+
+   useGSAP(() => {
+      if (isMobile || !sectionRef.current) {
+         return;
+      }
+
+      setCardsReady(false);
+
+      const q = gsap.utils.selector(sectionRef);
+      const cards = q('.automation-card');
+      const timeline = gsap.timeline({ defaults: { ease: 'power2.out' } });
+
+      if (bgRef.current) {
+         gsap.set(bgRef.current, { opacity: 0 });
+         timeline.to(bgRef.current, { opacity: 1, duration: 1.2 }, '+=0.4');
+      }
+
+      if (cards.length) {
+         gsap.set(cards, { autoAlpha: 0});
+         timeline.to(cards, {
+            autoAlpha: 1,
+            duration: 0.8,
+            ease: 'power2.out',
+            stagger: 0.15
+         }, bgRef.current ? '-=0.3' : '+=0.4');
+      }
+
+      timeline.call(() => setCardsReady(true));
+
+      return () => {
+         timeline.kill();
+      };
+   }, { scope: sectionRef, dependencies: [isMobile] });
+
    if (isMobile) {
       return <AutomationMobile />;
    }
    return (
-      <section className="relative  w-full overflow-hidden h-screen" id="automation">
+      <section ref={sectionRef} className="relative  w-full overflow-hidden h-screen" id="automation">
          <div className='flex flex-col bg-black'>
             <div className="text-center my-8 px-6">
                <div className='flex flex-col w-fit items-start justify-center '>
@@ -56,14 +101,15 @@ const Automation = () => {
             <div className='flex w-full h-[20vh] bg-black'>
             </div>
             <div ref={cardsContainerRef} className="relative  w-full h-[80vh] px-6 z-200">
-               <Image
-                  src="/assets/automation-bg.png"
-                  alt="Background"
-                  fill
-                  style={{ objectFit: "cover", objectPosition: "center" }}
-                  quality={100}
-                  className='-z-10'
-               />
+               <div ref={bgRef} className="absolute inset-0 -z-10 opacity-0">
+                  <Image
+                     src="/assets/automation-bg.png"
+                     alt="Background"
+                     fill
+                     style={{ objectFit: "cover", objectPosition: "center" }}
+                     quality={100}
+                  />
+               </div>
 
                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                   {automationContent.map((item, index) => (
@@ -72,7 +118,7 @@ const Automation = () => {
                         title={item.title}
                         description={item.description}
                         icon={item.icon}
-                        className=''
+                        className='opacity-0 translate-y-6'
                      />
                   ))}
                </div>
