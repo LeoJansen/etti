@@ -5,7 +5,7 @@ import { systemsContent } from './SystemsContent';
 
 const SystemsSection = () => {
   return (
-    <section className="min-h-screen h-full md:h-screen w-full flex items-stretch">
+    <section className="relative min-h-screen h-full md:h-screen w-full flex items-stretch">
       <div className="text-center mb-12 absolute">
         <h2 className="text-4xl font-extrabold text-gray-900 dark:text-white">
           Sistemas de Incêndio e Segurança
