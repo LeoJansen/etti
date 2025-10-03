@@ -157,20 +157,7 @@ export function useCircuitBorderAnimation(containerRef, {
         activeTimeline.to(card, {
           boxShadow: HIGHLIGHT_SHADOW
         }, position);
-        if (icon) {
-          activeTimeline.to(icon, {
-            filter: HIGHLIGHT_ICON_FILTER,
-            opacity: 1,
-            scale: 1.01
-          }, "<");
-        }
-
-        if (title) {
-          activeTimeline.to(title, {
-            color: HIGHLIGHT_TITLE_COLOR,
-            textShadow: TITLE_HIGHLIGHT_SHADOW
-          }, "<");
-        }
+     
 
         if (edges) {
           const { top, right, bottom, left } = edges;
@@ -215,6 +202,20 @@ export function useCircuitBorderAnimation(containerRef, {
               ease: "power1.inOut"
             }, ">" );
           }
+             if (icon) {
+          activeTimeline.to(icon, {
+            filter: HIGHLIGHT_ICON_FILTER,
+            opacity: 1,
+            scale: 1.01
+          }, ">");
+        }
+
+        if (title) {
+          activeTimeline.to(title, {
+            color: HIGHLIGHT_TITLE_COLOR,
+            textShadow: TITLE_HIGHLIGHT_SHADOW
+          }, ">");
+        }
         }
       });
 

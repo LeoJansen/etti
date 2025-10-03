@@ -19,7 +19,7 @@ const DocCard = ({  title, description, icon,  iconSize }) => {
             alt={icon.title}
             width={iconSize?.width || 70}
             height={iconSize?.height || 70}
-            className='mx-auto brightness-0 opacity-[0.2] '
+            className='mx-auto brightness-0 opacity-[0.42] '
           />
            <div className='bg-[#bebebe] h-[7px] w-full rounded-l-[2.3px] mr-[-16px] '/>
         

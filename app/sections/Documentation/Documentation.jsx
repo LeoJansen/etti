@@ -26,14 +26,14 @@ const Documentation = () => {
 
 
   return (
-    <section className="relative py-16 w-full h-full lg:h-screen overflow-hidden z-10" id="documentation">
+    <section className="relative py-16 w-full h-full lg:h-screen overflow-hidden z-10 bg-white" id="documentation">
       <Image
         src={backgroundSrc}
         alt="Background"
         fill
         style={{ objectFit: "cover", objectPosition: "center" }}
         quality={100}
-        className="-z-10 "
+        className="-z-10 opacity-30"
       />
 
       <div className=" px-6 flex flex-col gap-[10px] md:gap-[40px]">
