@@ -19,7 +19,7 @@ const About = () => {
           <div className="w-full h-full md:w-1/2 flex items-center mb-8 md:mb-0">
             
               <Image
-                src="/assets/about3.png"
+                src="/assets/about4.png"
                 alt="Equipe da Etti Project em reunião"
                
                 quality={100}
