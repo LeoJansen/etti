@@ -5,7 +5,7 @@ import { certificationCards } from "./CertificationContent";
 
 const Certification = () => {
   return (
-  <section className="py-16 bg-[#F1F2F2] lg:h-screen w-full" id="certification">
+  <section className="py-16 bg-[#FBFBFB] lg:h-screen w-full" id="certification">
       <div className="flex flex-col  w-full ">
       
   
