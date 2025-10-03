@@ -11,8 +11,8 @@ const AutomationMobile = () => {
 
    useCircuitBorderAnimation(cardsContainerRef);
    return (
-      <section className="relative  w-full overflow-hidden min-h-screen md:hidden" id="automation-mobile">
-         <div className='absolute w-full h-[20vh] bg-black -z-10'/>
+      <section className="relative  w-full overflow-hidden min-h-screen md:hidden p-4" id="automation-mobile">
+         <div className='absolute w-full h-[20vh] bg-black -m-4  -z-10'/>
          <Image
             src="/assets/automation-bg.png"
             alt="Background"
@@ -37,7 +37,7 @@ const AutomationMobile = () => {
                   </h3>
                </div>
             </div>
-            <p className="mt-2 text-base text-gray-600 dark:text-gray-400">
+            <p className="mt-2 text-base text-gray-400">
                Transforme sua casa em uma habitação inteligente com nossa expertise em domótica e protocolo KNX, o padrão mundial para automação predial.
             </p>
          </div>
