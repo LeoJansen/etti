@@ -29,7 +29,7 @@ const Automation = () => {
       return <AutomationMobile />;
    }
    return (
-      <section className="relative  w-full overflow-hidden h-screen" id="automation">
+      <section className="relative  w-full overflow-hidden min-h-screen" id="automation">
          <div className='flex flex-col bg-black'>
             <div className="text-center my-8 px-6">
                <div className='flex flex-col w-fit items-start justify-center '>
@@ -65,7 +65,7 @@ const Automation = () => {
                   className='-z-10'
                />
 
-               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+               <div className="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-8">
                   {automationContent.map((item, index) => (
                      <AutomationCard
                         key={index}

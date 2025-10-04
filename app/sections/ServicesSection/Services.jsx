@@ -8,7 +8,7 @@ import { servicesData } from './ServicesContent'
 const Services = () => {
 
   return (
-    <section id="services" className=" hidden md:flex relative  md:h-screen  w-full min-h-screen max-w-screen overflow-hidden">
+    <section id="services" className=" hidden md:flex relative   w-full min-h-screen max-w-screen overflow-hidden">
       <Image
         src="/assets/servicesBgDesk2.png"
         alt="Background Gradient"
@@ -32,7 +32,7 @@ const Services = () => {
         </div>
 
 
-        <div className="w-full h-full grid grid-cols-1 md:grid-cols-4 gap-8  px-10  py-20 text-[#cecece]  ">
+        <div className="w-full h-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8  px-10  py-20 text-[#cecece]  ">
           {servicesData.map((service, index) => (
             <ServiceCard
               key={index}

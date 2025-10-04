@@ -15,34 +15,34 @@ const AutomationCard = forwardRef(function AutomationCard(
       <span className="automation-card-edge automation-card-edge--right pointer-events-none absolute inset-y-0 right-0 w-[3px] rounded-full bg-[#EB994833] origin-top scale-y-0 opacity-0" />
       <span className="automation-card-edge automation-card-edge--bottom pointer-events-none absolute inset-x-0 bottom-0 h-[3px] rounded-full bg-[#EB994833] origin-right scale-x-0 opacity-0" />
       <span className="automation-card-edge automation-card-edge--left pointer-events-none absolute inset-y-0 left-0 w-[3px] rounded-full bg-[#EB994833] origin-bottom scale-y-0 opacity-0" />
-      <div className="flex items-center justify-center w-full  mb-4">
+      <div className="flex  items-center w-full mb-4">
         {icon?.src && (
-          <span className="automation-card-icon inline-flex items-center justify-start opacity-0 ">
-            <div className='flex items-center self-start'>
-               <div className='w-[50px] h-[5px] bg-[#eb9a48]'/>
+          <div className="automation-card-icon flex w-1/5 items-center justify-end opacity-0">
+            <div id="conector" className="flex w-[calc(100%-15px)] h-[5px] bg-[#eb9a48]" />
             <Image
               src={icon.src}
               alt={icon.alt ?? "Ícone de automação"}
               width={icon.width ?? 32}
               height={icon.height ?? 32}
-              className="w-[24px] h-[24px] mr-3"
+              className="w-[24px] h-[24px] "
               quality={icon.quality ?? 90}
               priority={false}
             />
-
-            </div>
-            
-          </span>
+          </div>
         )}
         {title && (
-          <h3 className="automation-card-title text-2xl font-semibold text-[#8a8a8a] tracking-tight">
-            {title}
-          </h3>
+         <div className='absolute flex w-full justify-center'>
+            <h3 className="automation-card-title text-2xl font-semibold text-[#8a8a8a] tracking-tight">
+              {title}
+            </h3>
+          </div>
         )}
       </div>
 
       {description ? (
-        <p className="text-gray-400 text-center leading-relaxed">{description}</p>
+         <div className='p-4 px-8'> 
+            <p className="text-gray-400 text-center leading-relaxed">{description}</p>
+         </div>
       ) : (
         children || null
       )}
