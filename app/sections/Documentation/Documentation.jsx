@@ -26,16 +26,34 @@ const Documentation = () => {
 
    return (
       <section className="relative flex flex-col w-full  overflow-hidden z-10 bg-white" id="documentation">
+         <div className="absolute w-full h-[80vh]">
+            <Image
+            alt="background"
+            src="/assets/doc-bg22.png"
 
+            quality={100}
+            fill
+            sizes="100vw"
+            style={{
+               objectFit: 'cover', objectPosition: 'bottom center'
+            }}
+            className="-z-10"
+         />
+
+         </div>
+         <div className="absolute w-full mt-[80vh] bg-gradient-to-r from-[#ECECEC] to-[hsl(0,0%,92%)] h-[20vh] -z-10">
+
+         </div>
+         
 
          <div className=" px-6 flex flex-col justify-between gap-[10px] md:gap-[40px]">
             <div className="flex flex-col w-full md:h-[50vh] md:flex-row-reverse ">
-               <div className="flex flex-col justify-start items-end  ">
+               <div className="flex flex-col justify-start items-end backdrop-blur-[1px] h-fit">
 
-                  <h2 className="lg:text-[80px] text-[40px] tracking-[-0.05em] font-light  text-[#8f8f8f] ">
+                  <h2 className="lg:text-[80px] text-[40px] tracking-[-0.05em] font-light  text-[#5c5c5c] ">
                      Documentação
                   </h2>
-                  <h2 className="lg:text-[80px] text-[40px] tracking-[-0.05em] font-light  text-[#8f8f8f] leading-5 md:leading-10">
+                  <h2 className="lg:text-[80px] text-[40px] tracking-[-0.05em] font-light  text-[#5c5c5c] leading-5 md:leading-10">
                      Técnica
                   </h2>
                   <div className="flex gap-4 items-center">
@@ -54,17 +72,7 @@ const Documentation = () => {
                   </div>
                   <div className="flex w-[50%] bg-black">
                      <div className="relative w-full h-full">
-                        <Image
-                           alt="Mountains"
-                           src={docbg12}
-                           placeholder="blur"
-                           quality={100}
-                           fill
-                           sizes="100vw"
-                           style={{
-                              objectFit: 'cover',
-                           }}
-                        />
+
 
                      </div>
 
