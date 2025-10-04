@@ -1,0 +1,26 @@
+"use client";
+
+import Image from "next/image";
+
+const DocCardMobile = ({ title, description, icon, iconSize, className = "", titleClassName = "" }) => {
+   return (
+      <div className={`flex flex-col items-center gap-6 rounded-[6px] py-6 px-5 bg-white/85 shadow-[0_4px_16px_rgba(0,0,0,0.08)] backdrop-blur-sm ${className}`}>
+         <div className="flex flex-col items-center gap-3 text-center">
+            {icon?.name && (
+               <Image
+                  src={`/assets/${icon.name}.svg`}
+                  alt={icon?.title || title}
+                  width={iconSize?.width || 64}
+                  height={iconSize?.height || 64}
+                  className="opacity-60"
+               />
+            )}
+            <h3 className={`text-[20px] leading-6 font-medium text-[#4d4d4d] ${titleClassName}`}>{title}</h3>
+         </div>
+
+         <p className="text-[14px] leading-relaxed text-[#5c5c5c] text-center">{description}</p>
+      </div>
+   );
+};
+
+export default DocCardMobile;
