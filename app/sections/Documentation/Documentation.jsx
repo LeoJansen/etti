@@ -21,7 +21,7 @@ const Documentation = () => {
 
    const backgroundSrc = isMounted && isMobile
       ? "/assets/doc-bg-mobile.png"
-      : "/assets/doc-bg.png";
+      : "/assets/certBG2.png";
 
 
 
@@ -31,9 +31,9 @@ const Documentation = () => {
             src={backgroundSrc}
             alt="Background"
             fill
-            style={{ objectFit: "cover", objectPosition: "center" }}
+            style={{ objectFit: "cover", objectPosition: "bottom" }}
             quality={100}
-            className="-z-10 opacity-30"
+            className="-z-10 "
          />
 
          <div className=" px-6 flex flex-col justify-between gap-[10px] md:gap-[40px]">
