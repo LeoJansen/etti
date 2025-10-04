@@ -7,6 +7,7 @@ import { useMediaQuery } from "react-responsive";
 
 import DocCard from "./DocCard";
 import { documentationCards } from "./DocumentationContent";
+import docbg12 from '../../../public/assets/docbg12.png'
 // Use DocCard to add new documentation items. You can override container styles via `className`
 // and title color via `titleClassName`.
 
@@ -19,22 +20,13 @@ const Documentation = () => {
       setIsMounted(true);
    }, []);
 
-   const backgroundSrc = isMounted && isMobile
-      ? "/assets/doc-bg-mobile.png"
-      : "/assets/certBG2.png";
+
 
 
 
    return (
-      <section className="relative flex flex-col w-full h-full lg:h-screen overflow-hidden z-10 bg-white" id="documentation">
-         <Image
-            src={backgroundSrc}
-            alt="Background"
-            fill
-            style={{ objectFit: "cover", objectPosition: "bottom" }}
-            quality={100}
-            className="-z-10 "
-         />
+      <section className="relative flex flex-col w-full  overflow-hidden z-10 bg-white" id="documentation">
+
 
          <div className=" px-6 flex flex-col justify-between gap-[10px] md:gap-[40px]">
             <div className="flex flex-col w-full md:h-[50vh] md:flex-row-reverse ">
@@ -53,11 +45,29 @@ const Documentation = () => {
 
                </div>
                <div className="flex w-full h-full justify-center md:justify-start md:items-end ">
-                  <div className="flex w-full md:bg-[#464646] md:ml-[-24px] px-2 md:px-12 rounded-r-[4px] md:w-[33vw]">
+                  <div className="flex w-[50%] md:bg-[#464646] md:ml-[-24px] px-2 md:px-12 rounded-r-[4px] ">
 
                      <p className="text-md md:text-[#c4c4c4] my-12 leading-snug  text-justify">
                         A <strong className="text-[#EB9948]">Etti Engenharia</strong>  oferece uma documentação técnica completa para garantir que cada projeto esteja em total conformidade com as normas regulamentares. Nossos documentos detalhados e técnicos são essenciais para licenciamentos e garantem a segurança e a qualidade das instalações elétricas.
                      </p>
+
+                  </div>
+                  <div className="flex w-[50%] bg-black">
+                     <div className="relative w-full h-full">
+                        <Image
+                           alt="Mountains"
+                           src={docbg12}
+                           placeholder="blur"
+                           quality={100}
+                           fill
+                           sizes="100vw"
+                           style={{
+                              objectFit: 'cover',
+                           }}
+                        />
+
+                     </div>
+
 
                   </div>
 
