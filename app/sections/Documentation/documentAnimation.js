@@ -1,7 +1,9 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(useGSAP);
+gsap.registerPlugin(ScrollTrigger);
 
 const DEFAULT_DIRECTIONS = ["left", "top", "right"];
 
@@ -26,7 +28,7 @@ export function useDocumentAnimation(
     selector = ".doc-card",
     intersectionThreshold = 0.2,
     directions = DEFAULT_DIRECTIONS,
-    distance = 48,
+    distance = 1248,
   } = {}
 ) {
   useGSAP(
@@ -38,39 +40,51 @@ export function useDocumentAnimation(
       const cards = select(selector);
       if (!cards.length) return;
 
+      const timelines = [];
+
       cards.forEach((card, index) => {
         const direction =
           directions[index] ?? directions[directions.length - 1] ?? "top";
         const { x, y } = resolveOffsets(direction, distance);
-        gsap.set(card, { autoAlpha: 0, x, y });
+
+        gsap.set(card, {  x, y });
+
+        const tl = gsap
+          .timeline({
+            scrollTrigger: {
+              trigger: card,
+              start: "-500px 80%",
+              end: "center 20%",
+              scrub: true,
+              invalidateOnRefresh: true,
+              markers: true
+            },
+          })
+          .to(card, {
+      
+            x: 0,
+            y: 0,
+            duration: 0.6,
+            ease: "power2.out",
+          })
+          .to(card, {
+            autoAlpha: 0,
+            x,
+            y,
+            duration: 0.6,
+            ease: "power2.in",
+          });
+
+        timelines.push(tl);
       });
 
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (!entry.isIntersecting) return;
-
-            const card = entry.target;
-            observer.unobserve(card);
-
-            gsap.to(card, {
-              autoAlpha: 1,
-              x: 0,
-              y: 0,
-              duration: 0.6,
-              ease: "power2.out",
-              overwrite: "auto",
-            });
-          });
-        },
-        { threshold: intersectionThreshold }
-      );
-
-      cards.forEach((card) => observer.observe(card));
+      ScrollTrigger.refresh();
 
       return () => {
-        observer.disconnect();
-        gsap.killTweensOf(cards);
+        timelines.forEach((tl) => {
+          tl.scrollTrigger?.kill();
+          tl.kill();
+        });
       };
     },
     {
