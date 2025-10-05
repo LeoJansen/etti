@@ -13,6 +13,7 @@ const Documentation = () => {
    const [isMounted, setIsMounted] = useState(false);
    const isMobile = useMediaQuery({ query: "(max-width: 764px)" });
    const desktopContainerRef = useRef(null);
+   const mobileContainerRef = useRef(null);
 
    useEffect(() => {
       setIsMounted(true);
@@ -21,6 +22,11 @@ const Documentation = () => {
    const showMobile = isMounted && isMobile;
 
    useDocumentAnimation(desktopContainerRef);
+   useDocumentAnimation(mobileContainerRef, {
+      backgroundSelector: null,
+      distance: 640,
+      directions: ["left", "top", "right"],
+   });
 
    return (
       <section
@@ -28,7 +34,10 @@ const Documentation = () => {
          id="documentation"
       >
          {showMobile ? (
-            <DocumentationMobile cards={documentationCards} />
+            <DocumentationMobile
+               cards={documentationCards}
+               containerRef={mobileContainerRef}
+            />
          ) : (
             <>
               <div className="absolute w-full h-[80vh] doc-bg">
@@ -48,7 +57,7 @@ const Documentation = () => {
                className="px-6 flex flex-col justify-between gap-[10px] md:gap-[40px]"
             >
                <div className="flex flex-col w-full md:h-[50vh] md:flex-row-reverse">
-                  <div className="flex flex-col justify-start items-end backdrop-blur-[1px] h-fit">
+                  <div className="flex flex-col justify-start items-end backdrop-blur-[1px] h-fit ">
                      <h2 className="lg:text-[80px] text-[40px] tracking-[-0.05em] font-light text-[#5c5c5c] doc-heading-title">
                         Documentação
                      </h2>
@@ -62,7 +71,7 @@ const Documentation = () => {
                         </h3>
                      </div>
                   </div>
-                  <div className="flex w-full h-full justify-center md:justify-start md:items-end">
+                  <div className="flex w-full h-full justify-center md:justify-start md:items-end z-20">
                      <div className="flex w-[50%] md:bg-[#464646] md:ml-[-24px] px-2 md:px-12 rounded-r-[4px]">
                         <p className="text-md md:text-[#c4c4c4] my-12 leading-snug text-justify doc-description">
                            A <strong className="text-[#EB9948]">Etti Engenharia</strong> oferece uma documentação técnica completa para garantir que cada projeto esteja em total conformidade com as normas regulamentares. Nossos documentos detalhados e técnicos são essenciais para licenciamentos e garantem a segurança e a qualidade das instalações elétricas.

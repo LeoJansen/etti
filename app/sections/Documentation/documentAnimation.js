@@ -26,9 +26,11 @@ export function useDocumentAnimation(
   containerRef,
   {
     selector = ".doc-card",
-    intersectionThreshold = 0.2,
     directions = DEFAULT_DIRECTIONS,
     distance = 1248,
+    backgroundSelector = ".doc-bg",
+    backgroundBlurInitial = 0,
+    backgroundBlurFocused = 4,
   } = {}
 ) {
   useGSAP(
@@ -36,60 +38,95 @@ export function useDocumentAnimation(
       const container = containerRef.current;
       if (!container) return;
 
+      const section = container.closest("section") ?? container;
+
       const select = gsap.utils.selector(container);
       const cards = select(selector);
       if (!cards.length) return;
 
-      const timelines = [];
+      const selectSection = gsap.utils.selector(section);
+      const backgroundEls = backgroundSelector
+        ? selectSection(backgroundSelector)
+        : [];
 
-      cards.forEach((card, index) => {
+      backgroundEls.forEach((bg) =>
+        gsap.set(bg, { filter: `blur(${backgroundBlurInitial}px)` })
+      );
+
+      let isBackgroundBlurred = false;
+      const toggleBackgroundBlur = (shouldBlur) => {
+        if (!backgroundEls.length || isBackgroundBlurred === shouldBlur) return;
+        isBackgroundBlurred = shouldBlur;
+        backgroundEls.forEach((bg) => {
+          gsap.to(bg, {
+            filter: `blur(${
+              shouldBlur ? backgroundBlurFocused : backgroundBlurInitial
+            }px)`,
+            duration: 0.8,
+            ease: "power2.out",
+          });
+        });
+      };
+
+      const triggers = cards.map((card, index) => {
         const direction =
           directions[index] ?? directions[directions.length - 1] ?? "top";
         const { x, y } = resolveOffsets(direction, distance);
 
-        gsap.set(card, {  x, y });
+        gsap.set(card, { autoAlpha: 0, x, y });
 
-        const tl = gsap
-          .timeline({
-            scrollTrigger: {
-              trigger: card,
-              start: "-500px 80%",
-              end: "center 20%",
-              scrub: true,
-              invalidateOnRefresh: true,
-              markers: true
-            },
-          })
-          .to(card, {
-      
+        const showCard = () => {
+          gsap.killTweensOf(card);
+          gsap.to(card, {
+            autoAlpha: 1,
             x: 0,
             y: 0,
-            duration: 0.6,
+            duration: 0.8,
             ease: "power2.out",
-          })
-          .to(card, {
+          });
+          toggleBackgroundBlur(true);
+        };
+
+        const hideCard = () => {
+          gsap.killTweensOf(card);
+          gsap.to(card, {
             autoAlpha: 0,
             x,
             y,
             duration: 0.6,
             ease: "power2.in",
           });
+          if (index === 0) {
+            toggleBackgroundBlur(false);
+          }
+        };
 
-        timelines.push(tl);
+        return ScrollTrigger.create({
+          trigger: card,
+          start: "top 80%",
+          end: "bottom 20%",
+          onEnter: showCard,
+          onEnterBack: showCard,
+          onLeaveBack: hideCard,
+        });
       });
 
       ScrollTrigger.refresh();
 
       return () => {
-        timelines.forEach((tl) => {
-          tl.scrollTrigger?.kill();
-          tl.kill();
-        });
+        triggers.forEach((trigger) => trigger.kill());
       };
     },
     {
       scope: containerRef,
-      dependencies: [selector, intersectionThreshold, directions, distance],
+      dependencies: [
+        selector,
+        directions,
+        distance,
+        backgroundSelector,
+        backgroundBlurInitial,
+        backgroundBlurFocused,
+      ],
     }
   );
 }
