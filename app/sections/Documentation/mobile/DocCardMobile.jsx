@@ -4,7 +4,9 @@ import Image from "next/image";
 
 const DocCardMobile = ({ title, description, icon, iconSize, className = "", titleClassName = "" }) => {
    return (
-      <div className={`flex flex-col items-center gap-6 rounded-[6px] py-6 px-5 bg-white/85 shadow-[0_4px_16px_rgba(0,0,0,0.08)] backdrop-blur-sm ${className}`}>
+      <div
+         className={`doc-card-mobile doc-card flex flex-col items-center gap-6 rounded-[6px] py-6 px-5 shadow-[0_4px_16px_rgba(0,0,0,0.08)] backdrop-blur-sm ${className}`.trim()}
+      >
          <div className="flex flex-col items-center gap-3 text-center">
             {icon?.name && (
                <Image

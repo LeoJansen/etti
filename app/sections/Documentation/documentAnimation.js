@@ -63,6 +63,7 @@ export function useDocumentAnimation(
               shouldBlur ? backgroundBlurFocused : backgroundBlurInitial
             }px)`,
             duration: 0.8,
+            opacity:0.4,
             ease: "power2.out",
           });
         });

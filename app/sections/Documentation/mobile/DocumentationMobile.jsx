@@ -1,25 +1,33 @@
 "use client";
 
 import Image from "next/image";
+import { useRef } from "react";
+
 import DocCardMobile from "./DocCardMobile";
+import { useDocAnimationMobile } from "./DocAnimationMobile";
 
 const DocumentationMobile = ({ cards }) => {
+   const containerRef = useRef(null);
+
+   useDocAnimationMobile(containerRef);
+
    return (
-      <div className="px-6 flex flex-col gap-12 pb-12">
-         <div className="">
+      <div
+         ref={containerRef}
+         className="relative px-6 flex flex-col gap-12 pb-12 overflow-hidden"
+      >
+         
             <Image
                alt="background"
                src="/assets/doc-bg-mobile.png"
                quality={100}
                fill
                sizes="100vw"
-               style={{ objectFit: "cover", objectPosition: "bottom center" }}
-               className=" rounded-[6px]"
+               className="doc-bg-mobile object-cover object-bottom"
+               priority
             />
+     
 
-
-
-         </div>
          <div className="flex flex-col gap-4 z-10">
             <div>
                <h2 className="text-[40px] tracking-[-0.05em] font-light text-[#5c5c5c]">Documentação</h2>
@@ -34,7 +42,7 @@ const DocumentationMobile = ({ cards }) => {
             </p>
          </div>
 
-         <div className="grid grid-cols-1 gap-9">
+         <div className="grid grid-cols-1 gap-9 z-10">
             {cards.map((card, index) => (
                <DocCardMobile
                   key={index}

@@ -7,14 +7,7 @@ import { certificationCards } from "./CertificationContent";
 const Certification = () => {
    return (
       <section className="py-16 relative bg-[#FBFBFB] lg:h-screen w-full -z-10 " id="certification">
-          <Image
-                        src="/assets/certBG2.png"
-                        alt="Background"
-                        fill
-                        style={{ objectFit: "cover", objectPosition: "top" }}
-                        quality={100}
-                        className='-z-10'
-                     />
+      
 
          <div className="flex flex-col  w-full ">
 

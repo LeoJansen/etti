@@ -13,7 +13,6 @@ const Documentation = () => {
    const [isMounted, setIsMounted] = useState(false);
    const isMobile = useMediaQuery({ query: "(max-width: 764px)" });
    const desktopContainerRef = useRef(null);
-   const mobileContainerRef = useRef(null);
 
    useEffect(() => {
       setIsMounted(true);
@@ -22,11 +21,6 @@ const Documentation = () => {
    const showMobile = isMounted && isMobile;
 
    useDocumentAnimation(desktopContainerRef);
-   useDocumentAnimation(mobileContainerRef, {
-      backgroundSelector: null,
-      distance: 640,
-      directions: ["left", "top", "right"],
-   });
 
    return (
       <section
@@ -34,10 +28,7 @@ const Documentation = () => {
          id="documentation"
       >
          {showMobile ? (
-            <DocumentationMobile
-               cards={documentationCards}
-               containerRef={mobileContainerRef}
-            />
+            <DocumentationMobile cards={documentationCards} />
          ) : (
             <>
               <div className="absolute w-full h-[80vh] doc-bg">
@@ -51,7 +42,7 @@ const Documentation = () => {
                className="-z-10"
             />
          </div>
-         <div className="absolute w-full mt-[80vh] bg-gradient-to-r from-[#ECECEC] to-[hsl(0,0%,92%)] h-[20vh] -z-10" />
+         <div className="absolute w-full mt-[80vh] bg-gradient-to-r from-[hsl(0,0%,98%)] to-[hsl(0,0%,97.5%)] h-[25vh] -z-10" />
             <div
                ref={desktopContainerRef}
                className="px-6 flex flex-col justify-between gap-[10px] md:gap-[40px]"
