@@ -15,7 +15,7 @@ const Certification = () => {
 
 
             <div className="flex flex-col w-full text-center mb-12 ">
-               <div className="flex flex-col items-end justify-center self-end">
+               <div className="flex flex-col items-start justify-center self-start">
                   <div className="bg-[#EB9948] px-4 py-2 rounded-l-md">
                      <h2 className="font-extralight tracking-[-0.02em] text-[#FFFFFF] text-[50px] xl:text-[90px] leading-[0.9]">
                         Certificação
@@ -31,6 +31,10 @@ const Certification = () => {
 
 
             </div>
+            <div className="relative">
+
+            </div>
+            
             <div className="flex flex-col w-1/2 h-full">
                <p className="mt-4 text-lg text-gray-600 dark:text-gray-400 px-10">
                   Garantimos a qualidade e a conformidade das suas instalações elétricas com serviços de certificação e vistoria.
