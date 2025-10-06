@@ -22,7 +22,7 @@ const projects = [
 
 const Projects = () => {
   return (
-  <section id="projects" className="projects-section py-16 w-full  px-4 overflow-hidden">
+  <section id="projects" className="projects-section py-16 w-full min-h-screen  px-4 overflow-hidden">
       <div className="flex flex-col items-start justify-center px-[2%] ">
         <div className='flex gap-4 items-center '>
           <div className='h-[4px] w-15 md:w-20 bg-[#4991EB] '/>
