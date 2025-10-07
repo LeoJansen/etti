@@ -30,7 +30,7 @@ const Certification = () => {
    }
 
    return (
-      <section className="certification-background bg-white py-24 relative min-h-screen w-full z-10" id="certification">
+      <section className=" bg-white py-24 relative min-h-screen w-full z-10" id="certification">
          <div className="flex flex-col w-full relative z-10">
             <div className="flex flex-col w-full text-center mb-16">
                <div className="flex flex-col items-end justify-center self-end px-6">
