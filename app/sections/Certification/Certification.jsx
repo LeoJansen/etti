@@ -54,8 +54,8 @@ const Certification = () => {
                </div>
 
                <div className="grid grid-cols-1  gap-12 px-10 lg:px-[10%]">
-                  {certificationCards.map((card) => (
-                     <CertificationCard key={card.title} title={card.title} description={card.description} image={card.image} />
+                  {certificationCards.map((card, index) => (
+                     <CertificationCard key={card.title} index={index} title={card.title} description={card.description} image={card.image} />
                   ))}
                </div>
             </div>
