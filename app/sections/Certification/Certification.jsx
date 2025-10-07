@@ -1,60 +1,64 @@
-// components/CertificationSection.js
+"use client";
 
-import Image from "next/image";
+import React from "react";
+import dynamic from "next/dynamic";
 import CertificationCard from "./CertificationCard";
 import { certificationCards } from "./CertificationContent";
 
+const CertificationMobile = dynamic(() => import("./mobile/CertificationMobile"), {
+   ssr: false,
+});
+
+function useIsMobile() {
+   const [isMobile, setIsMobile] = React.useState(false);
+
+   React.useEffect(() => {
+      const checkMobile = () => setIsMobile(window.innerWidth < 768);
+      checkMobile();
+      window.addEventListener("resize", checkMobile);
+      return () => window.removeEventListener("resize", checkMobile);
+   }, []);
+
+   return isMobile;
+}
+
 const Certification = () => {
+   const isMobile = useIsMobile();
+
+   if (isMobile) {
+      return <CertificationMobile />;
+   }
+
    return (
-      <section className="certification-background py-16 relative lg:h-screen w-full -z-10 bg-[#F2F2F2]" id="certification">
-    
+      <section className="certification-background bg-white py-24 relative min-h-screen w-full z-10" id="certification">
+         <div className="flex flex-col w-full relative z-10">
+            <div className="flex flex-col w-full text-center mb-16">
+               <div className="flex flex-col items-end justify-center self-end px-6">
 
-
-
-         <div className="flex flex-col w-full relative z-10 ">
-
-
-            <div className="flex flex-col w-full text-center mb-12 ">
-               <div className="flex flex-col items-end justify-center self-end">
-                  <div className="bg-[#EB9948] px-4 py-2 rounded-l-md">
-                     <h2 className="font-extralight tracking-[-0.02em] text-[#FFFFFF] text-[50px] xl:text-[90px] leading-[0.9]">
+                     <h2 className="font-extralight tracking-[-0.08em] text-[#8f8f8f] text-[56px] xl:text-[96px] leading-[1]">
                         Certificação
                      </h2>
 
-                  </div>
 
-                  <h2 className="font-extralight tracking-[-0.032em] text-[50px] xl:text-[90px] leading-[1.2] text-[#EB9948]">
+                  <h2 className=" text-[56px] xl:text-[36px] leading-[1.2] font-semibold  tracking-tight text-[#EB9948]">
                      e Vistoria
                   </h2>
-
                </div>
-
-
             </div>
-      
-            
-            <div className="flex flex-col justify-around w-full h-full">
-               <div className="flex h-[200px]">
-                  <p className="mt-4 text-lg text-gray-600 dark:text-gray-400 px-10">
-                  Garantimos a qualidade e a conformidade das suas instalações elétricas com serviços de certificação e vistoria.
-               </p>
 
+            <div className="flex flex-col gap-16 w-full">
+               <div className="flex justify-center">
+                  <p className="max-w-3xl text-lg text-gray-600 dark:text-gray-300 px-10 text-center">
+                     Garantimos a qualidade e a conformidade das suas instalações elétricas com serviços de certificação e vistoria.
+                  </p>
                </div>
-               
-               <div className="grid grid-cols-1 md:grid-cols-2 gap-12  px-10 md:px-[10%]">
-                  {certificationCards.map((card) => (
-                     <CertificationCard
-                        key={card.title}
-                        title={card.title}
-                        description={card.description}
 
-                     />
+               <div className="grid grid-cols-1  gap-12 px-10 lg:px-[10%]">
+                  {certificationCards.map((card) => (
+                     <CertificationCard key={card.title} title={card.title} description={card.description} image={card.image} />
                   ))}
                </div>
             </div>
-
-
-
          </div>
       </section>
    );
