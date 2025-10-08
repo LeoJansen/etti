@@ -50,6 +50,20 @@ body {
   color: var(--mainColor);
 }
 
+.section-heading1 {
+  font-size: 35px;
+  font-weight: 600;
+  color: #EB9948;
+  letter-spacing: -0.015em;
+  text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  .section-heading1 {
+    font-size: 40px;
+  }
+}
+
 
 .metalicCards {
   background-image: linear-gradient(rgba(31, 31, 31, 0.825), rgba(36, 36, 36, 0.725)),
