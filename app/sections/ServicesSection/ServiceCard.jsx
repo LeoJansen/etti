@@ -81,7 +81,7 @@ const ServiceCard = ({  title, description, icon, iconWidth, iconHeight, pulseOf
   }, { scope: cardRef })
 
   return (
-    <div ref={cardRef} className="service-card flex flex-col  items-center h-full self-end pb-8 md:h-3/4 w-full  rounded-[2px]  duration-300  gap-2 md:gap-0  bg-[#00000095] backdrop-blur-[40px] shadow-[0_2px_4px_2px_rgba(20,20,20,0.5)] z-10 ">
+    <div ref={cardRef} className="service-card flex flex-col  items-center h-full self-end pb-8 w-full  rounded-[2px]  duration-300  gap-2 md:gap-0  bg-[#00000095] backdrop-blur-[40px] shadow-[0_2px_4px_2px_rgba(20,20,20,0.5)] z-10 ">
       <div className='flex w-full justify-start items-center  p-4'>
 
         <div ref={circleRef} className='flex w-30 h-21 justify-center items-center  border-2 border-[hsl(30,50%,70%)]  rounded-full'>
@@ -108,8 +108,8 @@ const ServiceCard = ({  title, description, icon, iconWidth, iconHeight, pulseOf
       <div className='w-full h-full flex flex-col  gap-8 justify-center items-center  rounded-[6px]  px-4'>
         <div ref={dividerRef} className='h-[5px] md:h-[7px] w-full bg-[hsl(30,80%,80%)]'/>
      
-        <div className='flex w-full h-full'>
-          <p className=" text-[16px] tracking-wide text-[#8d8d8d]">
+        <div className='flex w-full h-full  md:text-xl xl:text-2xl text-[#9e9e9e] tracking-tight font-extralight'>
+          <p className="   text-[#d1d1d1]">
             {description}
           </p>
         </div>
