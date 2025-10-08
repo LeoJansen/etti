@@ -10,7 +10,7 @@ const About = () => {
                   <h3 className="text-[32px] md:text-[40px]  text-[#EB9948] leading-10 md:leading-14 font-semibold tracking-tight uppercase">Sobre a Etti</h3>
                   <div className='h-[6px] w-[70px] md:w-[165px] rounded-[1.5px] bg-[#4991EB]' />
                </div>
-               <h2 className="text-[48px] md:text-[70px] lg:text-[95px] tracking-[-0.08em]  font-extralight leading-11 md:leading-14  mb-6 text-[#929292] ">Quem somos e a nossa missão</h2>
+               <h2 className="text-[48px] md:text-[70px] lg:text-[75px] xl:text-[80px] 2xl:text-[95px] tracking-[-0.08em]  font-extralight leading-11 md:leading-14  mb-6 text-[#929292] ">Quem somos e a nossa missão</h2>
             </div>
             <div className="flex flex-col md:flex-row w-full h-full justify-center items-center md:space-x-12">
                <div className="w-full h-full md:w-1/2 flex items-center mb-8 rounded-sm overflow-hidden md:mb-0">
@@ -22,7 +22,7 @@ const About = () => {
                      height={1184}
                   />
                </div>
-               <div className="md:w-1/2 h-full flex flex-col justify-center items-center">
+               <div className="md:w-1/2 h-full flex flex-col justify-center items-center text-[#9e9e9e] tracking-tighter font-light md:text-xl xl:text-2xl ">
                   <p className=" leading-relaxed mb-4 text-justify">
                      Etti Project é uma empresa especializada em <strong>soluções elétricas e automação</strong>. Nossa missão é transformar espaços através de tecnologia avançada e instalações seguras, oferecendo soluções inovadoras e sustentáveis que melhoram a qualidade de vida dos nossos clientes.
                   </p>
