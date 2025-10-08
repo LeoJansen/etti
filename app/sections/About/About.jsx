@@ -10,7 +10,7 @@ const About = () => {
                   <h3 className="section-heading1">Sobre a Etti</h3>
                   <div className='h-[6px] w-[70px] md:w-[165px] rounded-[1.5px] bg-[#4991EB]' />
                </div>
-               <h2 className="text-[48px] md:text-[70px] lg:text-[75px] xl:text-[80px] 2xl:text-[95px] tracking-[-0.08em]  font-extralight leading-11 md:leading-14  mb-6 text-[#929292] ">Quem somos e a nossa missão</h2>
+               <h2 className="about-heading">Quem somos e a nossa missão</h2>
             </div>
             <div className="flex flex-col md:flex-row w-full h-full justify-center items-center md:space-x-12">
                <div className="w-full h-full md:w-1/2 flex items-center mb-8 rounded-sm overflow-hidden md:mb-0">
