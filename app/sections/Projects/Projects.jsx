@@ -25,14 +25,14 @@ const Projects = () => {
   <section id="projects" className="projects-section py-16 w-full min-h-screen  px-4 overflow-hidden">
       <div className="flex flex-col items-start justify-center px-[2%] ">
         <div className='flex gap-4 items-center '>
-          <div className='h-[4px] w-15 md:w-20 bg-[#4991EB] '/>
+          <div className='h-[5px] w-15 md:w-20 bg-[#4991EB] '/>
           <h3 className="text-[35px] md:text-[40px] font-semibold text-[#EB9948] tracking-tight uppercase">
           Projetos de
         </h3>
 
         </div>
         
-           <h2 className="text-[70px] lg:text-[95px] tracking-[-0.08em]  font-extralight leading-14  mb-6 text-[#8f8f8f] ">
+           <h2 className="section-heading3">
          Instalação Elétrica
         </h2>
         <p className="text-lg text-gray-600 max-w-3xl mx-auto my-12">

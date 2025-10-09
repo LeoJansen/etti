@@ -49,14 +49,14 @@ const Documentation = () => {
             >
                <div className="flex flex-col w-full md:h-[50vh] md:flex-row-reverse">
                   <div className="flex flex-col justify-start items-end backdrop-blur-[1px] h-fit ">
-                     <h2 className="lg:text-[80px] text-[40px] tracking-[-0.05em] font-light text-[#5c5c5c] doc-heading-title">
+                     <h2 className="lg:text-[95px] text-[40px] tracking-[-0.05em] font-extralight text-[#5c5c5c] doc-heading-title">
                         Documentação
                      </h2>
-                     <h2 className="lg:text-[80px] text-[40px] tracking-[-0.05em] font-light text-[#5c5c5c] leading-5 md:leading-10 doc-heading-title">
+                     <h2 className="lg:text-[95px] text-[40px] tracking-[-0.05em] font-extralight text-[#5c5c5c] leading-5 md:leading-10 doc-heading-title">
                         Técnica
                      </h2>
                      <div className="flex gap-4 items-center">
-                        <div className="h-[7px] w-[125px] rounded-[1.5px] bg-[#4991EB] doc-highlight-line" />
+                        <div className="h-[px] w-[125px] rounded-[1.5px] bg-[#4991EB] doc-highlight-line" />
                         <h3 className="lg:text-[40px] text-[30px] tracking-[-0.03em] font-semibold uppercase text-[#EB9948] md:leading-20 doc-highlight-text">
                            Completa
                         </h3>

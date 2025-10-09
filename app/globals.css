@@ -60,6 +60,7 @@ body {
 }
 
 @media (min-width: 768px) {
+
   .section-heading1,
   .services-heading {
     font-size: 40px;
@@ -96,6 +97,21 @@ body {
 
 @media (min-width: 1536px) {
   .about-heading {
+    font-size: 95px;
+  }
+}
+
+.section-heading3 {
+  font-size: 70px;
+  font-weight: 200;
+  color: #8f8f8f;
+  letter-spacing: -0.08em;
+  line-height: 3.5rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  .section-heading3 {
     font-size: 95px;
   }
 }
@@ -167,11 +183,11 @@ body {
 
 
 .projects-section {
-background: #F8F8F8;
-background: -webkit-linear-gradient(90deg, rgba(248, 248, 248, 1) 0%, rgba(250, 250, 250, 1) 50%, rgba(251, 251, 251, 1) 100%);
-background: -moz-linear-gradient(90deg, rgba(248, 248, 248, 1) 0%, rgba(250, 250, 250, 1) 50%, rgba(251, 251, 251, 1) 100%);
-background: linear-gradient(90deg, rgba(248, 248, 248, 1) 0%, rgba(250, 250, 250, 1) 50%, rgba(251, 251, 251, 1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#F8F8F8", endColorstr="#FBFBFB", GradientType=1);
+  background: #F8F8F8;
+  background: -webkit-linear-gradient(90deg, rgba(248, 248, 248, 1) 0%, rgba(250, 250, 250, 1) 50%, rgba(251, 251, 251, 1) 100%);
+  background: -moz-linear-gradient(90deg, rgba(248, 248, 248, 1) 0%, rgba(250, 250, 250, 1) 50%, rgba(251, 251, 251, 1) 100%);
+  background: linear-gradient(90deg, rgba(248, 248, 248, 1) 0%, rgba(250, 250, 250, 1) 50%, rgba(251, 251, 251, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#F8F8F8", endColorstr="#FBFBFB", GradientType=1);
 }
 
 .certification-background {
@@ -194,4 +210,3 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#F8F8F8", endC
   pointer-events: none;
   z-index: 0;
 }
-

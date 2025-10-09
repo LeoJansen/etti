@@ -31,7 +31,7 @@ const AutomationMobile = () => {
                </div>
                
                <div className='flex justify-center items-center gap-4 self-end'>
-                  <div className='h-[6px] w-[70px] md:w-[145px] rounded-[1.5px] bg-[#4991EB]' />
+                  <div className='h-[5px] w-[70px] md:w-[145px] rounded-[1.5px] bg-[#4991EB]' />
                   <h3 className="text-4xl font-semibold text-[#EB9948] tracking-tight uppercase">
                      com KNX
                   </h3>
