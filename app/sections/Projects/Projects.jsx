@@ -26,13 +26,13 @@ const Projects = () => {
       <div className="flex flex-col items-start justify-center px-[2%] ">
         <div className='flex gap-4 items-center '>
           <div className='h-[5px] w-15 md:w-20 bg-[#4991EB] '/>
-          <h3 className="text-[35px] md:text-[40px] font-semibold text-[#EB9948] tracking-tight uppercase">
+          <h3 className="projects-subheading">
           Projetos de
         </h3>
 
         </div>
         
-           <h2 className="section-heading3">
+           <h2 className="projects-heading ">
          Instalação Elétrica
         </h2>
         <p className="text-lg text-gray-600 max-w-3xl mx-auto my-12">

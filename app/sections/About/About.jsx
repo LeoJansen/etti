@@ -7,7 +7,7 @@ const About = () => {
          <div className="flex flex-col w-full h-full px-4 md:px-8 lg:px-16 text-[#313131] ">
             <div className='p-4 rounded-[4px]    mb-4 md:mb-8 flex flex-col justify-start w-full'>
                <div className='flex gap-5 md:gap-8 items-center'>
-                  <h3 className="section-heading1">Sobre a Etti</h3>
+                  <h3 className="about-subheading">Sobre a Etti</h3>
                   <div className='h-[5px] w-[70px] md:w-[165px] rounded-[1.5px] bg-[#4991EB]' />
                </div>
                <h2 className="about-heading">Quem somos e a nossa missão</h2>

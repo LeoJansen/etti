@@ -28,16 +28,16 @@ const DocumentationMobile = ({ cards }) => {
             />
      
 
-         <div className="flex flex-col gap-4 z-10">
-            <div>
-               <h2 className="text-[40px] tracking-[-0.05em] font-light text-[#5c5c5c]">Documentação</h2>
-               <h2 className="text-[40px] tracking-[-0.05em] font-light text-[#5c5c5c] leading-10">Técnica</h2>
+         <div className="flex flex-col  z-10">
+            <div className="flex">
+               <h2 className="documentation-heading">Documentação <span className="text-[70px] ">Técnica</span></h2>
+           
             </div>
             <div className="flex gap-4 items-center">
                <div className="h-[5px] w-[125px] rounded-[1.5px] bg-[#4991EB]" />
-               <h3 className="text-[30px] tracking-[-0.03em] font-semibold uppercase text-[#EB9948]">Completa</h3>
+               <h3 className="documentation-subheading">Completa</h3>
             </div>
-            <p className="text-md leading-snug text-justify text-[#5c5c5c]">
+            <p className="text-md leading-snug text-justify text-[#5c5c5c] mt-4">
                A <strong className="text-[#EB9948]">Etti Engenharia</strong> oferece uma documentação técnica completa para garantir que cada projeto esteja em total conformidade com as normas regulamentares. Nossos documentos detalhados e técnicos são essenciais para licenciamentos e garantem a segurança e a qualidade das instalações elétricas.
             </p>
          </div>

@@ -113,10 +113,10 @@ const ServicesMobile = () => {
         <div className='flex flex-col justify-end items-end bg-[#00000001] backdrop-blur-[40px] shadow-[0_2px_2px_2px_rgba(20,20,20,0.2)]  place-self-end p-1.5 px-7 md:p-8 md:px-16 rounded-l-[6px]'>
           <div className='flex w-full justify-end gap-4 items-center'>
             <div className='h-[6px] w-[70px] md:w-[145px] rounded-[1.5px] bg-[#4991EB]' />
-            <h3 className="text-[35px] md:text-[40px] font-semibold text-[#EB9948] tracking-tight uppercase">Nossos</h3>
+            <h3 className="services-subheading">Nossos</h3>
 
           </div>
-          <h2 className="text-[68px] md:text-[70px] lg:text-[95px] tracking-[-0.08em] font-extralight leading-8 md:leading-14 mb-6 text-[#8f8f8f]">
+          <h2 className="services-heading">
             Serviços
           </h2>
         </div>

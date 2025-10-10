@@ -1,14 +1,14 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-  --main-color: #EB9948;
+   --background: #ffffff;
+   --foreground: #171717;
+   --main-color: #EB9948;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+   --color-background: var(--background);
+   --color-foreground: var(--foreground);
 
 }
 
@@ -21,192 +21,281 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-title), ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+   font-family: var(--font-title), ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
 }
 
 /* Optional helpers */
 .font-title {
-  font-family: var(--font-title), ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+   font-family: var(--font-title), ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
 }
 
 .font-body {
-  font-family: var(--font-sans), system-ui, -apple-system, Segoe UI, Roboto, Arial, Noto Sans;
+   font-family: var(--font-sans), system-ui, -apple-system, Segoe UI, Roboto, Arial, Noto Sans;
 }
 
 
 body {
-  /* Map project font aliases to next/font variables */
-  --font-title: var(--font-poppins);
-  --font-sans: var(--font-open-sans);
+   /* Map project font aliases to next/font variables */
+   --font-title: var(--font-poppins);
+   --font-sans: var(--font-open-sans);
+   --black-theme: #0D0D0D;
+   --dark-title: #565555;
+   --gray-title: #818181;
 
 
 
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-sans), system-ui, -apple-system, Segoe UI, Roboto, Arial, Noto Sans, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+   background: var(--background);
+   color: var(--foreground);
+   font-family: var(--font-sans), system-ui, -apple-system, Segoe UI, Roboto, Arial, Noto Sans, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 .text-color-main {
-  color: var(--mainColor);
+   color: var(--mainColor);
 }
 
-.section-heading1,
-.services-heading {
-  font-size: 35px;
-  font-weight: 600;
-  color: #EB9948;
-  letter-spacing: -0.015em;
-  text-transform: uppercase;
-}
 
-@media (min-width: 768px) {
 
-  .section-heading1,
-  .services-heading {
-    font-size: 40px;
-  }
-}
+
+
+/* About section */
+
 
 .about-heading {
-  font-size: 48px;
-  font-weight: 200;
-  color: #929292;
-  letter-spacing: -0.08em;
-  line-height: 2.75rem;
-  margin-bottom: 1.5rem;
+   font-size: 48px;
+   font-weight: 200;
+   color: var(--gray-title);
+   letter-spacing: -0.08em;
+   line-height: 2.75rem;
+   margin-bottom: 1.5rem;
 }
 
 @media (min-width: 768px) {
-  .about-heading {
-    font-size: 70px;
-    line-height: 3.5rem;
-  }
+   .about-heading {
+      font-size: 70px;
+      line-height: 3.5rem;
+   }
 }
 
 @media (min-width: 1024px) {
-  .about-heading {
-    font-size: 75px;
-  }
+   .about-heading {
+      font-size: 75px;
+   }
 }
 
 @media (min-width: 1280px) {
-  .about-heading {
-    font-size: 80px;
-  }
+   .about-heading {
+      font-size: 80px;
+   }
 }
 
 @media (min-width: 1536px) {
-  .about-heading {
-    font-size: 95px;
-  }
+   .about-heading {
+      font-size: 95px;
+   }
 }
 
-.section-heading3 {
-  font-size: 70px;
-  font-weight: 200;
-  color: #8f8f8f;
-  letter-spacing: -0.08em;
-  line-height: 3.5rem;
-  margin-bottom: 1.5rem;
+.about-subheading {
+   font-size: 25px;
+   font-weight: 600;
+   color: #EB9948;
+   letter-spacing: -0.015em;
+   text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+
+   .about-subheading {
+      font-size: 40px;
+   }
+}
+
+
+/* Services Section */
+
+.services-heading {
+   font-size: 70px;
+   font-weight: 200;
+   color: var(--gray-title);
+   letter-spacing: -0.08em;
+   line-height: 2.75rem;
+   margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+   .services-heading {
+      font-size: 75px;
+      line-height: 3.5rem;
+   }
 }
 
 @media (min-width: 1024px) {
-  .section-heading3 {
-    font-size: 95px;
-  }
+   .services-heading {
+      font-size: 80px;
+   }
+}
+
+@media (min-width: 1280px) {
+   .services-heading {
+      font-size: 90px;
+   }
+}
+
+@media (min-width: 1536px) {
+   .services-heading {
+      font-size: 95px;
+   }
+}
+
+.services-subheading {
+   font-size: 25px;
+   font-weight: 600;
+   color: #EB9948;
+   letter-spacing: -0.015em;
+   text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+
+   .services-subheading {
+      font-size: 40px;
+   }
+}
+
+/* Projects Section */
+
+.projects-heading {
+   font-size: 70px;
+   font-weight: 200;
+   color: var(--gray-title);
+   letter-spacing: -0.08em;
+   line-height: 3.75rem;
+   margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+   .projects-heading {
+      font-size: 75px;
+      line-height: 3.5rem;
+   }
+}
+
+@media (min-width: 1024px) {
+   .projects-heading {
+      font-size: 80px;
+   }
+}
+
+@media (min-width: 1280px) {
+   .projects-heading {
+      font-size: 90px;
+   }
+}
+
+@media (min-width: 1536px) {
+   .projects-heading {
+      font-size: 95px;
+   }
+}
+
+.projects-subheading {
+   font-size: 25px;
+   font-weight: 600;
+   color: #EB9948;
+   letter-spacing: -0.015em;
+   text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+
+   .projects-subheading {
+      font-size: 40px;
+   }
+}
+
+/* Documentation Section */
+
+
+.documentation-heading {
+   font-size: 45px;
+   font-weight: 200;
+   color: var(--gray-title);
+   letter-spacing: -0.08em;
+     line-height: 3.0rem;
+   
+}
+
+@media (min-width: 768px) {
+   .documentation-heading {
+      font-size: 75px;
+      line-height: 3.5rem;
+   }
+}
+
+@media (min-width: 1024px) {
+   .documentation-heading {
+      font-size: 80px;
+        line-height: 4rem;
+   }
+}
+
+@media (min-width: 1280px) {
+   .documentation-heading {
+      font-size: 90px;
+       line-height: 4.5rem;
+   }
+}
+
+@media (min-width: 1536px) {
+   .documentation-heading {
+      font-size: 95px;
+     
+   }
+}
+
+.documentation-subheading {
+   font-size: 25px;
+   font-weight: 600;
+   color: #EB9948;
+   letter-spacing: -0.015em;
+   text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+
+   .documentation-subheading {
+      font-size: 40px;
+   }
 }
 
 
-.metalicCards {
-  background-image: linear-gradient(rgba(31, 31, 31, 0.825), rgba(36, 36, 36, 0.725)),
-    /* ajuste a opacidade */
-    url('/assets/steelText3.png');
-  background-size: cover;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  object-fit: cover;
-  object-position: center;
 
-
-
-}
-
-/* Gradient text helper */
-.text-gradient {
-  /* Default: blue → cyan → violet */
-  background: linear-gradient(90deg, #60a5fa 0%, #22d3ee 50%, #a78bfa 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-
-/* Optional: stronger contrast in dark mode */
-@media (prefers-color-scheme: dark) {
-  .text-gradient {
-    background: linear-gradient(90deg, #93c5fd 0%, #22d3ee 50%, #c4b5fd 100%);
-  }
-}
-
-/* Text with image background (mask the text with an image) */
-.terminal-text {
-  /* Replace with your desired image from /public */
-  /* background-image: url('/assets/steelTexture.png'); */
-  /* background-size: cover;  or contain for patterns */
-
-  font-family: var(--font-display-title), system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-
-
-  color: rgba(100, 100, 100, 0.63);
-
-
-  text-shadow: 1px 1px 15px rgba(230, 230, 255, 0.651);
-
-
-
-  text-transform: none;
-
-
-
-}
-
-.terminal-text h3 {
-  font-family: var(--font-display-title), system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  /* Avoid strong heading-level text-shadow that can override per-letter glow */
-  text-shadow: none;
-  text-transform: none;
-}
-
-/* Optional helper for display font usage */
-.font-display {
-  font-family: var(--font-display), system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-}
 
 
 .projects-section {
-  background: #F8F8F8;
-  background: -webkit-linear-gradient(90deg, rgba(248, 248, 248, 1) 0%, rgba(250, 250, 250, 1) 50%, rgba(251, 251, 251, 1) 100%);
-  background: -moz-linear-gradient(90deg, rgba(248, 248, 248, 1) 0%, rgba(250, 250, 250, 1) 50%, rgba(251, 251, 251, 1) 100%);
-  background: linear-gradient(90deg, rgba(248, 248, 248, 1) 0%, rgba(250, 250, 250, 1) 50%, rgba(251, 251, 251, 1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#F8F8F8", endColorstr="#FBFBFB", GradientType=1);
+   background: #F8F8F8;
+   background: -webkit-linear-gradient(90deg, rgba(248, 248, 248, 1) 0%, rgba(250, 250, 250, 1) 50%, rgba(251, 251, 251, 1) 100%);
+   background: -moz-linear-gradient(90deg, rgba(248, 248, 248, 1) 0%, rgba(250, 250, 250, 1) 50%, rgba(251, 251, 251, 1) 100%);
+   background: linear-gradient(90deg, rgba(248, 248, 248, 1) 0%, rgba(250, 250, 250, 1) 50%, rgba(251, 251, 251, 1) 100%);
+   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#F8F8F8", endColorstr="#FBFBFB", GradientType=1);
 }
 
 .certification-background {
-  position: relative;
-  overflow: hidden;
-  background: linear-gradient(180deg, rgba(251, 251, 251, 0.95) 0%, rgba(253, 232, 211, 0.55) 60%, rgba(251, 251, 251, 0.95) 100%);
+   position: relative;
+   overflow: hidden;
+   background: linear-gradient(180deg, rgba(251, 251, 251, 0.95) 0%, rgba(253, 232, 211, 0.55) 60%, rgba(251, 251, 251, 0.95) 100%);
 }
 
 .certification-background::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(45deg, rgba(235, 153, 72, 0.14) 25%, transparent 25%, transparent 75%, rgba(235, 153, 72, 0.14) 75%),
-    linear-gradient(45deg, rgba(235, 153, 72, 0.14) 25%, transparent 25%, transparent 75%, rgba(235, 153, 72, 0.14) 75%);
-  background-size: 56px 56px;
-  background-position: 0 0, 28px 28px;
-  mix-blend-mode: multiply;
-  opacity: 0.45;
-  pointer-events: none;
-  z-index: 0;
+   content: "";
+   position: absolute;
+   inset: 0;
+   background-image:
+      linear-gradient(45deg, rgba(235, 153, 72, 0.14) 25%, transparent 25%, transparent 75%, rgba(235, 153, 72, 0.14) 75%),
+      linear-gradient(45deg, rgba(235, 153, 72, 0.14) 25%, transparent 25%, transparent 75%, rgba(235, 153, 72, 0.14) 75%);
+   background-size: 56px 56px;
+   background-position: 0 0, 28px 28px;
+   mix-blend-mode: multiply;
+   opacity: 0.45;
+   pointer-events: none;
+   z-index: 0;
 }
