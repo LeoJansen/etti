@@ -61,7 +61,7 @@ body {
 
 
 .about-heading {
-   font-size: 48px;
+   font-size: 50px;
    font-weight: 200;
    color: var(--gray-title);
    letter-spacing: -0.08em;
@@ -100,6 +100,7 @@ body {
    color: #EB9948;
    letter-spacing: -0.015em;
    text-transform: uppercase;
+   white-space: nowrap;
 }
 
 @media (min-width: 768px) {
@@ -152,6 +153,7 @@ body {
    color: #EB9948;
    letter-spacing: -0.015em;
    text-transform: uppercase;
+   white-space: nowrap;
 }
 
 @media (min-width: 768px) {
@@ -203,6 +205,7 @@ body {
    color: #EB9948;
    letter-spacing: -0.015em;
    text-transform: uppercase;
+   white-space: nowrap;
 }
 
 @media (min-width: 768px) {
@@ -258,6 +261,7 @@ body {
    color: #EB9948;
    letter-spacing: -0.015em;
    text-transform: uppercase;
+   white-space: nowrap;
 }
 
 @media (min-width: 768px) {
@@ -266,6 +270,59 @@ body {
       font-size: 40px;
    }
 }
+
+/* Certification Section */
+
+.certification-heading {
+   font-size: 60px;
+   font-weight: 200;
+   color: var(--gray-title);
+   letter-spacing: -0.07em;
+   line-height: 3.75rem;
+
+}
+
+@media (min-width: 768px) {
+   .certification-heading {
+      font-size: 75px;
+      line-height: 3.5rem;
+   }
+}
+
+@media (min-width: 1024px) {
+   .certification-heading {
+      font-size: 80px;
+   }
+}
+
+@media (min-width: 1280px) {
+   .certification-heading {
+      font-size: 90px;
+   }
+}
+
+@media (min-width: 1536px) {
+   .certification-heading {
+      font-size: 95px;
+   }
+}
+
+.certification-subheading {
+   font-size: 25px;
+   font-weight: 600;
+   color: #EB9948;
+   letter-spacing: -0.015em;
+   text-transform: uppercase;
+   white-space: nowrap;
+}
+
+@media (min-width: 768px) {
+
+   .certification-subheading {
+      font-size: 40px;
+   }
+}
+
 
 
 

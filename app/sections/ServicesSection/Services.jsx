@@ -22,14 +22,22 @@ const Services = () => {
          <div className="flex flex-col w-full h-full  ">
             <div className='flex w-full h-1/3 justify-end items-center  '>
                <div className='flex flex-col justify-end items-end  bg-[#00000091] backdrop-blur-[40px] shadow-[0_2px_2px_2px_rgba(20,20,20,0.4)] place-self-end  p-8 px-16 rounded-l-[6px] '>
+                  <div className='flex flex-col justify-end w-fit '>
+                     
                   <div className='flex w-full justify-end gap-4 items-center '>
-                     <div className='h-[6px] w-[70px] md:w-[145px] rounded-[1.5px] ' />
+                     <div className='h-[6px] w-full rounded-[1.5px] bg-[#EBC197]' />
                      <h3 className="services-subheading">Nossos</h3>
 
                   </div>
-                  <h2 className="services-heading">
+                  <div className='flex w-fit'>
+                     <h2 className="services-heading">
                      Serviços
                   </h2>
+
+                  </div>
+
+                  </div>
+                  
                </div>
             </div>
 

@@ -34,7 +34,7 @@ const DocumentationMobile = ({ cards }) => {
            
             </div>
             <div className="flex gap-4 items-center">
-               <div className="h-[5px] w-[125px] rounded-[1.5px] bg-[#4991EB]" />
+               <div className="h-[5px] w-[125px] rounded-[1.5px] bg-[#EBC197]" />
                <h3 className="documentation-subheading">Completa</h3>
             </div>
             <p className="text-md leading-snug text-justify text-[#5c5c5c] mt-4">

@@ -35,13 +35,13 @@ const Certification = () => {
             <div className="flex flex-col w-full text-center mb-16">
                <div className="flex flex-col items-end justify-center self-end px-6">
 
-                  <h2 className="section-heading3">
+                  <h2 className="certification-heading">
                      Certificação
                   </h2>
 
                   <div className="flex gap-4 justify-center items-center">
-                     <div className='h-[5px] w-15 md:w-20 bg-[#4991EB] ' />
-                     <h2 className=" text-[56px] xl:text-[40px] leading-[1.2] font-semibold  tracking-tight text-[#EB9948]">
+                     <div className='h-[5px] w-15 md:w-20 bg-[#EBC197] ' />
+                     <h2 className="certification-subheading">
                         e Vistoria
                      </h2>
                   </div>

@@ -5,12 +5,18 @@ const About = () => {
    return (
       <section className="py-16 bg-gray-50 min-h-screen max-w-screen overflow-hidden z-120" id="about">
          <div className="flex flex-col w-full h-full px-4 md:px-8 lg:px-16 text-[#313131] ">
-            <div className='p-4 rounded-[4px]    mb-4 md:mb-8 flex flex-col justify-start w-full'>
-               <div className='flex gap-5 md:gap-8 items-center'>
-                  <h3 className="about-subheading">Sobre a Etti</h3>
-                  <div className='h-[5px] w-[70px] md:w-[165px] rounded-[1.5px] bg-[#4991EB]' />
+            <div className='p-4 rounded-[4px]    mb-4 md:mb-8 flex flex-col justify-start w-fit'>
+               <div id="etti-header" className='flex gap-5 md:gap-8 items-center'>
+                  <div className='flex'>
+                     <h3 className="about-subheading ">Sobre a Etti</h3>
+                  </div>
+
+                  <div className='h-[5px] w-full rounded-[1.5px] bg-[#EBC197]' />
                </div>
-               <h2 className="about-heading">Quem somos e a nossa missão</h2>
+               <div id="etti-subheader" className='flex w-fit'>
+                  <h2 className="about-heading">Quem somos</h2>
+               </div>
+
             </div>
             <div className="flex flex-col md:flex-row w-full h-full justify-center items-center md:space-x-12">
                <div className="w-full h-full md:w-1/2 flex items-center mb-8 rounded-sm overflow-hidden md:mb-0">

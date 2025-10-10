@@ -54,7 +54,7 @@ const Documentation = () => {
                         </h2>
                   
                         <div className="flex gap-4 items-center">
-                           <div className="h-[5px] w-[125px] rounded-[1.5px] bg-[#4991EB] doc-highlight-line" />
+                           <div className="h-[5px] w-[125px] rounded-[1.5px] bg-[#EBC197] doc-highlight-line" />
                            <h3 className="documentation-subheading">
                               Completa
                            </h3>
