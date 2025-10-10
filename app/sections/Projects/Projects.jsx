@@ -26,8 +26,9 @@ const Projects = () => {
          <div className="flex flex-col items-end justify-center px-[2%] ">
             <div className='flex flex-col items-end '>
                <div className='flex items-center justify-end gap-4 w-full'>
-                  <div className='h-[5px] w-full bg-[#EBC197]' />
+                 
                   <h3 className="projects-subheading">      Projetos de</h3>
+                   <div className='h-[5px] w-full bg-[#EBC197]' />
                </div>
 
                <h2 className="projects-heading text-end">

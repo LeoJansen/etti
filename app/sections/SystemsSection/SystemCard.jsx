@@ -9,20 +9,22 @@ import React from 'react';
  * - className?: string (extra classes merged with defaults)
  * - children?: ReactNode (alternative content when description isn't provided)
  */
-const SystemCard = ({index, title, description, className = '', children }) => {
- 
+const SystemCard = ({ index = 0, title, description, className = '', children }) => {
+  const isOdd = index % 2 !== 0;
+
+  const backgroundClass = isOdd ? 'bg-[#0a0a0a]' : 'bg-[#ffffff]';
 
   return (
-    <div className={` p-8   flex w-full h-full flex-col justify-center bg-[#ffffff]`.trim()}>
-        <div className='flex flex-col gap-6 justify-start items-center  w-full h-[300px]'>
-      {title && (
-        <h3 className={`text-2xl font-bold ${index % 2 ==! 0 ? 'text-[#0a0a0a] ' : 'text-[#ffffff] '}`}>{title}</h3>
-      )}
-      {description ? (
-        <p className="text-gray-600 ">{description}</p>
-      ) : (
-        children || null
-      )}
+    <div className={`p-8 flex w-full h-full flex-col justify-center ${backgroundClass} ${className}`.trim()}>
+      <div className="flex flex-col gap-6 justify-start items-center w-full h-[300px]">
+        {title && (
+          <h3 className={`text-2xl font-bold ${isOdd ? 'text-[#ffffff]' : 'text-[#0a0a0a]'}`}>{title}</h3>
+        )}
+        {description ? (
+          <p className="text-gray-600">{description}</p>
+        ) : (
+          children || null
+        )}
       </div>
     </div>
   );

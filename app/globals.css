@@ -323,10 +323,100 @@ body {
    }
 }
 
+/* Automation Section */
+
+.automation-heading {
+   font-size: 60px;
+   font-weight: 200;
+   color: var(--gray-title);
+   letter-spacing: -0.08em;
+   line-height: 3.75rem;
+   margin-bottom: 1.5rem;
+}
+@media (min-width: 768px) {
+   .automation-heading {
+      font-size: 75px;
+      line-height: 3.5rem;
+   }
+}
+@media (min-width: 1024px) {
+   .automation-heading {
+      font-size: 80px;
+   }
+}
+@media (min-width: 1280px) {
+   .automation-heading {
+      font-size: 90px;
+   }
+}
+@media (min-width: 1536px) {
+   .automation-heading {
+      font-size: 95px;
+   }
+}
 
 
+.automation-subheading {
+   font-size: 25px;
+   font-weight: 600;
+   color: #EB9948;
+   letter-spacing: -0.015em;
+   text-transform: uppercase;
+   white-space: nowrap;
+}
+@media (min-width: 768px) {
+   .automation-subheading {
+      font-size: 40px;
+   }
+}
+
+/* Systems Section */
+
+.systems-heading {
+   font-size: 60px;
+   font-weight: 200;
+   color: var(--gray-title);
+   letter-spacing: -0.08em;
+   line-height: 3.75rem;
+   margin-bottom: 1.5rem;
+}
+@media (min-width: 768px) {
+   .systems-heading {
+      font-size: 75px;
+      line-height: 3.5rem;
+   }
+}
+@media (min-width: 1024px) {
+   .systems-heading {
+      font-size: 80px;
+   }
+}
+@media (min-width: 1280px) {
+   .systems-heading {
+      font-size: 90px;
+   }
+}
+@media (min-width: 1536px) {
+   .systems-heading {
+      font-size: 95px;
+   }
+}
 
 
+.systems-subheading {
+   font-size: 25px;
+   font-weight: 600;
+   color: #EB9948;
+   letter-spacing: -0.015em;
+   text-transform: uppercase;
+   white-space: nowrap;
+}
+
+@media (min-width: 768px) {
+   .systems-subheading {
+      font-size: 40px;
+   }
+}
 
 .projects-section {
    background: #F8F8F8;

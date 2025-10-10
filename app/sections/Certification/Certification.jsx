@@ -34,16 +34,22 @@ const Certification = () => {
          <div className="flex flex-col w-full relative z-10">
             <div className="flex flex-col w-full text-center mb-16">
                <div className="flex flex-col items-end justify-center self-end px-6">
-
-                  <h2 className="certification-heading">
+                  <div className="flex">
+                     <h2 className="certification-heading">
                      Certificação
                   </h2>
 
-                  <div className="flex gap-4 justify-center items-center">
-                     <div className='h-[5px] w-15 md:w-20 bg-[#EBC197] ' />
+                  </div>
+
+
+                  
+
+                  <div className="flex gap-4 w-full justify-center items-center">
+                     
                      <h2 className="certification-subheading">
                         e Vistoria
                      </h2>
+                     <div className='h-[5px] w-full bg-[#EBC197] ' />
                   </div>
 
                </div>

@@ -10,8 +10,8 @@ const CertificationMobile = () => {
                   <h2 className="certification-heading">Certificação</h2>
 
                </div>
-               <div className="flex gap-x-4 items-center">
-                  <div className='h-[5px] w-15 md:w-20 bg-[#EBC197] ' />
+               <div className="flex gap-x-4 w-full items-center">
+                  <div className='h-[5px] w-full  bg-[#EBC197] ' />
 
                   <h2 className="certification-subheading">e Vistoria</h2>
 

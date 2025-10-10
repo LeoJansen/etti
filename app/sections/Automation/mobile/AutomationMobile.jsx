@@ -24,15 +24,15 @@ const AutomationMobile = () => {
          <div className='flex flex-col w-full items-start justify-center  my-8'>
             <div className='flex flex-col w-fit items-start justify-center '>
                <div className='flex'>
-                  <h2 className="text-[50px] tracking-[-0.0432em] font-extralight text-[#939393] leading-10">
+                  <h2 className="automation-heading">
                   Automação Residencial
                </h2>
 
                </div>
                
-               <div className='flex justify-center items-center gap-4 self-end'>
-                  <div className='h-[5px] w-[70px] md:w-[145px] rounded-[1.5px] bg-[#EBC197]' />
-                  <h3 className="text-4xl font-semibold text-[#EB9948] tracking-tight uppercase">
+               <div className='flex w-full justify-center items-center gap-4 self-end'>
+                  <div className='h-[5px] w-full rounded-[1.5px] bg-[#EBC197]' />
+                  <h3 className="automation-subheading">
                      com KNX
                   </h3>
                </div>
