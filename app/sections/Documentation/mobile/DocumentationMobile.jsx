@@ -16,27 +16,31 @@ const DocumentationMobile = ({ cards }) => {
          ref={containerRef}
          className="relative px-6 flex flex-col gap-12 pb-12 overflow-hidden"
       >
-         
-            <Image
-               alt="background"
-               src="/assets/doc-bg-mobile.png"
-               quality={100}
-               fill
-               sizes="100vw"
-               className="doc-bg-mobile object-cover object-bottom"
-               priority
-            />
-     
+
+         <Image
+            alt="background"
+            src="/assets/doc-bg-mobile.png"
+            quality={100}
+            fill
+            sizes="100vw"
+            className="doc-bg-mobile object-cover object-bottom"
+            priority
+         />
+
 
          <div className="flex flex-col  z-10">
-            <div className="flex">
-               <h2 className="documentation-heading">Documentação <span className="text-[70px] ">Técnica</span></h2>
-           
+            <div className="flex flex-col">
+               <div className="flex">
+                  <h2 className="documentation-heading">Documentos Técnicos</h2>
+
+               </div>
+               <div className="flex gap-4 items-center">
+                  <div className="h-[5px] w-full rounded-[1.5px] bg-[#EBC197]" />
+                  <h3 className="documentation-subheading">Completa</h3>
+               </div>
             </div>
-            <div className="flex gap-4 items-center">
-               <div className="h-[5px] w-[125px] rounded-[1.5px] bg-[#EBC197]" />
-               <h3 className="documentation-subheading">Completa</h3>
-            </div>
+
+
             <p className="text-md leading-snug text-justify text-[#5c5c5c] mt-4">
                A <strong className="text-[#EB9948]">Etti Engenharia</strong> oferece uma documentação técnica completa para garantir que cada projeto esteja em total conformidade com as normas regulamentares. Nossos documentos detalhados e técnicos são essenciais para licenciamentos e garantem a segurança e a qualidade das instalações elétricas.
             </p>
