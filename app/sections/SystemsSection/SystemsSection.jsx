@@ -5,7 +5,7 @@ import { systemsContent } from './SystemsContent';
 
 const SystemsSection = () => {
    return (
-      <section className="hidden md:flex relative w-full min-h-screen items-stretch bg-transparent py-24">
+      <section className="hidden md:flex relative w-full min-h-screen items-stretch bg-white py-24">
          <div className="mx-auto flex w-full max-w-6xl flex-col gap-12 px-10">
             <div className="flex flex-col text-left">
                <h3 className="systems-subheading">Sistemas de</h3>
@@ -16,7 +16,7 @@ const SystemsSection = () => {
                </p>
             </div>
 
-            <div className="flex w-full gap-8">
+            <div className="h-full w-full gap-8 grid grid-cols-2">
                {systemsContent.map(({ title, description }, idx) => (
                   <SystemCard
                      key={title}
