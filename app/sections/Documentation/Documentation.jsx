@@ -47,28 +47,27 @@ const Documentation = () => {
                   ref={desktopContainerRef}
                   className="px-6 flex flex-col justify-between gap-[10px] md:gap-[40px] z-20"
                >
-                  <div className="flex flex-col w-full md:h-[50vh] md:flex-row-reverse z-20">
+                  <div className="flex w-full  md:h-[50vh]  z-20">
                      <div className="flex flex-col justify-start items-end backdrop-blur-[1px] h-fit z-30">
-                        <h2 className="documentation-heading z-40 mt-5 text-end">
+                        <h2 className="documentation-heading z-40 mt-5 text-start">
                            Documentação Técnica
                         </h2>
-                  
-                        <div className="flex gap-4 items-center">
-                           <div className="h-[5px] w-[125px] rounded-[1.5px] bg-[#EBC197] doc-highlight-line" />
+
+                        <div className="flex gap-4 items-center w-full">
+                           <div className="h-[5px] w-full rounded-[1.5px] bg-[#EBC197] doc-highlight-line" />
                            <h3 className="documentation-subheading">
                               Completa
                            </h3>
+                           
                         </div>
                      </div>
-                     <div className="flex w-full h-full justify-center md:justify-start md:items-end z-20">
-                        <div className="flex w-[50%] md:bg-[#464646] md:ml-[-24px] px-2 md:px-12 rounded-r-[4px]">
+                     <div className="flex w-full h-full  justify-end items-end z-20">
+                        <div className="flex w-[50%] md:bg-[#464646] md:mr-[-24px] px-2 md:px-12 rounded-l-[4px] ">
                            <p className="text-md md:text-[#c4c4c4] my-12 leading-snug text-justify doc-description">
                               A <strong className="text-[#EB9948]">Etti Engenharia</strong> oferece uma documentação técnica completa para garantir que cada projeto esteja em total conformidade com as normas regulamentares. Nossos documentos detalhados e técnicos são essenciais para licenciamentos e garantem a segurança e a qualidade das instalações elétricas.
                            </p>
                         </div>
-                        <div className="flex w-[50%] ">
-                           <div className="relative w-full h-full" />
-                        </div>
+                       
                      </div>
                   </div>
                   <div className="grid h-[50vh] content-center pb-10 grid-cols-1 md:grid-cols-3 gap-9 xl:px-[4%]">
