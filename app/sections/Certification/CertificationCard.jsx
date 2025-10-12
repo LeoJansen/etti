@@ -4,11 +4,8 @@ import Image from "next/image";
 
 const CertificationCard = ({ title, description, image, index }) => {
    return (
-      <div className="relative flex  h-full justify-start items-center xl:gap-4   rounded-[6px]">
-         <div className="absolute left-0 h-full w-50 xl:w-60 rounded-l-[6px] bg-[#EB9849]  " />
-         <div className="absolute right-0 h-full w-30 xl:w-30 rounded-r-[6px] bg-[#504f4f]  " />
-         <div className="absolute top-5  right-5 w-50 h-90 xl:w-100 xl:h-110 rounded-[3px] bg-[#ffffff]  " />
-         <div className="absolute top-5  left-5 w-90 h-90 xl:w-100 xl:h-110 rounded-[3px] bg-[#ffffff]  " />
+      <div id={`certification-card-${index}`} className="relative flex  h-full justify-start items-center xl:gap-4   rounded-[6px]">
+    
          <div className={`flex w-fit p-10 justify-center items-center h-full  ${index % 2 == 0 ? "" : ""} rounded-l-[6px]  `}>
             <Image
                src={image}

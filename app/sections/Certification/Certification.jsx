@@ -2,8 +2,7 @@
 
 import React from "react";
 import dynamic from "next/dynamic";
-import CertificationCard from "./CertificationCard";
-import { certificationCards } from "./CertificationContent";
+import CertificationCarousel from "./CertificationCarousel";
 
 const CertificationMobile = dynamic(() => import("./mobile/CertificationMobile"), {
    ssr: false,
@@ -62,10 +61,8 @@ const Certification = () => {
                   </p>
                </div>
 
-               <div className="grid grid-cols-1  gap-12 px-10 lg:px-[10%]">
-                  {certificationCards.map((card, index) => (
-                     <CertificationCard key={card.title} index={index} title={card.title} description={card.description} image={card.image} />
-                  ))}
+               <div id="certification-carousel" className="flex w-full px-4 lg:px-[10%] h-[60vh]">
+                  <CertificationCarousel />
                </div>
             </div>
          </div>
