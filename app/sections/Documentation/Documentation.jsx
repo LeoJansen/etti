@@ -47,10 +47,10 @@ const Documentation = () => {
                   ref={desktopContainerRef}
                   className="px-6 flex flex-col justify-between gap-[10px] md:gap-[40px] z-20"
                >
-                  <div className="flex w-full  md:h-[50vh]  z-20">
-                     <div className="flex flex-col justify-start items-end backdrop-blur-[1px] h-fit z-30">
+                  <div className="flex flex-col w-full    z-20">
+                     <div className="flex flex-col justify-start items-end w-fit backdrop-blur-[1px] h-fit z-30">
                         <h2 className="documentation-heading z-40 mt-5 text-start">
-                           Documentação Técnica
+                           Documentação <br /> Técnica
                         </h2>
 
                         <div className="flex gap-4 items-center w-full">
@@ -62,8 +62,8 @@ const Documentation = () => {
                         </div>
                      </div>
                      <div className="flex w-full h-full  justify-end items-end z-20">
-                        <div className="flex w-[50%] md:bg-[#464646] md:mr-[-24px] px-2 md:px-12 rounded-l-[4px] ">
-                           <p className="text-md md:text-[#c4c4c4] my-12 leading-snug text-justify doc-description">
+                        <div className="flex w-[50%] md:bg-[#464646] md:mr-[-24px] px-2 md:px-12 rounded-l-[4px] p-4">
+                           <p className="text-[#d1d1d1] tracking-tighter font-light md:text-xl xl:text-2xl text-justify">
                               A <strong className="text-[#EB9948]">Etti Engenharia</strong> oferece uma documentação técnica completa para garantir que cada projeto esteja em total conformidade com as normas regulamentares. Nossos documentos detalhados e técnicos são essenciais para licenciamentos e garantem a segurança e a qualidade das instalações elétricas.
                            </p>
                         </div>

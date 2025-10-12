@@ -56,12 +56,12 @@ const Certification = () => {
 
             <div className="flex flex-col gap-16 w-full">
                <div className="flex justify-center">
-                  <p className="max-w-3xl text-lg text-gray-600 dark:text-gray-300 px-10 text-center">
+                  <p className="text-[#b6b6b6] tracking-tight font-light text-2xl">
                      Garantimos a qualidade e a conformidade das suas instalações elétricas com serviços de certificação e vistoria.
                   </p>
                </div>
 
-               <div id="certification-carousel" className="flex w-full px-4 lg:px-[10%] h-[60vh]">
+               <div id="certification-carousel" className="flex w-full px-4 lg:px-[10%] h-[50vh] xl:h-[60vh]">
                   <CertificationCarousel />
                </div>
             </div>
