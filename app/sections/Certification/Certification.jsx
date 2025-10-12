@@ -29,8 +29,8 @@ const Certification = () => {
    }
 
    return (
-      <section className=" bg-white py-24 relative min-h-screen w-full z-10" id="certification">
-         <div className="flex flex-col w-full relative z-10">
+      <section className=" bg-white py-12 relative min-h-screen w-full" id="certification">
+         <div className="flex flex-col w-full relative ">
             <div className="flex flex-col w-full text-center mb-16">
                <div className="flex flex-col items-end justify-center self-end px-6">
                   <div className="flex">
@@ -61,7 +61,7 @@ const Certification = () => {
                   </p>
                </div>
 
-               <div id="certification-carousel" className="flex w-full px-4 lg:px-[10%] h-[50vh] xl:h-[60vh]">
+               <div id="certification-carousel" className="flex w-full h-[50vh] xl:h-[60vh] z-80">
                   <CertificationCarousel />
                </div>
             </div>
