@@ -23,12 +23,12 @@ const projects = [
 const Projects = () => {
    return (
       <section id="projects" className="projects-section py-16 w-full min-h-screen  px-4 overflow-hidden">
-         <div className="flex flex-col items-end justify-center px-[2%] ">
+         <div className="flex flex-col items-end justify-center px-[2%] gap-12">
             <div className='flex flex-col items-end '>
                <div className='flex items-center justify-end gap-4 w-full'>
-                 
+
                   <h3 className="projects-subheading">      Projetos de</h3>
-                   <div className='h-[5px] w-full bg-[#EBC197]' />
+                  <div className='h-[5px] w-full bg-[#EBC197]' />
                </div>
 
                <h2 className="projects-heading text-end">
@@ -37,11 +37,15 @@ const Projects = () => {
 
 
             </div>
+            <div className='flex w-full px-[5%]'>
+               <p className="text-[#9e9e9e] tracking-tighter font-light md:text-xl xl:text-2xl ">
+                  Desenvolvemos soluções elétricas personalizadas para habitação, edifícios e espaços comerciais, seguindo rigorosamente as normas técnicas e de segurança mais atuais.
+               </p>
+
+            </div>
 
 
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto my-12">
-               Desenvolvemos soluções elétricas personalizadas para habitação, edifícios e espaços comerciais, seguindo rigorosamente as normas técnicas e de segurança mais atuais.
-            </p>
+
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-15 md:gap-10">
                {projects.map((project) => (
