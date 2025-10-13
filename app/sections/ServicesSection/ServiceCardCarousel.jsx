@@ -107,12 +107,12 @@ const ServiceCardCarousel = ({
         hover:scale-95 hover:opacity-80
       `}
     >
-      <div className={`flex w-full justify-center items-center transition-all duration-300 ${
-        isActive ? 'p-6' : 'p-4'
+      <div className={`flex w-full justify-between items-center transition-all duration-300 ${
+        isActive ? 'p-4' : 'p-1'
       }`}>
         <div 
           ref={circleRef} 
-          className={`flex justify-center items-center border-2 border-[hsl(30,50%,70%)] rounded-full transition-all duration-300 ${
+          className={`flex  justify-center items-center border-2 border-[hsl(30,50%,70%)] rounded-full transition-all duration-300 ${
             isActive ? 'w-20 h-20' : 'w-16 h-16'
           }`}
         >
@@ -125,6 +125,11 @@ const ServiceCardCarousel = ({
             ref={iconWrapperRef}
           />  
         </div>
+         <div 
+            ref={dividerRef} 
+            className={`h-[5px] bg-[hsl(30,80%,80%)] transition-all duration-300  ${isActive ? "mr-[-15px] w-[370px]" : "w-[100px] mr-[-3px]"}`}
+          
+          />
       </div>
       
       {/* Título sempre visível */}
@@ -141,10 +146,7 @@ const ServiceCardCarousel = ({
       {/* Conteúdo visível apenas quando ativo */}
       {isActive && (
         <div className='w-full h-full flex flex-col gap-6 justify-center items-center px-4 pb-6'>
-          <div 
-            ref={dividerRef} 
-            className='h-[5px] w-full bg-[hsl(30,80%,80%)] transition-all duration-300'
-          />
+         
           <div className='flex w-full h-full text-lg tracking-tight font-extralight'>
             <p className="text-[#a7a7a7] text-center leading-relaxed">
               {description}

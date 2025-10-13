@@ -28,6 +28,7 @@ const AutomationCard = forwardRef(function AutomationCard(
               quality={icon.quality ?? 90}
               priority={false}
             />
+            
           </div>
         )}
         {title && (
