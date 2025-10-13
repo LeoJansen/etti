@@ -37,7 +37,7 @@ const AutomationMobile = () => {
                   </h3>
                </div>
             </div>
-            <p className="mt-2 text-base text-gray-400">
+            <p className="mt-2 text-xl font-extralight text-justify text-gray-400">
                Transforme sua casa em uma habitação inteligente com nossa expertise em domótica e protocolo KNX, o padrão mundial para automação predial.
             </p>
          </div>
