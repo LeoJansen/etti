@@ -2,8 +2,8 @@
 
 import Image from 'next/image'
 import React, { useState, useRef, useEffect } from 'react'
-import ServiceCardCarousel from './ServiceCardCarousel'
-import { servicesData } from './ServicesContent'
+import ServiceCardCarouselMobile from './ServiceCardCarouselMobile'
+import { servicesData } from '../ServicesContent'
 
 const ServicesCarouselMobile = () => {
   const [activeIndex, setActiveIndex] = useState(0)
@@ -54,7 +54,7 @@ const ServicesCarouselMobile = () => {
   // }, [activeIndex])
 
   return (
-    <section id="services" className="flex md:hidden relative w-full min-h-screen max-w-screen overflow-hidden">
+    <section id="services" className="flex md:hidden relative w-full min-h-screen h-screen max-w-screen overflow-hidden">
       <Image
         src="/assets/servicesBgMobile3.png"
         alt="Background Gradient"
@@ -67,8 +67,8 @@ const ServicesCarouselMobile = () => {
       
       <div className="flex flex-col w-full h-full">
         {/* Header da seção */}
-        <div className='flex w-full h-1/3 justify-end items-center'>
-          <div className='flex flex-col justify-end items-end bg-[#00000091] backdrop-blur-[40px] shadow-[0_2px_2px_2px_rgba(20,20,20,0.4)] place-self-end p-4 px-8 rounded-l-[6px]'>
+        <div id="services-header" className='flex w-full h-1/5 min-h-[200px] justify-end items-start pt-8'>
+          <div className='flex flex-col justify-end items-end bg-[#00000091] backdrop-blur-[40px] shadow-[0_2px_2px_2px_rgba(20,20,20,0.4)]  p-4 px-8 rounded-l-[6px]'>
             <div className='flex flex-col justify-end w-fit'>
               <div className='flex w-full justify-end gap-4 items-center'>
                 <h3 className="text-lg font-light text-[#cecece]">Nossos</h3>
@@ -84,18 +84,18 @@ const ServicesCarouselMobile = () => {
         </div>
 
         {/* Carousel */}
-        <div className="w-full h-2/3 flex flex-col justify-center items-center relative px-4">
+        <div className="w-full h-4/5 flex flex-col justify-center items-center relative px-4 py-4">
           {/* Container do carousel mobile */}
           <div 
             ref={carouselRef}
-            className="flex items-center justify-center w-full max-w-sm relative touch-pan-y"
+            className="flex items-center justify-center w-full max-w-md relative touch-pan-y"
             onTouchStart={handleTouchStart}
             onTouchMove={handleTouchMove}
             onTouchEnd={handleTouchEnd}
           >
             {/* Card ativo no centro */}
             <div className="flex justify-center">
-              <ServiceCardCarousel
+              <ServiceCardCarouselMobile
                 title={servicesData[activeIndex].title}
                 description={servicesData[activeIndex].description}
                 icon={servicesData[activeIndex].icon}
@@ -112,10 +112,10 @@ const ServicesCarouselMobile = () => {
               <>
                 {/* Card anterior (esquerda) */}
                 <div 
-                  className="absolute left-0 opacity-40 scale-75 -translate-x-4 z-0"
+                  className="absolute left-0 opacity-30 scale-75 -translate-x-6 z-0"
                   onClick={handlePrevious}
                 >
-                  <ServiceCardCarousel
+                  <ServiceCardCarouselMobile
                     title={servicesData[activeIndex === 0 ? servicesData.length - 1 : activeIndex - 1].title}
                     description=""
                     icon={servicesData[activeIndex === 0 ? servicesData.length - 1 : activeIndex - 1].icon}
@@ -129,10 +129,10 @@ const ServicesCarouselMobile = () => {
 
                 {/* Card próximo (direita) */}
                 <div 
-                  className="absolute right-0 opacity-40 scale-75 translate-x-4 z-0"
+                  className="absolute right-0 opacity-30 scale-75 translate-x-6 z-0"
                   onClick={handleNext}
                 >
-                  <ServiceCardCarousel
+                  <ServiceCardCarouselMobile
                     title={servicesData[activeIndex === servicesData.length - 1 ? 0 : activeIndex + 1].title}
                     description=""
                     icon={servicesData[activeIndex === servicesData.length - 1 ? 0 : activeIndex + 1].icon}
@@ -148,7 +148,7 @@ const ServicesCarouselMobile = () => {
           </div>
 
           {/* Botões de navegação */}
-          <div className="flex justify-between items-center w-full max-w-sm mt-8">
+          <div className="flex justify-between items-center w-full max-w-md mt-8">
             <button
               onClick={handlePrevious}
               className="w-10 h-10 flex items-center justify-center rounded-full bg-[#00000080] backdrop-blur-md border border-[#eb994850] text-[#eb9948] hover:bg-[#eb994820] transition-all duration-300"

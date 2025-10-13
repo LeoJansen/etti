@@ -7,7 +7,7 @@ import { useGSAP } from '@gsap/react'
 
 gsap.registerPlugin(useGSAP)
 
-const ServiceCardCarousel = ({ 
+const ServiceCardCarouselMobile = ({ 
   title, 
   description, 
   icon, 
@@ -36,7 +36,7 @@ const ServiceCardCarousel = ({
     // Animação apenas para o card ativo
     if (isActive && dividerRef.current) {
       const parsedOffset = Number(pulseOffset) || 0
-      const offsetDelay = parsedOffset * 0.35
+      const offsetDelay = parsedOffset * 0.4 // Delay um pouco maior para mobile
 
       const tl = gsap.timeline({
         repeat: -1,
@@ -44,38 +44,38 @@ const ServiceCardCarousel = ({
         delay: offsetDelay,
         defaults: {
           ease: 'sine.inOut',
-          duration: 1.6
+          duration: 2.0 // Duração mais longa para mobile (mais suave)
         }
       })
 
-      // Estados iniciais
+      // Estados iniciais otimizados para mobile
       gsap.set(circleRef.current, {
-        boxShadow: '0 0 6px rgba(235, 153, 72, 0.45)',
+        boxShadow: '0 0 4px rgba(235, 153, 72, 0.4)',
         borderColor: 'hsl(30,50%,70%)'
       })
 
       gsap.set(iconWrapperRef.current, {
-        filter: 'drop-shadow(0 0 4px rgba(235, 153, 72, 0.35))',
+        filter: 'drop-shadow(0 0 3px rgba(235, 153, 72, 0.3))',
         scale: 1
       })
 
       gsap.set(dividerRef.current, {
-        boxShadow: '0 0 6px rgba(235, 153, 72, 0.45)',
+        boxShadow: '0 0 4px rgba(235, 153, 72, 0.4)',
         backgroundColor: 'hsl(30,80%,80%)'
       })
 
-      // Animação de pulso
+      // Animação de pulso suave para mobile
       tl
         .to(circleRef.current, {
-          boxShadow: '0 0 6px rgba(235, 153, 72, 0.7), 0 0 6px rgba(235, 125, 73, 0.65)',
+          boxShadow: '0 0 8px rgba(235, 153, 72, 0.6), 0 0 4px rgba(235, 125, 73, 0.5)',
           borderColor: '#D6CDC3'
         })
         .to(iconWrapperRef.current, {
-          filter: 'drop-shadow(0 0 16px rgba(235, 153, 72, 0.45)) drop-shadow(2px 6px 6px rgba(255,233,152,0.50))',
-          scale: 1.05
+          filter: 'drop-shadow(0 0 12px rgba(235, 153, 72, 0.4)) drop-shadow(1px 4px 4px rgba(255,233,152,0.4))',
+          scale: 1.02 // Escala bem pequena para mobile
         }, '<')
         .to(dividerRef.current, {
-          boxShadow: '0 0 10px rgba(235, 223, 172, 0.75)',
+          boxShadow: '0 0 8px rgba(235, 223, 172, 0.6)',
           backgroundColor: '#D6CDC3'
         }, '<')
 
@@ -98,29 +98,30 @@ const ServiceCardCarousel = ({
       ref={cardRef} 
       onClick={onClick}
       className={`
-        service-card-carousel flex flex-col items-center cursor-pointer transition-all duration-500 ease-in-out
+        service-card-carousel-mobile flex flex-col items-center cursor-pointer transition-all duration-500 ease-in-out
         ${isActive 
-          ? 'h-[300px] w-[500px] scale-100 opacity-100 z-20' 
-          : 'h-[300px] w-[200px] scale-90 opacity-60 z-10'
+          ? 'h-[400px] w-[240px] scale-100 opacity-100 z-20' 
+          : 'h-[280px] w-[180px] scale-85 opacity-50 z-10'
         }
-        rounded-[8px] bg-[#00000095] backdrop-blur-[40px] shadow-[0_2px_4px_2px_rgba(20,20,20,0.5)]
-        hover:scale-95 hover:opacity-80
+        rounded-[8px] bg-[#00000095] backdrop-blur-[4px] shadow-[0_2px_4px_2px_rgba(20,20,20,0.5)]
+        active:scale-95
       `}
     >
+      {/* Container do ícone */}
       <div className={`flex w-full justify-center items-center transition-all duration-300 ${
-        isActive ? 'p-6' : 'p-4'
+        isActive ? 'p-5' : 'p-3'
       }`}>
         <div 
           ref={circleRef} 
           className={`flex justify-center items-center border-2 border-[hsl(30,50%,70%)] rounded-full transition-all duration-300 ${
-            isActive ? 'w-20 h-20' : 'w-16 h-16'
+            isActive ? 'w-16 h-16' : 'w-12 h-12'
           }`}
         >
           <Image
             src={icon.path}
             alt={icon.title}
-            width={isActive ? iconWidth : iconWidth * 0.7}
-            height={isActive ? iconHeight : iconHeight * 0.7}
+            width={isActive ? iconWidth * 0.7 : iconWidth * 0.5}
+            height={isActive ? iconHeight * 0.7 : iconHeight * 0.5}
             className="object-contain transition-all duration-300"
             ref={iconWrapperRef}
           />  
@@ -128,8 +129,8 @@ const ServiceCardCarousel = ({
       </div>
       
       {/* Título sempre visível */}
-      <div className={`w-full flex flex-col justify-center items-center font-medium text-center leading-6 transition-all duration-300 ${
-        isActive ? 'text-[20px] text-[#eb9948] px-4' : 'text-[16px] text-[#eb9948] px-2'
+      <div className={`w-full flex flex-col justify-center items-center font-medium text-center leading-5 transition-all duration-300 ${
+        isActive ? 'text-base text-[#eb9948] px-3' : 'text-sm text-[#eb9948] px-2'
       }`}>
         {title.map((line, index) => (
           <h3 key={index} className="">
@@ -140,13 +141,13 @@ const ServiceCardCarousel = ({
       
       {/* Conteúdo visível apenas quando ativo */}
       {isActive && (
-        <div className='w-full h-full flex flex-col gap-6 justify-center items-center px-4 pb-6'>
+        <div className='w-full h-full flex flex-col gap-4 justify-center items-center px-3 pb-4'>
           <div 
             ref={dividerRef} 
-            className='h-[5px] w-full bg-[hsl(30,80%,80%)] transition-all duration-300'
+            className='h-[5px] w-3/4 bg-[hsl(30,80%,80%)] rounded-full transition-all duration-300'
           />
-          <div className='flex w-full h-full text-lg tracking-tight font-extralight'>
-            <p className="text-[#a7a7a7] text-center leading-relaxed">
+          <div className='flex w-full h-full text-sm tracking-tight font-light'>
+            <p className="text-[#9e9e9e] tracking-tighter font-light text-lg  text-center leading-relaxed">
               {description}
             </p>
           </div>
@@ -156,4 +157,4 @@ const ServiceCardCarousel = ({
   )
 }
 
-export default ServiceCardCarousel
+export default ServiceCardCarouselMobile
