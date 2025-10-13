@@ -18,7 +18,7 @@ const AutomationCard = forwardRef(function AutomationCard(
       <div className="flex  items-center w-full mb-4">
         {icon?.src && (
           <div className="automation-card-icon flex w-1/5 items-center justify-end opacity-0">
-            <div id="conector" className="flex w-[calc(100%-15px)] h-[5px] bg-[#eb9a48]" />
+            <div className="automation-card-connector flex w-[calc(100%-15px)] h-[5px] bg-[#eb9a48] opacity-0 scale-x-0 origin-left" />
             <Image
               src={icon.src}
               alt={icon.alt ?? "Ícone de automação"}
