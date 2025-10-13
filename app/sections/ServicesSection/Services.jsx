@@ -2,8 +2,7 @@
 
 import Image from 'next/image'
 import React from 'react'
-import ServiceCard from './ServiceCard'
-import { servicesData } from './ServicesContent'
+import ServicesCarousel from './ServicesCarousel'
 
 const Services = () => {
 
@@ -44,23 +43,7 @@ const Services = () => {
 
 
 
-            <div id="services-grid" className="w-full h-2/3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8  px-10  py-20 text-[#cecece]  border-purple-500">
-               {servicesData.map((service, index) => (
-                  <ServiceCard
-                     key={index}
-
-                     title={service.title}
-                     description={service.description}
-                     icon={service.icon}
-                     iconPath={service.icon.path}
-                     iconColor="#EB9948"
-                     iconWidth={service.icon.iconWidth}
-                     iconHeight={service.icon.iconHeight}
-                     pulseOffset={index}
-
-                  />
-               ))}
-            </div>
+            <ServicesCarousel />
          </div>
       </section>
    )

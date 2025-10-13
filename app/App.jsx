@@ -9,7 +9,7 @@ import SystemsSection from "./sections/SystemsSection/SystemsSection";
 import SystemsSectionMobile from "./sections/SystemsSection/mobile/SystemsSectionMobile";
 import WhyEtti from "./sections/WhyEtti";
 import Contact from "./sections/Contact";
-import ServicesMobile from "./sections/ServicesSection/ServicesMobile";
+import ServicesCarouselMobile from "./sections/ServicesSection/ServicesCarouselMobile";
 
 const App = () => {
    return (
@@ -17,7 +17,7 @@ const App = () => {
          <Hero />
          <About />
          <Services />
-         <ServicesMobile />
+         <ServicesCarouselMobile />
          <Projects />
          <Documentation />
          <Certification />
