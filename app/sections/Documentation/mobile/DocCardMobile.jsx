@@ -17,10 +17,10 @@ const DocCardMobile = ({ title, description, icon, iconSize, className = "", tit
                   className="opacity-60"
                />
             )}
-            <h3 className={`text-[20px] leading-6 font-medium text-[#4d4d4d] ${titleClassName}`}>{title}</h3>
+            <h3 className={`text-xl leading-6 font-medium text-[#494949] ${titleClassName}`}>{title}</h3>
          </div>
 
-         <p className="text-[14px] leading-relaxed text-[#5c5c5c] text-center">{description}</p>
+         <p className="text-lg leading-relaxed font-extralight text-[#5c5c5c] text-justify">{description}</p>
       </div>
    );
 };

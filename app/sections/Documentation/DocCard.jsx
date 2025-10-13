@@ -39,7 +39,7 @@ const DocCard = ({  title, description, icon,  iconSize, className }) => {
     
         </div>
         <div className='flex w-full h-full'>
-          <p className=" text-[14px] md:text-[16px] tracking-wide text-[#8d8d8d]">
+          <p className=" text-lg font-extralight tracking-wide text-[#8d8d8d] text-center">
             {description}
           </p>
         </div>

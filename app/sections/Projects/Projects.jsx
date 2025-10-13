@@ -38,7 +38,7 @@ const Projects = () => {
 
             </div>
             <div className='flex w-full px-[5%]'>
-               <p className="text-[#9e9e9e] tracking-tighter font-light md:text-xl xl:text-2xl ">
+               <p className="text-[#9e9e9e] tracking-tighter font-light text-xl xl:text-2xl ">
                   Desenvolvemos soluções elétricas personalizadas para habitação, edifícios e espaços comerciais, seguindo rigorosamente as normas técnicas e de segurança mais atuais.
                </p>
 

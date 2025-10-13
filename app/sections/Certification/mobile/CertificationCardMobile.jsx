@@ -19,7 +19,7 @@ const CertificationCardMobile = ({ title, description, image }) => {
    
 		<div className="flex flex-col gap-3 rounded-lg  p-5 ">
 			<h3 className="text-lg font-semibold text-[#EB9948] text-center">{title}</h3>
-			<p className="text-sm text-[#4b4b4b] text-center">{description}</p>
+			<p className="text-xl font-extralight text-[#4b4b4b] text-justify">{description}</p>
 		</div>
       </div>
 	);
