@@ -34,13 +34,13 @@ const ServicesCarousel = () => {
     return () => window.removeEventListener('keydown', handleKeyDown)
   }, [servicesData.length])
 
-  // Auto-play opcional (descomentear se desejado)
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     handleNext()
-  //   }, 5000)
-  //   return () => clearInterval(interval)
-  // }, [activeIndex])
+  
+   useEffect(() => {
+    const interval = setInterval(() => {
+       handleNext()
+     }, 5000)
+     return () => clearInterval(interval)
+   }, [activeIndex])
 
   return (
     <div className="w-full h-2/3 flex justify-center items-center relative px-4">
