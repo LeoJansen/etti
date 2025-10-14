@@ -18,7 +18,7 @@ const SystemCard = ({ index = 0, title, description, className = '', children })
    const imageRef = useRef(null);
    const overlayRef = useRef(null);
    const isOdd = index % 2 !== 0;
-   const backgroundClass = isOdd ? 'bg-[#0a0a0a]' : 'bg-[#0a0a0a]';
+   const backgroundClass = isOdd ? 'bg-[hsl(0,0%,0%)]' : 'bg-[hsl(0,0%,0%)]';
 
    useEffect(() => {
       const card = cardRef.current;
@@ -33,7 +33,7 @@ const SystemCard = ({ index = 0, title, description, className = '', children })
          
          // Animação: título desaparece e imagem aparece
          tl.to(titleElement, {
-            opacity: 0,
+            opacity: 1,
             scale: 0.8,
             duration: 0.4,
             ease: "power2.out"
@@ -110,7 +110,7 @@ const SystemCard = ({ index = 0, title, description, className = '', children })
          {/* Overlay escuro sobre a imagem */}
          <div 
             ref={overlayRef}
-            className="absolute inset-0 bg-black/60 opacity-0 z-10"
+            className="absolute inset-0 bg-[hsl(0,0%,0%)] opacity-0 z-10"
          />
 
          {/* Título com máscara de imagem */}

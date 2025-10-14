@@ -9,7 +9,7 @@ import React from 'react'
 const DocCard = ({  title, description, icon,  iconSize, className }) => {
 
   return (
-    <div className={`flex flex-col  items-center h-full self-end max-w-[500px]  w-full  rounded-[2px]  duration-300 py-4  gap-2 md:gap-0 p-4 ${className} backdrop-blur-[40px] shadow-[0_2px_4px_2px_rgba(20,20,20,0.15)] z-10 `}>
+    <div className={`flex flex-col  items-center h-full self-end max-w-[500px]  w-full  rounded-[2px]  duration-300 py-4  gap-2 md:gap-0 p-4 ${className} backdrop-blur-[40px] shadow-[0_2px_4px_1px_rgba(20,20,20,0.08)] z-10 `}>
       <div className='flex w-full justify-start items-center   '>
         <div className='flex  gap-2 w-full h-full justify-center items-end  '>
           

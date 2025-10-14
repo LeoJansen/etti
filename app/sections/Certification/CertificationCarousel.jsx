@@ -149,7 +149,7 @@ const CertificationCarousel = () => {
             {/* Navigation Buttons */}
             <button
                onClick={prevSlide}
-               className="absolute left-4 top-1/2 -translate-y-1/2  flex h-12 w-12 items-center justify-center rounded-full bg-white/80 shadow-lg transition-all hover:bg-white hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-[#EB9948] focus:ring-offset-2 z-70"
+               className="absolute left-4 top-1/2 -translate-y-1/2  flex h-12 w-12 items-center justify-center rounded-full bg-white/80 shadow-sm transition-all hover:bg-white hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-[#EB9948] focus:ring-offset-2 z-70"
                aria-label="Previous slide"
             >
                <svg
@@ -164,7 +164,7 @@ const CertificationCarousel = () => {
 
             <button
                onClick={nextSlide}
-               className="absolute right-4 top-1/2 -translate-y-1/2 z-30 flex h-12 w-12 items-center justify-center rounded-full bg-white/80 shadow-lg transition-all hover:bg-white hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-[#EB9948] focus:ring-offset-2"
+               className="absolute right-4 top-1/2 -translate-y-1/2 z-30 flex h-12 w-12 items-center justify-center rounded-full bg-white/80 shadow-sm transition-all hover:bg-white hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-[#EB9948] focus:ring-offset-2"
                aria-label="Next slide"
             >
                <svg

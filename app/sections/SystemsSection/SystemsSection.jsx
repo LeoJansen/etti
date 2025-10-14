@@ -6,8 +6,8 @@ import { systemsContent } from './SystemsContent';
 const SystemsSection = () => {
    return (
       <section className="hidden md:flex relative w-full min-h-screen items-stretch bg-black py-24">
-         <div className=" flex w-full  flex-col gap-12 ">
-            <div className="flex flex-col text-left">
+         <div className=" flex w-full  flex-col gap-12 px-6">
+            <div className="flex flex-col text-left w-full ">
                <div className='flex flex-col w-fit'>
                   <div className='flex w-full items-center'>
                      
@@ -23,7 +23,7 @@ const SystemsSection = () => {
                </div>
                
                
-               <p className="mt-6 max-w-3xl text-lg text-gray-600 dark:text-gray-400">
+               <p className="mt-6  text-lg text-gray-600 dark:text-gray-400">
                   Proteção total para o seu espaço com nossos sistemas avançados de segurança e combate a
                   incêndio.
                </p>
