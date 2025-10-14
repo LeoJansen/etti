@@ -446,3 +446,15 @@ body {
    pointer-events: none;
    z-index: 0;
 }
+
+/* Sistema Cards - Efeito de máscara de texto com imagem */
+.system-card-title {
+   background-size: cover;
+   background-position: center;
+   -webkit-background-clip: text;
+   background-clip: text;
+   color: transparent;
+   -webkit-text-fill-color: transparent;
+   text-shadow: none;
+   transition: all 0.3s ease;
+}
