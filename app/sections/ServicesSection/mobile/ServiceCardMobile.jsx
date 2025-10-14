@@ -127,7 +127,7 @@ const ServiceCardMobile = ({
       
       {/* Descrição */}
       <div className='flex w-full h-full flex-col justify-center items-center px-2'>
-        <p className="text-[#a7a7a7] text-sm sm:text-base leading-relaxed text-center font-light tracking-wide">
+        <p className="text-[#a7a7a7] text-sm sm:text-base leading-relaxed text-center tracking-wide">
           {description}
         </p>
       </div>

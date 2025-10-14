@@ -108,7 +108,7 @@ const ServiceCard = ({  title, description, icon, iconWidth, iconHeight, pulseOf
       <div className='w-full h-full flex flex-col  gap-8 justify-center items-center  rounded-[6px]  px-4'>
         <div ref={dividerRef} className='h-[5px] md:h-[7px] w-full bg-[hsl(30,80%,80%)]'/>
      
-        <div className='flex w-full h-full  md:text-xl xl:text-2xl tracking-tight font-extralight'>
+        <div className='flex w-full h-full  md:text-xl xl:text-2xl tracking-tight '>
           <p className="   text-[#a7a7a7]">
             {description}
           </p>

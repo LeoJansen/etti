@@ -20,7 +20,7 @@ const CertificationMobile = () => {
 
 
 
-               <p className="text-xl font-extralight text-gray-600">
+               <p className="text-xl font-light text-gray-600">
                   Garantimos a qualidade e a conformidade das suas instalações elétricas com serviços de certificação e vistoria.
                </p>
             </div>

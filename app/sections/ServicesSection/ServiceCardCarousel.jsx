@@ -147,7 +147,7 @@ const ServiceCardCarousel = ({
       {isActive && (
         <div className='w-full h-full flex flex-col gap-6 justify-center items-center px-4 pb-6'>
          
-          <div className='flex w-full h-full text-lg tracking-tight font-extralight'>
+          <div className='flex w-full h-full text-lg tracking-tight '>
             <p className="text-[#a7a7a7] text-center leading-relaxed">
               {description}
             </p>

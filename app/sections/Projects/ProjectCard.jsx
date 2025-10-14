@@ -26,7 +26,7 @@ const ProjectCard = ({ title, description, imageSrc }) => {
 
         </div>
         
-        <p className="text-[#707070] text-lg font-extralight text-justify">{description}</p>
+        <p className="text-[#707070] text-lg font-light text-justify">{description}</p>
       </div>
         
       </div>

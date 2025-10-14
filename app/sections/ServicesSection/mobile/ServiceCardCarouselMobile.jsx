@@ -146,8 +146,8 @@ const ServiceCardCarouselMobile = ({
             ref={dividerRef} 
             className='h-[5px] w-3/4 bg-[hsl(30,80%,80%)] rounded-full transition-all duration-300'
           />
-          <div className='flex w-full h-full text-sm tracking-tight font-light'>
-            <p className="text-[#9e9e9e] tracking-tighter font-light text-lg  text-center leading-relaxed">
+          <div className='flex w-full h-full text-sm tracking-tight '>
+            <p className="text-[#9e9e9e] tracking-tighter text-lg  text-center leading-relaxed">
               {description}
             </p>
           </div>
