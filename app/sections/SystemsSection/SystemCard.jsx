@@ -36,7 +36,9 @@ const SystemCard = ({ index = 0, title, description, className = '', children })
             opacity: 1,
             scale: 0.8,
             duration: 0.4,
-            ease: "power2.out"
+            ease: "power2.out",
+           
+            filter:"brightness(0.5) contrast(1.8) saturate(1.8)"
          })
          .to(imageElement, {
             opacity: 1,
@@ -69,7 +71,8 @@ const SystemCard = ({ index = 0, title, description, className = '', children })
          .to(titleElement, {
             opacity: 1,
             scale: 1,
-            duration: 0.5,
+            duration: 0.2,
+            filter:"brightness(1) contrast(1)",
             ease: "power2.out"
          }, "-=0.2");
       };
