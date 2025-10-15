@@ -458,3 +458,11 @@ body {
    text-shadow: none;
    transition: all 0.3s ease;
 }
+
+/* Mobile touch improvements */
+@media (max-width: 768px) {
+   .system-card-title {
+      font-size: 1.5rem;
+      line-height: 1.2;
+   }
+}
