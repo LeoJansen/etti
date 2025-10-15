@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 const ProjectCard = ({ title, description, imageSrc }) => {
   return (
-    <div className="relative bg-[#FEFEF] rounded-[2px] overflow-hidden ">
+    <div className="relative  rounded-[4px] overflow-hidden bg-[#FAFAFA]" style={{boxShadow:"0px 1px 2px 2px rgba(0,0,0,0.1) "}}>
       <div className='p-1'>
 
       

@@ -1,10 +1,19 @@
 // components/WhyEttiSection.js
 
+import Image from "next/image";
+
 
 const WhyEtti = () => {
   return (
-    <section className="py-16 bg-[#ffffff]">
-      <div className="container mx-auto px-6">
+    <section className="relative py-16 bg-[#ffffff] -z-10">
+      <Image
+         src="/assets/whyEtti/interrogation.png"
+         alt="Background Pattern"
+         fill
+         sizes="100vw"
+         style={{objectFit:"contain", objectPosition:"right",paddingTop:"5%", paddingBottom:"5%"}}
+         className="-z-10" />
+         <div className="container mx-auto px-6">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-extrabold text-gray-900 dark:text-white">
             Porquê Escolher a Etti Project

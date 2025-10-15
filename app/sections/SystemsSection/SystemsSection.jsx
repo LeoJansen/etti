@@ -9,7 +9,7 @@ const SystemsSection = () => {
          <div className=" flex w-full  flex-col gap-12 px-6">
             <div className="flex flex-col text-left w-full ">
                <div className='flex flex-col w-fit'>
-                  <div className='flex w-full items-center'>
+                  <div className='flex w-full items-center gap-4'>
                      
                      <div className='h-[5px] w-full rounded-[1.5px] bg-[#EBC197]' />
                      <h3 className="systems-subheading">Sistemas de</h3>
