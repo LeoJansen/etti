@@ -9,7 +9,7 @@ const AutomationCard = forwardRef(function AutomationCard(
   return (
     <div
       ref={ref}
-      className={`automation-card relative bg-[#000000] flex flex-col items-center py-8 rounded-[2px] shadow-[0_0_0_rgba(0,0,0,0)] transition-colors duration-300 overflow-hidden ${className}`.trim()}
+      className={`automation-card relative bg-[#000000] flex flex-col items-center py-8 rounded-[4px] shadow-[0_0_0_rgba(0,0,0,0)] transition-colors duration-300 overflow-hidden ${className}`.trim()} 
     >
       <span className="automation-card-edge automation-card-edge--top pointer-events-none absolute inset-x-0 top-0 h-[3px] rounded-full bg-[#EB994833] origin-left scale-x-0 opacity-0" />
       <span className="automation-card-edge automation-card-edge--right pointer-events-none absolute inset-y-0 right-0 w-[3px] rounded-full bg-[#EB994833] origin-top scale-y-0 opacity-0" />
