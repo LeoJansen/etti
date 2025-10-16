@@ -418,6 +418,53 @@ body {
    }
 }
 
+/* WhyEtti Section */
+
+.why-etti-heading {
+   font-size: 75px;
+   font-weight: 200;
+   color: var(--gray-title);
+   letter-spacing: -0.08em;
+   line-height: 3.75rem;
+   margin-bottom: 1.5rem;
+}
+@media (min-width: 768px) {
+   .why-etti-heading {
+      font-size: 75px;
+      line-height: 3.5rem;
+   }
+}
+@media (min-width: 1024px) {
+   .why-etti-heading {
+      font-size: 80px;
+   }
+}
+@media (min-width: 1280px) {
+   .why-etti-heading {
+      font-size: 90px;
+   }
+}
+@media (min-width: 1536px) {
+   .why-etti-heading {
+      font-size: 95px;
+   }
+}
+
+.why-etti-subheading {
+   font-size: 25px;
+   font-weight: 600;
+   color: #EB9948;
+   letter-spacing: -0.015em;
+   text-transform: uppercase;
+   white-space: nowrap;
+}
+
+@media (min-width: 768px) {
+   .why-etti-subheading {
+      font-size: 40px;
+   }
+}
+
 .projects-section {
    background: #F8F8F8;
    background: -webkit-linear-gradient(90deg, rgba(248, 248, 248, 1) 0%, rgba(250, 250, 250, 1) 50%, rgba(251, 251, 251, 1) 100%);

@@ -32,6 +32,7 @@ const Automation = () => {
       <section className="relative  w-full overflow-hidden min-h-screen" id="automation">
          <div className='flex flex-col bg-black'>
             <div className="text-center my-8 px-6">
+              
                <div className='flex flex-col w-fit items-start justify-center '>
                   <h2 className="automation-heading">
                      Automação Residencial
