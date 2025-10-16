@@ -6,13 +6,17 @@ import Image from "next/image";
 const WhyEtti = () => {
    return (
       <section className="relative py-16 bg-[#ffffff] -z-10">
-         <Image
+         
+            <Image
             src="/assets/whyEtti/interrogation.png"
             alt="Background Pattern"
             fill
             sizes="100vw"
-            style={{ objectFit: "contain", objectPosition: "right", paddingTop: "5%", paddingBottom: "5%" }}
+            style={{ objectFit: "contain", objectPosition: "right", paddingTop: "5%", paddingBottom: "5%", marginRight: "5%", right: 15 }}
             className="-z-10" />
+
+         
+         
          <div className="container mx-auto px-6">
             <div className="text-center mb-12">
                <h2 className="text-4xl font-extrabold text-gray-900 dark:text-white">
