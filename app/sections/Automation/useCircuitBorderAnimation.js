@@ -15,6 +15,10 @@ const TITLE_RESET_SHADOW = "0 0 0 rgba(0,0,0,0)";
 const TITLE_HIGHLIGHT_SHADOW = "0 0 12px rgba(235, 153, 72, 0.6)";
 const BASE_ICON_FILTER = "drop-shadow(0 0 0 rgba(0,0,0,0))";
 const HIGHLIGHT_ICON_FILTER = "drop-shadow(0 0 12px rgba(235, 153, 72, 0.6))";
+const BASE_DESCRIPTION_COLOR = "hsla(25, 100%, 90%, 0.09)";
+const HIGHLIGHT_DESCRIPTION_COLOR = "hsl(25, 100%, 90%)";
+const DESCRIPTION_RESET_SHADOW = "0 0 0 rgba(0,0,0,0)";
+const DESCRIPTION_HIGHLIGHT_SHADOW = "0 0 8px rgba(255, 153, 72, 0.4)";
 
 export function useCircuitBorderAnimation(containerRef, {
    selector = ".automation-card",
@@ -38,6 +42,7 @@ export function useCircuitBorderAnimation(containerRef, {
          return {
             card,
             title: card.querySelector(".automation-card-title"),
+            description: card.querySelector(".automation-card-description"),
             icon: card.querySelector(".automation-card-icon"),
             connector: card.querySelector(".automation-card-connector"),
             edges: {
@@ -63,6 +68,9 @@ export function useCircuitBorderAnimation(containerRef, {
          const titles = cardDetails
             .map((detail) => detail.title)
             .filter(Boolean);
+         const descriptions = cardDetails
+            .map((detail) => detail.description)
+            .filter(Boolean);
          const icons = cardDetails
             .map((detail) => detail.icon)
             .filter(Boolean);
@@ -76,6 +84,9 @@ export function useCircuitBorderAnimation(containerRef, {
          gsap.killTweensOf(cards);
          if (titles.length) {
             gsap.killTweensOf(titles);
+         }
+         if (descriptions.length) {
+            gsap.killTweensOf(descriptions);
          }
          if (icons.length) {
             gsap.killTweensOf(icons);
@@ -98,6 +109,17 @@ export function useCircuitBorderAnimation(containerRef, {
             gsap.to(titles, {
                color: BASE_TITLE_COLOR,
                textShadow: TITLE_RESET_SHADOW,
+               duration,
+               ease: "sine.out",
+               overwrite: true
+            });
+         }
+
+         if (descriptions.length) {
+            gsap.to(descriptions, {
+               color: BASE_DESCRIPTION_COLOR,
+               textShadow: DESCRIPTION_RESET_SHADOW,
+               opacity: 0.2,
                duration,
                ease: "sine.out",
                overwrite: true
@@ -174,7 +196,7 @@ export function useCircuitBorderAnimation(containerRef, {
             }
          });
 
-         cardDetails.forEach(({ card, title, icon, connector, edges }, index) => {
+         cardDetails.forEach(({ card, title, description, icon, connector, edges }, index) => {
             const position = index === 0 ? 0 : ">";
             const edgeDuration = highlightDuration * 0.5;
             let lastEdgePosition = position;
@@ -261,6 +283,17 @@ export function useCircuitBorderAnimation(containerRef, {
                   textShadow: TITLE_HIGHLIGHT_SHADOW,
                   duration: edgeDuration
                }, (icon || connector) ? ">" : lastEdgePosition);
+            }
+
+            // Animate description LAST - after title
+            if (description) {
+               activeTimeline.to(description, {
+                  color: HIGHLIGHT_DESCRIPTION_COLOR,
+                  textShadow: DESCRIPTION_HIGHLIGHT_SHADOW,
+                  opacity: 1,
+                  duration: edgeDuration * 1.2,
+                  ease: "back.out(1.7)"
+               }, title ? ">" : ((icon || connector) ? ">" : lastEdgePosition));
             }
          });
 
