@@ -40,10 +40,10 @@ const Contact = () => {
                </div>
             </div>
             <div className="flex flex-col sm:flex-row justify-center gap-12 mb-12">
-               <button className="border-4 border-[#ff7919] text-[#ff7919] backdrop-blur-md font-bold py-3 px-8 rounded-[6px] shadow-lg hover:bg-[#ff7919] hover:text-white transition duration-300">
+               <button className="border-4 border-[#ff7919] text-white backdrop-blur-md font-bold py-3 px-8 rounded-[6px] shadow-lg bg-[#ff7919] hover:text-white transition duration-300">
                   Fale com um especialista         
                    </button>
-               <button className="bg-[#ff7919] border-4 border-[#ff7919] text-white font-bold py-3 px-8 rounded-[6px] shadow-lg hover:bg-transparent hover:text-[#ff7919] backdrop-blur-md transition duration-300">
+               <button className="bg-[rgb(5,11,5)] ll  text-white font-bold py-3 px-8 rounded-[6px] shadow-lg hover:bg-transparent hover:text-[#ff7919] backdrop-blur-md transition duration-300">
                   Agendar Reunião
                </button>
             </div>
