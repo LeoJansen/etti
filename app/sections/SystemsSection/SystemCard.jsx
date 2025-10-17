@@ -89,7 +89,7 @@ const SystemCard = ({ index = 0, title, description, className = '', children })
    return (
       <div 
          ref={cardRef}
-         className={`relative flex w-full h-[400px] flex-col justify-center items-center ${backgroundClass} ${className} cursor-pointer overflow-hidden`.trim()}
+         className={`relative flex w-full h-[400px] flex-col rounded-[6px] justify-center items-center ${backgroundClass} ${className} cursor-pointer overflow-hidden`.trim()}
       >
          {/* Imagem de fundo completa (inicialmente oculta) */}
          <div 

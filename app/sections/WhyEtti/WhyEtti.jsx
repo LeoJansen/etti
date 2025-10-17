@@ -19,25 +19,29 @@ const WhyEtti = () => {
 
 
 
-         <div className="flex flex-col w-full">
-           <div className='flex flex-col w-fit'>
+         <div className="flex flex-col w-full justify-center items-center">
+           <div className='flex flex-col w-fit self-start '>
                   <div className='flex w-full items-center gap-4'>
                      
                      <div className='h-[5px] w-full rounded-[1.5px] bg-[#EBC197]' />
                      <h3 className="why-etti-subheading">Porque escolher a</h3>
 
                   </div>
-                  <div className='flex'>
+                  <div className='flex ml-4'>
                   <h2 className="why-etti-heading">Etti Engenharia</h2>   
                      </div>
 
                   
                </div>
-
-            <p className="mt-4 text-lg text-gray-600 dark:text-gray-400">
+               <div className="self-start ml-4">
+                  <p className="mt-4 text-lg text-gray-600 dark:text-gray-400">
                As nossas vantagens competitivas.
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-7xl justify-items-center">
+
+               </div>
+
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-16 mt-16 max-w-7xl justify-items-center">
                {whyEttiData.map((item) => (
                   <WhyEttiCard
                      key={item.id}
