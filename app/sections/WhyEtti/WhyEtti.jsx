@@ -1,13 +1,40 @@
+"use client"
 // components/WhyEttiSection.js
 
 import Image from "next/image";
 import WhyEttiCard from "./WhyEttiCard";
 import { whyEttiData } from "./WhyEttiContent";
+import dynamic from "next/dynamic";
+import { useState, useEffect } from "react";
+
+const WhyEttiMobile = dynamic(() => import("./mobile/WhyEttiMobile"), {
+   ssr: false,
+});
+
+function useIsMobile() {
+   const [isMobile, setIsMobile] = useState(false);
+   useEffect(() => {
+      const checkMobile = () => setIsMobile(window.innerWidth < 768);
+      checkMobile();
+      window.addEventListener("resize", checkMobile);
+      return () => window.removeEventListener("resize", checkMobile);
+   }, []);
+   return isMobile;
+}
+
+
+
 
 
 const WhyEtti = () => {
+   const isMobile = useIsMobile();
+   
+   if (isMobile) {
+      return <WhyEttiMobile />;
+   }
+
    return (
-      <section className="relative min-h-screen bg-[#ffffff] -z-10">
+      <section className="relative min-h-screen bg-[#ffffff] -z-10 hidden md:block">
 
          <Image
             src="/assets/whyEtti/interrogation.png"
@@ -42,11 +69,12 @@ const WhyEtti = () => {
 
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-16 mt-16 max-w-7xl justify-items-center">
-               {whyEttiData.map((item) => (
+               {whyEttiData.map((item, index) => (
                   <WhyEttiCard
                      key={item.id}
                      title={item.title}
                      description={item.description}
+                     index={index}  
                   />
                ))}
             </div>

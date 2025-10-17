@@ -8,7 +8,7 @@ import Automation from "./sections/Automation/Automation";
 import SystemsSection from "./sections/SystemsSection/SystemsSection";
 import SystemsSectionMobile from "./sections/SystemsSection/mobile/SystemsSectionMobile";
 import WhyEtti from "./sections/WhyEtti/WhyEtti";
-import Contact from "./sections/Contact";
+import Contact from "./sections/Contact/Contact";
 import ServicesCarouselMobile from "./sections/ServicesSection/mobile/ServicesMobile";
 
 const App = () => {
