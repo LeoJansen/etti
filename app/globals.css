@@ -37,7 +37,7 @@ h6 {
 body {
    /* Map project font aliases to next/font variables */
    --font-title: var(--font-poppins);
-   --font-sans: var(--font-open-sans);
+   --font-sans: var(--font-inter);
    --black-theme: #0D0D0D;
    --dark-title: #565555;
    --gray-title: #818181;

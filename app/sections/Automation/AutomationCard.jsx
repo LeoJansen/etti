@@ -33,7 +33,7 @@ const AutomationCard = forwardRef(function AutomationCard(
         )}
         {title && (
          <div className='absolute flex w-full justify-center'>
-            <h3 className="automation-card-title text-2xl font-semibold text-[#8a8a8a] tracking-tight">
+            <h3 className="automation-card-title text-2xl font-semibold text-[#000000] tracking-tight">
               {title}
             </h3>
           </div>

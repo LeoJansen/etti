@@ -9,7 +9,7 @@ const HIGHLIGHT_BORDER_COLOR = "#EB9948";
 const BASE_EDGE_COLOR = "#EB994833";
 const HIGHLIGHT_SHADOW = "0 0 18px rgba(235, 153, 72, 0.45)";
 const RESET_SHADOW = "0 0 0 rgba(0, 0, 0, 0)";
-const BASE_TITLE_COLOR = "#8a8a8a";
+const BASE_TITLE_COLOR = "hsla(25, 100%, 90%, 0.09)";
 const HIGHLIGHT_TITLE_COLOR = "#EB9948";
 const TITLE_RESET_SHADOW = "0 0 0 rgba(0,0,0,0)";
 const TITLE_HIGHLIGHT_SHADOW = "0 0 12px rgba(235, 153, 72, 0.6)";
@@ -197,7 +197,7 @@ export function useCircuitBorderAnimation(containerRef, {
          });
 
          cardDetails.forEach(({ card, title, description, icon, connector, edges }, index) => {
-            const position = index === 0 ? 0 : ">";
+            const position = index === 0 ? 0 : "-=0.41";
             const edgeDuration = highlightDuration * 0.5;
             let lastEdgePosition = position;
 
@@ -291,7 +291,7 @@ export function useCircuitBorderAnimation(containerRef, {
                   color: HIGHLIGHT_DESCRIPTION_COLOR,
                   textShadow: DESCRIPTION_HIGHLIGHT_SHADOW,
                   opacity: 1,
-                  duration: edgeDuration * 1.2,
+                  duration: edgeDuration * 4,
                   ease: "back.out(1.7)"
                }, title ? ">" : ((icon || connector) ? ">" : lastEdgePosition));
             }
