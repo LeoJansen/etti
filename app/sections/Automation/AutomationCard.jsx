@@ -42,7 +42,7 @@ const AutomationCard = forwardRef(function AutomationCard(
 
       {description ? (
          <div className='p-4 px-8'> 
-            <p className="text-gray-400 text-center leading-relaxed">{description}</p>
+            <p className="automation-card-description text-[#000000] text-center leading-relaxed">{description}</p>
          </div>
       ) : (
         children || null
