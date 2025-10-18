@@ -10,6 +10,7 @@ import SystemsSectionMobile from "./sections/SystemsSection/mobile/SystemsSectio
 import WhyEtti from "./sections/WhyEtti/WhyEtti";
 import Contact from "./sections/Contact/Contact";
 import ServicesCarouselMobile from "./sections/ServicesSection/mobile/ServicesMobile";
+import SuperSection from "./sections/Contact/SuperSection";
 
 const App = () => {
    return (
@@ -25,6 +26,7 @@ const App = () => {
          <SystemsSection />
          <SystemsSectionMobile />
          <WhyEtti />
+         <SuperSection />
          <Contact />
       </div>
    )

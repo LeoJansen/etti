@@ -223,8 +223,8 @@ body {
    font-weight: 200;
    color: var(--gray-title);
    letter-spacing: -0.08em;
-     line-height: 3.0rem;
-   
+   line-height: 3.0rem;
+
 }
 
 @media (min-width: 768px) {
@@ -237,21 +237,21 @@ body {
 @media (min-width: 1024px) {
    .documentation-heading {
       font-size: 80px;
-        line-height: 4rem;
+      line-height: 4rem;
    }
 }
 
 @media (min-width: 1280px) {
    .documentation-heading {
       font-size: 90px;
-       line-height: 4.5rem;
+      line-height: 4.5rem;
    }
 }
 
 @media (min-width: 1536px) {
    .documentation-heading {
       font-size: 95px;
-     
+
    }
 }
 
@@ -333,22 +333,26 @@ body {
    line-height: 3.75rem;
    margin-bottom: 1.5rem;
 }
+
 @media (min-width: 768px) {
    .automation-heading {
       font-size: 75px;
       line-height: 3.5rem;
    }
 }
+
 @media (min-width: 1024px) {
    .automation-heading {
       font-size: 80px;
    }
 }
+
 @media (min-width: 1280px) {
    .automation-heading {
       font-size: 90px;
    }
 }
+
 @media (min-width: 1536px) {
    .automation-heading {
       font-size: 95px;
@@ -364,6 +368,7 @@ body {
    text-transform: uppercase;
    white-space: nowrap;
 }
+
 @media (min-width: 768px) {
    .automation-subheading {
       font-size: 40px;
@@ -380,22 +385,26 @@ body {
    line-height: 3.75rem;
    margin-bottom: 1.5rem;
 }
+
 @media (min-width: 768px) {
    .systems-heading {
       font-size: 75px;
       line-height: 3.5rem;
    }
 }
+
 @media (min-width: 1024px) {
    .systems-heading {
       font-size: 80px;
    }
 }
+
 @media (min-width: 1280px) {
    .systems-heading {
       font-size: 90px;
    }
 }
+
 @media (min-width: 1536px) {
    .systems-heading {
       font-size: 95px;
@@ -428,22 +437,26 @@ body {
    line-height: 3.75rem;
    margin-bottom: 1.5rem;
 }
+
 @media (min-width: 768px) {
    .why-etti-heading {
       font-size: 75px;
       line-height: 3.5rem;
    }
 }
+
 @media (min-width: 1024px) {
    .why-etti-heading {
       font-size: 80px;
    }
 }
+
 @media (min-width: 1280px) {
    .why-etti-heading {
       font-size: 90px;
    }
 }
+
 @media (min-width: 1536px) {
    .why-etti-heading {
       font-size: 95px;
@@ -512,4 +525,12 @@ body {
       font-size: 1.5rem;
       line-height: 1.2;
    }
+}
+
+.super-section {
+   background: radial-gradient(circle closest-corner at 45% 100%,
+         hsl(209, 100%, 9%) 0%,
+         hsl(209, 100%, 7%) 60%,
+         hsl(209, 100%, 6%) 80%,
+         hsl(210, 100%, 5.9%) 100%)
 }

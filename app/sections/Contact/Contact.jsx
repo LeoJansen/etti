@@ -29,7 +29,7 @@ const Contact = () => {
    return (
       <section className="relative py-8  w-full h-screen overflow-hidden" id="contact">
          <Image
-            src="/assets/contact/footer-bg3.png"
+            src="/assets/contact/footer-bg6.png"
             alt="Background Pattern"
             fill
             sizes="100vw"
@@ -37,9 +37,8 @@ const Contact = () => {
             style={{ objectFit: "cover", objectPosition: "center" }}
             className="-z-10" />
 
-         <div className="flex flex-col h-full gap-12 justify-between items-center  px-6 text-center">
-            <h2 className="text-7xl font-extralight text-[hsl(0,0%,90%)]  tracking-[-0.05em] ">
-               Todo grande projeto começa com uma conversa. <span className="text-[#ff7919]">Vamos iniciar a sua?</span>          </h2>
+         <div className="flex flex-col h-full gap-12 justify-between items-center  px-6 text-center hidden">
+           <span className="text-[#ff7919]">Vamos iniciar a sua?</span>  
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
                {/* Card: Orçamento Gratuito */}
