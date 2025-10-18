@@ -37,7 +37,7 @@ const Contact = () => {
             style={{ objectFit: "cover", objectPosition: "center" }}
             className="-z-10" />
 
-         <div className="flex flex-col h-full gap-12 justify-between items-center  px-6 text-center hidden">
+         <div className="flex flex-col h-full gap-12 justify-between items-center  px-6 text-center ">
            <span className="text-[#ff7919]">Vamos iniciar a sua?</span>  
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
