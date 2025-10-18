@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import {useEffect, useState} from "react";
 import dynamic from "next/dynamic";
 import CertificationCarousel from "./CertificationCarousel";
 
@@ -9,9 +9,9 @@ const CertificationMobile = dynamic(() => import("./mobile/CertificationMobile")
 });
 
 function useIsMobile() {
-   const [isMobile, setIsMobile] = React.useState(false);
+   const [isMobile, setIsMobile] = useState(false);
 
-   React.useEffect(() => {
+   useEffect(() => {
       const checkMobile = () => setIsMobile(window.innerWidth < 768);
       checkMobile();
       window.addEventListener("resize", checkMobile);

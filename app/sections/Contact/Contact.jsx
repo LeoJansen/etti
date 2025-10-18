@@ -1,9 +1,31 @@
+"use client";
 // components/ContactSection.js
-
+import dynamic from "next/dynamic";
 import Image from "next/image";
+import { useEffect, useState } from "react";
+
+const ContactMobile = dynamic(() => import("./mobile/ContactMobile"), {
+   ssr: false,
+});
+
+function useIsMobile() {
+   const [isMobile, setIsMobile] = useState(false);
+   useEffect(() => {
+      const checkMobile = () => setIsMobile(window.innerWidth < 768);
+      checkMobile();
+      window.addEventListener("resize", checkMobile);
+      return () => window.removeEventListener("resize", checkMobile);
+   }, []);
+   return isMobile;
+}
 
 
 const Contact = () => {
+   const isMobile = useIsMobile();
+   if (isMobile) {
+      return <ContactMobile />;
+   }
+
    return (
       <section className="relative py-8  w-full h-screen overflow-hidden" id="contact">
          <Image
