@@ -27,7 +27,7 @@ const Contact = () => {
    }
 
    return (
-      <section className="relative py-8  w-full h-screen overflow-hidden" id="contact">
+      <section className="relative py-8  w-full h-screen " id="contact">
          <Image
             src="/assets/contact/footer-bg6.png"
             alt="Background Pattern"
@@ -36,9 +36,13 @@ const Contact = () => {
             quality={100}
             style={{ objectFit: "cover", objectPosition: "center" }}
             className="-z-10" />
+         <div className="absolute z-20 top-[-55px] h-[150px] w-full flex justify-center items-center backdrop-blur-[2px]">
+            <h2 className=" text-[#b3b3b3] text-[110px]  font-extralight  tracking-[-0.04em] ">Vamos iniciar o seu?</h2>
+         </div>
 
-         <div className="flex flex-col h-full gap-12 justify-between items-center  px-6 text-center ">
-           <span className="text-[#ff7919]">Vamos iniciar a sua?</span>  
+
+         <div className="flex flex-col h-full gap-12 justify-center items-center  px-6 text-center ">
+
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
                {/* Card: Orçamento Gratuito */}
@@ -62,8 +66,8 @@ const Contact = () => {
             </div>
             <div className="flex flex-col sm:flex-row justify-center gap-12 mb-12">
                <button className="border-4 border-[#ff7919] w-70 text-white backdrop-blur-md font-bold py-3 rounded-[6px] shadow-lg bg-[#ff7919] hover:text-white transition duration-300">
-                  Fale com um especialista         
-                   </button>
+                  Fale com um especialista
+               </button>
                <button className="bg-[rgb(5,11,5)] w-70  text-white font-bold py-3  rounded-[6px] shadow-lg hover:bg-transparent hover:text-[#ff7919] backdrop-blur-md transition duration-300">
                   Agendar Reunião
                </button>
