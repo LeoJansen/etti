@@ -18,28 +18,29 @@ const ContactMobile = () => {
    }, []);
 
    return (
-      <section className="relative py-8 w-full min-h-screen overflow-hidden" id="contact">
+      <section className="relative w-full h-screen bg-[#001524] " id="contact">
          <Image
-            src="/assets/contact/footer-bg-mobile.png"
+            src="/assets/contact/footer-bg-mobile2.png"
             alt="Background Pattern"
             fill
             sizes="100vw"
             quality={100}
             style={{ objectFit: "cover", objectPosition: "center" }}
-            className="-z-10 bg-image-mobile"
+            className="bg-image-mobile"
          />
+         
+            <div className="absolute z-20 top-[-5px] h-[150px] w-full flex justify-center items-end backdrop-blur-[6px] px-[2%]">
+               <h2 className="contact-title-mobile text-[#ffffff63] text-[50px] leading-[50px] font-thin tracking-[-0.04em]">Vamos iniciar o seu?</h2>
+            </div>
 
-         <div className="flex flex-col h-full gap-8 justify-between items-center px-4 text-center">
+         <div id="contact-info" className="flex flex-col h-full pt-25 gap-8 justify-center items-center px-4 text-center">
             {/* Mobile Title */}
-          
-               <span className="contact-title-mobile text-[#b3b3b3] block mt-2">
-                  Vamos iniciar o seu?
-               </span>
-          
+
+
             {/* Mobile Cards */}
-            <div className="flex flex-col gap-6 w-full max-w-sm">
+            <div className="flex flex-col gap-4 w-full max-w-sm">
                {/* Card: Orçamento Gratuito */}
-               <div className="contact-card-mobile flex flex-col gap-4 backdrop-blur-md p-6 rounded-lg shadow-md">
+               <div className="contact-card-mobile flex flex-col gap-4 backdrop-blur-md p-4 rounded-lg shadow-md">
                   <h3 className="text-xl text-[#ff7919] mb-2">
                      Orçamento Gratuito
                   </h3>
@@ -49,7 +50,7 @@ const ContactMobile = () => {
                </div>
 
                {/* Card: Resposta Rápida */}
-               <div className="contact-card-mobile flex flex-col gap-4 backdrop-blur-md p-6 rounded-lg shadow-md">
+               <div className="contact-card-mobile flex flex-col gap-4 backdrop-blur-md p-4 rounded-lg shadow-md">
                   <h3 className="text-xl text-[#ff7919] mb-2">
                      Resposta Rápida
                   </h3>

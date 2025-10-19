@@ -534,3 +534,11 @@ body {
          hsl(209, 100%, 6%) 80%,
          hsl(210, 100%, 5.9%) 100%)
 }
+
+.super-section-mobile {
+   background: radial-gradient(circle closest-corner at 45% 100%,
+         #001524 0%,
+         hsl(204, 100%, 7%) 60%,
+         hsl(204, 100%, 6%) 80%,
+         hsl(204, 100%, 5.9%) 100%)
+}
