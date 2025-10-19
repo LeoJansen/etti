@@ -1,0 +1,161 @@
+/* Estilos para animações GSAP da seção Contact */
+
+/* Estados iniciais para animação */
+.contact-title,
+.contact-title-mobile {
+  transform: translateY(100px);
+  opacity: 0;
+  transition: text-shadow 0.3s ease;
+}
+
+.contact-title {
+  text-shadow: 0 0 5px #b3b3b3;
+}
+
+.contact-title-mobile {
+  text-shadow: 0 0 4px #b3b3b3;
+}
+
+.contact-card,
+.contact-card-mobile {
+  transform: translateY(80px);
+  opacity: 0;
+}
+
+.contact-button,
+.contact-button-mobile {
+  transform: translateY(60px);
+  opacity: 0;
+}
+
+.bg-image,
+.bg-image-mobile {
+  transform: scale(1.1);
+  opacity: 0;
+}
+
+/* Melhorias visuais para hover/tap effects */
+.contact-card,
+.contact-card-mobile {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-button,
+.contact-button-mobile {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Melhorias no efeito de brilho das estrelas */
+.contact-title,
+.contact-title-mobile {
+  filter: drop-shadow(0 0 2px currentColor);
+}
+
+/* Estados prontos para animação (quando GSAP carrega) */
+.gsap-ready .contact-title,
+.gsap-ready .contact-title-mobile,
+.gsap-ready .contact-card,
+.gsap-ready .contact-card-mobile,
+.gsap-ready .contact-button,
+.gsap-ready .contact-button-mobile {
+  transform: none;
+  opacity: 1;
+}
+
+/* Melhorias de performance para animações */
+.contact-card,
+.contact-card-mobile,
+.contact-button,
+.contact-button-mobile {
+  will-change: transform, opacity;
+}
+
+/* Animação de backup para caso o GSAP falhe */
+@media (prefers-reduced-motion: no-preference) {
+  .contact-fallback .contact-title {
+    animation: fadeInUp 1s ease-out forwards, starBlinkDesktop 4s ease-in-out infinite 1.5s;
+  }
+  
+  .contact-fallback .contact-title-mobile {
+    animation: fadeInUp 1s ease-out forwards, starBlinkMobile 4s ease-in-out infinite 1.5s;
+  }
+  
+  .contact-fallback .contact-card,
+  .contact-fallback .contact-card-mobile {
+    animation: fadeInUp 1s ease-out forwards;
+    animation-delay: 0.2s;
+  }
+  
+  .contact-fallback .contact-button,
+  .contact-fallback .contact-button-mobile {
+    animation: fadeInUp 1s ease-out forwards;
+    animation-delay: 0.4s;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes starBlinkDesktop {
+  0%, 20%, 40%, 60%, 80%, 100% {
+    text-shadow: 0 0 5px #b3b3b3;
+  }
+  5% {
+    text-shadow: 0 0 10px #b3b3b3, 0 0 20px #b3b3b3, 0 0 30px #b3b3b3;
+  }
+  15% {
+    text-shadow: 0 0 15px #b3b3b3, 0 0 25px #b3b3b3;
+  }
+  35% {
+    text-shadow: 0 0 8px #b3b3b3, 0 0 16px #b3b3b3;
+  }
+  50% {
+    text-shadow: 0 0 20px #b3b3b3, 0 0 35px #b3b3b3, 0 0 45px #b3b3b3;
+  }
+  70% {
+    text-shadow: 0 0 12px #b3b3b3, 0 0 18px #b3b3b3;
+  }
+}
+
+@keyframes starBlinkMobile {
+  0%, 20%, 40%, 60%, 80%, 100% {
+    text-shadow: 0 0 4px #b3b3b3;
+  }
+  5% {
+    text-shadow: 0 0 8px #b3b3b3, 0 0 16px #b3b3b3, 0 0 24px #b3b3b3;
+  }
+  15% {
+    text-shadow: 0 0 12px #b3b3b3, 0 0 20px #b3b3b3;
+  }
+  35% {
+    text-shadow: 0 0 6px #b3b3b3, 0 0 12px #b3b3b3;
+  }
+  50% {
+    text-shadow: 0 0 16px #b3b3b3, 0 0 28px #b3b3b3, 0 0 36px #b3b3b3;
+  }
+  70% {
+    text-shadow: 0 0 10px #b3b3b3, 0 0 15px #b3b3b3;
+  }
+}
+
+/* Suporte para motion reduzido */
+@media (prefers-reduced-motion: reduce) {
+  .contact-title,
+  .contact-title-mobile,
+  .contact-card,
+  .contact-card-mobile,
+  .contact-button,
+  .contact-button-mobile {
+    transform: none !important;
+    opacity: 1 !important;
+    transition: none !important;
+  }
+}
