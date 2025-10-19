@@ -1,5 +1,5 @@
 import About from "./sections/About/About";
-import Hero from "./sections/Hero";
+import Hero from "./sections/Hero/Hero";
 import Projects from "./sections/Projects/Projects";
 import Services from "./sections/ServicesSection/Services";
 import Documentation from "./sections/Documentation/Documentation";
