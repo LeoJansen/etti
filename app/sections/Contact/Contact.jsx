@@ -52,8 +52,8 @@ const Contact = () => {
             quality={100}
             style={{ objectFit: "cover", objectPosition: "center" }}
             className=" bg-image" />
-         <div className="absolute z-20 top-[-55px] h-[150px] w-full flex justify-center items-center backdrop-blur-[2px]">
-            <h2 className="contact-title text-[#ffffff63] text-[110px]  font-thin  tracking-[-0.04em] ">Vamos iniciar o seu?</h2>
+         <div className="absolute z-20 top-[-50px] h-[190px] w-full flex justify-center items-end backdrop-blur-[6px] ">
+            <h2 className="contact-title text-[#ffffff63] text-[110px] leading-[100px] font-thin  tracking-[-0.04em] mt-5">Vamos iniciar o seu?</h2>
          </div>
 
 
