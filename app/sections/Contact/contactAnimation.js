@@ -58,45 +58,45 @@ export const initContactAnimation = () => {
          // Cria múltiplas animações de brilho em intervalos aleatórios
          starBlinkAnimation
             .to(".contact-title", {
-               textShadow: "0 0 10px #b3b3b3, 0 0 20px #b3b3b3, 0 0 30px #b3b3b3",
+               textShadow: "0 0 10px #ffffff9a, 0 0 20px #ffffff9a, 0 0 30px #ffffff9a",
                duration: 0.1,
                ease: "power2.out"
             })
             .to(".contact-title", {
-               textShadow: "0 0 5px #b3b3b3",
+               textShadow: "0 0 5px #ffffff9a",
                duration: 0.1,
                ease: "power2.out"
             })
             .to(".contact-title", {
-               textShadow: "0 0 15px #b3b3b3, 0 0 25px #b3b3b3",
+               textShadow: "0 0 15px #ffffff9a, 0 0 25px #ffffff9a",
                duration: 0.05,
                ease: "power2.out",
                delay: gsap.utils.random(0.5, 2)
             })
             .to(".contact-title", {
-               textShadow: "0 0 5px #b3b3b3",
+               textShadow: "0 0 5px #ffffff9a",
                duration: 0.05,
                ease: "power2.out"
             })
             .to(".contact-title", {
-               textShadow: "0 0 20px #b3b3b3, 0 0 35px #b3b3b3, 0 0 45px #b3b3b3",
+               textShadow: "0 0 20px #ffffff9a, 0 0 25px #ffffff9a, 0 0 35px #ffffff9a",
                duration: 0.08,
                ease: "power2.out",
                delay: gsap.utils.random(1, 3)
             })
             .to(".contact-title", {
-               textShadow: "0 0 5px #b3b3b3",
+               textShadow: "0 0 5px #ffffff9a",
                duration: 0.12,
                ease: "power2.out"
             })
             .to(".contact-title", {
-               textShadow: "0 0 12px #b3b3b3, 0 0 18px #b3b3b3",
+               textShadow: "0 0 12px #ffffff9a, 0 0 18px #ffffff9a",
                duration: 0.06,
                ease: "power2.out",
                delay: gsap.utils.random(0.8, 2.5)
             })
             .to(".contact-title", {
-               textShadow: "0 0 5px #b3b3b3",
+               textShadow: "0 0 5px #ffffff9a",
                duration: 0.1,
                ease: "power2.out",
                delay: gsap.utils.random(2, 4)
