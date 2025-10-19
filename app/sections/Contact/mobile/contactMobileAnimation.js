@@ -56,45 +56,45 @@ export const initContactMobileAnimation = () => {
          // Versão mobile agora usando a mesma cor do desktop
          starBlinkAnimation
             .to(".contact-title-mobile", {
-               textShadow: "0 0 8px #b3b3b3, 0 0 16px #b3b3b3, 0 0 24px #b3b3b3",
+               textShadow: "0 0 8px hsl(0, 0%, 70%), 0 0 16px hsl(0, 0%, 70%), 0 0 24px hsl(0, 0%, 70%)",
                duration: 0.1,
                ease: "power2.out"
             })
             .to(".contact-title-mobile", {
-               textShadow: "0 0 4px #b3b3b3",
+               textShadow: "0 0 4px hsl(0, 0%, 70%)",
                duration: 0.1,
                ease: "power2.out"
             })
             .to(".contact-title-mobile", {
-               textShadow: "0 0 12px #b3b3b3, 0 0 20px #b3b3b3",
+               textShadow: "0 0 12px hsl(0, 0%, 70%), 0 0 20px hsl(0, 0%, 70%)",
                duration: 0.05,
                ease: "power2.out",
                delay: gsap.utils.random(0.8, 2.2)
             })
             .to(".contact-title-mobile", {
-               textShadow: "0 0 4px #b3b3b3",
+               textShadow: "0 0 4px hsl(0, 0%, 70%)",
                duration: 0.05,
                ease: "power2.out"
             })
             .to(".contact-title-mobile", {
-               textShadow: "0 0 16px #b3b3b3, 0 0 28px #b3b3b3, 0 0 36px #b3b3b3",
+               textShadow: "0 0 16px hsl(0, 0%, 70%), 0 0 28px hsl(0, 0%, 70%), 0 0 36px hsl(0, 0%, 70%)",
                duration: 0.08,
                ease: "power2.out",
                delay: gsap.utils.random(1.2, 3.5)
             })
             .to(".contact-title-mobile", {
-               textShadow: "0 0 4px #b3b3b3",
+               textShadow: "0 0 4px hsl(0, 0%, 70%)",
                duration: 0.12,
                ease: "power2.out"
             })
             .to(".contact-title-mobile", {
-               textShadow: "0 0 10px #b3b3b3, 0 0 15px #b3b3b3",
+               textShadow: "0 0 10px hsl(0, 0%, 70%), 0 0 15px hsl(0, 0%, 70%)",
                duration: 0.06,
                ease: "power2.out",
                delay: gsap.utils.random(1, 2.8)
             })
             .to(".contact-title-mobile", {
-               textShadow: "0 0 4px #b3b3b3",
+               textShadow: "0 0 4px hsl(0, 0%, 70%)",
                duration: 0.1,
                ease: "power2.out",
                delay: gsap.utils.random(2.5, 4.5)
