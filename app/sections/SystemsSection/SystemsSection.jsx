@@ -5,8 +5,8 @@ import { systemsContent } from './SystemsContent';
 
 const SystemsSection = () => {
    return (
-      <section className="hidden md:flex relative w-full min-h-screen items-stretch bg-black py-24">
-         <div className=" flex w-full  flex-col gap-12 px-6">
+      <section className="relative w-full min-h-screen items-stretch bg-black py-24 z-80">
+         <div className=" flex w-full  flex-col gap-12 px-6 z-40">
             <div className="flex flex-col text-left w-full ">
                <div className='flex flex-col w-fit'>
                   <div className='flex w-full items-center gap-4'>

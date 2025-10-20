@@ -34,7 +34,7 @@ const WhyEtti = () => {
    }
 
    return (
-      <section className="relative min-h-screen bg-[#ffffff] -z-10 hidden md:block">
+      <section className="relative min-h-screen bg-[#ffffff]  hidden md:block">
 
          <Image
             src="/assets/whyEtti/interrogation.png"

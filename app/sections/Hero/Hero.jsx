@@ -2,16 +2,41 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import HeroMobile from './mobile/HeroMobile';
+import { useRef } from 'react';
+import { useHeroAnimantion } from './useHeroAnimation';
+import { useHeroSectionAnimation } from './useHeroSectionAnimation';
 
 export default function Hero() {
+  const glowRef = useRef(null);
+  const sectionRef = useRef(null);
+  useHeroAnimantion(glowRef, '#F1CFAD');
+  useHeroSectionAnimation(sectionRef);
   return (
     <>
       {/* Versão Desktop - visível apenas em md e acima */}
-      <section className="relative w-full h-screen text-white hidden md:flex items-center justify-start overflow-hidden">
+  <section ref={sectionRef} className="relative w-full h-screen bg-black text-white hidden md:flex items-center justify-start overflow-hidden">
         
-        <div className='absolute top-3/4 left-1/2 transform -translate-y-1/2 -translate-x-1/2 flex flex-col items-center'>
+        <div className='w-full h-full flex flex-col justify-around items-center z-40'>
+
+          <div data-hero-box className='ml-[50%] border-2 border-[#F1CFAD] p-8 w-1/2 flex justify-center items-center  z-140'>
+            <h2 data-hero-heading className='relative inline-block text-7xl text-[#F1CFAD] leading-tight z-120'>
+              <span className='relative z-10'>
+                O futuro do seu espaço começa com um projeto inteligente.
+              </span>
+              {/* Neon glow overlay behind the text */}
+              <span
+                aria-hidden='true'
+                ref={glowRef}
+                className='pointer-events-none select-none absolute inset-0 z-0 text-[#F1CFAD]'
+              >
+                O futuro do seu espaço começa com um projeto inteligente.
+              </span>
+            </h2>
+
+
+          </div>
           {/* Botões de Ação */}
-          <div className="flex flex-row justify-center gap-4">
+          <div data-hero-cta className="flex flex-row justify-center gap-4 z-80">
             <Link
               href="/orcamento"
               className="bg-[#0D0D0D] text-[#e9e9e9] font-semibold py-3 px-8 rounded-[3px] hover:bg-gray-200 hover:text-[#0D0D0D] transition-colors duration-300 text-center"
@@ -27,15 +52,15 @@ export default function Hero() {
           </div>
         </div>
         
-        {/* Background Image para Desktop */}
-        <div className='fixed w-full h-full top-0 -z-10'>
+        {/* Background Image para Desktop (inicia invisível; aparece com a animação) */}
+  <div data-hero-bg className='fixed w-full h-full top-0 '>
           <Image
             src="/assets/hero-bg4.png"
             alt="Hero Image"
             quality={100}
             fill
             sizes="100vw"
-            className="object-cover object-[25%_100%] md:object-center lg:object-bottom"
+            className="object-cover object-[25%_100%] md:object-center lg:object-bottom "
           />
         </div>
 

@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const About = () => {
    return (
-      <section className="py-16 bg-gray-50 min-h-screen max-w-screen overflow-hidden z-120" id="about">
+      <section className="relative py-16 bg-gray-50 min-h-screen max-w-screen overflow-hidden " id="about">
          <div className="flex flex-col w-full h-full px-4 md:px-8 lg:px-16 text-[#313131] ">
             <div className='p-4 rounded-[4px]    mb-4 md:mb-8 flex flex-col justify-start w-fit'>
                <div id="etti-header" className='flex gap-5 md:gap-8 items-center'>

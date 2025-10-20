@@ -14,7 +14,7 @@ import SuperSection from "./sections/Contact/SuperSection";
 
 const App = () => {
    return (
-      <div className="relative w-full h-full overflow-hidden">
+      <div className="relative w-full h-full overflow-hidden bg-black -z-40">
          <Hero />
          <About />
          <Services />

@@ -7,7 +7,7 @@ import ServicesCarousel from './ServicesCarousel'
 const Services = () => {
 
    return (
-      <section id="services" className=" hidden md:flex relative   w-full min-h-screen lg:h-screen max-w-screen overflow-hidden">
+      <section id="services" className=" hidden md:flex relative   w-full min-h-screen lg:h-screen max-w-screen overflow-hidden z-40">
          <Image
             src="/assets/servicesBgDesk2.png"
             alt="Background Gradient"
