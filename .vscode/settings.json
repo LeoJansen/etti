@@ -1,0 +1,12 @@
+{
+  "editor.colorDecorators": true,
+  "files.associations": {
+    "*.jsx": "javascriptreact"
+  },
+  "[javascriptreact]": {
+    "editor.colorDecorators": true
+  },
+  "[typescriptreact]": {
+    "editor.colorDecorators": true
+  }
+}
