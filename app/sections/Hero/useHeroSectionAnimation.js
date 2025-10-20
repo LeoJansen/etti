@@ -59,18 +59,18 @@ export function useHeroSectionAnimation(containerRef) {
 
       tl
   // Reveal container immediately so children can animate
-  .to(container, { autoAlpha: 1, duration: 0.01 }, 0)
+  .to(container, { autoAlpha: 1, duration: 0.1 }, 0)
   // Background becomes visible and zooms subtly
   .to(bg, { autoAlpha: 1, scale: 1, duration: 1.1 }, 0)
     // Frame/box appears
-    .to(box, { autoAlpha: 1, y: 0, duration: 0.6 }, 0.15)
+    .to(box, { autoAlpha: 1, y: 0, duration: 0.6 }, 0.5)
     // Heading rise in
-    .to(heading, { autoAlpha: 1, y: 0, duration: 0.6 }, 0.3)
+    .to(heading, { autoAlpha: 1, y: 0, duration: 0.6 }, 0.83)
   // Reveal heading overlay (allows glow to start only after reveal)
-  .to(headingOverlay, { autoAlpha: 1, duration: 0.2 }, 0.45)
+  .to(headingOverlay, { autoAlpha: 1, duration: 0.2 }, 0.845)
   // Reveal CTA container then stagger buttons
   .to(ctaContainer, { autoAlpha: 1, duration: 0.1 }, 0.5)
-  .to(cta, { autoAlpha: 1, y: 0, duration: 0.5, stagger: 0.1 }, 0.55);
+  .to(cta, { autoAlpha: 1, y: 0, duration: 0.5, stagger: 0.1 }, 1.85);
     }, container);
 
     return () => ctx.revert();

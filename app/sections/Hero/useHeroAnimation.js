@@ -9,7 +9,7 @@ import gsap from 'gsap';
  * Respects prefers-reduced-motion by keeping a static glow.
  *
  * @param {React.RefObject<HTMLElement>} ref - ref to the overlay element
- * @param {string} color - glow color, default '#F1CFAD'
+ * @param {string} color - glow color, default '#EBC299'
  */
 export function useHeroAnimantion(ref, color = '#F1CFAD') {
   useLayoutEffect(() => {
@@ -17,13 +17,13 @@ export function useHeroAnimantion(ref, color = '#F1CFAD') {
     if (!el) return;
 
     const ctx = gsap.context(() => {
-      const baseShadow = `0 0 0.15rem ${color}, 0 0 0.35rem ${color}`;
-      const strongShadow = `0 0 0.3rem ${color}, 0 0 0.8rem ${color}`;
+      const baseShadow = `0 0 0.05rem ${color}, 0 0 0.1rem ${color}`;
+      const strongShadow = `0 0 0.0515rem ${color}, 0 0 0.248rem ${color}`;
 
       // Initial glow (overlay only)
       gsap.set(el, {
         textShadow: baseShadow,
-        filter: `blur(1px) drop-shadow(0 0 6px ${color})`,
+        filter: `blur(0.51px) drop-shadow(0 0 3px ${color})`,
         opacity: 0.85,
         willChange: 'filter, text-shadow, opacity',
       });
@@ -40,13 +40,13 @@ export function useHeroAnimantion(ref, color = '#F1CFAD') {
         .to(el, {
           duration: 1.6,
           textShadow: strongShadow,
-          filter: `blur(1.5px) drop-shadow(0 0 10px ${color})`,
+          filter: `blur(1.0px) drop-shadow(0 0 10px ${color})`,
           opacity: 0.95,
         })
         .to(el, {
           duration: 1.6,
           textShadow: baseShadow,
-          filter: `blur(1px) drop-shadow(0 0 6px ${color})`,
+          filter: `blur(0.51px) drop-shadow(0 0 6px ${color})`,
           opacity: 0.85,
         });
 
