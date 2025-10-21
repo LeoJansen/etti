@@ -28,14 +28,14 @@ export default function HeroMobile() {
             data-hero-heading
             className="relative text-3xl sm:text-4xl text-[#fd810441] font-medium leading-snug"
           >
-            <span className="relative z-10 block text-white">
+            <span className="relative z-10 block text-[#ffa64dc9]">
               O futuro do seu espaço começa com um projeto inteligente.
             </span>
             {/* Neon glow overlay behind the text */}
             <span
               aria-hidden="true"
               ref={glowRef}
-              className="pointer-events-none select-none absolute inset-0 z-0 text-[#ffffff59]"
+              className="pointer-events-none select-none absolute inset-0 z-0 text-[#fd810441]"
             >
               O futuro do seu espaço começa com um projeto inteligente.
             </span>

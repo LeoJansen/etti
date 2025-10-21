@@ -41,6 +41,7 @@ body {
    --black-theme: #0D0D0D;
    --dark-title: #565555;
    --gray-title: #818181;
+   --white-title: #E0E0E0;
 
 
 
@@ -116,7 +117,7 @@ body {
 .services-heading {
    font-size: 70px;
    font-weight: 200;
-   color: var(--gray-title);
+   color: var(--white-title);
    letter-spacing: -0.08em;
    line-height: 2.75rem;
    margin-bottom: 1.5rem;
@@ -328,7 +329,7 @@ body {
 .automation-heading {
    font-size: 60px;
    font-weight: 200;
-   color: var(--gray-title);
+   color: var(--white-title);
    letter-spacing: -0.08em;
    line-height: 3.75rem;
    margin-bottom: 1.5rem;
@@ -380,7 +381,7 @@ body {
 .systems-heading {
    font-size: 60px;
    font-weight: 200;
-   color: var(--gray-title);
+   color: var(--white-title);
    letter-spacing: -0.08em;
    line-height: 3.75rem;
    margin-bottom: 1.5rem;

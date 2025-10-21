@@ -18,8 +18,8 @@ export default function Hero() {
         
   <div className='w-full h-full flex flex-col justify-around items-center z-10'>
 
-          <div data-hero-box className='ml-[50%] border-2 border-[#F38B23] p-8 w-1/2 flex justify-center items-center z-20 tracking-tight backdrop-blur-[1px]'>
-            <h2 data-hero-heading className='relative inline-block text-7xl text-[#fd810441] font-medium leading-tight z-30 text-right'>
+          <div data-hero-box className='ml-[50%] border-2 border-[#F38B23] p-8 w-1/2 flex justify-center items-center z-20 tracking-tight backdrop-blur-[2px] bg-[rgba(0,0,0,0.12)]'>
+            <h2 data-hero-heading className='relative inline-block text-[72px] text-[#fd810441] font-medium  z-30 text-right leading-[80px]'>
               <span className='relative z-10'>
                 O futuro do seu espaço começa com um projeto inteligente.
               </span>

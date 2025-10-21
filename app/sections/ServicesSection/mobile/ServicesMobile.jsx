@@ -71,11 +71,11 @@ const ServicesCarouselMobile = () => {
                <div className='flex flex-col justify-end items-end bg-[#00000091] backdrop-blur-[40px] shadow-[0_2px_2px_2px_rgba(20,20,20,0.4)]  p-4 px-8 rounded-l-[6px]'>
                   <div className='flex flex-col justify-end w-fit'>
                      <div className='flex w-full justify-end gap-4 items-center'>
-                        <h3 className="text-lg font-light text-[#cecece]">Nossos</h3>
+                        <h3 className="services-subheading">Nossos</h3>
                         <div className='h-[6px] w-full rounded-[1.5px] bg-[#EBC197]' />
                      </div>
                      <div className='flex w-fit'>
-                        <h2 className="text-3xl font-bold text-white">
+                        <h2 className="services-heading">
                            Serviços
                         </h2>
                      </div>

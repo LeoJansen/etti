@@ -18,9 +18,9 @@ const Services = () => {
             className='-z-10'
 
          />
-         <div className="flex flex-col w-full h-full  ">
-            <div className='flex w-full h-1/3 justify-end items-center  '>
-               <div className='flex flex-col justify-end items-end  bg-[#00000091] backdrop-blur-[40px] shadow-[0_2px_2px_2px_rgba(20,20,20,0.4)] place-self-end  p-8 px-16 rounded-l-[6px] '>
+         <div className="flex flex-col w-full h-full  justify-start  py-12">
+            <div className='flex w-full h-1/3 justify-end items-start   md:px-6 lg:px-12'>
+               <div className='flex flex-col justify-end items-end  bg-[#00000091] backdrop-blur-[40px] shadow-[0_2px_2px_2px_rgba(20,20,20,0.4)]   p-8 px-16 rounded-l-[6px] '>
                   <div className='flex flex-col justify-end w-fit '>
 
                      <div className='flex w-full justify-end gap-4 items-center '>
