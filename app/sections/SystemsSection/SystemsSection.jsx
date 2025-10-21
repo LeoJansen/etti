@@ -1,9 +1,31 @@
+"use client"
 // components/SystemsSection.js
-import React from 'react';
+import {useState, useEffect} from 'react';
 import SystemCard from './SystemCard';
 import { systemsContent } from './SystemsContent';
+import dynamic from 'next/dynamic';
+
+const SystemsSectionMobile = dynamic(() => import('./mobile/SystemsSectionMobile'), {
+   ssr: false,
+});
+
+function useIsMobile() {
+   const [isMobile, setIsMobile] = useState(false);
+   useEffect(() => {
+      const checkMobile = () => setIsMobile(window.innerWidth < 768);
+      checkMobile();
+      window.addEventListener('resize', checkMobile);
+      return () => window.removeEventListener('resize', checkMobile);
+   }, []);
+   return isMobile;
+}
+
 
 const SystemsSection = () => {
+   const isMobile = useIsMobile();
+   if (isMobile) {
+      return <SystemsSectionMobile />;
+   }
    return (
       <section className="relative w-full min-h-screen items-stretch bg-black py-24 z-80">
          <div className=" flex w-full  flex-col gap-12 px-6 z-40">

@@ -1,4 +1,5 @@
-import React from 'react';
+"use client"
+
 import SystemCardMobile from './SystemCardMobile';
 import { systemsContent } from '../SystemsContent';
 

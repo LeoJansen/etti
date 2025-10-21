@@ -24,7 +24,6 @@ const App = () => {
          <Certification />
          <Automation />
          <SystemsSection />
-         <SystemsSectionMobile />
          <WhyEtti />
          <SuperSection />
          <Contact />
