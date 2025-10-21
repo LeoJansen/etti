@@ -3,6 +3,7 @@ import Image from "next/image";
 import { useEffect, useRef } from "react";
 import { initContactMobileAnimation } from "./contactMobileAnimation";
 import "../contact.css";
+import { whatsAppLink } from "@/app/constants";
 
 const ContactMobile = () => {
    const animationRef = useRef(null);
@@ -62,7 +63,7 @@ const ContactMobile = () => {
 
             {/* Mobile Action Buttons */}
             <div className="flex flex-col items-center justify-center gap-4 w-full max-w-xs pb-8">
-               <button className="contact-button-mobile border-2 border-[#ff7919] text-white backdrop-blur-md font-bold py-3 px-2 rounded-[6px] shadow-lg bg-[#ff7919] hover:text-white transition duration-300 text-sm w-50">
+               <button onClick={() => window.open(whatsAppLink, "_blank")} className="contact-button-mobile border-2 border-[#ff7919] text-white backdrop-blur-md font-bold py-3 px-2 rounded-[6px] shadow-lg bg-[#ff7919] hover:text-white transition duration-300 text-sm w-50">
                   Fale com um especialista
                </button>
                <button className="contact-button-mobile bg-[rgb(5,11,5)] text-white font-bold py-3 px-2 rounded-[6px] shadow-lg hover:bg-transparent hover:text-[#ff7919] backdrop-blur-md transition duration-300 text-sm w-50">

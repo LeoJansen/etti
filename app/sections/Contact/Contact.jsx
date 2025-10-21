@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useEffect, useState, useRef } from "react";
 import { initContactAnimation } from "./contactAnimation";
 import "./contact.css";
+import { whatsAppLink } from "@/app/constants";
 
 const ContactMobile = dynamic(() => import("./mobile/ContactMobile"), {
    ssr: false,
@@ -81,7 +82,7 @@ const Contact = () => {
                </div>
             </div>
             <div className="flex flex-col sm:flex-row justify-center gap-12 mb-12">
-               <button className="contact-button border-4 border-[#ff7919] w-70 text-white font-bold py-3 rounded-[6px] shadow-lg bg-[#ff7919] hover:text-white transition duration-300">
+               <button onClick={() => window.open(whatsAppLink, "_blank")} className="contact-button border-4 border-[#ff7919] w-70 text-white font-bold py-3 rounded-[6px] shadow-lg bg-[#ff7919] hover:text-white transition duration-300">
                   Fale com um especialista
                </button>
                <button className="contact-button bg-[rgb(5,11,5)] w-70  text-white font-bold py-3  rounded-[6px] shadow-lg hover:bg-transparent hover:text-[#ff7919]  transition duration-300 ">

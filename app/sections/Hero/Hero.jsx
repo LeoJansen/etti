@@ -5,6 +5,7 @@ import HeroMobile from './mobile/HeroMobile';
 import { useRef } from 'react';
 import { useHeroAnimantion } from './useHeroAnimation';
 import { useHeroSectionAnimation } from './useHeroSectionAnimation';
+import { whatsAppLink } from '@/app/constants';
 
 export default function Hero() {
   const glowRef = useRef(null);
@@ -38,7 +39,7 @@ export default function Hero() {
           {/* Botões de Ação */}
           <div data-hero-cta className="relative flex flex-row justify-center gap-4 z-50 pointer-events-auto">
             <Link
-              href="#contact"
+              href={whatsAppLink}
               className="bg-[#0D0D0D] text-[#e9e9e9] font-semibold py-3 px-8 rounded-[3px] hover:bg-gray-200 hover:text-[#0D0D0D] transition-colors duration-300 text-center cursor-pointer"
             >
               Solicitar Orçamento
