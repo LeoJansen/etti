@@ -40,21 +40,21 @@ const ContactMobile = () => {
             {/* Mobile Cards */}
             <div className="flex flex-col gap-4 w-full max-w-sm " >
                {/* Card: Orçamento Gratuito */}
-               <div className="contact-card-mobile flex flex-col gap-2 backdrop-blur-[1px] p-4 rounded-lg shadow-md">
+               <div className="contact-card-mobile flex flex-col gap-2 backdrop-blur-[4px] p-4 rounded-lg shadow-md">
                   <h3 className="text-xl text-[#ff7919] ">
                      Orçamento Gratuito
                   </h3>
-                  <p className="text-gray-400 text-sm leading-relaxed">
+                  <p className="text-gray-400 text-lg leading-relaxed">
                      Oferecemos consultoria inicial gratuita e orçamentos detalhados sem compromisso para todos os nossos serviços.
                   </p>
                </div>
 
                {/* Card: Resposta Rápida */}
-               <div className="contact-card-mobile flex flex-col gap-2 backdrop-blur-[1px] p-4 rounded-lg shadow-md">
+               <div className="contact-card-mobile flex flex-col gap-2 backdrop-blur-[4px] p-4 rounded-lg shadow-md">
                   <h3 className="text-xl text-[#ff7919] ">
                      Resposta Rápida
                   </h3>
-                  <p className="text-gray-400 text-sm leading-relaxed">
+                  <p className="text-gray-400 text-lg leading-relaxed">
                      Garantimos resposta em 24 horas e disponibilidade para reuniões presenciais ou virtuais conforme a sua preferência.
                   </p>
                </div>
@@ -69,9 +69,9 @@ const ContactMobile = () => {
                   Agendar Reunião
                </button>
             </div>
-              <div className="contact-footer flex flex-col gap-2 w-full  justify-center items-end border-t-2 border-[#3b3b3b4f] p-6 backdrop-blur-[1px] ">
-               <h5 className="text-[#bbbbbb] text-xl font-light">+351 927 553 947</h5>
-               <h5 className="text-[#999999] text-xl font-light">geral@etti.pt</h5>
+              <div className="contact-footer flex flex-col gap-2 w-full  justify-center items-end border-t-2 border-[#3b3b3b4f] p-6 backdrop-blur-[2px] ">
+               <h5 className="text-[#ff7919] text-[22px] font-light">+351 927 553 947</h5>
+               <h5 className="text-[#ff7919] text-[22px] font-light">geral@etti.pt</h5>
 
             </div>
          </div>
