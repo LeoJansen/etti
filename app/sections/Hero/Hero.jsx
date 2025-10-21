@@ -9,7 +9,7 @@ import { useHeroSectionAnimation } from './useHeroSectionAnimation';
 export default function Hero() {
   const glowRef = useRef(null);
   const sectionRef = useRef(null);
-  useHeroAnimantion(glowRef, '#F1CAA2');
+  useHeroAnimantion(glowRef, '#F38B23');
   useHeroSectionAnimation(sectionRef);
   return (
     <>
@@ -18,8 +18,8 @@ export default function Hero() {
         
   <div className='w-full h-full flex flex-col justify-around items-center z-10'>
 
-          <div data-hero-box className='ml-[50%] border-2 border-[#F1CFAD] p-8 w-1/2 flex justify-center items-center z-20'>
-            <h2 data-hero-heading className='relative inline-block text-7xl text-[#F1CAA2] leading-tight z-30'>
+          <div data-hero-box className='ml-[50%] border-2 border-[#F38B23] p-8 w-1/2 flex justify-center items-center z-20 tracking-tight backdrop-blur-[1px]'>
+            <h2 data-hero-heading className='relative inline-block text-7xl text-[#fd810441] font-medium leading-tight z-30 text-right'>
               <span className='relative z-10'>
                 O futuro do seu espaço começa com um projeto inteligente.
               </span>
@@ -27,7 +27,7 @@ export default function Hero() {
               <span
                 aria-hidden='true'
                 ref={glowRef}
-                className='pointer-events-none select-none absolute inset-0 z-0 text-[#F1CFAD]'
+                className='pointer-events-none select-none absolute inset-0 z-0 text-[#ffffff59]'
               >
                 O futuro do seu espaço começa com um projeto inteligente.
               </span>
@@ -53,14 +53,14 @@ export default function Hero() {
         </div>
         
         {/* Background Image para Desktop (inicia invisível; aparece com a animação) */}
-  <div data-hero-bg className='fixed w-full h-full top-0 -z-10 pointer-events-none'>
+  <div data-hero-bg className='absolute inset-0 z-0 pointer-events-none'>
           <Image
             src="/assets/hero-bg4.png"
             alt="Hero Image"
             quality={100}
             fill
             sizes="100vw"
-            className="object-cover object-[25%_100%] md:object-center lg:object-bottom pointer-events-none"
+            className="object-cover object-[25%_100%] md:object-center lg:object-bottom pointer-events-none "
           />
         </div>
 

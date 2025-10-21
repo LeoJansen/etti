@@ -46,7 +46,7 @@ export function useHeroSectionAnimation(containerRef) {
 
       if (prefersReduced) {
         gsap.set(container, { clearProps: 'all', autoAlpha: 1 });
-    gsap.set(bg, { clearProps: 'all', scale: 1, autoAlpha: 1 });
+    gsap.set(bg, { clearProps: 'all', scale: 1, autoAlpha: 1, opacity: 1 });
     gsap.set(box, { clearProps: 'all', autoAlpha: 1, y: 0 });
     gsap.set(heading, { clearProps: 'all', autoAlpha: 1, y: 0 });
   gsap.set(headingOverlay, { clearProps: 'all', autoAlpha: 1 });
