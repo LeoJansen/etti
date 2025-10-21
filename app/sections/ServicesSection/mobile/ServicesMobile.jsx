@@ -67,8 +67,8 @@ const ServicesCarouselMobile = () => {
 
          <div className="flex flex-col w-full h-full">
             {/* Header da seção */}
-            <div id="services-header" className='flex w-full h-1/5 min-h-[200px] justify-end items-start pt-8'>
-               <div className='flex flex-col justify-end items-end bg-[#00000091] backdrop-blur-[40px] shadow-[0_2px_2px_2px_rgba(20,20,20,0.4)]  p-4 px-8 rounded-l-[6px]'>
+            <div id="services-header" className='flex w-full h-1/5 min-h-[200px] justify-end items-start p-6'>
+               <div className='flex flex-col justify-end items-end bg-[#00000091] backdrop-blur-[40px] shadow-[0_2px_2px_2px_rgba(20,20,20,0.4)]  px-8 rounded-l-[6px]'>
                   <div className='flex flex-col justify-end w-fit'>
                      <div className='flex w-full justify-end gap-4 items-center'>
                         <h3 className="services-subheading">Nossos</h3>

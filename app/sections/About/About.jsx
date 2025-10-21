@@ -3,9 +3,9 @@ import Image from 'next/image';
 
 const About = () => {
    return (
-      <section className="relative  py-6 md:py-12 bg-gray-50 min-h-screen max-w-screen overflow-hidden " id="about">
-         <div className="flex flex-col w-full h-full px-4 md:px-6 lg:px-12 text-[#313131] ">
-            <div className='p-4 rounded-[4px]    mb-4 md:mb-8 flex flex-col justify-start w-fit'>
+      <section className="relative  p-6 md:p-12 bg-gray-50 min-h-screen max-w-screen overflow-hidden " id="about">
+         <div className="flex flex-col w-full h-full  text-[#313131] ">
+            <div className='rounded-[4px]    mb-4 md:mb-8 flex flex-col justify-start w-fit'>
                <div id="etti-header" className='flex gap-5 md:gap-8 items-center'>
                     <div className='h-[5px] w-full rounded-[1.5px] bg-[#EBC197]' />
                   <div className='flex'>
