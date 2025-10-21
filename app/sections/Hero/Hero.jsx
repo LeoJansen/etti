@@ -38,13 +38,13 @@ export default function Hero() {
           {/* Botões de Ação */}
           <div data-hero-cta className="relative flex flex-row justify-center gap-4 z-50 pointer-events-auto">
             <Link
-              href="/orcamento"
+              href="#contact"
               className="bg-[#0D0D0D] text-[#e9e9e9] font-semibold py-3 px-8 rounded-[3px] hover:bg-gray-200 hover:text-[#0D0D0D] transition-colors duration-300 text-center cursor-pointer"
             >
               Solicitar Orçamento
             </Link>
             <Link
-              href="/servicos"
+              href="#services"
               className="bg-transparent text-[#FF7919] border-2 border-[#FF7919] font-semibold py-3 px-8 rounded-[3px] hover:bg-[#FF7919] hover:text-white transition-colors duration-300 text-center cursor-pointer"
             >
               Conhecer Serviços

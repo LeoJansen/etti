@@ -10,14 +10,14 @@ export default function HeroMobile() {
         {/* Botões de Ação */}
         <div className="flex flex-col justify-center gap-4">
           <Link
-            href="/orcamento"
+            href="#contact"
             className="bg-[#0D0D0D] text-[#e9e9e9] font-semibold py-3 px-8 rounded-[3px] hover:bg-gray-200 hover:text-[#0D0D0D] transition-colors duration-300 text-center"
           >
             Solicitar Orçamento
           </Link>
           <Link
-            href="/servicos"
-            className="bg-transparent text-[#FFFFFF] border border-[#ffffff] font-semibold py-3 px-8 rounded-[3px] hover:bg-[#EB9948] hover:text-white transition-colors duration-300 text-center"
+            href="#services"
+            className="bg-transparent text-[#FF7919] border-2 border-[#FF7919] font-semibold py-3 px-8 rounded-[3px] hover:bg-[#EB9948] hover:text-white transition-colors duration-300 text-center"
           >
             Conhecer Serviços
           </Link>

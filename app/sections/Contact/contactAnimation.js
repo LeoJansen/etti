@@ -139,6 +139,42 @@ export const initContactAnimation = () => {
          "-=0.5"
       );
 
+      // Animação do último div (barra de contactos)
+      tl.fromTo(
+         ".contact-footer",
+         {
+            y: 40,
+            opacity: 0,
+            filter: "blur(4px)"
+         },
+         {
+            y: 0,
+            opacity: 1,
+            filter: "blur(0px)",
+            duration: 0.8,
+            ease: "power2.out"
+         },
+         "-=0.3"
+      );
+
+      // Efeito sutil após aparecer: brilho de borda pulsante
+      tl.to(
+         ".contact-footer",
+         {
+            boxShadow: "0 -2px 16px rgba(255, 121, 25, 0.35)",
+            duration: 0.6,
+            ease: "sine.out",
+         },
+         "+=0.1"
+      ).to(
+         ".contact-footer",
+         {
+            boxShadow: "0 -2px 0 rgba(255, 121, 25, 0)",
+            duration: 0.8,
+            ease: "sine.inOut",
+         }
+      );
+
       // Efeito de hover nos cards
       gsap.utils.toArray(".contact-card").forEach(card => {
          const hoverTl = gsap.timeline({ paused: true });

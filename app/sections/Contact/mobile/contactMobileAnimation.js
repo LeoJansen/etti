@@ -137,6 +137,42 @@ export const initContactMobileAnimation = () => {
          "-=0.4"
       );
 
+      // Animação do último div (barra de contactos) no mobile
+      tl.fromTo(
+         ".contact-footer",
+         {
+            y: 30,
+            opacity: 0,
+            filter: "blur(4px)"
+         },
+         {
+            y: 0,
+            opacity: 1,
+            filter: "blur(0px)",
+            duration: 0.7,
+            ease: "power2.out"
+         },
+         "-=0.2"
+      );
+
+      // Efeito sutil após aparecer: brilho de borda pulsante (mobile)
+      tl.to(
+         ".contact-footer",
+         {
+            boxShadow: "0 -2px 14px rgba(255, 121, 25, 0.28)",
+            duration: 0.5,
+            ease: "sine.out",
+         },
+         "+=0.05"
+      ).to(
+         ".contact-footer",
+         {
+            boxShadow: "0 -2px 0 rgba(255, 121, 25, 0)",
+            duration: 0.7,
+            ease: "sine.inOut",
+         }
+      );
+
       // Efeito de tap nos cards (mobile touch)
       gsap.utils.toArray(".contact-card-mobile").forEach(card => {
          const tapTl = gsap.timeline({ paused: true });
