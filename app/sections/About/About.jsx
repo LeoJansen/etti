@@ -31,7 +31,7 @@ const About = () => {
                </div>
                <div className="md:w-1/2 h-full flex flex-col justify-center items-center text-[#9e9e9e] tracking-tighter font-light text-xl xl:text-2xl ">
                   <p className=" leading-relaxed mb-4 text-justify">
-                     Etti Project é uma empresa especializada em <strong>soluções elétricas e automação</strong>. Nossa missão é transformar espaços através de tecnologia avançada e instalações seguras, oferecendo soluções inovadoras e sustentáveis que melhoram a qualidade de vida dos nossos clientes.
+                     A Etti é uma empresa especializada em <strong>soluções elétricas e automação</strong>. Nossa missão é transformar espaços através de tecnologia avançada e instalações seguras, oferecendo soluções inovadoras e sustentáveis que melhoram a qualidade de vida dos nossos clientes.
                   </p>
                   <p className=" leading-relaxed text-justify">
                      Com uma equipe experiente e certificada, oferecemos um serviço completo, desde o projeto inicial até a certificação final. Isso garante a qualidade e a conformidade em cada instalação que realizamos.
