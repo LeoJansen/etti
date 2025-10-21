@@ -14,7 +14,7 @@ const DocumentationMobile = ({ cards }) => {
    return (
       <div
          ref={containerRef}
-         className="relative px-6 flex flex-col gap-12 pb-12 overflow-hidden"
+         className="relative p-6 md:p-12 flex flex-col gap-12  overflow-hidden"
       >
 
          <Image

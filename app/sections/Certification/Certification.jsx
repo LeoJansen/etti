@@ -29,7 +29,7 @@ const Certification = () => {
    }
 
    return (
-      <section className=" bg-gradient-to-r from-[#FAFAFA] to-[#F9F9F9] py-12 relative min-h-screen w-full" id="certification">
+      <section className=" bg-gradient-to-r from-[#FAFAFA] to-[#F9F9F9] p-6 md:p-12 relative min-h-screen w-full" id="certification">
          <div className="flex flex-col w-full relative ">
             <div className="flex flex-col w-full text-center mb-16">
                <div className="flex flex-col items-end justify-center self-end px-6">

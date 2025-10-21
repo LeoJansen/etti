@@ -22,7 +22,7 @@ const projects = [
 
 const Projects = () => {
    return (
-      <section id="projects" className="projects-section relative py-16 w-full min-h-screen  px-4 overflow-hidden">
+      <section id="projects" className="projects-section relative p-6  md:p-12 w-full min-h-screen  px-4 overflow-hidden">
          <div className="flex flex-col items-end justify-center px-[2%] gap-12">
             <div className='flex flex-col items-end '>
                <div className='flex items-center justify-end gap-4 w-full'>
