@@ -27,7 +27,7 @@ const SystemsSection = () => {
       return <SystemsSectionMobile />;
    }
    return (
-      <section className="relative w-full min-h-screen items-stretch bg-black py-24 z-80">
+      <section className="relative w-full min-h-screen items-stretch bg-black p-12 z-80">
          <div className=" flex w-full  flex-col gap-12 px-6 z-40">
             <div className="flex flex-col text-left w-full ">
                <div className='flex flex-col w-fit'>
@@ -45,7 +45,7 @@ const SystemsSection = () => {
                </div>
                
                
-               <p className="mt-6  text-lg text-gray-600 dark:text-gray-400">
+               <p className="mt-6  text-lg text-[#99a1af]">
                   Proteção total para o seu espaço com nossos sistemas avançados de segurança e combate a
                   incêndio.
                </p>
