@@ -3,9 +3,12 @@ import { certificationCards } from "../CertificationContent";
 
 const CertificationMobile = () => {
    return (
-      <section className="relative w-full md:hidden py-16 px-6 bg-gradient-to-r from-[hsl(0,0%,98%)] to-[hsl(0,0%,97.5%)]" id="certification">
+      <section className="relative w-full md:hidden p-6  bg-gradient-to-r from-[hsl(0,0%,98%)] to-[hsl(0,0%,97.5%)]" id="certification">
          <div className="relative z-10 flex flex-col gap-10">
             <div className="flex flex-col items-end text-center">
+               <div className="flex flex-col w-fit">
+
+               
                <div className="flex">
                   <h2 className="certification-heading">Certificação</h2>
 
@@ -16,11 +19,12 @@ const CertificationMobile = () => {
                   <h2 className="certification-subheading">e Vistoria</h2>
 
                </div>
+               </div>
 
 
 
 
-               <p className="text-xl font-light text-gray-600">
+               <p className="text-xl font-light text-gray-600 mt-6">
                   Garantimos a qualidade e a conformidade das suas instalações elétricas com serviços de certificação e vistoria.
                </p>
             </div>

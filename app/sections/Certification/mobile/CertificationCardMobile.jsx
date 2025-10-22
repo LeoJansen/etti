@@ -3,14 +3,14 @@ import Image from "next/image";
 const CertificationCardMobile = ({ title, description, image }) => {
 	return (
    <div className="flex flex-col items-center gap-4">
-      <div className="flex rounded-sm w-70 h-70 overflow-hidden">
+      <div className="flex rounded-sm w-80 h-80 overflow-hidden">
          <Image
       src={image}
       alt={title}
       width={80}
       height={80}
       
-      className="mb-4 w-70 h-70 object-contain "
+      className="mb-4 w-80 h-80 object-contain "
       />
 
       </div>
