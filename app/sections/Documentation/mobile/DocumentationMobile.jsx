@@ -29,9 +29,10 @@ const DocumentationMobile = ({ cards }) => {
 
 
          <div className="flex flex-col  z-10">
-            <div className="flex flex-col">
-               <div className="flex">
-                  <h2 className="documentation-heading">Documentos Técnicos</h2>
+            <div className="flex flex-col w-fit ">
+               <div className="flex flex-col">
+                  <h2 className="documentation-heading">Documentação</h2>
+                  <h2 className="documentation-heading">Técnica</h2>
 
                </div>
                <div className="flex gap-4 items-center">
