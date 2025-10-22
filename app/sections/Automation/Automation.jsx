@@ -31,9 +31,9 @@ const Automation = () => {
    return (
       <section className="relative  w-full overflow-hidden min-h-screen" id="automation">
          <div className='flex flex-col bg-black'>
-            <div className="text-center my-8 px-6">
+            <div className="text-center ">
               
-               <div className='flex flex-col w-fit items-start justify-center '>
+               <div className='flex flex-col w-fit items-start justify-center p-12'>
                   <h2 className="automation-heading">
                      Automação Residencial
                   </h2>
@@ -56,17 +56,17 @@ const Automation = () => {
 
             <div className='flex w-full h-[20vh] bg-black'>
             </div>
-            <div ref={cardsContainerRef} className="relative  w-full h-[80vh] px-6 z-200">
+            <div ref={cardsContainerRef} className="relative  w-full h-[80vh]  z-200">
                <Image
                   src="/assets/automation-bg.png"
                   alt="Background"
                   fill
                   style={{ objectFit: "cover", objectPosition: "center" }}
                   quality={100}
-                  className='-z-10'
+                  className=''
                />
 
-               <div className="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-8">
+               <div className="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-8 p-12">
                   {automationContent.map((item, index) => (
                      <AutomationCard
                         key={index}

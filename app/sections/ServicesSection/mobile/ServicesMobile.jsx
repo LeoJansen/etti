@@ -5,7 +5,7 @@ import React, { useState, useRef, useEffect } from 'react'
 import ServiceCardCarouselMobile from './ServiceCardCarouselMobile'
 import { servicesData } from '../ServicesContent'
 
-const ServicesCarouselMobile = () => {
+const ServicesMobile = () => {
    const [activeIndex, setActiveIndex] = useState(0)
    const carouselRef = useRef(null)
    const touchStartX = useRef(0)
@@ -204,4 +204,4 @@ const ServicesCarouselMobile = () => {
    )
 }
 
-export default ServicesCarouselMobile
+export default ServicesMobile

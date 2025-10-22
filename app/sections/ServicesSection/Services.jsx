@@ -1,10 +1,32 @@
 "use client"
 
-import Image from 'next/image'
-import React from 'react'
-import ServicesCarousel from './ServicesCarousel'
+import Image from 'next/image';
+import React from 'react';
+import ServicesCarousel from './ServicesCarousel';
+import dynamic from 'next/dynamic';
+import { useState, useEffect } from 'react';
+
+const ServicesMobile = dynamic(() => import('./mobile/ServicesMobile'), {
+   ssr: false,
+   loading: () => <p>Loading...</p>,
+});
+
+function useIsMobile() {
+   const [isMobile, setIsMobile] = useState(false);
+   useEffect(() => {
+      const checkMobile = () => setIsMobile(window.innerWidth < 768);
+      checkMobile();
+      window.addEventListener('resize', checkMobile);
+      return () => window.removeEventListener('resize', checkMobile);
+   }, []);
+   return isMobile;
+}
 
 const Services = () => {
+   const isMobile = useIsMobile();
+   if (isMobile) {
+      return <ServicesMobile />;
+   }
 
    return (
       <section id="services" className=" hidden md:flex relative   w-full min-h-screen lg:h-screen max-w-screen overflow-hidden z-40">
