@@ -25,18 +25,23 @@ const WhyEttiMobile = () => {
          <div className="flex flex-col w-full justify-center items-center relative z-10">
             {/* Mobile Header */}
             <div className='flex flex-col w-full'>
-               <div className='flex w-full items-center gap-2 mb-2'>
-                  <div className='h-[3px] w-8 rounded-[1.5px] bg-[#EBC197]' />
+               <div className="flex flex-col w-fit">
+                     <div className='flex w-full items-center gap-2 '>
+                  <div className='h-[3px] w-full rounded-[1.5px] bg-[#EBC197]' />
                   <h3 className="why-etti-subheading">
-                     Porque escolher a
+                     Porque somos a
                   </h3>
                </div>
                
-               <div className='ml-2'>
+               <div className=''>
                   <h2 className="why-etti-heading">
-                     Etti Engenharia
+                      Escolha Certa
                   </h2>   
+                    
                </div>
+
+               </div>
+            
                
                <div className="ml-2">
                   <p className="text-base text-gray-600 mb-8">
