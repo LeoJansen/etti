@@ -46,16 +46,16 @@ const WhyEtti = () => {
 
 
 
-         <div className="flex flex-col w-full justify-center items-center">
+         <div className="flex flex-col w-full justify-center items-center p-12">
            <div className='flex flex-col w-fit self-start '>
                   <div className='flex w-full items-center gap-4'>
                      
                      <div className='h-[5px] w-full rounded-[1.5px] bg-[#EBC197]' />
-                     <h3 className="why-etti-subheading">Porque escolher a</h3>
+                     <h3 className="why-etti-subheading">Porque somos a</h3>
 
                   </div>
                   <div className='flex ml-4'>
-                  <h2 className="why-etti-heading">Etti Engenharia</h2>   
+                  <h2 className="why-etti-heading">Escolha Certa</h2>   
                      </div>
 
                   
