@@ -13,10 +13,8 @@ export const initContactAnimation = () => {
          scrollTrigger: {
             trigger: "#contact",
             start: "top 80%",
-            end: "bottom 20%",
-            toggleActions: "play none none reverse",
-            // Adiciona indicadores para debug (remover em produção)
-            // markers: true
+            
+            toggleActions: "play none none none",
          }
       });
 
@@ -30,6 +28,7 @@ export const initContactAnimation = () => {
             scale: 1,
             opacity: 1,
             duration: 1.5,
+            
             ease: "power2.out"
          }
       );
