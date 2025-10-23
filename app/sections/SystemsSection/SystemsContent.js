@@ -21,6 +21,6 @@ export const systemsContent = [
     title: 'Manutenção Preventiva',
     imagem: "/assets/systems/systemCard4.png",
     description:  
-      'Garantimos a confiabilidade e o pleno funcionamento dos sistemas de segurança e combate a incêndios através de serviços de manutenção preventiva, que incluem testes operacionais e inspeções periódicas, em conformidade com as normas técnicas.',
+      'Garantimos a confiabilidade e o pleno funcionamento dos sistemas de segurança e combate a incêndios através de  manutenções preventivas com testes operacionais e inspeções periódicas, em conformidade com as normas técnicas.',
   }
 ];

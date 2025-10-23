@@ -45,7 +45,7 @@ const SystemsSection = () => {
                </div>
                
                
-               <p className="mt-6  text-lg text-[#99a1af]">
+               <p className="mt-6  text-2xl text-[#99a1af]">
                   Proteção total para o seu espaço com nossos sistemas avançados de segurança e combate a
                   incêndio.
                </p>

@@ -29,11 +29,16 @@ const SystemCardMobile = ({ index = 0, title, description, className = '', child
          const tl = gsap.timeline();
 
          // Anima título e descrição enquanto traz a imagem
-         tl.to([titleElement, descriptionElement], {
+         tl.to(descriptionElement, {
             opacity: 0,
             scale: 0.8,
             duration: 0.4,
             ease: 'power2.out',
+         })
+         tl.to(titleElement, {
+            duration: 0.4,
+            ease: 'power2.out',
+            filter: "brightness(0.5) contrast(1.8) saturate(1.8)"
          })
             .to(
                imageElement,
@@ -75,8 +80,19 @@ const SystemCardMobile = ({ index = 0, title, description, className = '', child
                },
                '-=0.1',
             )
+
             .to(
-               [titleElement, descriptionElement],
+               titleElement,
+               {
+                  opacity: 1,
+                  duration: 0.5,
+                  ease: 'power2.out',
+                  filter: "brightness(1.5) contrast(0.8) saturate(1.8)"
+               },
+               '-=0.2',
+            )
+            .to(
+               descriptionElement,
                {
                   opacity: 1,
                   scale: 1,
@@ -104,9 +120,8 @@ const SystemCardMobile = ({ index = 0, title, description, className = '', child
    return (
       <div
          ref={cardRef}
-         className={`relative flex w-full h-[280px] flex-col items-center justify-center rounded-xl overflow-hidden cursor-pointer ${
-            isOdd ? 'bg-[#000000]' : 'bg-[#000000]'
-         } ${className}`.trim()}
+         className={`relative flex w-full h-[320px] flex-col items-center justify-center rounded-xl overflow-hidden cursor-pointer ${isOdd ? 'bg-[#000000]' : 'bg-[#000000]'
+            } ${className}`.trim()}
       >
          {/* Imagem de fundo completa (inicialmente oculta) */}
          <div
@@ -138,9 +153,11 @@ const SystemCardMobile = ({ index = 0, title, description, className = '', child
             {title && (
                <h3
                   ref={titleRef}
-                  className="system-card-title text-2xl md:text-3xl font-bold text-center leading-tight"
+                  className="system-card-title  font-semibold text-center tracking-[0.05em] leading-tight"
                   style={{
                      backgroundImage: `url(/assets/systems/systemCard${index + 1}.png)`,
+                     filter: "brightness(1.2)  saturate(1.2)",
+                     fontSize: '32px',
                   }}
                >
                   {title}

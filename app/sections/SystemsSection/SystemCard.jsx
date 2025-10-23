@@ -17,6 +17,7 @@ const SystemCard = ({ index = 0, title, description, className = '', children })
    const titleRef = useRef(null);
    const imageRef = useRef(null);
    const overlayRef = useRef(null);
+   const descriptionRef = useRef(null);
    const isOdd = index % 2 !== 0;
    const backgroundClass = isOdd ? 'bg-[hsl(0,0%,0%)]' : 'bg-[hsl(0,0%,0%)]';
 
@@ -25,56 +26,106 @@ const SystemCard = ({ index = 0, title, description, className = '', children })
       const titleElement = titleRef.current;
       const imageElement = imageRef.current;
       const overlayElement = overlayRef.current;
+      const descriptionElement = descriptionRef.current;
 
-      if (!card || !titleElement || !imageElement) return;
+      if (!card) return;
+
+      const supportsHover = typeof window !== 'undefined'
+         && typeof window.matchMedia === 'function'
+         && window.matchMedia('(hover: hover)').matches;
+
+      if (descriptionElement) {
+         if (supportsHover) {
+            gsap.set(descriptionElement, { opacity: 1, y: 16 });
+         } else {
+            gsap.set(descriptionElement, { opacity: 0, y: 0 });
+         }
+      }
+
+      if (!supportsHover) return;
 
       const handleMouseEnter = () => {
          const tl = gsap.timeline();
          
          // Animação: título desaparece e imagem aparece
-         tl.to(titleElement, {
-            opacity: 1,
-            scale: 0.8,
-            duration: 0.4,
-            ease: "power2.out",
-           
-            filter:"brightness(0.5) contrast(1.8) saturate(1.8)"
-         })
-         .to(imageElement, {
-            opacity: 1,
-            scale: 1,
-            duration: 0.5,
-            ease: "power2.out"
-         }, "-=0.2")
-         .to(overlayElement, {
-            opacity: 0.3,
-            duration: 0.3,
-            ease: "power2.out"
-         }, "-=0.3");
+            if (descriptionElement) {
+            tl.to(descriptionElement, {
+               opacity: 0,
+               y: 0,
+               duration: 0.4,
+               ease: "power2.out"
+            }, "-=0.2");
+         }
+         
+         if (titleElement) {
+            tl.to(titleElement, {
+               opacity: 1,
+               scale: 0.8,
+               duration: 0.4,
+               ease: "power2.out",
+               filter: "brightness(0.5) contrast(1.8) saturate(1.8)"
+            });
+         }
+
+         if (imageElement) {
+            tl.to(imageElement, {
+               opacity: 1,
+               scale: 1,
+               duration: 0.5,
+               ease: "power2.out"
+            }, "-=0.2");
+         }
+
+         if (overlayElement) {
+            tl.to(overlayElement, {
+               opacity: 0.3,
+               duration: 0.3,
+               ease: "power2.out"
+            }, "-=0.3");
+         }
+
+      
       };
 
       const handleMouseLeave = () => {
          const tl = gsap.timeline();
          
          // Animação reversa: imagem desaparece e título volta
-         tl.to(overlayElement, {
-            opacity: 0,
-            duration: 0.3,
-            ease: "power2.out"
-         })
-         .to(imageElement, {
-            opacity: 0,
-            scale: 1.1,
-            duration: 0.4,
-            ease: "power2.out"
-         }, "-=0.1")
-         .to(titleElement, {
-            opacity: 1,
-            scale: 1,
-            duration: 0.2,
-            filter:"brightness(1) contrast(1)",
-            ease: "power2.out"
-         }, "-=0.2");
+         if (overlayElement) {
+            tl.to(overlayElement, {
+               opacity: 0,
+               duration: 0.3,
+               ease: "power2.out"
+            });
+         }
+
+         if (imageElement) {
+            tl.to(imageElement, {
+               opacity: 0,
+               scale: 1.1,
+               duration: 0.4,
+               ease: "power2.out"
+            }, "-=0.1");
+         }
+
+         if (descriptionElement) {
+            tl.to(descriptionElement, {
+               opacity: 1,
+               y: 16,
+               duration: 0.3,
+               ease: "power2.out"
+            }, "-=0.2");
+         }
+
+         if (titleElement) {
+            tl.to(titleElement, {
+               opacity: 1,
+               scale: 1,
+               duration: 0.2,
+               filter: "brightness(1) contrast(1)",
+               ease: "power2.out"
+            }, "-=0.2");
+         }
       };
 
       card.addEventListener('mouseenter', handleMouseEnter);
@@ -84,7 +135,7 @@ const SystemCard = ({ index = 0, title, description, className = '', children })
          card.removeEventListener('mouseenter', handleMouseEnter);
          card.removeEventListener('mouseleave', handleMouseLeave);
       };
-   }, []);
+   }, [description]);
 
    return (
       <div 
@@ -130,7 +181,10 @@ const SystemCard = ({ index = 0, title, description, className = '', children })
          )}
 
          {description && (
-            <div className="mt-4 px-6 relative z-20">
+            <div
+               ref={descriptionRef}
+               className="mt-4 px-6 relative z-20"
+            >
                <p className="text-[#8d8d8d] text-lg text-center">{description}</p>
             </div>
          )}
