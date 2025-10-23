@@ -2,6 +2,9 @@
 import dynamic from "next/dynamic";
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const SuperSectionMobile = dynamic(() => import("./mobile/SuperSectionMobile"), {
    ssr: false,
@@ -24,7 +27,8 @@ const SuperSection = () => {
    const textRef = useRef(null);
 
    useEffect(() => {
-      if (isMobile || !textRef.current) {
+      const heading = textRef.current;
+      if (isMobile || !heading) {
          return undefined;
       }
 
@@ -34,17 +38,23 @@ const SuperSection = () => {
             return;
          }
 
-         gsap.fromTo(
-            letters,
-            { opacity: 0 },
-            {
+         gsap.set(letters, { opacity: 0 });
+
+         gsap
+            .timeline({
+               scrollTrigger: {
+                  trigger: heading,
+                  start: "top 80%",
+                  once: true,
+               },
+            })
+            .to(letters, {
                opacity: 1,
                duration: 0.6,
                ease: "power2.out",
                stagger: 0.05,
-            }
-         );
-      }, textRef);
+            });
+      }, heading);
 
       return () => ctx.revert();
    }, [isMobile]);
