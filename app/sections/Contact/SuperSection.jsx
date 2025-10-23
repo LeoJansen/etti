@@ -28,7 +28,7 @@ const SuperSection = () => {
       return <SuperSectionMobile />;
    }
    return (
-      <div className="super-section relative h-screen w-full flex flex-col justify-center items-start gap-12 px-6 z-20">
+      <div className="super-section relative h-screen w-full flex flex-col justify-center items-start gap-12 p-12 z-20">
          <h2 className="text-[150px] leading-[150px] font-extralight text-[hsl(0,0%,70%)]  tracking-[-0.04em] ">
             Todo         <br />
             <span className="  text-[#EB9948] "> grande projeto</span>
