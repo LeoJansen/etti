@@ -103,7 +103,7 @@ const ServiceCardCarouselMobile = ({
           ? 'h-[400px] w-[240px] scale-100 opacity-100 z-20' 
           : 'h-[280px] w-[180px] scale-85 opacity-50 z-10'
         }
-        rounded-[8px] bg-[#00000095] backdrop-blur-[4px] shadow-[0_2px_4px_2px_rgba(20,20,20,0.5)]
+        rounded-[3px] bg-[#00000095] backdrop-blur-[4px] shadow-[0_2px_4px_2px_rgba(20,20,20,0.5)]
         active:scale-95
       `}
     >

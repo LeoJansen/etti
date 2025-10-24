@@ -55,7 +55,7 @@ const WhyEttiMobile = () => {
                {whyEttiData.map((item, index) => (
                   <div 
                      key={item.id}
-                     className="  p-6 rounded-lg shadow-[0_4px_12px_rgba(20,20,20,0.1)] border border-gray-100 transform transition duration-300 hover:scale-105 hover:shadow-[0_8px_20px_rgba(235,153,72,0.15)]"
+                     className="  p-6 rounded-[3px] shadow-[0_4px_12px_rgba(20,20,20,0.1)] border border-gray-100 transform transition duration-300 hover:scale-105 hover:shadow-[0_8px_20px_rgba(235,153,72,0.15)]"
                   >
                      <div className="flex flex-col items-start text-left">
                         {/* Card number indicator */}
@@ -78,15 +78,7 @@ const WhyEttiMobile = () => {
                ))}
             </div>
 
-            {/* Mobile CTA or additional content */}
-            <div className="mt-12 text-center">
-               <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#EB9948]/10 rounded-full">
-                  <div className="w-2 h-2 rounded-full bg-[#EB9948]"></div>
-                  <span className="text-sm font-medium text-[#EB9948]">
-                     Qualidade garantida
-                  </span>
-               </div>
-            </div>
+          
          </div>
       </section>
    );

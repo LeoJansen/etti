@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 const ProjectCardMobile = ({ title, description, imageSrc }) => {
    return (
-      <article className="flex flex-col overflow-hidden rounded-[4px] border border-white/10 shadow-[0_6px_24px_rgba(0,0,0,0.45)]">
+      <article className="flex flex-col overflow-hidden rounded-[3px] border border-white/10 shadow-[0_6px_24px_rgba(0,0,0,0.45)]">
 	<div className='p-[5px] '>
 		
          <div className="relative h-52 w-full">

@@ -120,7 +120,7 @@ const SystemCardMobile = ({ index = 0, title, description, className = '', child
    return (
       <div
          ref={cardRef}
-         className={`relative flex w-full h-[320px] flex-col items-center justify-center rounded-xl overflow-hidden cursor-pointer ${isOdd ? 'bg-[#000000]' : 'bg-[#000000]'
+         className={`relative flex w-full h-[320px] flex-col items-center justify-center rounded-[3px] overflow-hidden cursor-pointer ${isOdd ? 'bg-[#000000]' : 'bg-[#000000]'
             } ${className}`.trim()}
       >
          {/* Imagem de fundo completa (inicialmente oculta) */}

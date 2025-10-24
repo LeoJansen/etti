@@ -20,7 +20,7 @@ const About = () => {
 
             </div>
             <div className="flex flex-col md:flex-row w-full h-full justify-center items-center md:space-x-12">
-               <div className="w-full h-full md:w-1/2 flex items-center mb-8 rounded-sm overflow-hidden md:mb-0">
+               <div className="w-full h-full md:w-1/2 flex items-center mb-8 rounded-[3px] overflow-hidden md:mb-0">
                   <Image
                      src="/assets/about.png"
                      alt="Equipe da Etti Project em reunião"

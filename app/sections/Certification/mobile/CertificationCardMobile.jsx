@@ -3,7 +3,7 @@ import Image from "next/image";
 const CertificationCardMobile = ({ title, description, image }) => {
 	return (
    <div className="flex flex-col items-center gap-4">
-      <div className="flex rounded-sm w-80 h-80 overflow-hidden">
+      <div className="flex rounded-[3px] w-80 h-80 overflow-hidden">
          <Image
       src={image}
       alt={title}

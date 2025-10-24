@@ -26,7 +26,7 @@ export default function Hero() {
         
   <div className='w-full h-full flex flex-col justify-around items-center z-10'>
 
-          <div data-hero-box className='ml-[50%] border-2 border-[#F38B23] p-8 w-1/2 flex justify-center items-center z-20 tracking-tight backdrop-blur-[2px] bg-[rgba(0,0,0,0.12)]'>
+          <div data-hero-box className='ml-[50%] border-2 border-[#F38B23] rounded-[3px] p-8 w-1/2 flex justify-center items-center z-20 tracking-tight backdrop-blur-[2px] bg-[rgba(0,0,0,0.12)]'>
             <h2 data-hero-heading className='relative inline-block md:text-[38px] lg:text-[55px] xl:text-[70px] 2xl:text-[72px] text-[#fd810441] font-medium  z-30 text-right leading-[40px] lg:leading-[55px] xl:leading-[70px] 2xl:leading-[72px]'>
               <span className='relative z-10'>
                 {headingLines.map((line, lineIndex) => (

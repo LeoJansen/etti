@@ -63,7 +63,7 @@ const Contact = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 h-full mt-90 px-6">
                {/* Card: Orçamento Gratuito */}
-               <div className="contact-card flex flex-col gap-8 backdrop-blur-md p-8 rounded-lg shadow-md h-fit ">
+               <div className="contact-card flex flex-col gap-8 backdrop-blur-md p-8 rounded-[3px] shadow-md h-fit ">
                   <h3 className="text-2xl  text-[#ff7919] mb-2">
                      Orçamento Gratuito
                   </h3>
@@ -72,7 +72,7 @@ const Contact = () => {
                   </p>
                </div>
                {/* Card: Resposta Rápida */}
-               <div className="contact-card flex flex-col  gap-8 backdrop-blur-md p-8 rounded-lg shadow-md h-fit">
+               <div className="contact-card flex flex-col  gap-8 backdrop-blur-md p-8 rounded-[3px] shadow-md h-fit">
                   <h3 className="text-2xl  text-[#ff7919] mb-2">
                      Resposta Rápida
                   </h3>
@@ -82,10 +82,10 @@ const Contact = () => {
                </div>
             </div>
             <div className="flex flex-col sm:flex-row justify-center gap-12 mb-12">
-               <button onClick={() => window.open(whatsAppLink, "_blank")} className="contact-button border-4 border-[#ff7919] w-70 text-white font-bold py-3 rounded-[6px] shadow-lg bg-[#ff7919] hover:text-white transition duration-300">
+               <button onClick={() => window.open(whatsAppLink, "_blank")} className="contact-button border-4 border-[#ff7919] w-70 text-white font-bold py-3 rounded-[3px] shadow-lg bg-[#ff7919] hover:text-white transition duration-300">
                   Fale com um especialista
                </button>
-               <button className="contact-button bg-[rgb(5,11,5)] w-70  text-white font-bold py-3  rounded-[6px] shadow-lg hover:bg-transparent hover:text-[#ff7919]  transition duration-300 ">
+               <button className="contact-button bg-[rgb(5,11,5)] w-70  text-white font-bold py-3  rounded-[3px] shadow-lg hover:bg-transparent hover:text-[#ff7919]  transition duration-300 ">
                   Agendar Reunião
                </button>
             </div>

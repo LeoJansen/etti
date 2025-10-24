@@ -27,7 +27,7 @@ export default function HeroMobile() {
       <div className="w-full flex justify-center px-4 z-20">
         <div
           data-hero-box
-          className="border-2 border-[#F38B23] p-4 w-full max-w-[700px] backdrop-blur-[2px]"
+          className="border-2 border-[#F38B23] p-4 w-full max-w-[700px] backdrop-blur-[2px] rounded-[3px"
         >
           <h2
             data-hero-heading
