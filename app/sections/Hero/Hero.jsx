@@ -7,14 +7,14 @@ import { useHeroAnimantion } from './useHeroAnimation';
 import { useHeroSectionAnimation } from './useHeroSectionAnimation';
 import { whatsAppLink } from '@/app/constants';
 
-const HERO_HEADING_TEXT = 'O futuro do seu espaço começa com um projeto inteligente.';
+const HERO_HEADING_TEXT = 'O futuro do seu\nespaço começa\ncom um projeto\ninteligente.';
 const NBSP = '\u00A0';
 
 export default function Hero() {
   const glowRef = useRef(null);
   const sectionRef = useRef(null);
-  const headingLetters = useMemo(
-    () => HERO_HEADING_TEXT.split(''),
+  const headingLines = useMemo(
+    () => HERO_HEADING_TEXT.split('\n'),
     []
   );
   useHeroAnimantion(glowRef, '#F38B23');
@@ -29,12 +29,16 @@ export default function Hero() {
           <div data-hero-box className='ml-[50%] border-2 border-[#F38B23] p-8 w-1/2 flex justify-center items-center z-20 tracking-tight backdrop-blur-[2px] bg-[rgba(0,0,0,0.12)]'>
             <h2 data-hero-heading className='relative inline-block text-[72px] text-[#fd810441] font-medium  z-30 text-right leading-[80px]'>
               <span className='relative z-10'>
-                {headingLetters.map((char, index) => (
-                  <span
-                    key={`hero-letter-${index}`}
-                    className='hero-letter inline-block opacity-0'
-                  >
-                    {char === ' ' ? NBSP : char}
+                {headingLines.map((line, lineIndex) => (
+                  <span key={`hero-line-${lineIndex}`} className='block'>
+                    {line.split('').map((char, charIndex) => (
+                      <span
+                        key={`hero-letter-${lineIndex}-${charIndex}`}
+                        className='hero-letter inline-block opacity-0'
+                      >
+                        {char === ' ' ? NBSP : char}
+                      </span>
+                    ))}
                   </span>
                 ))}
               </span>
@@ -44,7 +48,18 @@ export default function Hero() {
                 ref={glowRef}
                 className='pointer-events-none select-none absolute inset-0 z-0 text-[#ffffff59]'
               >
-                {HERO_HEADING_TEXT}
+                {headingLines.map((line, lineIndex) => (
+                  <span key={`hero-line-overlay-${lineIndex}`} className='block'>
+                    {line.split('').map((char, charIndex) => (
+                      <span
+                        key={`hero-letter-overlay-${lineIndex}-${charIndex}`}
+                        className='hero-letter-overlay inline-block opacity-0'
+                      >
+                        {char === ' ' ? NBSP : char}
+                      </span>
+                    ))}
+                  </span>
+                ))}
               </span>
             </h2>
           </div>

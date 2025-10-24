@@ -31,6 +31,7 @@ export function useHeroSectionAnimation(containerRef) {
   const heading = q('[data-hero-heading]');
   const headingOverlay = q('[data-hero-heading] > span[aria-hidden="true"]');
   const headingLetters = q('.hero-letter');
+  const headingOverlayLetters = q('.hero-letter-overlay');
   const ctaContainer = q('[data-hero-cta]');
   const cta = q('[data-hero-cta] a');
 
@@ -43,6 +44,7 @@ export function useHeroSectionAnimation(containerRef) {
     gsap.set(heading, { autoAlpha: 0, y: 10 });
   gsap.set(headingLetters, { opacity: 0 });
   gsap.set(headingOverlay, { autoAlpha: 0 });
+  gsap.set(headingOverlayLetters, { opacity: 0 });
   gsap.set(ctaContainer, { autoAlpha: 0 });
   gsap.set(cta, { autoAlpha: 0, y: 16 });
 
@@ -53,6 +55,7 @@ export function useHeroSectionAnimation(containerRef) {
     gsap.set(heading, { clearProps: 'all', autoAlpha: 1, y: 0 });
   gsap.set(headingLetters, { clearProps: 'all', opacity: 1 });
   gsap.set(headingOverlay, { clearProps: 'all', autoAlpha: 1 });
+  gsap.set(headingOverlayLetters, { clearProps: 'all', opacity: 1 });
   gsap.set(ctaContainer, { clearProps: 'all', autoAlpha: 1 });
   gsap.set(cta, { clearProps: 'all', autoAlpha: 1, y: 0 });
         return;
@@ -72,6 +75,7 @@ export function useHeroSectionAnimation(containerRef) {
     .to(headingLetters, { opacity: 1, duration: 0.6, ease: 'power2.out', stagger: 0.05 }, 0.83)
   // Reveal heading overlay (allows glow to start only after reveal)
   .to(headingOverlay, { autoAlpha: 1, duration: 0.2 }, 0.845)
+    .to(headingOverlayLetters, { opacity: 1, duration: 0.6, ease: 'power2.out', stagger: 0.05 }, 0.87)
   // Reveal CTA container then stagger buttons
   .to(ctaContainer, { autoAlpha: 1, duration: 0.1 }, 0.5)
   .to(cta, { autoAlpha: 1, y: 0, duration: 0.5, stagger: 0.1 }, 1.85);
