@@ -29,14 +29,10 @@ const ContactMobile = () => {
             style={{ objectFit: "cover", objectPosition: "center" }}
             className="bg-image-mobile"
          />
-         
-            <div className="absolute z-20 top-[-5px] h-[150px] w-full flex justify-center items-end backdrop-blur-[6px] px-[2%]">
-            
-            </div>
 
-         <div id="contact-info" className="flex flex-col h-full  gap-12 justify-end items-center px-4 text-center z-40">
+         <div id="contact-info" className="flex flex-col h-full  gap-12 justify-end items-center  text-center z-40">
             {/* Mobile Title */}
-   <h2 className="contact-title-mobile text-[#ffffff63] text-[50px] leading-[50px] font-thin tracking-[-0.04em]">Vamos iniciar o seu?</h2>
+            <h2 className="contact-title-mobile text-[#ffffff63] text-[50px] leading-[50px] font-thin tracking-[-0.04em]">Vamos iniciar o seu?</h2>
 
             {/* Mobile Cards */}
             <div className="flex flex-col gap-4 w-full max-w-sm " >
@@ -70,10 +66,59 @@ const ContactMobile = () => {
                   Agendar Reunião
                </button>
             </div>
-              <div className="contact-footer flex flex-col gap-2 w-full  justify-center items-end border-t-2 border-[#3b3b3b4f] p-6 backdrop-blur-[2px] ">
-               <h5 className="text-[#ff7919] text-[22px] font-light">+351 927 553 947</h5>
-               <h5 className="text-[#ff7919] text-[22px] font-light">geral@etti.pt</h5>
+            <div className="contact-footer flex-col  gap-2 w-full  justify-center items-between   bg-[#000F1E] ">
+               <div className="flex flex-col justify-between items-center p-4 py-8 gap-6">
+                  <div className="flex w-full justify-between">
+                     <div className="flex flex-col gap-4">
+                        <div className="flex  gap-4  items-center">
+                           <Image
+                              src="/assets/contact/phone.svg"
+                              alt="Etti Logo"
+                              width={22}
+                              height={22}
+                           />
+                           <p className="text-[#aaaaaa] text-xl font-light">+351 927 553 947</p>
 
+                        </div>
+                        <div className="flex  gap-4  items-center">
+                           <Image
+                              src="/assets/contact/mail.svg"
+                              alt="Etti Logo"
+                              width={30}
+                              height={30}
+                           />
+                           <p className="text-[#aaaaaa] text-xl font-light">geral@etti.pt</p>
+
+                        </div>
+                     </div>
+                     <div className="flex gap-6">
+                        <Image
+                           src="/assets/contact/instagram.svg"
+                           alt="Etti Logo"
+                           width={30}
+                           height={30}
+                        />
+                        <Image
+                           src="/assets/contact/whatsapp.svg"
+                           alt="Etti Logo"
+                           width={30}
+                           height={30}
+                        />
+                        <Image
+                           src="/assets/contact/linkedin.svg"
+                           alt="Etti Logo"
+                           width={30}
+                           height={30}
+                        />
+                     </div>
+
+                  </div>
+
+                  <div>
+                     <p className="text-[#797979] text-lg font-light">© 2025 Etti. Todos os direitos reservados.</p>
+                  </div>
+
+               </div>
             </div>
          </div>
       </section>

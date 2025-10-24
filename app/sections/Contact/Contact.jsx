@@ -89,10 +89,57 @@ const Contact = () => {
                   Agendar Reunião
                </button>
             </div>
-            <div className="contact-footer flex flex-col gap-2 w-full  justify-center items-end border-t-2 border-[#3b3b3b4f] p-12 ">
-               <h5 className="text-[#aaaaaa] text-2xl font-light">+351 927 553 947</h5>
-               <h5 className="text-[#aaaaaa] text-2xl font-light">geral@etti.pt</h5>
+            <div className="contact-footer flex-col  gap-2 w-full  justify-center items-between   bg-[#000F1E] p-12 ">
+               <div className="flex justify-between items-center">
+                  <div className="flex flex-col gap-4">
+                     <div className="flex  gap-4  items-center">
+                        <Image
+                           src="/assets/contact/phone.svg"
+                           alt="Etti Logo"
+                           width={22}
+                           height={22}
+                        />
+                        <p className="text-[#aaaaaa] text-xl font-light">+351 927 553 947</p>
 
+                     </div>
+                     <div className="flex  gap-4  items-center">
+                        <Image
+                           src="/assets/contact/mail.svg"
+                           alt="Etti Logo"
+                           width={30}
+                           height={30}
+                        />
+                     <p className="text-[#aaaaaa] text-xl font-light">geral@etti.pt</p>
+
+                     </div>
+                     
+                     
+                     
+                  </div>
+                  <div>
+                     <p className="text-[#797979] text-lg font-light">© 2025 Etti. Todos os direitos reservados.</p>
+                  </div>
+                  <div className="flex gap-6">
+                     <Image
+                        src="/assets/contact/instagram.svg"
+                        alt="Etti Logo"
+                        width={30}
+                        height={30}
+                     />
+                     <Image
+                        src="/assets/contact/whatsapp.svg"
+                        alt="Etti Logo"
+                        width={30}
+                        height={30}
+                     />
+                     <Image
+                        src="/assets/contact/linkedin.svg"
+                        alt="Etti Logo"
+                        width={30}
+                        height={30}
+                     />
+                  </div>
+               </div>
             </div>
          </div>
       </section>
