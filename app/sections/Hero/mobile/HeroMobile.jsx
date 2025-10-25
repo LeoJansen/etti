@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useMemo, useRef } from 'react';
 import { useHeroAnimantion } from '../useHeroAnimation';
-import { useHeroSectionAnimation } from '../useHeroSectionAnimation';
+import { useHeroSectionAnimationMobile } from './useHeroSectionAnimationMobile';
 import { whatsAppLink } from '@/app/constants';
 
 const HERO_HEADING_TEXT = 'O futuro do seu espaço\ncomeça com um\nprojeto inteligente.';
@@ -16,7 +16,7 @@ export default function HeroMobile() {
 
   // Reutiliza os mesmos hooks de animação da versão desktop
   useHeroAnimantion(glowRef, '#F38B23');
-  useHeroSectionAnimation(sectionRef);
+  useHeroSectionAnimationMobile(sectionRef);
 
   return (
     <section
