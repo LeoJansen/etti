@@ -27,7 +27,7 @@ export default function HeroMobile() {
       <div className="w-full flex justify-center px-4 z-20">
         <div
           data-hero-box
-          className="border-2 border-[#F38B23] p-4 w-full max-w-[700px] backdrop-blur-[2px] rounded-[3px"
+          className="border-2 border-[#F38B23] p-4 w-full max-w-[700px] backdrop-blur-[2px] rounded-[3px] opacity-0"
         >
           <h2
             data-hero-heading
@@ -73,7 +73,7 @@ export default function HeroMobile() {
       {/* Botões de Ação */}
       <div
         data-hero-cta
-        className="absolute top-3/4 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center z-30 pointer-events-auto"
+        className="absolute top-3/4 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center z-30 pointer-events-auto opacity-0"
       >
         <div className="flex flex-col justify-center gap-4">
           <Link
@@ -92,7 +92,7 @@ export default function HeroMobile() {
       </div>
 
       {/* Background Image para Mobile (animável) */}
-      <div data-hero-bg className="absolute inset-0 z-0 pointer-events-none">
+      <div data-hero-bg className="absolute inset-0 z-0 pointer-events-none opacity-0">
         <Image
           src="/assets/heroMobile.png"
           alt="Hero Image"
