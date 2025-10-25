@@ -117,6 +117,11 @@ const ContactMobile = () => {
                   <div>
                      <p className="text-[#797979] text-lg font-light">© 2025 Etti. Todos os direitos reservados.</p>
                   </div>
+                  <div className="flex flex-col w-full items-end">
+                     <p className="text-[#636363]">Desenvolvido por <a href="https://www.etti.pt" className="text-[#949494]">Leonardo Jansen</a></p>
+                     <a href="https://www.leonardojansen.com" className="text-[#636363]">www.leonardojansen.com</a>
+
+                  </div>
 
                </div>
             </div>

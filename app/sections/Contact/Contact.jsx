@@ -89,10 +89,10 @@ const Contact = () => {
                   Agendar Reunião
                </button>
             </div>
-            <div className="contact-footer flex-col  gap-2 w-full  justify-center items-between   bg-[#000F1E] p-12 ">
+            <div className="contact-footer flex flex-col  gap-2 w-full  justify-between items-between   bg-[#000F1E] p-4 ">
                <div className="flex justify-between items-center">
-                  <div className="flex flex-col gap-4">
-                     <div className="flex  gap-4  items-center">
+                  <div className="flex flex-col gap-4 ml-6 mt-2">
+                     <div className="flex  gap-4  items-center m">
                         <Image
                            src="/assets/contact/phone.svg"
                            alt="Etti Logo"
@@ -139,6 +139,11 @@ const Contact = () => {
                         height={30}
                      />
                   </div>
+               </div>
+               <div className="flex flex-col w-full items-end">
+                  <p className="text-[#636363]">Desenvolvido por <a href="https://www.etti.pt" className="text-[#949494]">Leonardo Jansen</a></p>
+                  <a href="https://www.leonardojansen.com" className="text-[#636363]">www.leonardojansen.com</a>
+
                </div>
             </div>
          </div>
