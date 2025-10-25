@@ -7,7 +7,7 @@ export const systemsContent = [
   },
   {
     title: 'Supressão Automática',
-    imagem: "/assets/systems/systemCard2.png",
+    imagem: "/assets/systems/systemCard22.png",
     description:
       'Instalamos sistemas de extinção automática com sprinklers e gases limpos para proteção eficaz.',
   },
