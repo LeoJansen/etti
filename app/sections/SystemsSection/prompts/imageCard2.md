@@ -1,33 +1,36 @@
-# Prompt de Imagem: Iluminação de Emergência em Laranja Dourado
+Excelente observação. É um ajuste comum e muito importante. Quando o prompt enfatiza demais a "escuridão total" e a "única fonte de luz", a IA pode interpretar isso de forma literal, criando grandes áreas de preto absoluto e perdendo detalhes da arquitetura.
+
+Para corrigir isso, vamos ajustar o prompt para que a luz de emergência seja mais **envolvente e generosa**, iluminando não apenas o caminho, mas também o ambiente ao redor, criando uma cena mais visível e rica em detalhes, sem perder o drama.
+
+Aqui está o prompt refeito, estruturado em Markdown, com essa nova direção.
+
+---
+
+# Prompt de Imagem: Iluminação de Emergência Laranja (Versão Balanceada)
 
 ## 1. Visão Geral e Conceito Principal
 
-Gerar uma imagem estilizada que demonstra um sistema de iluminação de emergência, mas com uma estética de cor **laranja dourado**. A cena deve equilibrar a sensação de segurança com um ambiente quente, sofisticado e quase luxuoso, mantendo o contraste dramático entre luz e escuridão.
+Gerar uma imagem estilizada de um sistema de iluminação de emergência laranja. O objetivo é criar uma cena que seja **dramaticamente iluminada em vez de excessivamente escura**. A luz laranja deve ser a protagonista, preenchendo o espaço de forma mais ampla, revelando a arquitetura ao redor e criando um ambiente seguro e visível.
 
 ## 2. Composição da Cena
 
-*   **Local:** Um corredor de um hotel de luxo, um edifício corporativo de alto padrão ou um condomínio residencial moderno. A arquitetura deve ser elegante.
-*   **Perspectiva:** Ponto de fuga único, para criar profundidade e guiar o olhar.
-*   **Elementos Arquitetônicos:** Paredes com texturas sutis (madeira escura, painéis metálicos em tons de bronze ou concreto polido) que interajam bem com a luz quente. O piso deve ter um acabamento que reflita suavemente o brilho dourado.
+*   **Local:** Corredor de um edifício corporativo moderno com design minimalista.
+*   **Perspectiva:** Ponto de fuga único para manter a profundidade.
+*   **Elementos Arquitetônicos:** As superfícies devem ser otimizadas para refletir a luz. **Piso altamente polido** (quase espelhado), paredes com **acabamento acetinado ou metálico sutil** e um teto que também capte um pouco do brilho.
 
-## 3. Iluminação e Contraste
+## 3. Iluminação e Ambiente
 
-*   **Fonte de Luz Principal:** **Nenhuma.** O ambiente permanece em profunda escuridão para maximizar o impacto da iluminação de emergência.
-*   **Fonte de Luz Secundária:** O sistema de emergência, com uma emissão de luz totalmente modificada.
-    *   **Luzes de Emergência:** Luminárias de design moderno que emitem uma **luz laranja dourado** forte e quente. A luz não é branca, mas sim um tom rico, semelhante à "golden hour" ou a uma lâmpada de tungstênio.
-    - **Sinalização de Saída:** O sinal de "SAÍDA" também brilha no mesmo tom **laranja dourado**, unificando a paleta de cores da cena.
-*   **Contraste:** Muito alto. A luz quente e dourada deve criar um contraste visual forte contra as sombras profundas e frias. Os reflexos no chão e nas paredes são cruciais para ampliar a sensação de calor e sofisticação.
+*   **Ambiente:** Em vez de "escuridão total", o ambiente está em uma **penumbra dramática**. Existem sombras profundas, mas não áreas de preto absoluto. Detalhes da arquitetura nas sombras devem ser sutilmente visíveis.
+*   **Fonte de Luz Principal:** O sistema de emergência, que agora é descrito como mais **potente e volumétrico**.
+    *   **Luzes de Emergência:** Tiras de LED ou painéis que emitem uma **luz laranja potente e difusa**. A luz deve "banhar" as superfícies próximas, não apenas traçar uma linha.
+    - **Sinalização de Saída:** O sinal de "SAÍDA" continua sendo um ponto focal laranja intenso, contribuindo para a iluminação geral da cena.
+*   **Reflexos e Brilho Ambiente:** Este é o ponto-chave. A luz laranja deve criar **reflexos amplos e vívidos** no chão e no teto. Esse reflexo é crucial para iluminar o volume do espaço e evitar que a imagem fique escura demais. A luz deve gerar um **brilho ambiente** que preenche o corredor.
 
 ## 4. Atmosfera e Estilo
 
-*   **Estilo Visual:** Fotorrealista com um toque cinematográfico e estilizado. A imagem deve ser elegante e impactante.
-*   **Atmosfera:** Sofisticada, segura, calma e quente. A cor laranja dourado deve evocar uma sensação de conforto e luxo, mesmo em uma situação de emergência.
-*   **Paleta de Cores:** Dominada por preto e sombras profundas, cortada por tons vibrantes de laranja, âmbar e dourado.
-
-## 5. Objetivo e Mensagem
-
-*   **Comunicação Direta:** A segurança não precisa ser fria ou impessoal. Um sistema de emergência pode ser integrado a um design de interiores sofisticado.
-*   **Associação de Marca:** Ligar a competência em "Instalações Elétricas" a projetos de alto padrão, que exigem tanto funcionalidade quanto estética.
+*   **Estilo Visual:** Fotorrealista, limpo e cinematográfico. O foco está na beleza da interação entre a luz e as superfícies.
+*   **Atmosfera:** Segura, clara, moderna e imersiva. A sensação é de que todo o corredor está envolvido pela luz de emergência, não apenas atravessado por ela.
+*   **Paleta de Cores:** Tons escuros de carvão e cinza para as sombras, contrastando com uma gama rica de laranja luminoso que se reflete por todo o ambiente.
 
 ---
 
@@ -36,11 +39,11 @@ Gerar uma imagem estilizada que demonstra um sistema de iluminação de emergên
 ### Versão em Português
 
 ```markdown
-Fotografia cinematográfica de arquitetura, perspectiva de um corredor longo e escuro de um edifício de luxo durante uma queda de energia. O ambiente está em escuridão profunda. A única iluminação vem de um sistema de emergência estilizado que emite uma luz quente e rica na cor laranja dourado. A luz projeta tons dourados nas paredes e no piso polido, criando um contraste dramático e uma atmosfera sofisticada. Ao fundo, um sinal de "SAÍDA" brilha intensamente no mesmo tom laranja dourado. O estilo é fotorrealista, elegante, com alto contraste e uma sensação de segurança e calor.
+Fotografia de arquitetura cinematográfica de um corredor longo e minimalista em um edifício moderno durante uma penumbra dramática. A cena é poderosamente iluminada por um sistema de emergência que emite uma luz laranja vibrante e envolvente. A luz laranja não apenas define um caminho, mas banha as paredes e cria reflexos amplos e vívidos no piso altamente polido, preenchendo o ambiente com um brilho quente e revelando detalhes da arquitetura nas sombras. Ao fundo, um sinal de "SAÍDA" brilha no mesmo tom laranja intenso. O estilo é fotorrealista, limpo e com alto contraste, resultando em uma imagem clara e visualmente rica.
 ```
 
 ### Versão em Inglês (Recomendado para melhores resultados)
 
 ```markdown
-Cinematic architectural photography, a one-point perspective of a long, dark corridor in a luxury building during a power outage. The environment is in deep darkness. The only illumination comes from a stylized emergency system emitting a rich, warm golden-orange light. The light casts golden hues on the walls and polished floor, creating dramatic contrast and a sophisticated atmosphere. In the background, an "EXIT" sign glows intensely in the same golden-orange tone. The style is photorealistic, elegant, with high contrast and a feeling of safety and warmth.
+Cinematic architectural photography of a long, minimalist corridor in a modern building during a dramatic twilight. The scene is powerfully illuminated by an emergency system emitting a vibrant and immersive orange light. The orange light not only defines a path but also bathes the walls and creates broad, vivid reflections on the highly polished floor, filling the environment with a warm glow and revealing architectural details in the shadows. In the background, an "EXIT" sign glows in the same intense orange hue. The style is photorealistic, clean, and high-contrast, resulting in a clear and visually rich image.
 ```

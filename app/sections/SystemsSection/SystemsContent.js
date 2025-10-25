@@ -6,10 +6,10 @@ export const systemsContent = [
       'Sistemas avançados de deteção de incêndios com sensores de última geração para alerta imediato.',
   },
   {
-    title: 'Supressão Automática',
-    imagem: "/assets/systems/systemCard22.png",
+    title: 'Iluminação de Emergência',
+    imagem: "/assets/systems/systemCard21.png",
     description:
-      'Instalamos sistemas de extinção automática com sprinklers e gases limpos para proteção eficaz.',
+      'Projetamos e instalamos sistemas de iluminação de emergência e sinalização, assegurando a evacuação segura e a conformidade regulamentar em caso de sinistro.',
   },
   {
     title: 'Monitorização Contínua',

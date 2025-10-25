@@ -12,7 +12,7 @@ import { gsap } from 'gsap';
  * - className?: string (extra classes merged with defaults)
  * - children?: ReactNode (alternative content when description isn't provided)
  */
-const SystemCard = ({ index = 0, title, description, className = '', children }) => {
+const SystemCard = ({ index = 0, title, description, imagem, className = '', children }) => {
    const cardRef = useRef(null);
    const titleRef = useRef(null);
    const imageRef = useRef(null);
@@ -20,6 +20,7 @@ const SystemCard = ({ index = 0, title, description, className = '', children })
    const descriptionRef = useRef(null);
    const isOdd = index % 2 !== 0;
    const backgroundClass = isOdd ? 'bg-[hsl(0,0%,0%)]' : 'bg-[hsl(0,0%,0%)]';
+   const imageSrc = imagem ?? `/assets/systems/systemCard${index + 1}.png`;
 
    useEffect(() => {
       const card = cardRef.current;
@@ -151,7 +152,7 @@ const SystemCard = ({ index = 0, title, description, className = '', children })
             }}
          >
             <Image
-               src={`/assets/systems/systemCard${index + 1}.png`}
+               src={imageSrc}
                alt={title}
                fill
                style={{
@@ -173,7 +174,7 @@ const SystemCard = ({ index = 0, title, description, className = '', children })
                ref={titleRef}
                className="system-card-title text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-center leading-tight px-4 max-w-full relative z-20"
                style={{
-                  backgroundImage: `url(/assets/systems/systemCard${index + 1}.png)`
+                  backgroundImage: `url(${imageSrc})`
                }}
             >
                {title}
