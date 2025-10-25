@@ -16,12 +16,14 @@ const AboutMobile = () => {
 			id="about"
 		>
 			<div className="flex flex-col gap-6">
-				<div className="about-animate-item flex items-center gap-5">
-					<div className="h-[5px] flex-1 rounded-[1.5px] bg-[#EBC197]" />
-					<h3 className="about-subheading">Sobre a Etti</h3>
-				</div>
-				<div className="about-animate-item">
-					<h2 className="about-heading">Quem somos</h2>
+				<div className="flex flex-col w-fit">
+					<div className="about-animate-item flex items-center gap-5">
+						<div className="h-[5px] flex-1 rounded-[1.5px] bg-[#EBC197]" />
+						<h3 className="about-subheading">Sobre a Etti</h3>
+					</div>
+					<div className="about-animate-item">
+						<h2 className="about-heading">Quem somos</h2>
+					</div>
 				</div>
 				<div className="about-animate-item overflow-hidden rounded-[6px]">
 					<Image
@@ -33,7 +35,7 @@ const AboutMobile = () => {
 						className="h-auto w-full object-cover"
 					/>
 				</div>
-				<div className="flex flex-col gap-4 text-justify text-lg font-light tracking-tight text-[#9e9e9e]">
+				<div className="flex flex-col gap-4 text-justify text-xl font-light tracking-tight text-[#9e9e9e]">
 					<p className="about-animate-item leading-relaxed">
 						A Etti é uma empresa especializada em <strong className="font-medium text-[#EB9948]">soluções elétricas e automação</strong>. Nossa missão é transformar espaços através de tecnologia avançada e instalações seguras, oferecendo soluções inovadoras e sustentáveis que melhoram a qualidade de vida dos nossos clientes.
 					</p>

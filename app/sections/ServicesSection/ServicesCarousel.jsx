@@ -4,7 +4,7 @@ import React, { useState, useRef, useEffect } from 'react'
 import ServiceCardCarousel from './ServiceCardCarousel'
 import { servicesData } from './ServicesContent'
 
-const ServicesCarousel = () => {
+const ServicesCarousel = ({ className = '', ...rest }) => {
   const [activeIndex, setActiveIndex] = useState(0)
   const carouselRef = useRef(null)
 
@@ -43,7 +43,10 @@ const ServicesCarousel = () => {
    }, [activeIndex])
 
   return (
-    <div className="w-full h-2/3 flex justify-center items-center relative px-4">
+    <div
+      {...rest}
+      className={`w-full h-2/3 flex justify-center items-center relative px-4${className ? ` ${className}` : ''}`}
+    >
       {/* Botão anterior */}
       <button
         onClick={(e) => {

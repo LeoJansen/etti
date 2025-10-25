@@ -1,10 +1,10 @@
 "use client"
 
 import Image from 'next/image';
-import React from 'react';
-import ServicesCarousel from './ServicesCarousel';
 import dynamic from 'next/dynamic';
-import { useState, useEffect } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
+import ServicesCarousel from './ServicesCarousel';
+import useServiceAnimation from './useServiceAnimation';
 
 const ServicesMobile = dynamic(() => import('./mobile/ServicesMobile'), {
    ssr: false,
@@ -24,12 +24,15 @@ function useIsMobile() {
 
 const Services = () => {
    const isMobile = useIsMobile();
+   const sectionRef = useRef(null);
+
+   useServiceAnimation(sectionRef);
    if (isMobile) {
       return <ServicesMobile />;
    }
 
    return (
-      <section id="services" className=" hidden md:flex relative   w-full min-h-screen lg:h-screen max-w-screen overflow-hidden z-40">
+      <section ref={sectionRef} id="services" className=" hidden md:flex relative   w-full min-h-screen lg:h-screen max-w-screen overflow-hidden z-40">
          <Image
             src="/assets/servicesBgDesk2.png"
             alt="Background Gradient"
@@ -44,28 +47,23 @@ const Services = () => {
             <div className='flex w-full h-1/3 justify-end items-start   '>
                <div className='flex flex-col justify-end items-end  bg-[#00000091] backdrop-blur-[40px] shadow-[0_2px_2px_2px_rgba(20,20,20,0.4)]   p-8  rounded-l-[6px] '>
                   <div className='flex flex-col justify-end w-fit '>
-
                      <div className='flex w-full justify-end gap-4 items-center '>
-
-                        <h3 className="services-subheading">Nossos</h3>
-                        <div className='h-[6px] w-full rounded-[1.5px] bg-[#EBC197]' />
+                        <h3 data-service-item className="services-subheading">Nossos</h3>
+                        <div data-service-item className='h-[6px] w-full rounded-[1.5px] bg-[#EBC197]' />
                      </div>
                      <div className='flex w-fit'>
-                        <h2 className="services-heading">
+                        <h2 data-service-item className="services-heading">
                            Serviços
                         </h2>
-
                      </div>
-
                   </div>
-
                </div>
             </div>
 
 
 
 
-            <ServicesCarousel />
+            <ServicesCarousel data-service-item />
          </div>
       </section>
    )
