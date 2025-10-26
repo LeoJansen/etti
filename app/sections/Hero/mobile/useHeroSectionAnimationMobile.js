@@ -72,8 +72,8 @@ export function useHeroSectionAnimationMobile(containerRef) {
           ease: 'power2.out',
           stagger: 0.05,
         })
-        .to(ctaContainer, { autoAlpha: 1, duration: 0.3 }, '+=0.2')
-        .to(cta, { autoAlpha: 1, y: 0, duration: 0.5, stagger: 0.12 });
+        .to(ctaContainer, { autoAlpha: 1, duration: 0.3 }, '-=5.2')
+        .to(cta, { autoAlpha: 1, y: 0, duration: 0.5, stagger: 0.08 }, '-=3.2');
     }, container);
 
     return () => ctx.revert();
