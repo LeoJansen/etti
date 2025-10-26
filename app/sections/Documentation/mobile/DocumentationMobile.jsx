@@ -1,19 +1,13 @@
 "use client";
 
 import Image from "next/image";
-import { useRef } from "react";
 
 import DocCardMobile from "./DocCardMobile";
-import { useDocAnimationMobile } from "./DocAnimationMobile";
 
 const DocumentationMobile = ({ cards }) => {
-   const containerRef = useRef(null);
-
-   useDocAnimationMobile(containerRef);
-
    return (
       <div
-         ref={containerRef}
+         id="documentation"
          className="relative p-6 md:p-12 flex flex-col gap-12  overflow-hidden"
       >
 

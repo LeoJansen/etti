@@ -1,26 +1,22 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { useMediaQuery } from "react-responsive";
 
 import DocCard from "./DocCard";
 import { documentationCards } from "./DocumentationContent";
 import DocumentationMobile from "./mobile/DocumentationMobile";
-import { useDocumentAnimation } from "./documentAnimation";
 
 const Documentation = () => {
    const [isMounted, setIsMounted] = useState(false);
    const isMobile = useMediaQuery({ query: "(max-width: 764px)" });
-   const desktopContainerRef = useRef(null);
 
    useEffect(() => {
       setIsMounted(true);
    }, []);
 
    const showMobile = isMounted && isMobile;
-
-   useDocumentAnimation(desktopContainerRef);
 
    return (
       <section
@@ -43,10 +39,7 @@ const Documentation = () => {
                   />
                </div>
                <div className="absolute w-full mt-[80vh] bg-gradient-to-r from-[hsl(0,0%,98%)] to-[hsl(0,0%,97.5%)] h-[25vh] -z-10" />
-               <div
-                  ref={desktopContainerRef}
-                  className="p-6 md:p-12 flex flex-col justify-between gap-[10px] md:gap-[40px] z-20"
-               >
+               <div className="p-6 md:p-12 flex flex-col justify-between gap-[10px] md:gap-[40px] z-20">
                   <div className="flex flex-col w-full    z-20">
                      <div className="flex flex-col justify-start items-end w-fit backdrop-blur-[1px] h-fit z-30">
                         <h2 className="documentation-heading z-40  text-start">
