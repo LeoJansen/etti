@@ -1,8 +1,19 @@
 import Image from 'next/image';
 
-const ProjectCardMobile = ({ title, description, imageSrc }) => {
+const ProjectCardMobile = ({
+   title,
+   description,
+   imageSrc,
+   className = '',
+   style,
+   ...props
+}) => {
+   const baseClassName =
+      'flex flex-col overflow-hidden rounded-[3px] border border-white/10 shadow-[0_6px_24px_rgba(0,0,0,0.45)]';
+   const combinedClassName = [baseClassName, className].filter(Boolean).join(' ');
+
    return (
-      <article className="flex flex-col overflow-hidden rounded-[3px] border border-white/10 shadow-[0_6px_24px_rgba(0,0,0,0.45)]">
+      <article {...props} className={combinedClassName} style={style}>
 	<div className='p-[5px] '>
 		
          <div className="relative h-52 w-full">
