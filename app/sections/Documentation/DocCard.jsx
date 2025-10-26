@@ -6,10 +6,14 @@ import React from 'react'
 
 
 
-const DocCard = ({  title, description, icon,  iconSize, className }) => {
+const DocCard = ({  title, description, icon,  iconSize, className = "", titleClassName = "", ...props }) => {
+  const baseClasses = 'flex flex-col  items-center h-full self-end max-w-[500px]  w-full  rounded-[2px]  duration-300 py-4  gap-2 md:gap-0 p-4 backdrop-blur-[40px] shadow-[0_2px_4px_1px_rgba(20,20,20,0.08)] z-10';
 
   return (
-    <div className={`flex flex-col  items-center h-full self-end max-w-[500px]  w-full  rounded-[2px]  duration-300 py-4  gap-2 md:gap-0 p-4 ${className} backdrop-blur-[40px] shadow-[0_2px_4px_1px_rgba(20,20,20,0.08)] z-10 `}>
+    <div
+      {...props}
+      className={`${baseClasses} ${className}`.trim()}
+    >
       <div className='flex w-full justify-start items-center   '>
         <div className='flex  gap-2 w-full h-full justify-center items-end  '>
           
@@ -33,7 +37,7 @@ const DocCard = ({  title, description, icon,  iconSize, className }) => {
       <div className='w-full h-full flex flex-col  gap-8 justify-center items-center  rounded-[6px]  px-8 mt-4'>
         <div className='h-10 w-full flex flex-col justify-center text-[20px] text-[#686868] font-medium text-center  leading-6  tracking-tight '>
        
-            <h3 className="text-[#EB9948]">
+            <h3 className={`text-[#EB9948] ${titleClassName}`.trim()}>
               {title}
             </h3>
     

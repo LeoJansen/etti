@@ -1,6 +1,6 @@
 
 "use client";
-import React from 'react';
+import { useEffect, useRef, useState } from 'react';
 import dynamic from 'next/dynamic';
 import AutomationCard from './AutomationCard';
 import { automationContent } from './AutomationContent';
@@ -10,8 +10,8 @@ import { useCircuitBorderAnimation } from "./useCircuitBorderAnimation";
 const AutomationMobile = dynamic(() => import('./mobile/AutomationMobile'), { ssr: false });
 
 function useIsMobile() {
-   const [isMobile, setIsMobile] = React.useState(false);
-   React.useEffect(() => {
+   const [isMobile, setIsMobile] = useState(false);
+   useEffect(() => {
       const checkMobile = () => setIsMobile(window.innerWidth < 768);
       checkMobile();
       window.addEventListener('resize', checkMobile);
@@ -22,7 +22,7 @@ function useIsMobile() {
 
 const Automation = () => {
    const isMobile = useIsMobile();
-   const cardsContainerRef = React.useRef(null);
+   const cardsContainerRef = useRef(null);
 
    useCircuitBorderAnimation(cardsContainerRef);
    if (isMobile) {
