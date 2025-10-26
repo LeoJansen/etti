@@ -7,7 +7,7 @@ export const systemsContent = [
   },
   {
     title: 'Iluminação de Emergência',
-    imagem: "/assets/systems/systemCard21.png",
+    imagem: "/assets/systems/systemCard2.png",
     description:
       'Projetamos e instalamos sistemas de iluminação de emergência e sinalização, assegurando a evacuação segura e a conformidade regulamentar em caso de sinistro.',
   },
