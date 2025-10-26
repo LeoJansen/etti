@@ -40,7 +40,7 @@ const AutomationCardMobile = forwardRef(function AutomationCardMobile(
             )}
          </div>
          {description ? (
-            <p className="text-[#bebebe] text-lg leading-relaxed mb-3">{description}</p>
+            <p className="automation-card-description text-[#bebebe] text-lg leading-relaxed mb-3">{description}</p>
          ) : (
             children || null
          )}
