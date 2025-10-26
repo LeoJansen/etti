@@ -12,7 +12,7 @@ const AboutMobile = () => {
 	return (
 		<section
 			ref={sectionRef}
-			className="relative flex min-h-screen w-full max-w-screen flex-col overflow-hidden bg-gray-50 p-6 text-[#313131] md:hidden"
+			className="relative flex min-h-screen w-full max-w-screen flex-col overflow-hidden bg-gray-50 p-6 pb-20 text-[#313131] md:hidden"
 			id="about"
 		>
 			<div className="flex flex-col gap-6">

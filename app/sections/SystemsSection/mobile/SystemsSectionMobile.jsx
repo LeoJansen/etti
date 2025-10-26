@@ -9,7 +9,7 @@ import { systemsContent } from '../SystemsContent';
  */
 const SystemsSectionMobile = () => {
    return (
-      <section className="flex md:hidden w-full items-stretch bg-black p-6">
+      <section id="systems" className="flex md:hidden w-full items-stretch bg-black p-6 pb-20">
          <div className="mx-auto flex w-full max-w-xl flex-col gap-10 ">
             <div className="flex flex-col items-center text-center w-fit">
                <div className='flex flex-col w-fit justify-end self-end '>

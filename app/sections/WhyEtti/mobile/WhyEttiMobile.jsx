@@ -5,7 +5,7 @@ import { whyEttiData } from "../WhyEttiContent";
 
 const WhyEttiMobile = () => {
    return (
-      <section className="relative min-h-screen bg-[#ffffff] px-4 py-8 -z-10 md:hidden">
+      <section className="relative min-h-screen bg-[#ffffff] p-6 pb-20 -z-10 md:hidden">
          {/* Background Image - Mobile optimized */}
          <Image
             src="/assets/whyEtti/interrogation.png"

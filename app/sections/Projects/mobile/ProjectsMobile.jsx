@@ -11,7 +11,7 @@ const ProjectsMobile = () => {
    useProjectAnimation(sectionRef);
 
    return (
-      <div ref={sectionRef} className="projects-section flex w-full p-6 pb-12">
+      <div ref={sectionRef} className="projects-section flex w-full p-6 pb-20">
          <div className="mx-auto flex w-full max-w-xl flex-col gap-10 px-6">
             <div className="flex flex-col items-end text-end gap-4 w-fit self-end">
                <div className="flex w-full items-center justify-end gap-4">

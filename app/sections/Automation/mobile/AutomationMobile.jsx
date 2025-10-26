@@ -11,7 +11,7 @@ const AutomationMobile = () => {
 
    useCircuitBorderAnimation(cardsContainerRef);
    return (
-      <section className="relative  w-full overflow-hidden min-h-screen md:hidden p-6" id="automation-mobile">
+      <section className="relative  w-full overflow-hidden min-h-screen md:hidden p-6 pb-20" id="automation-mobile">
          <div className='absolute w-full h-[20vh] bg-black -m-4  -z-10' />
          <Image
             src="/assets/automation-bg.png"

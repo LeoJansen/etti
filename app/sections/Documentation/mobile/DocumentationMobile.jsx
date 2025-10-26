@@ -15,7 +15,7 @@ const DocumentationMobile = ({ cards = [] }) => {
       <div
          ref={sectionRef}
          id="documentation"
-         className="relative flex flex-col gap-12  overflow-hidden"
+         className="relative flex flex-col gap-12  overflow-hidden pb-20"
       >
 
          <div className="absolute w-full h-full doc-bg">
@@ -58,7 +58,7 @@ const DocumentationMobile = ({ cards = [] }) => {
                </p>
             </div>
 
-            <div className="grid grid-cols-1 gap-9 z-10">
+            <div className="grid grid-cols-1 gap-9 mt-[30px] z-10">
                {cards.map((card, index) => (
                   <DocCardMobile
                      data-doc-mobile-card
