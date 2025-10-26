@@ -70,7 +70,6 @@ const Projects = () => {
             </div>
          </div>
 
-         <ProjectsMobile />
       </section>
    );
 };
