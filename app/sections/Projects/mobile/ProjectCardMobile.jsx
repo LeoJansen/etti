@@ -21,7 +21,7 @@ const ProjectCardMobile = ({ title, description, imageSrc }) => {
                <h3 className="text-2xl font-medium text-[#777777] tracking-[-0.02em] mb-2">{title}</h3>
                <div className="h-[3px] w-14 rounded-full bg-[#EB9948]" />
             </div>
-            <p className="text-[#707070] text-lg font-light text-justify">{description}</p>
+            <p className="text-[#888888] text-lg  text-justify">{description}</p>
          </div>
 
 	</div>

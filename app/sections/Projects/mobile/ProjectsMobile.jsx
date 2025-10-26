@@ -14,7 +14,7 @@ const ProjectsMobile = () => {
                <h2 className="projects-heading">Elétrica</h2>
             </div>
 
-            <p className="text-base leading-relaxed text-gray-300">
+            <p className="text-[#9e9e9e] leading-relaxed text-xl">
                Desenvolvemos soluções elétricas personalizadas para habitação, edifícios e espaços comerciais,
                seguindo rigorosamente as normas técnicas e de segurança mais atuais.
             </p>
