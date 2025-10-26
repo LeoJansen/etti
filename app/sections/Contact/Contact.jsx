@@ -67,7 +67,7 @@ const Contact = () => {
                   <h3 className="text-2xl  text-[#ff7919] mb-2">
                      Orçamento Gratuito
                   </h3>
-                  <p className="text-gray-400">
+                  <p className="text-lg text-gray-400">
                      Oferecemos consultoria inicial gratuita e orçamentos detalhados sem compromisso para todos os nossos serviços.
                   </p>
                </div>
@@ -76,7 +76,7 @@ const Contact = () => {
                   <h3 className="text-2xl  text-[#ff7919] mb-2">
                      Resposta Rápida
                   </h3>
-                  <p className="text-gray-400">
+                  <p className="text-lg text-gray-400">
                      Garantimos resposta em 24 horas e disponibilidade para reuniões presenciais ou virtuais conforme a sua preferência.
                   </p>
                </div>

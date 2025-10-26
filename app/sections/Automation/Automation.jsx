@@ -48,7 +48,7 @@ const Automation = () => {
 
                </div>
 
-               <p className="mt-4 text-lg text-gray-600 dark:text-gray-400">
+               <p className="mt-4 text-xl text-gray-600 dark:text-gray-400">
                   Transforme sua casa em uma habitação inteligente com nossa expertise em domótica e protocolo KNX, o padrão mundial para automação predial.
                </p>
             </div>
