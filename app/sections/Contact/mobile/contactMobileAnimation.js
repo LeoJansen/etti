@@ -56,7 +56,7 @@ export const initContactMobileAnimation = () => {
          // Versão mobile agora usando a mesma cor do desktop
          starBlinkAnimation
             .to(".contact-title-mobile", {
-               textShadow: "0 0 8px hsl(0, 0%, 70%), 0 0 16px hsl(0, 0%, 70%), 0 0 24px hsl(0, 0%, 70%)",
+               textShadow: "0 0 4px hsl(0, 0%, 70%), 0 0 8px hsl(0, 0%, 70%), 0 0 16px hsl(0, 0%, 70%), 0 0 24px hsl(0, 0%, 70%)",
                duration: 0.1,
                ease: "power2.out"
             })

@@ -32,7 +32,7 @@ const ContactMobile = () => {
 
          <div id="contact-info" className="flex flex-col h-full  gap-12 justify-end items-center  text-center z-40">
             {/* Mobile Title */}
-            <h2 className="contact-title-mobile text-[#ffffff63] text-[50px] leading-[50px] font-thin tracking-[-0.04em]">Vamos iniciar o seu?</h2>
+            <h2 className="contact-title-mobile text-[#ffffff63] text-[55px] leading-[50px] font-thin tracking-[-0.04em]">Vamos iniciar o seu?</h2>
 
             {/* Mobile Cards */}
             <div className="flex flex-col gap-4 w-full max-w-sm " >
