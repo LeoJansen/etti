@@ -72,7 +72,7 @@ const ContactMobile = () => {
                      <div className="flex flex-col gap-4">
                         <div className="flex  gap-4  items-center">
                            <Image
-                              src="/assets/contact/phone.svg"
+                              src="/assets/contact/phone-icon.svg"
                               alt="Etti Logo"
                               width={22}
                               height={22}
@@ -82,7 +82,7 @@ const ContactMobile = () => {
                         </div>
                         <div className="flex  gap-4  items-center">
                            <Image
-                              src="/assets/contact/mail.svg"
+                              src="/assets/contact/mail-icon.svg"
                               alt="Etti Logo"
                               width={30}
                               height={30}
@@ -93,19 +93,19 @@ const ContactMobile = () => {
                      </div>
                      <div className="flex gap-6">
                         <Image
-                           src="/assets/contact/instagram.svg"
+                           src="/assets/contact/instagram-icon.svg"
                            alt="Etti Logo"
                            width={30}
                            height={30}
                         />
                         <Image
-                           src="/assets/contact/whatsapp.svg"
+                           src="/assets/contact/whatsapp-icon.svg"
                            alt="Etti Logo"
                            width={30}
                            height={30}
                         />
                         <Image
-                           src="/assets/contact/linkedin.svg"
+                           src="/assets/contact/linkedin-icon.svg"
                            alt="Etti Logo"
                            width={30}
                            height={30}
