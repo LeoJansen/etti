@@ -108,8 +108,8 @@ const ServiceCardCarouselMobile = ({
       `}
     >
       {/* Container do ícone */}
-      <div className={`flex w-full justify-center items-center transition-all duration-300 ${
-        isActive ? 'p-5' : 'p-3'
+      <div className={`flex flex-col gap-4 w-full justify-center items-center transition-all duration-300 ${
+        isActive ? 'py-5' : 'py-3'
       }`}>
         <div 
           ref={circleRef} 
@@ -126,10 +126,14 @@ const ServiceCardCarouselMobile = ({
             ref={iconWrapperRef}
           />  
         </div>
+        <div 
+            ref={dividerRef} 
+            className='h-[5px] w-3/4 bg-[hsl(30,80%,80%)] rounded-full transition-all duration-300'
+          />
       </div>
       
       {/* Título sempre visível */}
-      <div className={`w-full flex flex-col justify-center items-center font-medium text-center leading-5 transition-all duration-300 ${
+      <div className={`w-full flex flex-col  justify-center items-center font-medium text-center leading-5 transition-all duration-300 ${
         isActive ? 'text-base text-[#eb9948] px-3' : 'text-sm text-[#eb9948] px-2'
       }`}>
         {title.map((line, index) => (
@@ -141,11 +145,8 @@ const ServiceCardCarouselMobile = ({
       
       {/* Conteúdo visível apenas quando ativo */}
       {isActive && (
-        <div className='w-full h-full flex flex-col gap-4 justify-center items-center px-3 pb-4'>
-          <div 
-            ref={dividerRef} 
-            className='h-[5px] w-3/4 bg-[hsl(30,80%,80%)] rounded-full transition-all duration-300'
-          />
+        <div className='w-full h-full flex flex-col gap-4 justify-center items-center px-3 pb-4 mt-5'>
+          
           <div className='flex w-full h-full text-sm tracking-tight '>
             <p className="text-[#9e9e9e] tracking-tighter text-lg  text-center leading-relaxed">
               {description}

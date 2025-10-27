@@ -16,30 +16,53 @@ const useServiceAnimation = (sectionRef) => {
          return;
       }
 
+      if (typeof window === 'undefined') {
+         return;
+      }
+
+      const prefersReducedMotion = window.matchMedia(
+         '(prefers-reduced-motion: reduce)'
+      ).matches;
+
+      if (prefersReducedMotion) {
+         return;
+      }
+
       const ctx = gsap.context(() => {
-         const query = gsap.utils.selector(sectionElement);
-         const items = query('[data-service-item]');
+         const select = gsap.utils.selector(sectionElement);
+         const items = select('[data-service-item]');
 
          if (!items.length) {
             return;
          }
 
-         gsap.set(items, { autoAlpha: 0, y: 40 });
+         const timeline = gsap.timeline({
+            defaults: { ease: 'power3.out' },
+            scrollTrigger: {
+               trigger: sectionElement,
+               start: 'top 75%',
+               end: 'bottom 20%',
+               once: true,
+            },
+         });
 
-         gsap
-            .timeline({
-               defaults: { duration: 0.6, ease: 'power3.out' },
-               scrollTrigger: {
-                  trigger: sectionElement,
-                  start: 'top 70%',
-                  once: true,
-               },
-            })
-            .to(items, {
+         timeline.fromTo(
+            sectionElement,
+            { autoAlpha: 0, y: 80 },
+            { autoAlpha: 1, y: 0, duration: 0.8 }
+         );
+
+         timeline.fromTo(
+            items,
+            { autoAlpha: 0, y: 48 },
+            {
                autoAlpha: 1,
                y: 0,
+               duration: 0.6,
                stagger: 0.2,
-            });
+            },
+            '-=0.4'
+         );
       }, sectionElement);
 
       return () => ctx.revert();

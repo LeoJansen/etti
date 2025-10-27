@@ -4,12 +4,14 @@ import Image from 'next/image'
 import React, { useState, useRef, useEffect } from 'react'
 import ServiceCardCarouselMobile from './ServiceCardCarouselMobile'
 import { servicesData } from '../ServicesContent'
+import useServiceAnimation from '../useServiceAnimation'
 
 const ServicesMobile = () => {
    const [activeIndex, setActiveIndex] = useState(0)
    const carouselRef = useRef(null)
    const touchStartX = useRef(0)
    const touchEndX = useRef(0)
+   const sectionRef = useRef(null)
 
    const handlePrevious = () => {
       setActiveIndex((prev) => (prev === 0 ? servicesData.length - 1 : prev - 1))
@@ -53,8 +55,14 @@ const ServicesMobile = () => {
       return () => clearInterval(interval)
    }, [activeIndex])
 
+   useServiceAnimation(sectionRef)
+
    return (
-      <section id="services" className="flex md:hidden relative w-full min-h-screen h-screen max-w-screen overflow-hidden">
+      <section
+         ref={sectionRef}
+         id="services"
+         className="flex md:hidden relative w-full min-h-screen h-screen max-w-screen overflow-hidden"
+      >
          <Image
             src="/assets/servicesBgMobile3.png"
             alt="Background Gradient"
@@ -67,7 +75,7 @@ const ServicesMobile = () => {
 
          <div className="flex flex-col w-full h-full">
             {/* Header da seção */}
-            <div id="services-header" className='flex w-full h-1/5 min-h-[200px] justify-end items-start p-6'>
+            <div id="services-header" data-service-item className='flex w-full h-1/5 min-h-[200px] justify-end items-start p-6'>
                <div className='flex flex-col justify-end items-end bg-[#00000091] backdrop-blur-[40px] shadow-[0_2px_2px_2px_rgba(20,20,20,0.4)]  p-4 px-8 rounded-[2px]'>
                   <div className='flex flex-col justify-end w-fit'>
                      <div className='flex w-full justify-end gap-4 items-center'>
@@ -84,7 +92,7 @@ const ServicesMobile = () => {
             </div>
 
             {/* Carousel */}
-            <div className="w-full h-4/5 flex flex-col justify-center items-center relative px-4 py-4">
+            <div className="w-full h-4/5 flex flex-col justify-center items-center relative px-4 py-4" data-service-item>
                {/* Container do carousel mobile */}
                <div
                   ref={carouselRef}
@@ -148,7 +156,7 @@ const ServicesMobile = () => {
                </div>
 
                {/* Botões de navegação */}
-               <div className="flex justify-between items-center w-full max-w-md mt-8">
+            <div className="flex justify-between items-center w-full max-w-md mt-8" data-service-item>
                   <button
                      onClick={handlePrevious}
                      className="w-10 h-10 flex items-center justify-center rounded-full bg-[#00000080] backdrop-blur-md border border-[#eb994850] text-[#eb9948] hover:bg-[#eb994820] transition-all duration-300"
@@ -185,7 +193,7 @@ const ServicesMobile = () => {
                </div>
 
                {/* Indicadores de posição */}
-               <div className="flex gap-2 mt-6">
+            <div className="flex gap-2 mt-6" data-service-item>
                   {servicesData.map((_, index) => (
                      <button
                         key={index}

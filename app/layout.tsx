@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   title: "ETTI — Engenharia & Projetos",
   description: "Projetos e inspeções de instalações elétricas, sistemas de segurança, automação e mais.",
   icons: {
-    icon: "/assets/ettiIcon2.ico",
+    icon: "/assets/ettiIcon.ico",
     shortcut: "/assets/ettiIcon2.svg",
     apple: "/assets/ettiIcon2.svg",
   },
