@@ -49,7 +49,7 @@ const SuperSectionMobile = () => {
   }, []);
 
   return (
-    <div className="super-section-mobile h-[400px] w-full flex flex-col justify-start items-start gap-12 p-6 ">
+    <div className="super-section-mobile w-full flex flex-col justify-start items-start gap-12 p-6 pb-12">
       <h2
         ref={textRef}
         className="text-[50px] leading-[55px] font-extralight text-[hsl(0,0%,70%)] tracking-[-0.06em]"
