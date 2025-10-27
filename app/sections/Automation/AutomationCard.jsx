@@ -3,12 +3,13 @@ import Image from 'next/image';
 import React, { forwardRef } from 'react';
 
 const AutomationCard = forwardRef(function AutomationCard(
-  { title, description, icon, children, className = "" },
+  { title, description, icon, children, className = "", ...rest },
   ref
 ) {
   return (
     <div
       ref={ref}
+      {...rest}
       className={`automation-card relative bg-[#050505] flex flex-col items-center py-8 rounded-[4px] shadow-[0_0_0_rgba(0,0,0,0)] transition-colors duration-300 overflow-hidden ${className}`.trim()} 
     >
       <span className="automation-card-edge automation-card-edge--top pointer-events-none absolute inset-x-0 top-0 h-[3px] rounded-full bg-[#EB994833] origin-left scale-x-0 opacity-0" />

@@ -1,4 +1,3 @@
-
 "use client";
 import { useEffect, useRef, useState } from 'react';
 import dynamic from 'next/dynamic';
@@ -6,6 +5,7 @@ import AutomationCard from './AutomationCard';
 import { automationContent } from './AutomationContent';
 import Image from "next/image";
 import { useCircuitBorderAnimation } from "./useCircuitBorderAnimation";
+import { useAutomationAnimation } from "./useAutomationAnimation";
 
 const AutomationMobile = dynamic(() => import('./mobile/AutomationMobile'), { ssr: false });
 
@@ -23,23 +23,25 @@ function useIsMobile() {
 const Automation = () => {
    const isMobile = useIsMobile();
    const cardsContainerRef = useRef(null);
+   const sectionRef = useRef(null);
 
    useCircuitBorderAnimation(cardsContainerRef);
+   useAutomationAnimation(sectionRef, isMobile);
    if (isMobile) {
       return <AutomationMobile />;
    }
    return (
-      <section className="relative  w-full overflow-hidden min-h-screen" id="automation">
+      <section ref={sectionRef} className="relative  w-full overflow-hidden min-h-screen" id="automation">
          <div className='flex flex-col bg-black'>
             <div className="text-center ">
               
                <div className='flex flex-col w-fit items-start justify-center p-12'>
-                  <h2 className="automation-heading">
+                  <h2 className="automation-heading" data-automation-heading>
                      Automação Residencial
                   </h2>
                   <div className='flex w-full justify-center items-center gap-4 self-end'>
-                     <div className='h-[5px] w-full rounded-[1.5px] bg-[#EBC197]' />
-                     <h3 className="automation-subheading">
+                     <div className='h-[5px] w-full rounded-[1.5px] bg-[#EBC197]' data-automation-accent />
+                     <h3 className="automation-subheading" data-automation-subheading>
                         com KNX
                      </h3>
 
@@ -48,7 +50,7 @@ const Automation = () => {
 
                </div>
 
-               <p className="mt-4 text-xl text-gray-600 dark:text-gray-400">
+               <p className="mt-4 text-xl text-gray-600 dark:text-gray-400" data-automation-description>
                   Transforme sua casa em uma habitação inteligente com nossa expertise em domótica e protocolo KNX, o padrão mundial para automação predial.
                </p>
             </div>
@@ -68,13 +70,18 @@ const Automation = () => {
 
                <div className="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-8 p-12">
                   {automationContent.map((item, index) => (
-                     <AutomationCard
-                        key={index}
-                        title={item.title}
-                        description={item.description}
-                        icon={item.icon}
-                        className=''
-                     />
+                     <div
+                        key={item.title ?? index}
+                        data-automation-card
+                        className="automation-card-wrapper"
+                     >
+                        <AutomationCard
+                           title={item.title}
+                           description={item.description}
+                           icon={item.icon}
+                           className=''
+                        />
+                     </div>
                   ))}
                </div>
             </div>
