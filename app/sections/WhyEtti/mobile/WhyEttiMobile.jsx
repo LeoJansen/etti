@@ -1,11 +1,20 @@
 "use client";
 
 import Image from "next/image";
+import { useRef } from "react";
 import { whyEttiData } from "../WhyEttiContent";
+import useWhyAnimation from "../useWhyAnimation";
 
 const WhyEttiMobile = () => {
+   const sectionRef = useRef(null);
+
+   useWhyAnimation(sectionRef);
+
    return (
-      <section className="relative min-h-screen bg-[#ffffff] p-6 pb-20 -z-10 md:hidden">
+      <section
+         ref={sectionRef}
+         className="relative min-h-screen bg-[#ffffff] p-6 pb-20 -z-10 md:hidden"
+      >
          {/* Background Image - Mobile optimized */}
          <Image
             src="/assets/whyEtti/interrogation.png"
@@ -26,14 +35,14 @@ const WhyEttiMobile = () => {
             {/* Mobile Header */}
             <div className='flex flex-col w-full'>
                <div className="flex flex-col w-fit">
-                     <div className='flex w-full items-center gap-2 '>
+                     <div className='flex w-full items-center gap-2 ' data-why-heading>
                   <div className='h-[3px] w-full rounded-[1.5px] bg-[#EBC197]' />
                   <h3 className="why-etti-subheading">
                      Porque somos a
                   </h3>
                </div>
                
-               <div className=''>
+               <div className='' data-why-heading>
                   <h2 className="why-etti-heading">
                       Escolha Certa
                   </h2>   
@@ -43,7 +52,7 @@ const WhyEttiMobile = () => {
                </div>
             
                
-               <div className="ml-2">
+               <div className="ml-2" data-why-heading>
                   <p className="text-base text-gray-600 mb-8">
                      As nossas vantagens competitivas.
                   </p>
@@ -55,7 +64,8 @@ const WhyEttiMobile = () => {
                {whyEttiData.map((item, index) => (
                   <div 
                      key={item.id}
-                     className="  p-6 rounded-[3px] shadow-[0_4px_12px_rgba(20,20,20,0.1)] border border-gray-100 transform transition duration-300 hover:scale-105 hover:shadow-[0_8px_20px_rgba(235,153,72,0.15)]"
+                     className="p-6 rounded-[3px] shadow-[0_4px_12px_rgba(20,20,20,0.1)] border border-gray-100 transform transition duration-300 hover:scale-105 hover:shadow-[0_8px_20px_rgba(235,153,72,0.15)]"
+                     data-why-card
                   >
                      <div className="flex flex-col items-start text-left">
                         {/* Card number indicator */}
