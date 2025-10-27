@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useRef } from "react";
 
 import DocCardMobile from "./DocCardMobile";
-import { useDocAnimationMobile } from "./DocAnimationMobile";
+import { useDocAnimationMobile } from "./docAnimationMobile";
 
 const DocumentationMobile = ({ cards = [] }) => {
    const sectionRef = useRef(null);
