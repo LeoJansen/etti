@@ -133,7 +133,7 @@ const Contact = () => {
                         height={30}
                      />
                      <Image
-                        src="/assets/contact/linkedin-icon.svg"
+                        src="/assets/contact/linked-in-icon.svg"
                         alt="Etti Logo"
                         width={30}
                         height={30}
