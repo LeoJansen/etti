@@ -16,7 +16,7 @@ const TITLE_HIGHLIGHT_SHADOW = "0 0 12px rgba(235, 153, 72, 0.6)";
 const BASE_ICON_FILTER = "drop-shadow(0 0 0 rgba(0,0,0,0))";
 const HIGHLIGHT_ICON_FILTER = "drop-shadow(0 0 12px rgba(235, 153, 72, 0.6))";
 const BASE_DESCRIPTION_COLOR = "hsla(25, 100%, 90%, 0.09)";
-const HIGHLIGHT_DESCRIPTION_COLOR = "hsl(25, 100%, 90%)";
+const HIGHLIGHT_DESCRIPTION_COLOR = "hsl(25, 100%, 80%)";
 const DESCRIPTION_RESET_SHADOW = "0 0 0 rgba(0,0,0,0)";
 const DESCRIPTION_HIGHLIGHT_SHADOW = "0 0 8px rgba(255, 153, 72, 0.4)";
 

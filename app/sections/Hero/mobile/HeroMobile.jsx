@@ -21,17 +21,17 @@ export default function HeroMobile() {
   return (
     <section
       ref={sectionRef}
-      className="relative w-full h-screen text-white flex items-center justify-start overflow-hidden"
+      className="relative w-full h-screen text-white flex items-center justify-start overflow-hidden @container"
     >
       {/* Heading/Box */}
       <div className="w-full flex justify-center px-4 z-20">
         <div
           data-hero-box
-          className="border-2 border-[#F38B23] p-4 w-full max-w-[700px] backdrop-blur-[2px] rounded-[3px] opacity-0"
+          className="border-2 border-[#F38B23] p-4 w-full max-w-[700px] backdrop-blur-[2px] rounded-[3px] opacity-0 "
         >
           <h2
             data-hero-heading
-            className="relative text-3xl sm:text-4xl text-[#fd810441] font-medium leading-snug"
+            className="relative text-[24px] @min-[385px]:text-[27px] @min-[400px]:text-[28px] @min-[430px]:text-[30px] @min-[460px]:text-[33px]  text-[#fd810441] font-medium leading-snug"
           >
             <span className="relative z-10 block text-[#ffa64dc9]">
               {headingLines.map((line, lineIndex) => (
