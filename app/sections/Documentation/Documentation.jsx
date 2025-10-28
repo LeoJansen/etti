@@ -60,7 +60,7 @@ const Documentation = () => {
                      className="-z-10"
                   />
                </div>
-               <div className="absolute w-full mt-[80vh] bg-gradient-to-r from-[hsl(0,0%,95%)] to-[hsl(0,0%,92%)] h-[25vh] " />
+               <div className="absolute w-full mt-[80vh] bg-gradient-to-r from-[hsl(0,0%,95%)] to-[hsl(0,0%,92%)] flex h-full " />
                <div className="p-6 md:p-12 flex flex-col justify-between gap-[10px] md:gap-[40px] z-20">
                   <div className="flex flex-col w-full    z-20">
                      <div className="flex flex-col justify-start items-end w-fit backdrop-blur-[1px] h-fit z-30">
@@ -82,7 +82,7 @@ const Documentation = () => {
                      <div className="flex w-full h-full  justify-end items-end z-20">
                         <div
                            data-doc-content
-                           className="flex w-[50%] md:bg-[#464646] md:mr-[-24px] px-2 md:px-12 rounded-l-[4px] p-4"
+                           className="flex w-[50%] md:bg-[#464646] md:mr-[-24px] px-2 md:px-12 rounded-[4px] p-4"
                         >
                            <p className="text-[#d1d1d1] tracking-tighter font-light md:text-xl xl:text-2xl text-justify">
                               A <strong className="text-[#EB9948]">Etti Engenharia</strong> oferece uma documentação técnica completa para garantir que cada projeto esteja em total conformidade com as normas regulamentares. Nossos documentos detalhados e técnicos são essenciais para licenciamentos e garantem a segurança e a qualidade das instalações elétricas.
@@ -91,7 +91,7 @@ const Documentation = () => {
                        
                      </div>
                   </div>
-                  <div className="grid h-[50vh] content-center pb-10 grid-cols-1 md:grid-cols-3 gap-9 xl:px-[4%]">
+                  <div className="grid min-h-[50vh] content-center pb-10 grid-cols-2 lg:grid-cols-3 gap-9 xl:px-[4%]">
                      {documentationCards.map((card, index) => (
                         <DocCard
                            data-doc-card
