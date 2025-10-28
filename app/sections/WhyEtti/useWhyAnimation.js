@@ -37,33 +37,36 @@ const useWhyAnimation = (sectionRef) => {
 				return;
 			}
 
-		const ctx = gsap.context(() => {
+		const ctx = gsap.context((context) => {
 			const select = gsap.utils.selector(sectionElement);
 			const headingItems = select("[data-why-heading]");
 			const cards = select("[data-why-card]");
 
+			gsap.set(sectionElement, { autoAlpha: 0, y: 64 });
+			if (headingItems.length) {
+				gsap.set(headingItems, { autoAlpha: 0, y: 32 });
+			}
+			if (cards.length) {
+				gsap.set(cards, { autoAlpha: 0, y: 48 });
+			}
+
 			const timeline = gsap.timeline({
 				defaults: { ease: "power3.out" },
-				scrollTrigger: {
-					trigger: sectionElement,
-					start: "top 70%",
-					end: "bottom 10%",
-					once: true,
-				},
+				paused: true,
 			});
 
-			timeline.from(sectionElement, {
-				autoAlpha: 0,
-				y: 64,
+			timeline.to(sectionElement, {
+				autoAlpha: 1,
+				y: 0,
 				duration: 0.8,
 			});
 
 			if (headingItems.length) {
-				timeline.from(
+				timeline.to(
 					headingItems,
 					{
-						autoAlpha: 0,
-						y: 32,
+						autoAlpha: 1,
+						y: 0,
 						duration: 0.6,
 						stagger: 0.15,
 						clearProps: "transform,opacity",
@@ -73,11 +76,11 @@ const useWhyAnimation = (sectionRef) => {
 			}
 
 			if (cards.length) {
-				timeline.from(
+				timeline.to(
 					cards,
 					{
-						autoAlpha: 0,
-						y: 48,
+						autoAlpha: 1,
+						y: 0,
 						duration: 0.7,
 						stagger: 0.2,
 						clearProps: "transform,opacity",
@@ -85,6 +88,24 @@ const useWhyAnimation = (sectionRef) => {
 					"-=0.2"
 				);
 			}
+
+			const trigger = ScrollTrigger.create({
+				trigger: sectionElement,
+				start: "top 70%",
+				end: "bottom 10%",
+				onEnter: () => timeline.play(),
+				onEnterBack: () => timeline.play(),
+			});
+
+			timeline.eventCallback("onComplete", () => {
+				trigger.kill();
+			});
+
+			if (ScrollTrigger.isInViewport(sectionElement)) {
+				timeline.play();
+			}
+
+			context.add(() => trigger.kill());
 		}, sectionElement);
 
 		return () => ctx.revert();
