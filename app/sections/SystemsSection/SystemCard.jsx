@@ -155,7 +155,8 @@ const SystemCard = ({ index = 0, title, description, imagem, className = '', chi
                alt={title}
                fill
                style={{
-                  objectFit: "cover"
+                  objectFit: "cover",
+                  opacity: 0.9
                }}
                sizes="(max-width: 768px) 100vw, 50vw"
             />
@@ -171,9 +172,10 @@ const SystemCard = ({ index = 0, title, description, imagem, className = '', chi
          {title && (
             <h3 
                ref={titleRef}
-               className="system-card-title text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-center leading-tight px-4 max-w-full relative z-20"
+               className="system-card-title text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-center leading-tight px-4 max-w-full relative z-20 "
                style={{
-                  backgroundImage: `url(${imageSrc})`
+                  backgroundImage: `url(${imageSrc})`,
+                  
                }}
             >
                {title}

@@ -38,7 +38,7 @@ const SystemsSection = () => {
          className="relative w-full min-h-screen items-stretch bg-black p-12 z-80 overflow-hidden"
       >
          <video
-            className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-40"
+            className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-10"
             autoPlay
             muted
             loop
