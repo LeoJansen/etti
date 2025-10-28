@@ -31,7 +31,7 @@ export default function HeroMobile() {
         >
           <h2
             data-hero-heading
-            className="relative text-[23px] @min-[385px]:text-[26px] @min-[400px]:text-[27px] @min-[430px]:text-[29px] @min-[460px]:text-[32px] [500px]:text-[35px]  text-[#fd810441] font-medium leading-snug"
+            className="relative text-[23px] @min-[385px]:text-[26px] @min-[400px]:text-[27px] @min-[430px]:text-[29px] @min-[460px]:text-[32px] @min-[500px]:text-[35px] @min-[600px]:text-[40px]  text-[#fd810441] font-medium leading-snug"
           >
             <span className="relative z-10 block text-[#ffa64dc9]">
               {headingLines.map((line, lineIndex) => (

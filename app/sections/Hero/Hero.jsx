@@ -27,7 +27,7 @@ export default function Hero() {
   <div className='w-full h-full flex flex-col justify-around items-center z-10'>
 
           <div data-hero-box className='ml-[50%] border-2 border-[#F38B23] rounded-[3px] p-8 w-1/2 flex justify-center items-center z-20 tracking-tight backdrop-blur-[2px] bg-[rgba(0,0,0,0.12)] opacity-0'>
-            <h2 data-hero-heading className='relative inline-block md:text-[38px] lg:text-[55px] xl:text-[70px] 2xl:text-[72px] text-[#fd810441] font-medium  z-30 text-right leading-[40px] lg:leading-[55px] xl:leading-[70px] 2xl:leading-[72px]'>
+            <h2 data-hero-heading className='relative inline-block md:text-[38px] @min-[850px]:text-[43px] @min-[950px]:text-[50px] lg:text-[55px] xl:text-[70px] 2xl:text-[72px] text-[#fd810441] font-medium  z-30 text-right leading-[40px] @min-[850px]:leading-[43px] @min-[950px]:leading-[50px] lg:leading-[55px] xl:leading-[70px] 2xl:leading-[72px]'>
               <span className='relative z-10'>
                 {headingLines.map((line, lineIndex) => (
                   <span key={`hero-line-${lineIndex}`} className='block'>
@@ -73,7 +73,7 @@ export default function Hero() {
             </Link>
             <Link
               href="#services"
-              className="bg-transparent text-[#FF7919] border-2 border-[#FF7919] font-semibold py-3 px-8 rounded-[3px] hover:bg-[#FF7919] hover:text-white transition-colors duration-300 text-center cursor-pointer"
+              className="bg-transparent backdrop-blur-sm text-[#FF7919] border-2 border-[#FF7919] font-semibold py-3 px-8 rounded-[3px] hover:bg-[#FF7919] hover:text-white transition-colors duration-300 text-center cursor-pointer"
             >
               Conhecer Serviços
             </Link>
