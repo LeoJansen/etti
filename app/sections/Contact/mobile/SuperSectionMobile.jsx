@@ -9,7 +9,8 @@ gsap.registerPlugin(ScrollTrigger);
 const textLines = [
   { id: "todo", text: "Todo" },
   { id: "grande", text: "grande projeto", className: "text-[#EB9948]" },
-  { id: "conversa", text: "começa com uma conversa." },
+  { id: "começa", text: "começa com" },
+  { id: "conversa", text: "uma conversa." },
 ];
 
 const SuperSectionMobile = () => {
