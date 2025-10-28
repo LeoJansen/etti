@@ -18,8 +18,22 @@ const SystemsSectionMobile = () => {
       <section
          ref={sectionRef}
          id="systems"
-         className="flex md:hidden w-full items-stretch bg-black p-6 pb-20"
+         className="relative flex md:hidden w-full items-stretch p-6 pb-20"
       >
+            <video
+            className="pointer-events-none absolute bottom-0 inset-0 h-full w-full object-cover opacity-10 -z-10"
+            autoPlay
+            muted
+            loop
+            playsInline
+            data-systems-video
+            style={{
+               objectFit: 'cover',
+               objectPosition: 'bottom center',
+            }}
+         >
+            <source src="/assets/systems/systems-bg.mp4" type="video/mp4" />
+         </video>
          <div className="mx-auto flex w-full max-w-xl flex-col gap-10 ">
             <div className="flex flex-col items-center text-center w-fit">
                <div className='flex flex-col w-fit justify-end self-end '>

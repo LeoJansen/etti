@@ -14,7 +14,7 @@ const SystemCardMobile = ({ index = 0, title, description, className = '', child
    const imageRef = useRef(null);
    const overlayRef = useRef(null);
    const descriptionRef = useRef(null);
-   const isOdd = index % 2 !== 0;
+
 
    useEffect(() => {
       const card = cardRef.current;
@@ -120,7 +120,7 @@ const SystemCardMobile = ({ index = 0, title, description, className = '', child
    return (
       <div
          ref={cardRef}
-         className={`relative flex w-full h-[320px] flex-col items-center justify-center rounded-[3px] overflow-hidden cursor-pointer ${isOdd ? 'bg-[#000000]' : 'bg-[#000000]'
+         className={`relative flex w-full h-[320px] flex-col items-center justify-center rounded-[3px] overflow-hidden cursor-pointer $
             } ${className}`.trim()}
       >
          {/* Imagem de fundo completa (inicialmente oculta) */}
@@ -145,7 +145,7 @@ const SystemCardMobile = ({ index = 0, title, description, className = '', child
          {/* Overlay escuro sobre a imagem */}
          <div
             ref={overlayRef}
-            className="absolute inset-0 bg-black/60 opacity-0 z-10"
+            className="absolute inset-0 opacity-0 z-10"
          />
 
          {/* Conteúdo principal */}
