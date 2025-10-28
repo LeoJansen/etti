@@ -5,8 +5,7 @@ import Image from "next/image";
 import WhyEttiCard from "./WhyEttiCard";
 import { whyEttiData } from "./WhyEttiContent";
 import dynamic from "next/dynamic";
-import { useState, useEffect, useRef } from "react";
-import useWhyAnimation from "./useWhyAnimation";
+import { useState, useEffect } from "react";
 
 const WhyEttiMobile = dynamic(() => import("./mobile/WhyEttiMobile"), {
    ssr: false,
@@ -29,19 +28,13 @@ function useIsMobile() {
 
 const WhyEtti = () => {
    const isMobile = useIsMobile();
-   const sectionRef = useRef(null);
-
-   useWhyAnimation(sectionRef);
    
    if (isMobile) {
       return <WhyEttiMobile />;
    }
 
    return (
-      <section
-         ref={sectionRef}
-         className="relative min-h-screen bg-[#ffffff]  hidden md:block"
-      >
+      <section className="relative min-h-screen bg-[#ffffff]  hidden md:block">
 
          <Image
             src="/assets/whyEtti/interrogation.png"
@@ -57,20 +50,19 @@ const WhyEtti = () => {
            <div className='flex flex-col w-fit self-start '>
                   <div
                      className='flex w-full items-center gap-4'
-                     data-why-heading
                   >
                      
                      <div className='h-[5px] w-full rounded-[1.5px] bg-[#EBC197]' />
                      <h3 className="why-etti-subheading">Porque somos a</h3>
 
                   </div>
-                  <div className='flex ml-4' data-why-heading>
+                  <div className='flex ml-4'>
                   <h2 className="why-etti-heading">Escolha Certa</h2>   
                      </div>
 
                   
                </div>
-               <div className="self-start ml-4" data-why-heading>
+               <div className="self-start ml-4">
                   <p className="mt-4 text-xl text-gray-600 dark:text-gray-400">
                As nossas vantagens competitivas.
             </p>
@@ -80,13 +72,12 @@ const WhyEtti = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-16 mt-16 max-w-7xl justify-items-center">
                {whyEttiData.map((item, index) => (
-                  <div key={item.id} className="w-full" data-why-card>
-                     <WhyEttiCard
-                        title={item.title}
-                        description={item.description}
-                        index={index}  
-                     />
-                  </div>
+                  <WhyEttiCard
+                     key={item.id}
+                     title={item.title}
+                     description={item.description}
+                     index={index}  
+                  />
                ))}
             </div>
          </div>
