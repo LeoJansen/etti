@@ -1,11 +1,18 @@
 "use client";
 
 import Image from "next/image";
+import { useRef } from "react";
 import { whyEttiData } from "../WhyEttiContent";
+import useWhyAnimationMobile from "./useWhyAnimationMobile";
 
 const WhyEttiMobile = () => {
+   const sectionRef = useRef(null);
+
+   useWhyAnimationMobile(sectionRef);
+
    return (
       <section
+         ref={sectionRef}
          className="relative min-h-screen bg-[#ffffff] p-6 pb-20 -z-10 md:hidden"
       >
          {/* Background Image - Mobile optimized */}
@@ -28,21 +35,27 @@ const WhyEttiMobile = () => {
             <div className='flex flex-col w-full'>
                <div className="flex flex-col w-fit">
                   <div className='flex w-full items-center gap-2 '>
-                     <div className='h-[3px] w-full rounded-[1.5px] bg-[#EBC197]' />
-                     <h3 className="why-etti-subheading">
+                     <div
+                        className='h-[3px] w-full rounded-[1.5px] bg-[#EBC197]'
+                        data-why-mobile-accent
+                     />
+                     <h3 className="why-etti-subheading" data-why-mobile-heading>
                         Porque somos a
                      </h3>
                   </div>
 
                   <div className=''>
-                     <h2 className="why-etti-heading">
+                     <h2 className="why-etti-heading" data-why-mobile-heading>
                         Escolha Certa
                      </h2>
                   </div>
                </div>
 
                <div className="ml-2">
-                  <p className="text-base text-gray-600 mb-8">
+                  <p
+                     className="text-base text-gray-600 mb-8"
+                     data-why-mobile-description
+                  >
                      As nossas vantagens competitivas.
                   </p>
                </div>
@@ -53,6 +66,7 @@ const WhyEttiMobile = () => {
                {whyEttiData.map((item, index) => (
                   <div
                      key={item.id}
+                     data-why-mobile-card
                      className="p-6 rounded-[3px] shadow-[0_4px_12px_rgba(20,20,20,0.1)] border border-gray-100 transform transition duration-300 hover:scale-105 hover:shadow-[0_8px_20px_rgba(235,153,72,0.15)]"
                   >
                      <div className="flex flex-col items-start text-left">
