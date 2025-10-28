@@ -19,7 +19,6 @@ const SystemCard = ({ index = 0, title, description, imagem, className = '', chi
    const overlayRef = useRef(null);
    const descriptionRef = useRef(null);
    const isOdd = index % 2 !== 0;
-   const backgroundClass = isOdd ? 'bg-[hsl(0,0%,0%)]' : 'bg-[hsl(0,0%,0%)]';
    const imageSrc = imagem ?? `/assets/systems/systemCard${index + 1}.png`;
 
    useEffect(() => {
@@ -141,7 +140,7 @@ const SystemCard = ({ index = 0, title, description, imagem, className = '', chi
    return (
       <div 
          ref={cardRef}
-         className={`relative flex w-full h-[400px] flex-col rounded-[3px] justify-center items-center ${backgroundClass} ${className} cursor-pointer overflow-hidden`.trim()}
+         className={`relative flex w-full h-[400px] flex-col rounded-[3px] justify-center items-center  ${className} cursor-pointer overflow-hidden`.trim()}
       >
          {/* Imagem de fundo completa (inicialmente oculta) */}
          <div 
@@ -165,7 +164,7 @@ const SystemCard = ({ index = 0, title, description, imagem, className = '', chi
          {/* Overlay escuro sobre a imagem */}
          <div 
             ref={overlayRef}
-            className="absolute inset-0 bg-[hsl(0,0%,0%)] opacity-0 z-10"
+            className="absolute inset-0  opacity-0 z-10"
          />
 
          {/* Título com máscara de imagem */}

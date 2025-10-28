@@ -35,9 +35,19 @@ const SystemsSection = () => {
       <section
          ref={sectionRef}
          id="systems"
-         className="relative w-full min-h-screen items-stretch bg-black p-12 z-80"
+         className="relative w-full min-h-screen items-stretch bg-black p-12 z-80 overflow-hidden"
       >
-         <div className=" flex w-full  flex-col gap-12 px-6 z-40">
+         <video
+            className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-40"
+            autoPlay
+            muted
+            loop
+            playsInline
+            data-systems-video
+         >
+            <source src="/assets/systems/systems-bg.mp4" type="video/mp4" />
+         </video>
+         <div className="relative flex w-full flex-col gap-12 px-6 z-40">
             <div className="flex flex-col text-left w-full ">
                <div className='flex flex-col w-fit'>
                   <div className='flex w-full items-center gap-4'>
