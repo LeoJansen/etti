@@ -28,7 +28,7 @@ const useWhyAnimation = (sectionRef) => {
 			if (prefersReducedMotion) {
 				const select = gsap.utils.selector(sectionElement);
 
-				gsap.set(sectionElement, { autoAlpha: 1 });
+				gsap.set(sectionElement, { autoAlpha: 1, y: 0 });
 				gsap.set(select("[data-why-heading], [data-why-card]"), {
 					autoAlpha: 1,
 					y: 0,
@@ -42,70 +42,58 @@ const useWhyAnimation = (sectionRef) => {
 			const headingItems = select("[data-why-heading]");
 			const cards = select("[data-why-card]");
 
-			gsap.set(sectionElement, { autoAlpha: 0, y: 64 });
-			if (headingItems.length) {
-				gsap.set(headingItems, { autoAlpha: 0, y: 32 });
-			}
-			if (cards.length) {
-				gsap.set(cards, { autoAlpha: 0, y: 48 });
-			}
-
 			const timeline = gsap.timeline({
 				defaults: { ease: "power3.out" },
-				paused: true,
+				scrollTrigger: {
+					trigger: sectionElement,
+					start: "top 70%",
+					end: "bottom 10%",
+					once: true,
+				},
 			});
 
-			timeline.to(sectionElement, {
-				autoAlpha: 1,
-				y: 0,
+			timeline.from(sectionElement, {
+				y: 64,
 				duration: 0.8,
+				immediateRender: false,
 			});
 
 			if (headingItems.length) {
-				timeline.to(
+				timeline.from(
 					headingItems,
 					{
-						autoAlpha: 1,
-						y: 0,
+						autoAlpha: 0,
+						y: 32,
 						duration: 0.6,
 						stagger: 0.15,
-						clearProps: "transform,opacity",
+						immediateRender: false,
 					},
 					"-=0.45"
 				);
 			}
 
 			if (cards.length) {
-				timeline.to(
+				timeline.from(
 					cards,
 					{
-						autoAlpha: 1,
-						y: 0,
+						autoAlpha: 0,
+						y: 48,
 						duration: 0.7,
 						stagger: 0.2,
-						clearProps: "transform,opacity",
+						immediateRender: false,
 					},
 					"-=0.2"
 				);
 			}
 
-			const trigger = ScrollTrigger.create({
-				trigger: sectionElement,
-				start: "top 70%",
-				end: "bottom 10%",
-				onEnter: () => timeline.play(),
-				onEnterBack: () => timeline.play(),
-			});
-
-			timeline.eventCallback("onComplete", () => {
-				trigger.kill();
-			});
-
 			if (ScrollTrigger.isInViewport(sectionElement)) {
-				timeline.play();
+				timeline.play(0);
 			}
 
-			context.add(() => trigger.kill());
+			context.add(() => {
+				timeline.scrollTrigger?.kill();
+				timeline.kill();
+			});
 		}, sectionElement);
 
 		return () => ctx.revert();
