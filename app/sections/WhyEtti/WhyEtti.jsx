@@ -42,7 +42,7 @@ const WhyEtti = () => {
             fill
             sizes="100vw"
             style={{ objectFit: "contain", objectPosition: "center", paddingTop: "5%", paddingBottom: "5%" }}
-            className="-z-10" />
+            className="z-10" />
 
 
 
