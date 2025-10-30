@@ -134,7 +134,7 @@ const ServiceCardCarousel = ({
       
       {/* Título sempre visível */}
       <div className={`w-full flex flex-col justify-center items-center font-medium text-center leading-6 transition-all duration-300 ${
-        isActive ? 'text-[20px] text-[#eb9948] px-4' : 'text-[16px] text-[#eb9948] px-2'
+        isActive ? 'text-[22px] text-[#eb9948] px-4' : 'text-[16px] text-[#eb9948] px-2'
       }`}>
         {title.map((line, index) => (
           <h3 key={index} className="">
@@ -147,7 +147,7 @@ const ServiceCardCarousel = ({
       {isActive && (
         <div className='w-full h-full flex flex-col gap-6 justify-center items-center px-4 pb-6'>
          
-          <div className='flex w-full h-full items-center text-lg tracking-tight '>
+          <div className='flex w-full h-full items-center text-xl tracking-tight '>
             <p className="text-[#a7a7a7] text-center leading-relaxed">
               {description}
             </p>

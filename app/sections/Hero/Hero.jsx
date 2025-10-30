@@ -27,7 +27,7 @@ export default function Hero() {
   <div className='w-full h-full flex flex-col justify-around items-center z-10'>
 
           <div data-hero-box className='ml-[50%] border-2 border-[#F38B23] rounded-[3px] p-8 w-1/2 flex justify-center items-center z-20 tracking-tight backdrop-blur-[2px] bg-[rgba(0,0,0,0.12)] opacity-0'>
-            <h2 data-hero-heading className='relative inline-block md:text-[38px] @min-[850px]:text-[43px] @min-[950px]:text-[50px] lg:text-[55px] xl:text-[70px] @min-[1536px]:text-[72px] text-[#fd810441] font-medium  z-30 text-right leading-[40px] @min-[850px]:leading-[43px] @min-[950px]:leading-[50px] lg:leading-[55px] xl:leading-[70px] @min-[1536px]:leading-[72px]'>
+            <h2 data-hero-heading className='relative inline-block md:text-[38px] @min-[850px]:text-[43px] @min-[950px]:text-[50px] @min-[1024px]:text-[55px] @min-[1280px]:text-[70px] @min-[1536px]:text-[72px] text-[#fd810441] font-medium  z-30 text-right leading-[40px] @min-[850px]:leading-[43px] @min-[950px]:leading-[50px]  @min-[1024px]:leading-[55px] @min-[1280px]:leading-[70px]  @min-[1536px]:leading-[72px]'>
               <span className='relative z-10'>
                 {headingLines.map((line, lineIndex) => (
                   <span key={`hero-line-${lineIndex}`} className='block'>

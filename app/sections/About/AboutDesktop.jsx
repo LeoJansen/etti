@@ -40,7 +40,7 @@ const AboutDesktop = () => {
               height={1184}
             />
           </div>
-          <div className="flex h-full w-full flex-col items-center justify-center text-xl font-light tracking-tighter text-[#9e9e9e] md:w-1/2 xl:text-2xl">
+          <div className="flex h-full w-full flex-col items-center justify-center  font-light tracking-tighter text-[#9e9e9e] md:w-1/2 text-2xl">
             <p className="about-animate-item mb-4 text-justify leading-relaxed">
               A Etti é uma empresa especializada em <strong className="font-medium text-[#EB9948]">soluções elétricas e automação</strong>. Nossa missão é transformar espaços através de tecnologia avançada e instalações seguras, oferecendo soluções inovadoras e sustentáveis que melhoram a qualidade de vida dos nossos clientes.
             </p>
