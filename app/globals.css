@@ -216,6 +216,61 @@ body {
    }
 }
 
+
+/* Camera section */
+
+
+.camera-heading {
+   font-size: 60px;
+   font-weight: 200;
+   color: var(--gray-title);
+   letter-spacing: -0.08em;
+   line-height: 2.75rem;
+   margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+   .camera-heading {
+      font-size: 70px;
+      line-height: 3.5rem;
+   }
+}
+
+@media (min-width: 1024px) {
+   .camera-heading {
+      font-size: 75px;
+   }
+}
+
+@media (min-width: 1280px) {
+   .camera-heading {
+      font-size: 80px;
+   }
+}
+
+@media (min-width: 1536px) {
+   .camera-heading {
+      font-size: 95px;
+   }
+}
+
+.camera-subheading {
+   font-size: 25px;
+   font-weight: 600;
+   color: #EB9948;
+   letter-spacing: -0.015em;
+   text-transform: uppercase;
+   white-space: nowrap;
+}
+
+@media (min-width: 768px) {
+
+   .camera-subheading {
+      font-size: 40px;
+   }
+}
+
+
 /* Documentation Section */
 
 

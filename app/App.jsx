@@ -5,6 +5,7 @@ import Services from "./sections/ServicesSection/Services";
 import Documentation from "./sections/Documentation/Documentation";
 import Certification from "./sections/Certification/Certification";
 import Automation from "./sections/Automation/Automation";
+import Camera from "./sections/Camera/Camera";
 import SystemsSection from "./sections/SystemsSection/SystemsSection";
 import SystemsSectionMobile from "./sections/SystemsSection/mobile/SystemsSectionMobile";
 import WhyEtti from "./sections/WhyEtti/WhyEtti";
@@ -19,9 +20,11 @@ const App = () => {
          <About />
          <Services />
          <Projects />
+          <Camera />
          <Documentation />
-         <Certification />
          <Automation />
+        
+         <Certification />
          <SystemsSection />
          <WhyEtti />
          <SuperSection />
