@@ -64,7 +64,7 @@ const Camera = () => {
                     {/* Background with overlay */}
                     <div className="absolute inset-0">
                         <div className="absolute inset-0 bg-gradient-to-br from-[#0A0A0A] via-transparent to-[#080808]" />
-                        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(59,130,246,0.1)_0%,transparent_70%)]" />
+                        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(89,130,146,0.1)_0%,transparent_70%)]" />
                     </div>
 
                     {/* Cards Grid */}

@@ -1,5 +1,6 @@
 "use client";
 import React, { useRef, useEffect } from 'react';
+import Image from 'next/image';
 import CameraCardMobile from './CameraCardMobile';
 import { cameraContent } from '../CameraContent';
 import { useCameraMobileAnimation } from './useCameraMobileAnimation';
@@ -12,23 +13,21 @@ const CameraMobile = () => {
   return (
     <section ref={sectionRef} className="relative w-full min-h-screen bg-black overflow-hidden" id="camera">
       <div className="flex flex-col px-4 py-16">
-        
+
         {/* Header */}
         <div className="text-center mb-12">
-          <div className="flex flex-col items-center justify-center">
-            <h2 className="camera-heading-mobile text-3xl font-bold text-white mb-4" data-camera-heading-mobile>
-              SISTEMAS DE
-            </h2>
-            <div className="flex items-center gap-3 mb-4">
-              <div className="h-[3px] w-16 rounded bg-[#3B82F6]" data-camera-accent-mobile />
-              <h3 className="camera-subheading-mobile text-2xl font-bold text-[#3B82F6]" data-camera-subheading-mobile>
-                Câmera CCTV
-              </h3>
+          <div className="flex flex-col w-fit">
+            <div className="about-animate-item flex items-center gap-5">
+              <div className="h-[5px] flex-1 rounded-[1.5px] bg-[#EBC197]" />
+              <h3 className="camera-subheading">Sistemas de</h3>
+            </div>
+            <div className="">
+              <h2 className="camera-heading">Câmera CCTV</h2>
             </div>
           </div>
 
           <p className="mt-6 text-lg text-gray-300 leading-relaxed px-4" data-camera-description-mobile>
-            Sistemas avançados de videomonitoramento com tecnologia de ponta para máxima segurança e tranquilidade.
+           Na Etti, implementamos soluções avançadas de videovigilância (CCTV) que garantem a proteção total do seu espaço. Os nossos projetos são personalizados para habitação , edifícios e comércios , utilizando tecnologia de ponta  para assegurar que o seu patrimônio esteja sempre protegido.
           </p>
         </div>
 

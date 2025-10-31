@@ -13,7 +13,7 @@ const CameraCardMobile = forwardRef(function CameraCardMobile(
     >
       {/* Animated border */}
       <div className="camera-card-border-mobile absolute inset-0 rounded-lg opacity-0 transition-opacity duration-300">
-        <div className="absolute inset-0 rounded-lg border-2 border-transparent bg-gradient-to-r from-[#3B82F6] to-[#1D4ED8] p-0.5">
+        <div className="absolute inset-0 rounded-lg border-2 border-transparent bg-gradient-to-r from-[#EBC197] to-[#EB9948] p-0.5">
           <div className="rounded-lg bg-[#0A0A0A] h-full w-full" />
         </div>
       </div>
@@ -34,8 +34,8 @@ const CameraCardMobile = forwardRef(function CameraCardMobile(
             
             {/* Tech indicator overlay */}
             <div className="absolute top-3 right-3 flex items-center gap-1 bg-[#0A0A0A]/80 backdrop-blur-sm rounded-full px-2 py-1">
-              <div className="w-1.5 h-1.5 bg-[#3B82F6] rounded-full animate-pulse" />
-              <span className="text-xs text-[#3B82F6] font-medium">HD</span>
+              <div className="w-1.5 h-1.5 bg-[#EB9948] rounded-full animate-pulse" />
+              <span className="text-xs text-[#EB9948] font-medium">HD</span>
             </div>
           </div>
         )}
@@ -59,11 +59,11 @@ const CameraCardMobile = forwardRef(function CameraCardMobile(
           {/* Bottom tech bar */}
           <div className="camera-card-tech-mobile flex items-center gap-2 pt-2 border-t border-[#1A1A1A]">
             <div className="flex items-center gap-1">
-              <div className="w-1 h-1 bg-[#3B82F6] rounded-full" />
-              <div className="w-1 h-1 bg-[#3B82F6] rounded-full opacity-70" />
-              <div className="w-1 h-1 bg-[#3B82F6] rounded-full opacity-40" />
+              <div className="w-1 h-1 bg-[#EB9948] rounded-full" />
+              <div className="w-1 h-1 bg-[#EB9948] rounded-full opacity-70" />
+              <div className="w-1 h-1 bg-[#EB9948] rounded-full opacity-40" />
             </div>
-            <span className="text-xs text-[#3B82F6] font-medium uppercase tracking-wider flex-1">
+            <span className="text-xs text-[#EB9948] font-medium uppercase tracking-wider flex-1">
               Sistema Integrado
             </span>
           </div>
