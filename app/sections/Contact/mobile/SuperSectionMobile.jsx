@@ -1,20 +1,32 @@
 "use client"
 
-import { useEffect, useRef } from "react";
+import { useEffect, useMemo, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useDictionary } from "@/src/site/context/DictionaryContext";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const textLines = [
-  { id: "todo", text: "Todo" },
-  { id: "grande", text: "grande projeto", className: "text-[#EB9948]" },
-  { id: "começa", text: "começa com" },
-  { id: "conversa", text: "uma conversa." },
-];
-
 const SuperSectionMobile = () => {
   const textRef = useRef(null);
+  const { dictionary } = useDictionary();
+
+  const lines = useMemo(() => {
+    const fallbackLines = [
+      { text: "Todo" },
+      { text: "grande projeto", highlight: true },
+      { text: "começa com" },
+      { text: "uma conversa." },
+    ];
+    const source = (dictionary.superSection?.lines ?? []).length
+      ? dictionary.superSection?.lines
+      : fallbackLines;
+    return source.map((line, index) => ({
+      id: line.id ?? `line-${index}`,
+      text: line.text ?? "",
+      highlight: Boolean(line.highlight),
+    }));
+  }, [dictionary.superSection]);
 
   useEffect(() => {
     const heading = textRef.current;
@@ -55,8 +67,8 @@ const SuperSectionMobile = () => {
         ref={textRef}
         className="text-[50px] leading-[55px] font-extralight text-[hsl(0,0%,70%)] tracking-[-0.06em]"
       >
-        {textLines.map(({ id, text, className = "" }) => (
-          <span key={id} className={`block ${className}`}>
+          {lines.map(({ id, text, highlight }) => (
+            <span key={id} className={`block ${highlight ? "text-[#EB9948]" : ""}`}>
             {text.split("").map((char, index) => (
               <span
                 key={`${id}-${index}`}

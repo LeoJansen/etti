@@ -3,11 +3,16 @@
 import Image from "next/image";
 import { useRef } from "react";
 
+import { useDictionary } from "@/src/site/context/DictionaryContext";
+
 import DocCardMobile from "./DocCardMobile";
 import { useDocAnimationMobile } from "./docAnimationMobile";
 
-const DocumentationMobile = ({ cards = [] }) => {
+const DocumentationMobile = () => {
    const sectionRef = useRef(null);
+   const { dictionary } = useDictionary();
+   const documentationContent = dictionary.documentation;
+   const headingLines = documentationContent.headingLines ?? [documentationContent.heading];
 
    useDocAnimationMobile(sectionRef);
 
@@ -36,16 +41,18 @@ const DocumentationMobile = ({ cards = [] }) => {
             <div className="flex flex-col  z-10">
                <div className="flex flex-col w-fit ">
                   <div className="flex flex-col">
-                     <h2 data-doc-mobile-heading className="documentation-heading">Documentação</h2>
-                     <h2 data-doc-mobile-heading className="documentation-heading">Técnica</h2>
-
+                     {headingLines.map((line) => (
+                        <h2 key={line} data-doc-mobile-heading className="documentation-heading">
+                           {line}
+                        </h2>
+                     ))}
                   </div>
                   <div className="flex gap-4 items-center">
                      <div
                         data-doc-mobile-highlight
                         className="h-[5px] w-full rounded-[1.5px] bg-[#EBC197]"
                      />
-                     <h3 data-doc-mobile-heading className="documentation-subheading">Completa</h3>
+                     <h3 data-doc-mobile-heading className="documentation-subheading">{documentationContent.subheading}</h3>
                   </div>
                </div>
 
@@ -54,12 +61,12 @@ const DocumentationMobile = ({ cards = [] }) => {
                   data-doc-mobile-paragraph
                   className="text-xl xl:text-2xl font-light leading-snug text-justify text-[#5c5c5c] mt-4"
                >
-                  A <strong className="text-[#EB9948]">Etti Engenharia</strong> oferece uma documentação técnica completa para garantir que cada projeto esteja em total conformidade com as normas regulamentares. Nossos documentos detalhados e técnicos são essenciais para licenciamentos e garantem a segurança e a qualidade das instalações elétricas.
+                  {documentationContent.description}
                </p>
             </div>
 
             <div className="grid grid-cols-1 gap-9 mt-[30px] z-10">
-               {cards.map((card, index) => (
+               {documentationContent.cards.map((card, index) => (
                   <DocCardMobile
                      data-doc-mobile-card
                      key={index}

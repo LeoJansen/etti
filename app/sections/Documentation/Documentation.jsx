@@ -2,11 +2,12 @@
 
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
+import dynamic from "next/dynamic";
+
+import { useDictionary } from "@/src/site/context/DictionaryContext";
 
 import DocCard from "./DocCard";
-import { documentationCards } from "./DocumentationContent";
 import { useDocumentAnimation } from "./documentAnimation";
-import dynamic from "next/dynamic";
 
 const DocumentationMobile = dynamic(
    () => import("./mobile/DocumentationMobile"),
@@ -32,11 +33,14 @@ function useIsMobile() {
 const Documentation = () => {
    const isMobile = useIsMobile();
    const sectionRef = useRef(null);
+   const { dictionary } = useDictionary();
+   const documentationContent = dictionary.documentation;
+   const headingLines = documentationContent.headingLines ?? [documentationContent.heading];
 
    useDocumentAnimation(sectionRef);
 
    if (isMobile) {
-      return <DocumentationMobile cards={documentationCards} />;
+      return <DocumentationMobile />;
    }
 
 
@@ -64,9 +68,11 @@ const Documentation = () => {
                <div className="p-6 md:p-12 flex flex-col justify-between gap-[10px] md:gap-[40px] z-20">
                   <div className="flex flex-col w-full    z-20">
                      <div className="flex flex-col justify-start items-end w-fit backdrop-blur-[1px] h-fit z-30">
-                        <h2 data-doc-heading className="documentation-heading z-40  text-start">
-                           Documentação <br /> Técnica
-                        </h2>
+                        {headingLines.map((line) => (
+                           <h2 key={line} data-doc-heading className="documentation-heading z-40  text-start">
+                              {line}
+                           </h2>
+                        ))}
 
                         <div className="flex gap-4 items-center w-full">
                            <div
@@ -74,7 +80,7 @@ const Documentation = () => {
                               className="h-[5px] w-full rounded-[1.5px] bg-[#EBC197] doc-highlight-line"
                            />
                            <h3 data-doc-heading className="documentation-subheading">
-                              Completa
+                              {documentationContent.subheading}
                            </h3>
                            
                         </div>
@@ -85,14 +91,14 @@ const Documentation = () => {
                            className="flex w-[50%] md:bg-[#464646] md:mr-[-24px] px-2 md:px-12 rounded-[4px] p-4"
                         >
                            <p className="text-[#d1d1d1] tracking-tighter font-light md:text-xl xl:text-2xl text-justify">
-                              A <strong className="text-[#EB9948]">Etti Engenharia</strong> oferece uma documentação técnica completa para garantir que cada projeto esteja em total conformidade com as normas regulamentares. Nossos documentos detalhados e técnicos são essenciais para licenciamentos e garantem a segurança e a qualidade das instalações elétricas.
+                              {documentationContent.description}
                            </p>
                         </div>
                        
                      </div>
                   </div>
                   <div className="grid min-h-[50vh] content-center pb-10 grid-cols-2 lg:grid-cols-3 gap-9 xl:px-[4%]">
-                     {documentationCards.map((card, index) => (
+                     {documentationContent.cards.map((card, index) => (
                         <DocCard
                            data-doc-card
                            key={index}

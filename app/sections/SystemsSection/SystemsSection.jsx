@@ -1,9 +1,11 @@
 "use client"
 // components/SystemsSection.js
 import { useEffect, useRef, useState } from 'react';
-import SystemCard from './SystemCard';
-import { systemsContent } from './SystemsContent';
 import dynamic from 'next/dynamic';
+
+import { useDictionary } from '@/src/site/context/DictionaryContext';
+
+import SystemCard from './SystemCard';
 import { useSystemsAnimation } from './useSystemsAnimation';
 
 const SystemsSectionMobile = dynamic(() => import('./mobile/SystemsSectionMobile'), {
@@ -25,6 +27,9 @@ function useIsMobile() {
 const SystemsSection = () => {
    const isMobile = useIsMobile();
    const sectionRef = useRef(null);
+   const { dictionary } = useDictionary();
+   const systemsContent = dictionary.systems;
+   const headingLines = systemsContent.headingLines ?? [systemsContent.heading];
 
    useSystemsAnimation(sectionRef);
 
@@ -52,11 +57,13 @@ const SystemsSection = () => {
                <div className='flex flex-col w-fit'>
                   <div className='flex w-full items-center gap-4'>
                      <div className='h-[5px] w-full rounded-[1.5px] bg-[#EBC197]' data-systems-accent />
-                     <h3 className="systems-subheading" data-systems-subheading>Sistemas de</h3>
+                        <h3 className="systems-subheading" data-systems-subheading>{systemsContent.eyebrow}</h3>
 
                   </div>
                   <div className='flex'>
-                  <h2 className="systems-heading" data-systems-heading>Incêndio e Segurança</h2>   
+                     {headingLines.map((line) => (
+                        <h2 key={line} className="systems-heading" data-systems-heading>{line}</h2>
+                     ))}   
                      </div>
 
                   
@@ -64,13 +71,12 @@ const SystemsSection = () => {
                
                
                <p className="mt-6  text-2xl text-[#99a1af]" data-systems-description>
-                  Proteção total para o seu espaço com nossos sistemas avançados de segurança e combate a
-                  incêndio.
+                  {systemsContent.description}
                </p>
             </div>
 
             <div className="w-full gap-8 grid grid-cols-2 min-h-[500px]">
-               {systemsContent.map(({ title, description, imagem }, idx) => (
+               {systemsContent.cards.map(({ title, description, image }, idx) => (
                   <div
                      key={title ?? idx}
                      data-systems-card
@@ -80,7 +86,7 @@ const SystemsSection = () => {
                         index={idx}
                         title={title}
                         description={description}
-                        imagem={imagem}
+                        image={image}
                      />
                   </div>
                ))}

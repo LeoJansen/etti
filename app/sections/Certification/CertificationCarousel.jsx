@@ -3,8 +3,10 @@
 import React from "react";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
+
+import { useDictionary } from "@/src/site/context/DictionaryContext";
+
 import CertificationCard from "./CertificationCard";
-import { certificationCards } from "./CertificationContent";
 
 gsap.registerPlugin(useGSAP);
 
@@ -16,6 +18,16 @@ const CertificationCarousel = () => {
    const [currentSlide, setCurrentSlide] = React.useState(0);
    const [isPlaying, setIsPlaying] = React.useState(true);
    const timelineRef = React.useRef(null);
+   const { dictionary } = useDictionary();
+   const certificationContent = dictionary.certification;
+   const certificationCards = certificationContent.cards;
+   const carouselLabels = certificationContent.carousel ?? {};
+   const previousAriaLabel = carouselLabels.previousAriaLabel ?? "Previous slide";
+   const nextAriaLabel = carouselLabels.nextAriaLabel ?? "Next slide";
+   const resolveIndicatorLabel = (index) => {
+      const base = carouselLabels.indicatorAriaLabel ?? "Go to slide {{index}}";
+      return base.replace("{{index}}", String(index + 1));
+   };
 
    useGSAP(
       () => {
@@ -150,7 +162,7 @@ const CertificationCarousel = () => {
             <button
                onClick={prevSlide}
                className="absolute left-4 top-1/2 -translate-y-1/2  flex h-12 w-12 items-center justify-center rounded-full bg-white/80 shadow-sm transition-all hover:bg-white hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-[#EB9948] focus:ring-offset-2 z-70"
-               aria-label="Previous slide"
+               aria-label={previousAriaLabel}
             >
                <svg
                   className="h-6 w-6 text-gray-700"
@@ -165,7 +177,7 @@ const CertificationCarousel = () => {
             <button
                onClick={nextSlide}
                className="absolute right-4 top-1/2 -translate-y-1/2 z-30 flex h-12 w-12 items-center justify-center rounded-full bg-white/80 shadow-sm transition-all hover:bg-white hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-[#EB9948] focus:ring-offset-2"
-               aria-label="Next slide"
+               aria-label={nextAriaLabel}
             >
                <svg
                   className="h-6 w-6 text-gray-700"
@@ -187,7 +199,7 @@ const CertificationCarousel = () => {
                            ? "bg-[#EB9948]"
                            : "bg-[#dadada] hover:bg-white/80"
                         }`}
-                     aria-label={`Go to slide ${index + 1}`}
+                     aria-label={resolveIndicatorLabel(index)}
                   />
                ))}
             </div>

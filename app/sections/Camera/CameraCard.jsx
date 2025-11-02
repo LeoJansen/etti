@@ -2,7 +2,7 @@ import Image from 'next/image';
 import React, { forwardRef } from 'react';
 
 const CameraCard = forwardRef(function CameraCard(
-  { title, description, image, children, className = "", ...rest },
+  { title, description, image, techBadge, children, className = "", ...rest },
   ref
 ) {
   return (
@@ -52,10 +52,10 @@ const CameraCard = forwardRef(function CameraCard(
         </div>
 
         {/* Tech indicator */}
-        <div className="camera-card-tech mt-4 flex items-center gap-2 opacity-0">
+          <div className="camera-card-tech mt-4 flex items-center gap-2 opacity-0">
           <div className="w-2 h-2 bg-[#EB9948] rounded-full animate-pulse" />
           <span className="text-xs text-[#EB9948] font-medium uppercase tracking-wider">
-            CCTV Technology
+            {techBadge ?? "CCTV Technology"}
           </span>
         </div>
       </div>

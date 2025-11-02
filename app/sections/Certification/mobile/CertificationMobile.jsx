@@ -1,12 +1,16 @@
 "use client";
 
 import { useRef } from "react";
+
+import { useDictionary } from "@/src/site/context/DictionaryContext";
+
 import CertificationCardMobile from "./CertificationCardMobile";
-import { certificationCards } from "../CertificationContent";
 import useCertAnimationMobile from "./useCertAnimationMobile";
 
 const CertificationMobile = () => {
    const sectionRef = useRef(null);
+   const { dictionary } = useDictionary();
+   const certificationContent = dictionary.certification;
 
    useCertAnimationMobile(sectionRef);
 
@@ -22,13 +26,13 @@ const CertificationMobile = () => {
 
                
                <div className="flex">
-                  <h2 className="certification-heading" data-cert-mobile-heading>Certificação</h2>
+                  <h2 className="certification-heading" data-cert-mobile-heading>{certificationContent.heading}</h2>
 
                </div>
                <div className="flex gap-x-4 w-full items-center">
                   <div className='h-[5px] w-full  bg-[#EBC197] ' data-cert-mobile-divider />
 
-                  <h2 className="certification-subheading" data-cert-mobile-heading>e Vistoria</h2>
+                  <h2 className="certification-subheading" data-cert-mobile-heading>{certificationContent.subheading}</h2>
 
                </div>
                </div>
@@ -37,12 +41,12 @@ const CertificationMobile = () => {
 
 
                <p className="text-xl font-light text-gray-600 mt-6" data-cert-mobile-description>
-                  Garantimos a qualidade e a conformidade das suas instalações elétricas com serviços de certificação e vistoria.
+                  {certificationContent.description}
                </p>
             </div>
 
             <div className="flex flex-col gap-6">
-               {certificationCards.map((card, index) => (
+               {certificationContent.cards.map((card, index) => (
                   <CertificationCardMobile
                      key={card.title}
                      index={index}

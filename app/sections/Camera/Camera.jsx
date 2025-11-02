@@ -1,9 +1,11 @@
 "use client";
 import { useEffect, useRef, useState } from 'react';
 import dynamic from 'next/dynamic';
-import CameraCard from './CameraCard';
-import { cameraContent } from './CameraContent';
 import Image from "next/image";
+
+import { useDictionary } from '@/src/site/context/DictionaryContext';
+
+import CameraCard from './CameraCard';
 import { useCameraAnimation } from "./useCameraAnimation";
 
 const CameraMobile = dynamic(() => import('./mobile/CameraMobile'), { ssr: false });
@@ -22,6 +24,9 @@ function useIsMobile() {
 const Camera = () => {
     const isMobile = useIsMobile();
     const sectionRef = useRef(null);
+    const { dictionary } = useDictionary();
+    const cameraContent = dictionary.camera;
+    const headingLines = cameraContent.headingLines ?? [cameraContent.heading];
 
     useCameraAnimation(sectionRef, isMobile);
 
@@ -41,17 +46,18 @@ const Camera = () => {
                         >
                             <div className="h-[5px] w-full rounded-[1.5px] bg-[#EBC197]" />
                             <div className="flex">
-                                <h3 className="about-subheading">Sistemas de</h3>
+                                <h3 className="about-subheading">{cameraContent.eyebrow}</h3>
                             </div>
                         </div>
                         <div id="etti-subheader" className="about-animate-item flex w-fit">
-                            <h2 className="about-heading">Camera CCTV</h2>
+                            {headingLines.map((line) => (
+                                <h2 key={line} className="about-heading">{line}</h2>
+                            ))}
                         </div>
                     </div>
 
                     <p className="mt-4 text-xl text-gray-600 dark:text-gray-400" data-camera-description>
-                        Soluções avançadas em videomonitoramento com tecnologia de ponta. Sistemas integrados de segurança
-                        para proteção completa com monitoramento em tempo real e análise inteligente.
+                        {cameraContent.description}
                     </p>
                 </div>
 
@@ -69,7 +75,7 @@ const Camera = () => {
 
                     {/* Cards Grid */}
                     <div className="relative z-20 grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-4 gap-8 p-12">
-                        {cameraContent.map((item, index) => (
+                        {cameraContent.cards.map((item, index) => (
                             <div
                                 key={item.title ?? index}
                                 data-camera-card
@@ -79,6 +85,7 @@ const Camera = () => {
                                     title={item.title}
                                     description={item.description}
                                     image={item.image}
+                                    techBadge={cameraContent.techBadge}
                                     className='h-full'
                                 />
                             </div>

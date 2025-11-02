@@ -1,8 +1,10 @@
 "use client"
 
 import { useRef } from 'react';
+
+import { useDictionary } from '@/src/site/context/DictionaryContext';
+
 import SystemCardMobile from './SystemCardMobile';
-import { systemsContent } from '../SystemsContent';
 import { useSystemsAnimation } from '../useSystemsAnimation';
 
 /**
@@ -11,6 +13,9 @@ import { useSystemsAnimation } from '../useSystemsAnimation';
  */
 const SystemsSectionMobile = () => {
    const sectionRef = useRef(null);
+   const { dictionary } = useDictionary();
+   const systemsContent = dictionary.systems;
+   const headingLines = systemsContent.headingLines ?? [systemsContent.heading];
 
    useSystemsAnimation(sectionRef);
 
@@ -39,23 +44,23 @@ const SystemsSectionMobile = () => {
                <div className='flex flex-col w-fit justify-end self-end '>
                   <div className='flex w-full  items-center gap-4'>
                      <div className='h-[5px] w-full rounded-[1.5px] bg-[#EBC197]' data-systems-accent />
-                     <h3 className="systems-subheading" data-systems-subheading>Sistemas de</h3>
+                        <h3 className="systems-subheading" data-systems-subheading>{systemsContent.eyebrow}</h3>
                   </div>
                   <div className='flex flex-col mt-2'>
-                     <h2 className="systems-heading text-right" data-systems-heading>Incêndio e</h2>
-                     <h2 className="systems-heading text-right" data-systems-heading>Segurança</h2>
+                        {headingLines.map((line) => (
+                           <h2 key={line} className="systems-heading text-right" data-systems-heading>{line}</h2>
+                        ))}
                   </div>
                </div>
 
 
-               <p className="mt-4 text-xl text-[#99a1af]" data-systems-description>
-                  Proteção total para o seu espaço com nossos sistemas avançados de segurança e combate a
-                  incêndio.
+                  <p className="mt-4 text-xl text-[#99a1af]" data-systems-description>
+                     {systemsContent.description}
                </p>
             </div>
 
             <div className="flex flex-col gap-6">
-               {systemsContent.map(({ title, description, imagem }, idx) => (
+                  {systemsContent.cards.map(({ title, description, image }, idx) => (
                   <div
                      key={`${title ?? idx}-mobile`}
                      data-systems-card
@@ -65,7 +70,7 @@ const SystemsSectionMobile = () => {
                         index={idx}
                         title={title}
                         description={description}
-                        imagem={imagem}
+                           image={image}
                      />
                   </div>
                ))}

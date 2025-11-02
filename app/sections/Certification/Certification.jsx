@@ -2,6 +2,9 @@
 
 import {useEffect, useRef, useState} from "react";
 import dynamic from "next/dynamic";
+
+import { useDictionary } from "@/src/site/context/DictionaryContext";
+
 import CertificationCarousel from "./CertificationCarousel";
 import useCertificationAnimation from "./useCertificationAnimation";
 
@@ -25,6 +28,8 @@ function useIsMobile() {
 const Certification = () => {
    const isMobile = useIsMobile();
    const sectionRef = useRef(null);
+   const { dictionary } = useDictionary();
+   const certificationContent = dictionary.certification;
 
    useCertificationAnimation(sectionRef);
 
@@ -42,9 +47,9 @@ const Certification = () => {
             <div className="flex flex-col w-full text-center mb-16">
                <div className="flex flex-col items-end justify-center self-end px-6">
                   <div className="flex">
-                     <h2 className="certification-heading" data-cert-heading>
-                        Certificação
-                     </h2>
+                        <h2 className="certification-heading" data-cert-heading>
+                           {certificationContent.heading}
+                        </h2>
                   </div>
 
 
@@ -53,7 +58,7 @@ const Certification = () => {
                   <div className="flex gap-4 w-full justify-center items-center">
                      
                      <h2 className="certification-subheading" data-cert-subheading>
-                        e Vistoria
+                        {certificationContent.subheading}
                      </h2>
                      <div className="h-[5px] w-full bg-[#EBC197]" data-cert-divider />
                   </div>
@@ -64,7 +69,7 @@ const Certification = () => {
             <div className="flex flex-col gap-16 w-full">
                <div className="flex justify-center">
                   <p className="text-[#b6b6b6] tracking-tight font-light text-2xl" data-cert-description>
-                     Garantimos a qualidade e a conformidade das suas instalações elétricas com serviços de certificação e vistoria.
+                     {certificationContent.description}
                   </p>
                </div>
 

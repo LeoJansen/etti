@@ -4,8 +4,10 @@
 
 import { useRef, useState, useEffect } from 'react';
 import dynamic from 'next/dynamic';
+
+import { useDictionary } from '@/src/site/context/DictionaryContext';
+
 import ProjectCard from './ProjectCard';
-import { projectsContent } from './ProjectsContent';
 import useProjectAnimation from './useProjectAnimation';
 
 const ProjectsMobile = dynamic(() => import('./mobile/ProjectsMobile'), {
@@ -28,6 +30,9 @@ function useIsMobile() {
 const Projects = () => {
    const isMobile = useIsMobile();
    const sectionRef = useRef(null);
+   const { dictionary } = useDictionary();
+   const projectsContent = dictionary.projects;
+   const headingLines = projectsContent.headingLines ?? [projectsContent.heading];
 
    useProjectAnimation(sectionRef);
 
@@ -42,28 +47,32 @@ const Projects = () => {
                <div className="flex flex-col items-end">
                   <div className="flex flex-col w-fit">
                      <div className="flex items-center justify-end gap-4">
-                        <h3 data-project-heading className="projects-subheading">Projetos de</h3>
+                        <h3 data-project-heading className="projects-subheading">{projectsContent.eyebrow}</h3>
                         <div data-project-heading className="h-[5px] w-full bg-[#EBC197]" />
                      </div>
 
-                     <h2 data-project-heading className="projects-heading text-end w-fit">Instalação Elétrica</h2>
+                     {headingLines.map((line) => (
+                        <h2 key={line} data-project-heading className="projects-heading text-end w-fit">
+                           {line}
+                        </h2>
+                     ))}
                   </div>
                </div>
 
                <div className="flex w-full px-[5%]">
                   <p data-project-description className="text-[#9e9e9e] tracking-tighter font-light text-xl xl:text-2xl ">
-                     Desenvolvemos soluções elétricas personalizadas para habitação, edifícios e espaços comerciais, seguindo rigorosamente as normas técnicas e de segurança mais atuais.
+                     {projectsContent.description}
                   </p>
                </div>
 
                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-15 md:gap-10">
-                  {projectsContent.map((project) => (
+                  {projectsContent.cards.map((project) => (
                      <ProjectCard
                         key={project.title}
                         data-project-card
                         title={project.title}
                         description={project.description}
-                        imageSrc={project.imageSrc}
+                        image={project.image}
                      />
                   ))}
                </div>

@@ -1,12 +1,17 @@
 "use client";
 import React, { useRef, useEffect } from 'react';
 import Image from 'next/image';
+
+import { useDictionary } from '@/src/site/context/DictionaryContext';
+
 import CameraCardMobile from './CameraCardMobile';
-import { cameraContent } from '../CameraContent';
 import { useCameraMobileAnimation } from './useCameraMobileAnimation';
 
 const CameraMobile = () => {
   const sectionRef = useRef(null);
+  const { dictionary } = useDictionary();
+  const cameraContent = dictionary.camera;
+  const headingLines = cameraContent.headingLines ?? [cameraContent.heading];
 
   useCameraMobileAnimation(sectionRef);
 
@@ -19,21 +24,23 @@ const CameraMobile = () => {
           <div className="flex flex-col w-fit">
             <div className="about-animate-item flex items-center gap-5">
               <div className="h-[5px] flex-1 rounded-[1.5px] bg-[#EBC197]" />
-              <h3 className="camera-subheading">Sistemas de</h3>
+              <h3 className="camera-subheading">{cameraContent.eyebrow}</h3>
             </div>
             <div className="">
-              <h2 className="camera-heading">Câmera CCTV</h2>
+              {headingLines.map((line) => (
+                <h2 key={line} className="camera-heading">{line}</h2>
+              ))}
             </div>
           </div>
 
           <p className="mt-6 text-lg text-gray-300 leading-relaxed px-4" data-camera-description-mobile>
-           Na Etti, implementamos soluções avançadas de videovigilância (CCTV) que garantem a proteção total do seu espaço. Os nossos projetos são personalizados para habitação , edifícios e comércios , utilizando tecnologia de ponta  para assegurar que o seu patrimônio esteja sempre protegido.
+           {cameraContent.description}
           </p>
         </div>
 
         {/* Cards Grid */}
         <div className="grid grid-cols-1 gap-6 px-2">
-          {cameraContent.map((item, index) => (
+          {cameraContent.cards.map((item, index) => (
             <div
               key={item.title ?? index}
               data-camera-card-mobile
@@ -43,6 +50,7 @@ const CameraMobile = () => {
                 title={item.title}
                 description={item.description}
                 image={item.image}
+                techBadge={cameraContent.techBadge}
               />
             </div>
           ))}

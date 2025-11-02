@@ -2,11 +2,15 @@
 
 import Image from "next/image";
 import { useRef } from "react";
-import { whyEttiData } from "../WhyEttiContent";
+
+import { useDictionary } from "@/src/site/context/DictionaryContext";
+
 import useWhyAnimationMobile from "./useWhyAnimationMobile";
 
 const WhyEttiMobile = () => {
    const sectionRef = useRef(null);
+   const { dictionary } = useDictionary();
+   const whyContent = dictionary.whyEtti;
 
    useWhyAnimationMobile(sectionRef);
 
@@ -40,13 +44,13 @@ const WhyEttiMobile = () => {
                         data-why-mobile-accent
                      />
                      <h3 className="why-etti-subheading" data-why-mobile-heading>
-                        Porque somos a
+                        {whyContent.eyebrow}
                      </h3>
                   </div>
 
                   <div className=''>
                      <h2 className="why-etti-heading" data-why-mobile-heading>
-                        Escolha Certa
+                        {whyContent.heading}
                      </h2>
                   </div>
                </div>
@@ -56,16 +60,16 @@ const WhyEttiMobile = () => {
                      className="text-base text-gray-600 mb-8"
                      data-why-mobile-description
                   >
-                     As nossas vantagens competitivas.
+                     {whyContent.description}
                   </p>
                </div>
             </div>
 
             {/* Mobile Cards Grid - Single column with spacing */}
             <div className="flex flex-col gap-6 w-full max-w-md">
-               {whyEttiData.map((item, index) => (
+               {whyContent.cards.map((item, index) => (
                   <div
-                     key={item.id}
+                     key={`${item.title}-${index}`}
                      data-why-mobile-card
                      className="p-6 rounded-[3px] shadow-[0_4px_12px_rgba(20,20,20,0.1)] border border-gray-100 transform transition duration-300 hover:scale-105 hover:shadow-[0_8px_20px_rgba(235,153,72,0.15)]"
                   >

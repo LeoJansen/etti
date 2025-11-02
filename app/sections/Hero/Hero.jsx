@@ -1,22 +1,49 @@
 "use client";
-import Image from 'next/image';
-import Link from 'next/link';
-import HeroMobile from './mobile/HeroMobile';
-import { useMemo, useRef } from 'react';
-import { useHeroAnimantion } from './useHeroAnimation';
-import { useHeroSectionAnimation } from './useHeroSectionAnimation';
-import { whatsAppLink } from '@/app/constants';
+import Image from "next/image";
+import Link from "next/link";
+import { useMemo, useRef } from "react";
 
-const HERO_HEADING_TEXT = 'O futuro do seu\nespaço começa\ncom um projeto\ninteligente.';
-const NBSP = '\u00A0';
+import { whatsAppLink } from "@/src/site/constants/contact";
+import { useDictionary } from "@/src/site/context/DictionaryContext";
+
+import HeroMobile from "./mobile/HeroMobile";
+import { useHeroAnimantion } from "./useHeroAnimation";
+import { useHeroSectionAnimation } from "./useHeroSectionAnimation";
+
+const NBSP = "\u00A0";
+
+const resolveCtaHref = (cta) => {
+  if (!cta) {
+    return "#";
+  }
+
+  if (cta.type === "whatsapp") {
+    return whatsAppLink;
+  }
+
+  return cta.href ?? "#";
+};
+
+const resolveCtaTarget = (cta) => {
+  if (!cta || cta.type !== "external") {
+    return {};
+  }
+
+  return { target: "_blank", rel: "noreferrer" };
+};
 
 export default function Hero() {
+  const { dictionary } = useDictionary();
   const glowRef = useRef(null);
   const sectionRef = useRef(null);
   const headingLines = useMemo(
-    () => HERO_HEADING_TEXT.split('\n'),
-    []
+    () => dictionary.hero.headingLines,
+    [dictionary.hero.headingLines]
   );
+  const primaryCta = dictionary.hero.primaryCta;
+  const secondaryCta = dictionary.hero.secondaryCta;
+  const primaryHref = resolveCtaHref(primaryCta);
+  const secondaryHref = resolveCtaHref(secondaryCta);
   useHeroAnimantion(glowRef, '#F38B23');
   useHeroSectionAnimation(sectionRef);
   return (
@@ -66,16 +93,20 @@ export default function Hero() {
           {/* Botões de Ação */}
           <div data-hero-cta className="relative flex flex-row justify-center gap-4 z-50 pointer-events-auto opacity-0">
             <Link
-              href={whatsAppLink}
+              href={primaryHref}
+              {...resolveCtaTarget(primaryCta)}
+              aria-label={primaryCta?.ariaLabel}
               className="bg-[#0D0D0D] text-[#e9e9e9] font-semibold py-3 px-8 rounded-[3px] hover:bg-gray-200 hover:text-[#0D0D0D] transition-colors duration-300 text-center cursor-pointer"
             >
-              Solicitar Orçamento
+              {primaryCta?.label}
             </Link>
             <Link
-              href="#services"
+              href={secondaryHref}
+              {...resolveCtaTarget(secondaryCta)}
+              aria-label={secondaryCta?.ariaLabel}
               className="bg-transparent backdrop-blur-sm text-[#FF7919] border-2 border-[#FF7919] font-semibold py-3 px-8 rounded-[3px] hover:bg-[#FF7919] hover:text-white transition-colors duration-300 text-center cursor-pointer"
             >
-              Conhecer Serviços
+              {secondaryCta?.label}
             </Link>
           </div>
         </div>
@@ -84,7 +115,7 @@ export default function Hero() {
   <div data-hero-bg className='absolute inset-0 z-0 pointer-events-none opacity-0'>
           <Image
             src="/assets/hero-bg4.png"
-            alt="Hero Image"
+            alt={dictionary.hero.backgroundAlt}
             quality={100}
             fill
             sizes="100vw"

@@ -1,8 +1,9 @@
 "use client"
 import dynamic from "next/dynamic";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useDictionary } from "@/src/site/context/DictionaryContext";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -25,6 +26,24 @@ function useIsMobile() {
 const SuperSection = () => {
    const isMobile = useIsMobile();
    const textRef = useRef(null);
+   const { dictionary } = useDictionary();
+
+   const lines = useMemo(() => {
+      const fallbackLines = [
+         { text: "Todo" },
+         { text: "grande projeto", highlight: true },
+         { text: "começa com" },
+         { text: "uma conversa." },
+      ];
+      const source = (dictionary.superSection?.lines ?? []).length
+         ? dictionary.superSection?.lines
+         : fallbackLines;
+      return source.map((line, index) => ({
+         id: line.id ?? `line-${index}`,
+         text: line.text ?? "",
+         highlight: Boolean(line.highlight),
+      }));
+   }, [dictionary.superSection]);
 
    useEffect(() => {
       const heading = textRef.current;
@@ -63,21 +82,14 @@ const SuperSection = () => {
       return <SuperSectionMobile />;
    }
 
-   const textLines = [
-      { id: "todo", text: "Todo" },
-      { id: "grande", text: "grande projeto", className: "text-[#EB9948]" },
-      { id: "começa", text: "começa com" },
-      { id: "conversa", text: "uma conversa." },
-   ];
-
    return (
       <div className="super-section relative h-screen w-full flex flex-col justify-center items-start gap-12 p-12 z-20">
          <h2
             ref={textRef}
             className="text-[150px] leading-[150px] font-extralight text-[hsl(0,0%,70%)] tracking-[-0.04em]"
          >
-            {textLines.map(({ id, text, className = "" }) => (
-               <span key={id} className={`block ${className}`}>
+            {lines.map(({ id, text, highlight }) => (
+               <span key={id} className={`block ${highlight ? "text-[#EB9948]" : ""}`}>
                   {text.split("").map((char, index) => (
                      <span
                         key={`${id}-${index}`}

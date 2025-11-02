@@ -1,19 +1,40 @@
 "use client"
 
-import React, { useState, useRef, useEffect } from 'react'
+import React, { useEffect, useMemo, useRef, useState } from 'react'
+
+import { useDictionary } from '@/src/site/context/DictionaryContext'
+
 import ServiceCardCarousel from './ServiceCardCarousel'
-import { servicesData } from './ServicesContent'
 
 const ServicesCarousel = ({ className = '', ...rest }) => {
   const [activeIndex, setActiveIndex] = useState(0)
   const carouselRef = useRef(null)
+  const { dictionary } = useDictionary()
+  const cards = useMemo(() => {
+    return dictionary.services.cards.map((card) => ({
+      title: card.title,
+      description: card.description,
+      icon: {
+        path: card.icon.src,
+        title: card.icon.alt,
+        iconWidth: card.icon.width,
+        iconHeight: card.icon.height,
+      },
+    }))
+  }, [dictionary.services.cards])
+
+  const cardsLength = cards.length
+
+  if (cardsLength === 0) {
+    return null
+  }
 
   const handlePrevious = () => {
-    setActiveIndex((prev) => (prev === 0 ? servicesData.length - 1 : prev - 1))
+    setActiveIndex((prev) => (prev === 0 ? cardsLength - 1 : prev - 1))
   }
 
   const handleNext = () => {
-    setActiveIndex((prev) => (prev === servicesData.length - 1 ? 0 : prev + 1))
+    setActiveIndex((prev) => (prev === cardsLength - 1 ? 0 : prev + 1))
   }
 
   const handleCardClick = (index) => {
@@ -24,15 +45,15 @@ const ServicesCarousel = ({ className = '', ...rest }) => {
   useEffect(() => {
     const handleKeyDown = (event) => {
       if (event.key === 'ArrowLeft') {
-        setActiveIndex((prev) => (prev === 0 ? servicesData.length - 1 : prev - 1))
+        setActiveIndex((prev) => (prev === 0 ? cardsLength - 1 : prev - 1))
       } else if (event.key === 'ArrowRight') {
-        setActiveIndex((prev) => (prev === servicesData.length - 1 ? 0 : prev + 1))
+        setActiveIndex((prev) => (prev === cardsLength - 1 ? 0 : prev + 1))
       }
     }
 
     window.addEventListener('keydown', handleKeyDown)
     return () => window.removeEventListener('keydown', handleKeyDown)
-  }, [servicesData.length])
+  }, [cardsLength])
 
   
    useEffect(() => {
@@ -40,7 +61,7 @@ const ServicesCarousel = ({ className = '', ...rest }) => {
        handleNext()
      }, 5000)
      return () => clearInterval(interval)
-   }, [activeIndex])
+   }, [activeIndex, cardsLength])
 
   return (
     <div
@@ -75,20 +96,20 @@ const ServicesCarousel = ({ className = '', ...rest }) => {
         className="flex items-center justify-center gap-6 w-full max-w-6xl"
       >
         {/* Card anterior (esquerda) */}
-        {servicesData.length > 1 && (
+        {cardsLength > 1 && (
           <div className="flex-shrink-0">
             <ServiceCardCarousel
-              title={servicesData[activeIndex === 0 ? servicesData.length - 1 : activeIndex - 1].title}
-              description={servicesData[activeIndex === 0 ? servicesData.length - 1 : activeIndex - 1].description}
-              icon={servicesData[activeIndex === 0 ? servicesData.length - 1 : activeIndex - 1].icon}
-              iconWidth={servicesData[activeIndex === 0 ? servicesData.length - 1 : activeIndex - 1].icon.iconWidth}
-              iconHeight={servicesData[activeIndex === 0 ? servicesData.length - 1 : activeIndex - 1].icon.iconHeight}
+              title={cards[activeIndex === 0 ? cardsLength - 1 : activeIndex - 1].title}
+              description={cards[activeIndex === 0 ? cardsLength - 1 : activeIndex - 1].description}
+              icon={cards[activeIndex === 0 ? cardsLength - 1 : activeIndex - 1].icon}
+              iconWidth={cards[activeIndex === 0 ? cardsLength - 1 : activeIndex - 1].icon.iconWidth}
+              iconHeight={cards[activeIndex === 0 ? cardsLength - 1 : activeIndex - 1].icon.iconHeight}
               pulseOffset={0}
               isActive={false}
               onClick={(e) => {
                 e.preventDefault()
                 e.stopPropagation()
-                handleCardClick(activeIndex === 0 ? servicesData.length - 1 : activeIndex - 1)
+                handleCardClick(activeIndex === 0 ? cardsLength - 1 : activeIndex - 1)
               }}
             />
           </div>
@@ -97,11 +118,11 @@ const ServicesCarousel = ({ className = '', ...rest }) => {
         {/* Card ativo (centro) */}
         <div className="flex-shrink-0">
           <ServiceCardCarousel
-            title={servicesData[activeIndex].title}
-            description={servicesData[activeIndex].description}
-            icon={servicesData[activeIndex].icon}
-            iconWidth={servicesData[activeIndex].icon.iconWidth}
-            iconHeight={servicesData[activeIndex].icon.iconHeight}
+            title={cards[activeIndex].title}
+            description={cards[activeIndex].description}
+            icon={cards[activeIndex].icon}
+            iconWidth={cards[activeIndex].icon.iconWidth}
+            iconHeight={cards[activeIndex].icon.iconHeight}
             pulseOffset={activeIndex}
             isActive={true}
             onClick={() => {}}
@@ -109,20 +130,20 @@ const ServicesCarousel = ({ className = '', ...rest }) => {
         </div>
 
         {/* Card próximo (direita) */}
-        {servicesData.length > 1 && (
+        {cardsLength > 1 && (
           <div className="flex-shrink-0">
             <ServiceCardCarousel
-              title={servicesData[activeIndex === servicesData.length - 1 ? 0 : activeIndex + 1].title}
-              description={servicesData[activeIndex === servicesData.length - 1 ? 0 : activeIndex + 1].description}
-              icon={servicesData[activeIndex === servicesData.length - 1 ? 0 : activeIndex + 1].icon}
-              iconWidth={servicesData[activeIndex === servicesData.length - 1 ? 0 : activeIndex + 1].icon.iconWidth}
-              iconHeight={servicesData[activeIndex === servicesData.length - 1 ? 0 : activeIndex + 1].icon.iconHeight}
+              title={cards[activeIndex === cardsLength - 1 ? 0 : activeIndex + 1].title}
+              description={cards[activeIndex === cardsLength - 1 ? 0 : activeIndex + 1].description}
+              icon={cards[activeIndex === cardsLength - 1 ? 0 : activeIndex + 1].icon}
+              iconWidth={cards[activeIndex === cardsLength - 1 ? 0 : activeIndex + 1].icon.iconWidth}
+              iconHeight={cards[activeIndex === cardsLength - 1 ? 0 : activeIndex + 1].icon.iconHeight}
               pulseOffset={0}
               isActive={false}
               onClick={(e) => {
                 e.preventDefault()
                 e.stopPropagation()
-                handleCardClick(activeIndex === servicesData.length - 1 ? 0 : activeIndex + 1)
+                handleCardClick(activeIndex === cardsLength - 1 ? 0 : activeIndex + 1)
               }}
             />
           </div>
@@ -153,7 +174,7 @@ const ServicesCarousel = ({ className = '', ...rest }) => {
 
       {/* Indicadores de posição */}
       <div className="absolute bottom-4 flex gap-2 z-50">
-        {servicesData.map((_, index) => (
+        {cards.map((_, index) => (
           <button
             key={index}
             onClick={(e) => {

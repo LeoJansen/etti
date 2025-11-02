@@ -1,0 +1,484 @@
+{
+	"meta": {
+		"title": "ETTI — Engineering & Projects",
+		"description": "Electrical installations, security systems, automation and more.",
+		"openGraph": {
+			"title": "ETTI — Engineering & Projects",
+			"description": "Electrical engineering, home automation and technical certification for residential and commercial spaces."
+		}
+	},
+	"navigation": {
+		"links": [
+			{ "label": "Home", "href": "#hero" },
+			{ "label": "About", "href": "#about" },
+			{ "label": "Services", "href": "#services" },
+			{ "label": "Projects", "href": "#projects" },
+			{ "label": "Documentation", "href": "#documentation" },
+			{ "label": "Automation", "href": "#automation" },
+			{ "label": "CCTV", "href": "#camera" },
+			{ "label": "Certification", "href": "#certification" },
+			{ "label": "Systems", "href": "#systems" },
+			{ "label": "Why Etti", "href": "#why-etti" },
+			{ "label": "Contact", "href": "#contact" }
+		],
+		"contactCtaLabel": "Talk to a specialist",
+		"localeToggle": [
+			{ "locale": "pt", "label": "Português", "ariaLabel": "Mudar para português" },
+			{ "locale": "en", "label": "English", "ariaLabel": "Switch to English" }
+		]
+	},
+	"hero": {
+		"headingLines": ["The future of your", "space begins with", "smart and thoughtful", "engineering."],
+		"mobileHeadingLines": ["The future of your space", "begins with smart", "engineering."],
+		"primaryCta": {
+			"label": "Request a Quote",
+			"type": "whatsapp",
+			"ariaLabel": "Start a WhatsApp conversation with Etti"
+		},
+		"secondaryCta": {
+			"label": "Explore Services",
+			"href": "#services",
+			"type": "internal"
+		},
+		"backgroundAlt": "Tech grid on a dark background representing smart solutions",
+		"mobileBackgroundAlt": "Dark abstract pattern with technological lines"
+	},
+	"about": {
+		"eyebrow": "About Etti",
+		"heading": "Who we are",
+		"paragraphs": [
+			"Etti is a company specialised in electrical and automation solutions. Our mission is to transform spaces through advanced technology and safe installations, delivering innovative and sustainable results that improve our clients' quality of life.",
+			"With an experienced and certified team, we provide an end-to-end service, from the initial design to the final certification. That is how we ensure quality, compliance and peace of mind on every installation."
+		],
+		"image": {
+			"src": "/assets/about.png",
+			"alt": "Etti Project team in a meeting",
+			"width": 864,
+			"height": 1184
+		}
+	},
+	"services": {
+		"eyebrow": "Our",
+		"heading": "Services",
+		"cards": [
+			{
+				"title": ["Electrical", "Installations"],
+				"description": "Complete solutions for homes, buildings and retail spaces aligned with the latest safety standards.",
+				"icon": {
+					"src": "/assets/iconServices12.svg",
+					"alt": "Icon representing electrical installations",
+					"width": 60,
+					"height": 60
+				}
+			},
+			{
+				"title": ["Technical", "Certification"],
+				"description": "Comprehensive documentation, certifications and inspections to guarantee regulatory compliance.",
+				"icon": {
+					"src": "/assets/iconServices22.svg",
+					"alt": "Icon representing technical certification",
+					"width": 50,
+					"height": 50
+				}
+			},
+			{
+				"title": ["Home", "Automation"],
+				"description": "Advanced KNX-based automation for intelligent control of every room in the house.",
+				"icon": {
+					"src": "/assets/iconServices32.svg",
+					"alt": "Icon representing home automation",
+					"width": 58,
+					"height": 58
+				}
+			},
+			{
+				"title": ["Safety", "Systems"],
+				"description": "Integrated fire safety and security systems that deliver maximum peace of mind.",
+				"icon": {
+					"src": "/assets/iconServices42.svg",
+					"alt": "Icon representing safety systems",
+					"width": 52,
+					"height": 52
+				}
+			}
+		],
+		"carousel": {
+			"previousAriaLabel": "Previous service card",
+			"nextAriaLabel": "Next service card",
+			"indicatorAriaLabel": "Go to service card {{index}}"
+		}
+	},
+	"projects": {
+		"eyebrow": "Electrical",
+		"heading": "Installation Projects",
+		"headingLines": ["Installation", "Projects"],
+		"description": "We design tailored electrical solutions for homes, buildings and commercial spaces, rigorously aligned with the latest technical and safety standards.",
+		"cards": [
+			{
+				"title": "Residential",
+				"description": "Modern installations focused on energy efficiency and reinforced protection for your home.",
+				"image": {
+					"src": "/assets/projects1.png",
+					"alt": "Residential electrical installation project",
+					"width": 600,
+					"height": 400
+				}
+			},
+			{
+				"title": "Buildings",
+				"description": "Complex electrical systems for residential towers and offices with smart energy management.",
+				"image": {
+					"src": "/assets/projects2.png",
+					"alt": "Electrical solutions for corporate buildings",
+					"width": 600,
+					"height": 400
+				}
+			},
+			{
+				"title": "Retail",
+				"description": "Robust commercial solutions that ensure continuous, safe operations for your business.",
+				"image": {
+					"src": "/assets/projects3.png",
+					"alt": "Electrical infrastructure for retail spaces",
+					"width": 600,
+					"height": 400
+				}
+			}
+		]
+	},
+	"documentation": {
+		"heading": "Technical Documentation",
+		"headingLines": ["Technical", "Documentation"],
+		"subheading": "Complete",
+		"description": "Etti Engineering delivers full technical documentation to guarantee compliance, licensing and safety at every project stage.",
+		"cards": [
+			{
+				"title": "Electrical Datasheet",
+				"description": "Official technical specifications for the electrical installation. Essential for licensing.",
+				"icon": {
+					"src": "/assets/docIcon1.svg",
+					"alt": "Icon representing an electrical datasheet",
+					"width": 70,
+					"height": 70
+				}
+			},
+			{
+				"title": "Design Report",
+				"description": "Detailed sizing calculations and technical justification for every solution deployed.",
+				"icon": {
+					"src": "/assets/docIcon2.svg",
+					"alt": "Icon representing a design report",
+					"width": 70,
+					"height": 70
+				}
+			},
+			{
+				"title": "Statement of Responsibility",
+				"description": "Technical statement that guarantees regulatory compliance and operational safety.",
+				"icon": {
+					"src": "/assets/docIcon3.svg",
+					"alt": "Icon representing a responsibility statement",
+					"width": 70,
+					"height": 70
+				}
+			}
+		]
+	},
+	"automation": {
+		"heading": "Home Automation",
+		"headingLines": ["Home", "Automation"],
+		"subheading": "with KNX",
+		"description": "Turn your house into an intelligent home with our KNX-based automation expertise — the global benchmark for building control.",
+		"cards": [
+			{
+				"title": "Smart Lighting",
+				"description": "Full control over lighting scenarios with optimised energy efficiency.",
+				"icon": {
+					"src": "/assets/autoIcon.svg",
+					"alt": "Lamp icon representing smart lighting",
+					"width": 40,
+					"height": 40
+				}
+			},
+			{
+				"title": "Climate Control",
+				"description": "Automated heating, ventilation and air-conditioning management for maximum comfort.",
+				"icon": {
+					"src": "/assets/autoIcon2.svg",
+					"alt": "Thermostat icon representing climate control",
+					"width": 40,
+					"height": 40
+				}
+			},
+			{
+				"title": "Access Control",
+				"description": "Integrated security with remote control and real-time monitoring.",
+				"icon": {
+					"src": "/assets/autoIcon.svg",
+					"alt": "Security icon representing access control",
+					"width": 40,
+					"height": 40
+				}
+			}
+		],
+		"backgroundAlt": "Electronic circuit glowing to represent home automation"
+	},
+	"camera": {
+		"eyebrow": "CCTV",
+		"heading": "Camera Systems",
+		"headingLines": ["Camera", "Systems"],
+		"description": "Advanced video surveillance with cutting-edge technology. Integrated security systems that ensure full protection with real-time monitoring and smart analytics.",
+		"cards": [
+			{
+				"title": "Tailored Surveillance Projects",
+				"description": "We design bespoke security projects. Our certified team analyses layouts and vulnerable points to guarantee strategic coverage without blind spots.",
+				"image": {
+					"src": "/assets/camera/camera-card1.png",
+					"alt": "Diagram of a tailored surveillance project",
+					"width": 300,
+					"height": 200
+				}
+			},
+			{
+				"title": "High-Definition Monitoring",
+				"description": "Installation of state-of-the-art cameras capturing crisp images (Full HD and 4K), even under low light. We ensure total coverage with no blind zones.",
+				"image": {
+					"src": "/assets/camera/camera-card2.png",
+					"alt": "High-definition CCTV monitoring setup",
+					"width": 300,
+					"height": 200
+				}
+			},
+			{
+				"title": "Remote Access & Central Control",
+				"description": "Monitor your facilities in real time from anywhere through secure mobile apps. Enjoy full control and intuitive access to recordings.",
+				"image": {
+					"src": "/assets/camera/camera-card3.png",
+					"alt": "Mobile application for CCTV control",
+					"width": 300,
+					"height": 200
+				}
+			},
+			{
+				"title": "Smart Automation Integration",
+				"description": "Your CCTV integrates seamlessly with our KNX automation and access control systems. Intrusion events can trigger lighting scenes, lock doors or send immediate alerts.",
+				"image": {
+					"src": "/assets/camera/camera-card4.png",
+					"alt": "Integration between CCTV and home automation",
+					"width": 300,
+					"height": 200
+				}
+			}
+		],
+		"techBadge": "CCTV Technology"
+	},
+	"certification": {
+		"heading": "Certification",
+		"subheading": "and Inspection",
+		"description": "We ensure quality and compliance for your electrical installations with dedicated certification and inspection services.",
+		"carousel": {
+			"previousAriaLabel": "Previous certification slide",
+			"nextAriaLabel": "Next certification slide",
+			"indicatorAriaLabel": "Go to certification slide {{index}}"
+		},
+		"cards": [
+			{
+				"title": "Electrical Installation Certification",
+				"description": "Official certification aligned with current national and European technical standards.",
+				"image": {
+					"src": "/assets/certCard23.png",
+					"alt": "Technician performing electrical certification",
+					"width": 1280,
+					"height": 720
+				}
+			},
+			{
+				"title": "Inspections and Supervision",
+				"description": "Technical inspections that safeguard quality and safety throughout the project, pinpointing non-compliances and recommending effective solutions.",
+				"image": {
+					"src": "/assets/certCard13.png",
+					"alt": "Technical team conducting an inspection",
+					"width": 1280,
+					"height": 720
+				}
+			}
+		]
+	},
+	"systems": {
+		"eyebrow": "Fire &",
+		"heading": "Safety Systems",
+		"headingLines": ["Safety", "Systems"],
+		"description": "Comprehensive protection for your space with advanced safety and fire-fighting solutions.",
+		"cards": [
+			{
+				"title": "Early Detection",
+				"description": "Advanced fire detection systems with next-generation sensors for immediate alerts.",
+				"image": {
+					"src": "/assets/systems/systemCard1.png",
+					"alt": "Early fire detection system",
+					"width": 600,
+					"height": 400
+				}
+			},
+			{
+				"title": "Emergency Lighting",
+				"description": "Design and installation of emergency lighting and signage that ensures safe evacuation and full compliance.",
+				"image": {
+					"src": "/assets/systems/systemCard2.png",
+					"alt": "Emergency lighting in a corridor",
+					"width": 600,
+					"height": 400
+				}
+			},
+			{
+				"title": "Continuous Monitoring",
+				"description": "Integrated security with 24/7 monitoring and automated responses to emergencies.",
+				"image": {
+					"src": "/assets/systems/systemCard3.png",
+					"alt": "Control room with continuous monitoring",
+					"width": 600,
+					"height": 400
+				}
+			},
+			{
+				"title": "Preventive Maintenance",
+				"description": "Preventive maintenance with operational tests and periodic inspections that keep systems fully reliable.",
+				"image": {
+					"src": "/assets/systems/systemCard4.png",
+					"alt": "Technician performing preventive maintenance",
+					"width": 600,
+					"height": 400
+				}
+			}
+		]
+	},
+	"whyEtti": {
+		"eyebrow": "Why we are",
+		"heading": "The Right Choice",
+		"description": "Our competitive advantages.",
+		"cards": [
+			{
+				"title": "Proven Expertise",
+				"description": "A seasoned team delivering projects of every scale, from single-family homes to large commercial developments."
+			},
+			{
+				"title": "Advanced Technology",
+				"description": "We apply the latest automation and energy-efficiency technologies to deliver innovative, sustainable solutions."
+			},
+			{
+				"title": "Official Certification",
+				"description": "Certified engineers recognised by the relevant authorities, guaranteeing quality and regulatory compliance."
+			},
+			{
+				"title": "End-to-End Service",
+				"description": "From concept to final certification, we provide an integrated experience that simplifies every step for you."
+			}
+		]
+	},
+	"superSection": {
+		"lines": [
+			{ "text": "Every" },
+			{ "text": "great project", "highlight": true },
+			{ "text": "starts with" },
+			{ "text": "a conversation." }
+		]
+	},
+	"contact": {
+		"headline": "Ready to start yours?",
+		"backgroundAlt": "Abstract blue texture with technological shapes",
+		"cards": [
+			{
+				"title": "Free Estimate",
+				"description": "We provide a free initial consultation and detailed estimates with no obligation for all our services."
+			},
+			{
+				"title": "Fast Response",
+				"description": "We reply within 24 hours and are available for in-person or remote meetings — whichever you prefer."
+			}
+		],
+		"buttons": [
+			{
+				"id": "contact-whatsapp",
+				"label": "Talk to a specialist",
+				"type": "whatsapp",
+				"variant": "primary",
+				"ariaLabel": "Start a WhatsApp conversation"
+			},
+			{
+				"id": "contact-meeting",
+				"label": "Schedule a Meeting",
+				"href": "mailto:geral@etti.pt?subject=Schedule%20a%20Meeting",
+				"type": "external",
+				"variant": "secondary",
+				"ariaLabel": "Schedule a meeting via e-mail"
+			}
+		],
+		"details": {
+			"phone": {
+				"label": "Phone",
+				"value": "+351 927 553 947",
+				"href": "tel:+351927553947",
+				"icon": {
+					"src": "/assets/contact/phone-icon.svg",
+					"alt": "Phone icon",
+					"width": 22,
+					"height": 22
+				}
+			},
+			"email": {
+				"label": "Email",
+				"value": "geral@etti.pt",
+				"href": "mailto:geral@etti.pt",
+				"icon": {
+					"src": "/assets/contact/mail-icon.svg",
+					"alt": "Mail icon",
+					"width": 30,
+					"height": 30
+				}
+			}
+		},
+		"social": [
+			{
+				"id": "instagram",
+				"label": "Etti on Instagram",
+				"href": "https://www.instagram.com/etti",
+				"icon": {
+					"src": "/assets/contact/instagram-icon.svg",
+					"alt": "Instagram icon",
+					"width": 30,
+					"height": 30
+				}
+			},
+			{
+				"id": "whatsapp",
+				"label": "Etti on WhatsApp",
+				"href": "https://wa.me/351927553947",
+				"icon": {
+					"src": "/assets/contact/whatsapp-icon.svg",
+					"alt": "WhatsApp icon",
+					"width": 30,
+					"height": 30
+				}
+			},
+			{
+				"id": "linkedin",
+				"label": "Etti on LinkedIn",
+				"href": "https://www.linkedin.com/company/etti",
+				"icon": {
+					"src": "/assets/contact/linked-in-icon.svg",
+					"alt": "LinkedIn icon",
+					"width": 30,
+					"height": 30
+				}
+			}
+		],
+		"legal": {
+			"copyright": "© 2025 Etti. All rights reserved.",
+			"developerAttribution": "Crafted by",
+			"developerLinkLabel": "Leonardo Jansen",
+			"developerUrl": "https://www.etti.pt",
+			"websiteLabel": "www.leonardojansen.com",
+			"websiteUrl": "https://www.leonardojansen.com"
+		}
+	}
+}

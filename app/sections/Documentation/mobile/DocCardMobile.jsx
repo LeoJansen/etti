@@ -3,18 +3,22 @@
 import Image from "next/image";
 
 const DocCardMobile = ({ title, description, icon, iconSize, className = "", titleClassName = "", ...rest }) => {
+   const iconSource = icon?.src ?? (icon?.name ? `/assets/${icon.name}.svg` : undefined);
+   const iconAlt = icon?.alt ?? icon?.title ?? title;
+   const resolvedIconWidth = icon?.width ?? iconSize?.width ?? 64;
+   const resolvedIconHeight = icon?.height ?? iconSize?.height ?? 64;
    return (
       <div
          {...rest}
          className={`doc-card-mobile doc-card flex flex-col items-center gap-6 rounded-[3px] py-6 px-5 shadow-[0_4px_16px_rgba(0,0,0,0.08)] backdrop-blur-sm ${className}`.trim()}
       >
          <div className="flex w-full items-center gap-3 text-center">
-            {icon?.name && (
+            {iconSource && (
                <Image
-                  src={`/assets/${icon.name}.svg`}
-                  alt={icon?.title || title}
-                  width={iconSize?.width || 64}
-                  height={iconSize?.height || 64}
+                  src={iconSource}
+                  alt={iconAlt}
+                  width={resolvedIconWidth}
+                  height={resolvedIconHeight}
                   className="opacity-60"
                />
             )}

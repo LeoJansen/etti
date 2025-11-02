@@ -3,17 +3,21 @@ import Image from "next/image";
 
 
 const CertificationCard = ({ title, description, image, index }) => {
+   const imageSource = typeof image === "string" ? image : image?.src;
+   const imageAlt = (typeof image === "object" && image?.alt) ? image.alt : title;
    return (
       <div id={`certification-card-${index}`} className="relative flex w-full h-full justify-center items-center  rounded-[3px] p-10  gap-8 xl:gap-12" style={{ boxShadow: "0 0 60px 3px rgba(23, 15, 7, 0.07)" }}>
          <div className="flex w-fit justify-center items-center h-full rounded-l-[6px] ">
             <div className="relative w-[18rem] h-[18rem] xl:w-[26rem] xl:h-[26rem]">
-               <Image
-                  src={image}
-                  alt="Certification Icon"
-                  fill
-                  sizes="(min-width: 1280px) 36rem, 28rem"
-                  className="object-contain rounded-[3px] z-10"
-               />
+               {imageSource && (
+                  <Image
+                     src={imageSource}
+                     alt={imageAlt}
+                     fill
+                     sizes="(min-width: 1280px) 36rem, 28rem"
+                     className="object-contain rounded-[3px] z-10"
+                  />
+               )}
             </div>
          </div>
 

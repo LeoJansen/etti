@@ -8,12 +8,15 @@ import Image from 'next/image';
  * Ensures mobile-specific styling for system cards while keeping the API
  * similar to the desktop component.
  */
-const SystemCardMobile = ({ index = 0, title, description, className = '', children }) => {
+const SystemCardMobile = ({ index = 0, title, description, image, imagem, className = '', children }) => {
    const cardRef = useRef(null);
    const titleRef = useRef(null);
    const imageRef = useRef(null);
    const overlayRef = useRef(null);
    const descriptionRef = useRef(null);
+   const imageData = image ?? (imagem ? { src: imagem } : undefined);
+   const imageSrc = imageData?.src ?? `/assets/systems/systemCard${index + 1}.png`;
+   const imageAlt = imageData?.alt ?? title;
 
 
    useEffect(() => {
@@ -132,8 +135,8 @@ const SystemCardMobile = ({ index = 0, title, description, className = '', child
             }}
          >
             <Image
-               src={`/assets/systems/systemCard${index + 1}.png`}
-               alt={title}
+               src={imageSrc}
+               alt={imageAlt}
                fill
                style={{
                   objectFit: 'cover',
@@ -155,7 +158,7 @@ const SystemCardMobile = ({ index = 0, title, description, className = '', child
                   ref={titleRef}
                   className="system-card-title  font-semibold text-center tracking-[0.05em] leading-tight"
                   style={{
-                     backgroundImage: `url(/assets/systems/systemCard${index + 1}.png)`,
+                     backgroundImage: `url(${imageSrc})`,
                      filter: "brightness(1.2)  saturate(1.2)",
                      fontSize: '32px',
                   }}

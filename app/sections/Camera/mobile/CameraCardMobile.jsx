@@ -2,7 +2,7 @@ import Image from 'next/image';
 import React, { forwardRef } from 'react';
 
 const CameraCardMobile = forwardRef(function CameraCardMobile(
-  { title, description, image, children, className = "", ...rest },
+  { title, description, image, techBadge, children, className = "", ...rest },
   ref
 ) {
   return (
@@ -35,7 +35,9 @@ const CameraCardMobile = forwardRef(function CameraCardMobile(
             {/* Tech indicator overlay */}
             <div className="absolute top-3 right-3 flex items-center gap-1 bg-[#0A0A0A]/80 backdrop-blur-sm rounded-full px-2 py-1">
               <div className="w-1.5 h-1.5 bg-[#EB9948] rounded-full animate-pulse" />
-              <span className="text-xs text-[#EB9948] font-medium">HD</span>
+              <span className="text-xs text-[#EB9948] font-medium">
+                {techBadge ?? "CCTV"}
+              </span>
             </div>
           </div>
         )}
@@ -64,7 +66,7 @@ const CameraCardMobile = forwardRef(function CameraCardMobile(
               <div className="w-1 h-1 bg-[#EB9948] rounded-full opacity-40" />
             </div>
             <span className="text-xs text-[#EB9948] font-medium uppercase tracking-wider flex-1">
-              Sistema Integrado
+              {techBadge ?? "CCTV"}
             </span>
           </div>
         </div>

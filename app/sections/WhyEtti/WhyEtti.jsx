@@ -1,11 +1,12 @@
 "use client"
 // components/WhyEttiSection.js
-
 import Image from "next/image";
-import WhyEttiCard from "./WhyEttiCard";
-import { whyEttiData } from "./WhyEttiContent";
 import dynamic from "next/dynamic";
 import { useState, useEffect, useRef } from "react";
+
+import { useDictionary } from "@/src/site/context/DictionaryContext";
+
+import WhyEttiCard from "./WhyEttiCard";
 import useWhyAnimation from "./useWhyAnimation";
 
 const WhyEttiMobile = dynamic(() => import("./mobile/WhyEttiMobile"), {
@@ -30,6 +31,8 @@ function useIsMobile() {
 const WhyEtti = () => {
    const isMobile = useIsMobile();
    const sectionRef = useRef(null);
+   const { dictionary } = useDictionary();
+   const whyContent = dictionary.whyEtti;
 
    useWhyAnimation(sectionRef, isMobile);
    
@@ -66,11 +69,11 @@ const WhyEtti = () => {
                         className='h-[5px] w-full rounded-[1.5px] bg-[#EBC197]'
                         data-why-accent
                      />
-                     <h3 className="why-etti-subheading" data-why-subheading>Porque somos a</h3>
+                     <h3 className="why-etti-subheading" data-why-subheading>{whyContent.eyebrow}</h3>
 
                   </div>
                   <div className='flex ml-4'>
-                  <h2 className="why-etti-heading" data-why-heading>Escolha Certa</h2>   
+                  <h2 className="why-etti-heading" data-why-heading>{whyContent.heading}</h2>   
                      </div>
 
                   
@@ -80,16 +83,16 @@ const WhyEtti = () => {
                      className="mt-4 text-xl text-gray-600 dark:text-gray-400"
                      data-why-description
                   >
-               As nossas vantagens competitivas.
+                     {whyContent.description}
             </p>
 
                </div>
 
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-16 mt-16 max-w-7xl justify-items-center">
-               {whyEttiData.map((item, index) => (
+               {whyContent.cards.map((item, index) => (
                   <WhyEttiCard
-                     key={item.id}
+                     key={`${item.title}-${index}`}
                      title={item.title}
                      description={item.description}
                      index={index}  

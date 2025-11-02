@@ -1,0 +1,484 @@
+{
+	"meta": {
+		"title": "ETTI — Engenharia & Projetos",
+		"description": "Projetos e inspeções de instalações elétricas, sistemas de segurança, automação e mais.",
+		"openGraph": {
+			"title": "ETTI — Engenharia & Projetos",
+			"description": "Engenharia elétrica, automação residencial e certificação técnica para espaços residenciais e comerciais."
+		}
+	},
+	"navigation": {
+		"links": [
+			{ "label": "Início", "href": "#hero" },
+			{ "label": "Sobre", "href": "#about" },
+			{ "label": "Serviços", "href": "#services" },
+			{ "label": "Projetos", "href": "#projects" },
+			{ "label": "Documentação", "href": "#documentation" },
+			{ "label": "Automação", "href": "#automation" },
+			{ "label": "CCTV", "href": "#camera" },
+			{ "label": "Certificação", "href": "#certification" },
+			{ "label": "Sistemas", "href": "#systems" },
+			{ "label": "Porque Etti", "href": "#why-etti" },
+			{ "label": "Contactos", "href": "#contact" }
+		],
+		"contactCtaLabel": "Fale com um especialista",
+		"localeToggle": [
+			{ "locale": "pt", "label": "Português", "ariaLabel": "Mudar para português" },
+			{ "locale": "en", "label": "English", "ariaLabel": "Switch to English" }
+		]
+	},
+	"hero": {
+		"headingLines": ["O futuro do seu", "espaço começa", "com um projeto", "inteligente."],
+		"mobileHeadingLines": ["O futuro do seu espaço", "começa com um", "projeto inteligente."],
+		"primaryCta": {
+			"label": "Solicitar Orçamento",
+			"type": "whatsapp",
+			"ariaLabel": "Abrir conversa no WhatsApp da Etti"
+		},
+		"secondaryCta": {
+			"label": "Conhecer Serviços",
+			"href": "#services",
+			"type": "internal"
+		},
+		"backgroundAlt": "Rede tecnológica em tons escuros representando soluções inteligentes",
+		"mobileBackgroundAlt": "Textura de linhas tecnológicas em fundo escuro"
+	},
+	"about": {
+		"eyebrow": "Sobre a Etti",
+		"heading": "Quem somos",
+		"paragraphs": [
+			"A Etti é uma empresa especializada em soluções elétricas e automação. Nossa missão é transformar espaços através de tecnologia avançada e instalações seguras, oferecendo soluções inovadoras e sustentáveis que melhoram a qualidade de vida dos nossos clientes.",
+			"Com uma equipa experiente e certificada, entregamos um serviço completo, desde o projeto inicial até à certificação final. Assim garantimos qualidade, conformidade e tranquilidade em cada instalação."
+		],
+		"image": {
+			"src": "/assets/about.png",
+			"alt": "Equipa da Etti Project em reunião",
+			"width": 864,
+			"height": 1184
+		}
+	},
+	"services": {
+		"eyebrow": "Nossos",
+		"heading": "Serviços",
+		"cards": [
+			{
+				"title": ["Instalações", "Elétricas"],
+				"description": "Projetos completos para habitação, edifícios e comércios com as mais recentes normas de segurança.",
+				"icon": {
+					"src": "/assets/iconServices12.svg",
+					"alt": "Ícone de instalações elétricas",
+					"width": 60,
+					"height": 60
+				}
+			},
+			{
+				"title": ["Certificação", "Técnica"],
+				"description": "Documentação completa, certificações e vistorias para garantir conformidade regulamentar.",
+				"icon": {
+					"src": "/assets/iconServices22.svg",
+					"alt": "Ícone de certificação técnica",
+					"width": 50,
+					"height": 50
+				}
+			},
+			{
+				"title": ["Automação", "Residencial"],
+				"description": "Domótica avançada com protocolo KNX para controlo inteligente de toda a habitação.",
+				"icon": {
+					"src": "/assets/iconServices32.svg",
+					"alt": "Ícone de automação residencial",
+					"width": 58,
+					"height": 58
+				}
+			},
+			{
+				"title": ["Sistemas de", "Segurança"],
+				"description": "Proteção contra incêndios e sistemas de segurança integrados para máxima tranquilidade.",
+				"icon": {
+					"src": "/assets/iconServices42.svg",
+					"alt": "Ícone de sistemas de segurança",
+					"width": 52,
+					"height": 52
+				}
+			}
+		],
+		"carousel": {
+			"previousAriaLabel": "Serviço anterior",
+			"nextAriaLabel": "Próximo serviço",
+			"indicatorAriaLabel": "Ir para o serviço {{index}}"
+		}
+	},
+	"projects": {
+		"eyebrow": "Projetos de",
+		"heading": "Instalação Elétrica",
+		"headingLines": ["Instalação", "Elétrica"],
+		"description": "Desenvolvemos soluções elétricas personalizadas para habitação, edifícios e espaços comerciais, seguindo rigorosamente as normas técnicas e de segurança mais atuais.",
+		"cards": [
+			{
+				"title": "Habitação",
+				"description": "Instalações residenciais modernas com eficiência energética e segurança maximizada para o seu lar.",
+				"image": {
+					"src": "/assets/projects1.png",
+					"alt": "Projeto de instalação elétrica para habitação",
+					"width": 600,
+					"height": 400
+				}
+			},
+			{
+				"title": "Edifícios",
+				"description": "Sistemas elétricos complexos para edifícios residenciais e escritórios com gestão inteligente de energia.",
+				"image": {
+					"src": "/assets/projects2.png",
+					"alt": "Soluções elétricas para edifícios empresariais",
+					"width": 600,
+					"height": 400
+				}
+			},
+			{
+				"title": "Comércios",
+				"description": "Soluções comerciais robustas que garantem funcionamento contínuo e seguro do seu negócio.",
+				"image": {
+					"src": "/assets/projects3.png",
+					"alt": "Infraestrutura elétrica para espaços comerciais",
+					"width": 600,
+					"height": 400
+				}
+			}
+		]
+	},
+	"documentation": {
+		"heading": "Documentação Técnica",
+		"headingLines": ["Documentação", "Técnica"],
+		"subheading": "Completa",
+		"description": "A Etti Engenharia disponibiliza documentação técnica completa para garantir conformidade regulamentar, licenciamento e segurança em todas as fases do projeto.",
+		"cards": [
+			{
+				"title": "Ficha Eletrotécnica",
+				"description": "Especificações técnicas detalhadas da instalação elétrica. Essencial para licenciamentos.",
+				"icon": {
+					"src": "/assets/docIcon1.svg",
+					"alt": "Ícone de ficha eletrotécnica",
+					"width": 70,
+					"height": 70
+				}
+			},
+			{
+				"title": "Memória Descritiva",
+				"description": "Cálculos de dimensionamento pormenorizados e justificativa técnica das soluções implementadas.",
+				"icon": {
+					"src": "/assets/docIcon2.svg",
+					"alt": "Ícone de memória descritiva",
+					"width": 70,
+					"height": 70
+				}
+			},
+			{
+				"title": "Termo de Responsabilidade",
+				"description": "Termo de responsabilidade técnica garantindo conformidade regulamentar e segurança operacional.",
+				"icon": {
+					"src": "/assets/docIcon3.svg",
+					"alt": "Ícone de termo de responsabilidade",
+					"width": 70,
+					"height": 70
+				}
+			}
+		]
+	},
+	"automation": {
+		"heading": "Automação Residencial",
+		"headingLines": ["Automação", "Residencial"],
+		"subheading": "com KNX",
+		"description": "Transforme a sua casa em uma habitação inteligente com a nossa expertise em domótica e protocolo KNX, o padrão mundial para automação predial.",
+		"cards": [
+			{
+				"title": "Iluminação Inteligente",
+				"description": "Controle total da iluminação com cenários personalizados e eficiência energética otimizada.",
+				"icon": {
+					"src": "/assets/autoIcon.svg",
+					"alt": "Ícone de lâmpada representando automação de iluminação",
+					"width": 40,
+					"height": 40
+				}
+			},
+			{
+				"title": "Climatização",
+				"description": "Gestão automática de aquecimento, ventilação e ar condicionado para o máximo conforto.",
+				"icon": {
+					"src": "/assets/autoIcon2.svg",
+					"alt": "Ícone de termóstato representando climatização",
+					"width": 40,
+					"height": 40
+				}
+			},
+			{
+				"title": "Controle de Acessos",
+				"description": "Sistemas de segurança integrados com controlo remoto e monitorização em tempo real.",
+				"icon": {
+					"src": "/assets/autoIcon.svg",
+					"alt": "Ícone de segurança representando controlo de acessos",
+					"width": 40,
+					"height": 40
+				}
+			}
+		],
+		"backgroundAlt": "Circuito eletrónico iluminado representando automação residencial"
+	},
+	"camera": {
+		"eyebrow": "Sistemas de",
+		"heading": "Câmara CCTV",
+		"headingLines": ["Câmara", "CCTV"],
+		"description": "Soluções avançadas em videomonitorização com tecnologia de ponta. Sistemas integrados de segurança para proteção completa com monitorização em tempo real e análise inteligente.",
+		"cards": [
+			{
+				"title": "Projetos de Vigilância Personalizados",
+				"description": "Desenvolvemos um projeto de segurança à medida do seu espaço. A nossa equipa certificada analisa a planta e os pontos vulneráveis para garantir uma cobertura estratégica e total, eliminando ângulos mortos e otimizando a sua segurança.",
+				"image": {
+					"src": "/assets/camera/camera-card1.png",
+					"alt": "Diagrama de sistema de vigilância personalizado",
+					"width": 300,
+					"height": 200
+				}
+			},
+			{
+				"title": "Monitorização de Alta Definição",
+				"description": "Instalação de câmaras com sensores de última geração para captura de imagens nítidas (Full HD e 4K), mesmo em condições de baixa luminosidade. Garantimos cobertura total sem pontos cegos.",
+				"image": {
+					"src": "/assets/camera/camera-card2.png",
+					"alt": "Monitorização em alta definição com múltiplas câmaras",
+					"width": 300,
+					"height": 200
+				}
+			},
+			{
+				"title": "Acesso Remoto e Controle Centralizado",
+				"description": "Visualize as suas instalações em tempo real, de qualquer lugar do mundo, através de aplicações seguras em dispositivos móveis. Oferecemos controlo total e acesso a gravações de forma intuitiva.",
+				"image": {
+					"src": "/assets/camera/camera-card3.png",
+					"alt": "Aplicação móvel de vigilância CCTV",
+					"width": 300,
+					"height": 200
+				}
+			},
+			{
+				"title": "Integração Inteligente com Automação",
+				"description": "O seu sistema de CCTV funciona em perfeita harmonia com os nossos sistemas de automação KNX e controlo de acessos. Ao detetar intrusão, o sistema pode acionar cenários de iluminação, trancar portas ou enviar alertas imediatos.",
+				"image": {
+					"src": "/assets/camera/camera-card4.png",
+					"alt": "Integração entre CCTV e automação residencial",
+					"width": 300,
+					"height": 200
+				}
+			}
+		],
+		"techBadge": "Tecnologia CCTV"
+	},
+	"certification": {
+		"heading": "Certificação",
+		"subheading": "e Vistoria",
+		"description": "Garantimos a qualidade e a conformidade das suas instalações elétricas com serviços de certificação e vistoria.",
+		"carousel": {
+			"previousAriaLabel": "Slide anterior de certificação",
+			"nextAriaLabel": "Próximo slide de certificação",
+			"indicatorAriaLabel": "Ir para o slide de certificação {{index}}"
+		},
+		"cards": [
+			{
+				"title": "Certificação de Instalações Elétricas",
+				"description": "Realizamos a certificação oficial das instalações elétricas, garantindo a conformidade com as normas técnicas nacionais e europeias em vigor.",
+				"image": {
+					"src": "/assets/certCard23.png",
+					"alt": "Técnico realizando certificação elétrica",
+					"width": 1280,
+					"height": 720
+				}
+			},
+			{
+				"title": "Vistorias e Fiscalização",
+				"description": "Serviços de vistoria técnica e fiscalização para assegurar a qualidade e a segurança em todas as fases do projeto, identificando não conformidades e propondo soluções.",
+				"image": {
+					"src": "/assets/certCard13.png",
+					"alt": "Equipe técnica realizando vistoria",
+					"width": 1280,
+					"height": 720
+				}
+			}
+		]
+	},
+	"systems": {
+		"eyebrow": "Sistemas de",
+		"heading": "Incêndio e Segurança",
+		"headingLines": ["Incêndio e", "Segurança"],
+		"description": "Proteção total para o seu espaço com os nossos sistemas avançados de segurança e combate a incêndio.",
+		"cards": [
+			{
+				"title": "Deteção Precoce",
+				"description": "Sistemas avançados de deteção de incêndios com sensores de última geração para alerta imediato.",
+				"image": {
+					"src": "/assets/systems/systemCard1.png",
+					"alt": "Sistema de deteção precoce de incêndio",
+					"width": 600,
+					"height": 400
+				}
+			},
+			{
+				"title": "Iluminação de Emergência",
+				"description": "Projetamos e instalamos sistemas de iluminação de emergência e sinalização, assegurando evacuação segura e conformidade regulamentar.",
+				"image": {
+					"src": "/assets/systems/systemCard2.png",
+					"alt": "Iluminação de emergência em corredor",
+					"width": 600,
+					"height": 400
+				}
+			},
+			{
+				"title": "Monitorização Contínua",
+				"description": "Sistemas integrados de segurança com vigilância 24/7 e resposta automática a emergências.",
+				"image": {
+					"src": "/assets/systems/systemCard3.png",
+					"alt": "Sala de controlo com monitorização contínua",
+					"width": 600,
+					"height": 400
+				}
+			},
+			{
+				"title": "Manutenção Preventiva",
+				"description": "Manutenções preventivas com testes operacionais e inspeções periódicas para garantir confiabilidade total.",
+				"image": {
+					"src": "/assets/systems/systemCard4.png",
+					"alt": "Técnico realizando manutenção preventiva",
+					"width": 600,
+					"height": 400
+				}
+			}
+		]
+	},
+	"whyEtti": {
+		"eyebrow": "Porque somos a",
+		"heading": "Escolha Certa",
+		"description": "As nossas vantagens competitivas.",
+		"cards": [
+			{
+				"title": "Experiência Comprovada",
+				"description": "Equipa com vasta experiência em projetos de diferentes escalas e complexidades, desde habitações unifamiliares a grandes edifícios comerciais."
+			},
+			{
+				"title": "Tecnologia Avançada",
+				"description": "Utilização das mais recentes tecnologias em automação e eficiência energética, proporcionando soluções inovadoras e sustentáveis."
+			},
+			{
+				"title": "Certificação Oficial",
+				"description": "Técnicos certificados e credenciados pelas entidades competentes, garantindo qualidade e conformidade regulamentar em todos os projetos."
+			},
+			{
+				"title": "Serviço Completo",
+				"description": "Do projeto inicial à certificação final, oferecemos um serviço integral que simplifica todo o processo para o cliente."
+			}
+		]
+	},
+	"superSection": {
+		"lines": [
+			{ "text": "Todo" },
+			{ "text": "grande projeto", "highlight": true },
+			{ "text": "começa com" },
+			{ "text": "uma conversa." }
+		]
+	},
+	"contact": {
+		"headline": "Vamos iniciar o seu?",
+		"backgroundAlt": "Textura abstrata azul com formas tecnológicas",
+		"cards": [
+			{
+				"title": "Orçamento Gratuito",
+				"description": "Oferecemos consultoria inicial gratuita e orçamentos detalhados sem compromisso para todos os nossos serviços."
+			},
+			{
+				"title": "Resposta Rápida",
+				"description": "Garantimos resposta em 24 horas e disponibilidade para reuniões presenciais ou virtuais conforme a sua preferência."
+			}
+		],
+		"buttons": [
+			{
+				"id": "contact-whatsapp",
+				"label": "Fale com um especialista",
+				"type": "whatsapp",
+				"variant": "primary",
+				"ariaLabel": "Iniciar contacto via WhatsApp"
+			},
+			{
+				"id": "contact-meeting",
+				"label": "Agendar Reunião",
+				"href": "mailto:geral@etti.pt?subject=Agendar%20Reuni%C3%A3o",
+				"type": "external",
+				"variant": "secondary",
+				"ariaLabel": "Agendar reunião por e-mail"
+			}
+		],
+		"details": {
+			"phone": {
+				"label": "Telefone",
+				"value": "+351 927 553 947",
+				"href": "tel:+351927553947",
+				"icon": {
+					"src": "/assets/contact/phone-icon.svg",
+					"alt": "Ícone de telefone",
+					"width": 22,
+					"height": 22
+				}
+			},
+			"email": {
+				"label": "E-mail",
+				"value": "geral@etti.pt",
+				"href": "mailto:geral@etti.pt",
+				"icon": {
+					"src": "/assets/contact/mail-icon.svg",
+					"alt": "Ícone de envelope",
+					"width": 30,
+					"height": 30
+				}
+			}
+		},
+		"social": [
+			{
+				"id": "instagram",
+				"label": "Instagram da Etti",
+				"href": "https://www.instagram.com/etti",
+				"icon": {
+					"src": "/assets/contact/instagram-icon.svg",
+					"alt": "Ícone do Instagram",
+					"width": 30,
+					"height": 30
+				}
+			},
+			{
+				"id": "whatsapp",
+				"label": "WhatsApp da Etti",
+				"href": "https://wa.me/351927553947",
+				"icon": {
+					"src": "/assets/contact/whatsapp-icon.svg",
+					"alt": "Ícone do WhatsApp",
+					"width": 30,
+					"height": 30
+				}
+			},
+			{
+				"id": "linkedin",
+				"label": "LinkedIn da Etti",
+				"href": "https://www.linkedin.com/company/etti",
+				"icon": {
+					"src": "/assets/contact/linked-in-icon.svg",
+					"alt": "Ícone do LinkedIn",
+					"width": 30,
+					"height": 30
+				}
+			}
+		],
+		"legal": {
+			"copyright": "© 2025 Etti. Todos os direitos reservados.",
+			"developerAttribution": "Desenvolvido por",
+			"developerLinkLabel": "Leonardo Jansen",
+			"developerUrl": "https://www.etti.pt",
+			"websiteLabel": "www.leonardojansen.com",
+			"websiteUrl": "https://www.leonardojansen.com"
+		}
+	}
+}

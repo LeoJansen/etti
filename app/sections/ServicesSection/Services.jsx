@@ -3,6 +3,9 @@
 import Image from 'next/image';
 import dynamic from 'next/dynamic';
 import React, { useEffect, useRef, useState } from 'react';
+
+import { useDictionary } from '@/src/site/context/DictionaryContext';
+
 import ServicesCarousel from './ServicesCarousel';
 import useServiceAnimation from './useServiceAnimation';
 
@@ -25,6 +28,8 @@ function useIsMobile() {
 const Services = () => {
    const isMobile = useIsMobile();
    const sectionRef = useRef(null);
+   const { dictionary } = useDictionary();
+   const servicesContent = dictionary.services;
 
    useServiceAnimation(sectionRef);
    if (isMobile) {
@@ -48,13 +53,13 @@ const Services = () => {
                <div className='flex flex-col justify-end items-end  bg-[#00000091] backdrop-blur-[40px] shadow-[0_2px_2px_2px_rgba(20,20,20,0.4)]   p-8  rounded-l-[6px] '>
                   <div className='flex flex-col justify-end w-fit '>
                      <div className='flex w-full justify-end gap-4 items-center '>
-                        <h3 data-service-item className="services-subheading">Nossos</h3>
+                           <h3 data-service-item className="services-subheading">{servicesContent.eyebrow}</h3>
                         <div data-service-item className='h-[6px] w-full rounded-[1.5px] bg-[#EBC197]' />
                      </div>
                      <div className='flex w-fit'>
-                        <h2 data-service-item className="services-heading">
-                           Serviços
-                        </h2>
+                           <h2 data-service-item className="services-heading">
+                              {servicesContent.heading}
+                           </h2>
                      </div>
                   </div>
                </div>
