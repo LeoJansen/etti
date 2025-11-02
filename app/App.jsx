@@ -15,7 +15,7 @@ import SuperSection from "./sections/Contact/SuperSection";
 
 const App = () => {
    return (
-      <div id="app" className=" @max-[350px]:hidden relative w-full h-full overflow-hidden bg-black z-0">
+      <div id="app" className=" @max-[350px]:hidden @container hyhyrelative w-full h-full overflow-hidden bg-black z-0">
          <Hero />
          <About />
          <Services />
