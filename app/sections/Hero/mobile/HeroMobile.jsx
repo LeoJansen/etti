@@ -5,6 +5,7 @@ import { useMemo, useRef } from "react";
 
 import { whatsAppLink } from "@/src/site/constants/contact";
 import { useDictionary } from "@/src/site/context/DictionaryContext";
+import LanguageSwitcher from "@/src/site/components/LanguageSwitcher";
 
 import { useHeroAnimantion } from "../useHeroAnimation";
 import { useHeroSectionAnimationMobile } from "./useHeroSectionAnimationMobile";
@@ -53,6 +54,10 @@ export default function HeroMobile() {
       ref={sectionRef}
       className="relative w-full h-screen text-white flex items-center justify-start overflow-hidden @container"
     >
+      <div className="absolute top-4 right-4 z-40">
+        <LanguageSwitcher className="items-center " buttonClassName="px-2" />
+      </div>
+
       {/* Heading/Box */}
       <div className="w-full flex justify-center px-4 z-20">
         <div
