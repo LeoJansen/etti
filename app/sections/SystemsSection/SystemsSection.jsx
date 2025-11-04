@@ -29,7 +29,6 @@ const SystemsSection = () => {
    const sectionRef = useRef(null);
    const { dictionary } = useDictionary();
    const systemsContent = dictionary.systems;
-   const headingLines = systemsContent.headingLines ?? [systemsContent.heading];
 
    useSystemsAnimation(sectionRef);
 
@@ -57,19 +56,13 @@ const SystemsSection = () => {
                <div className='flex flex-col w-fit'>
                   <div className='flex w-full items-center gap-4'>
                      <div className='h-[5px] w-full rounded-[1.5px] bg-[#EBC197]' data-systems-accent />
-                        <h3 className="systems-subheading" data-systems-subheading>{systemsContent.eyebrow}</h3>
-
+                     <h3 className="systems-subheading" data-systems-subheading>{systemsContent.eyebrow}</h3>
                   </div>
                   <div className='flex'>
-                     {headingLines.map((line) => (
-                        <h2 key={line} className="systems-heading" data-systems-heading>{line}</h2>
-                     ))}   
-                     </div>
-
-                  
+                     <h2 className="systems-heading" data-systems-heading>{systemsContent.heading}</h2>
+                  </div>
                </div>
-               
-               
+
                <p className="mt-6  text-2xl text-[#99a1af]" data-systems-description>
                   {systemsContent.description}
                </p>

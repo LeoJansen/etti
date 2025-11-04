@@ -26,7 +26,6 @@ const Camera = () => {
     const sectionRef = useRef(null);
     const { dictionary } = useDictionary();
     const cameraContent = dictionary.camera;
-    const headingLines = cameraContent.headingLines ?? [cameraContent.heading];
 
     useCameraAnimation(sectionRef, isMobile);
 
@@ -50,9 +49,7 @@ const Camera = () => {
                             </div>
                         </div>
                         <div id="etti-subheader" className="about-animate-item flex w-fit">
-                            {headingLines.map((line) => (
-                                <h2 key={line} className="about-heading">{line}</h2>
-                            ))}
+                            <h2 className="about-heading">{cameraContent.heading}</h2>
                         </div>
                     </div>
 

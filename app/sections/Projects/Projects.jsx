@@ -32,7 +32,6 @@ const Projects = () => {
    const sectionRef = useRef(null);
    const { dictionary } = useDictionary();
    const projectsContent = dictionary.projects;
-   const headingLines = projectsContent.headingLines ?? [projectsContent.heading];
 
    useProjectAnimation(sectionRef);
 
@@ -44,18 +43,16 @@ const Projects = () => {
       <section ref={sectionRef} id="projects" className="projects-section relative w-full min-h-screen px-4 overflow-hidden">
          <div className="hidden md:block w-full h-full p-6 md:p-12">
             <div className="flex flex-col items-end justify-center px-[2%] gap-12">
-               <div className="flex flex-col items-end">
+               <div className="flex flex-col w-fit items-end">
                   <div className="flex flex-col w-fit">
                      <div className="flex items-center justify-end gap-4">
                         <h3 data-project-heading className="projects-subheading">{projectsContent.eyebrow}</h3>
                         <div data-project-heading className="h-[5px] w-full bg-[#EBC197]" />
                      </div>
 
-                     {headingLines.map((line) => (
-                        <h2 key={line} data-project-heading className="projects-heading text-end w-fit">
-                           {line}
-                        </h2>
-                     ))}
+                     <h2 data-project-heading className="projects-heading text-end w-fit">
+                        {projectsContent.heading}
+                     </h2>
                   </div>
                </div>
 
