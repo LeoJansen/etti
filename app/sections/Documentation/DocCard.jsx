@@ -3,7 +3,7 @@
 import Image from 'next/image'
 import React from 'react'
 const DocCard = ({  title, description, icon,  iconSize, className = "", titleClassName = "", ...props }) => {
-  const baseClasses = 'flex flex-col  items-center h-full self-end max-w-[500px]  w-full  rounded-[2px]  duration-300 py-4  gap-2 md:gap-0 p-4 backdrop-blur-[40px] shadow-[0_2px_4px_1px_rgba(20,20,20,0.08)] z-10';
+  const baseClasses = 'flex flex-col  items-center h-full self-end max-w-[500px]  w-full  rounded-[2px]  duration-300 py-4 bg-[#EFEFEF]  gap-2 md:gap-0 p-4 backdrop-blur-[40px] shadow-[0_2px_4px_1px_rgba(20,20,20,0.08)] z-10';
   const iconSource = icon?.src ?? (icon?.name ? `/assets/${icon.name}.svg` : undefined);
   const iconAlt = icon?.alt ?? icon?.title ?? title;
   const resolvedIconWidth = icon?.width ?? iconSize?.width ?? 70;
