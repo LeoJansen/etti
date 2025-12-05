@@ -42,7 +42,7 @@ const ProjectCard = ({
               className='rounded-t-[2px] object-cover'
               sizes='(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw' />
           </div>
-          <div className="relative flex flex-col w-full p-6 z-40">
+          <div className="relative flex flex-col w-full p-6 z-40 h-30">
             <div className='flex items-center gap-4'>
               <h3 className="text-2xl font-medium text-[#777777] tracking-[-0.02em] mb-2">{title}</h3>
               <div className='h-[4px] w-full bg-[#EB9948]' />
