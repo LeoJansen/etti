@@ -1,14 +1,11 @@
 
 "use client";
 
-import { useEffect, useLayoutEffect } from "react";
+import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-const useIsomorphicLayoutEffect =
-	typeof window !== "undefined" ? useLayoutEffect : useEffect;
-
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 const prefersReducedMotion = () => {
 	if (typeof window === "undefined" || !window.matchMedia) {
@@ -19,7 +16,8 @@ const prefersReducedMotion = () => {
 };
 
 const useWhyAnimation = (sectionRef, disabled = false) => {
-	useIsomorphicLayoutEffect(() => {
+	useGSAP(
+		() => {
 		if (disabled) {
 			return undefined;
 		}
@@ -143,7 +141,12 @@ const useWhyAnimation = (sectionRef, disabled = false) => {
 		}, sectionElement);
 
 		return () => ctx.revert();
-	}, [sectionRef, disabled]);
+		},
+		{
+			scope: sectionRef,
+			dependencies: [sectionRef, disabled],
+		}
+	);
 
 	return undefined;
 };

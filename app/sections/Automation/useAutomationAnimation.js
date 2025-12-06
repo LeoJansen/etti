@@ -1,17 +1,15 @@
 
 "use client";
 
-import { useEffect, useLayoutEffect } from "react";
+import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-const useIsomorphicLayoutEffect =
-	typeof window !== "undefined" ? useLayoutEffect : useEffect;
-
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 export function useAutomationAnimation(sectionRef, disabled = false) {
-	useIsomorphicLayoutEffect(() => {
+	useGSAP(
+		() => {
 		if (disabled) {
 			return undefined;
 		}
@@ -125,5 +123,10 @@ export function useAutomationAnimation(sectionRef, disabled = false) {
 		}, sectionElement);
 
 		return () => ctx.revert();
-	}, [sectionRef, disabled]);
+		},
+		{
+			scope: sectionRef,
+			dependencies: [sectionRef, disabled],
+		}
+	);
 }

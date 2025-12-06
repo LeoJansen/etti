@@ -1,16 +1,14 @@
 'use client';
 
-import { useEffect, useLayoutEffect } from 'react';
+import { useGSAP } from '@gsap/react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-const useIsomorphicLayoutEffect =
-	typeof window !== 'undefined' ? useLayoutEffect : useEffect;
-
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 const useProjectAnimation = (sectionRef) => {
-	useIsomorphicLayoutEffect(() => {
+	useGSAP(
+		() => {
 		const sectionElement = sectionRef?.current;
 		if (!sectionElement) {
 			return;
@@ -81,7 +79,12 @@ const useProjectAnimation = (sectionRef) => {
 		}, sectionElement);
 
 		return () => ctx.revert();
-	}, [sectionRef]);
+		},
+		{
+			scope: sectionRef,
+			dependencies: [sectionRef],
+		}
+	);
 };
 
 export default useProjectAnimation;

@@ -165,8 +165,8 @@ const LanguageSwitcher = ({
       <button
         type="button"
         ref={buttonRef}
-  aria-haspopup="listbox"
-  aria-expanded={isOpen}
+        aria-haspopup="listbox"
+        aria-expanded={isOpen ? "true" : "false"}
         id={buttonId}
         onClick={() => setIsOpen((previous) => !previous)}
         onKeyDown={handleButtonKeyDown}
@@ -193,7 +193,7 @@ const LanguageSwitcher = ({
                   id={`language-${option}`}
                   type="button"
                   role="option"
-                  aria-selected={isActive}
+                  aria-selected={isActive ? "true" : "false"}
                   ref={(element) => {
                     optionRefs.current[option] = element;
                   }}

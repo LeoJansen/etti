@@ -1,15 +1,16 @@
-import { useEffect } from "react";
+import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 export const useCameraAnimation = (sectionRef, isMobile = false) => {
-  useEffect(() => {
-    if (!sectionRef?.current) return;
+  useGSAP(
+    () => {
+      if (!sectionRef?.current) return;
 
-    const section = sectionRef.current;
-    const ctx = gsap.context(() => {
+      const section = sectionRef.current;
+      const ctx = gsap.context(() => {
       // Title animations
       gsap.set("[data-camera-heading]", { 
         opacity: 0, 
@@ -179,8 +180,13 @@ export const useCameraAnimation = (sectionRef, isMobile = false) => {
         });
       }
 
-    }, section);
+      }, section);
 
-    return () => ctx.revert();
-  }, [sectionRef, isMobile]);
+      return () => ctx.revert();
+    },
+    {
+      scope: sectionRef,
+      dependencies: [sectionRef, isMobile],
+    }
+  );
 };
