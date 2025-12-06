@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { useMemo, useRef } from "react";
+import { Suspense, useMemo, useRef } from "react";
 
 import { whatsAppLink } from "@/src/site/constants/contact";
 import { useDictionary } from "@/src/site/context/DictionaryContext";
@@ -53,7 +53,9 @@ export default function Hero() {
     <section ref={sectionRef} className="relative w-full h-screen bg-black text-white hidden md:flex items-center justify-start overflow-hidden isolate">
 
         <div className="absolute top-8 left-8 z-50">
-          <LanguageSwitcher className="items-center   " buttonClassName="min-w-[48px]" />
+          <Suspense fallback={null}>
+            <LanguageSwitcher className="items-center   " buttonClassName="min-w-[48px]" />
+          </Suspense>
         </div>
         
   <div className='w-full h-full flex flex-col justify-around items-center z-10'>

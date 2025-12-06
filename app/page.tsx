@@ -1,5 +1,4 @@
 
-import App from "./App";
 import { headers } from "next/headers";
 import { redirect } from "next/navigation";
 
@@ -28,21 +27,12 @@ const getPreferredLocale = (acceptLanguageHeader: string | null): Locale => {
   return defaultLocale;
 };
 
-export default async function Home() {
+const Home = async () => {
   const headerList = await headers();
   const acceptLanguage = headerList.get("accept-language");
   const locale = getPreferredLocale(acceptLanguage);
 
-  // Redirect root to localized path
   redirect(`/${locale}`);
+};
 
-  // Fallback UI (shouldn't be rendered after redirect)
-  return (
-    <div id="page1" className="relative w-full min-h-screen overflow-visible pointer-events-none">
-      {/* Reabilita eventos no conteúdo real */}
-      <div className="pointer-events-auto @container">
-        <App />
-      </div>
-    </div>
-  );
-}
+export default Home;
