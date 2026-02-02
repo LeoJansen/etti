@@ -47,6 +47,7 @@ const SystemsSection = () => {
             muted
             loop
             playsInline
+            preload="none"
             data-systems-video
          >
             <source src="/assets/systems/systems-bg.mp4" type="video/mp4" />

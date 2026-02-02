@@ -31,6 +31,7 @@ const SystemsSectionMobile = () => {
             muted
             loop
             playsInline
+            preload="none"
             data-systems-video
             style={{
                objectFit: 'cover',

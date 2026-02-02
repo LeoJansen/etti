@@ -1,0 +1,2131 @@
+
+--- page 1 ---
+Report from Feb 1, 2026, 10:07:04 PM
+Showing results for URL: https://etti.pt/en
+Run with original URL
+Discover what your real users are experiencing No Data
+Diagnose performance issueshttps://etti.pt/ Analyze
+Values are estimated and may vary. The performance score is calculated
+directly from these metrics. See calculator.
+0–49 50–89 90–100Performance
+54
+Accessibility
+98
+Best Practices
+100
+SEO
+91
+54
+Performance
+PageSpe ed Insights Copy Link Docs
+--- page 2 ---
+Show audits relevant to: A l lFCPLCPTBTCLSMETRICS Expand view
+First Contentful P aint
+1 . 7   sLargest Contentful P aint
+44.1 s
+Total Blocking Time
+540 msCumulative Layout Shift
+0
+Speed Index
+6.7 s
+Captured at Feb 1, 2026, 10:06 PM
+GMT-3
+Emulated Moto G P ower with
+Lighthouse 13.0.1
+Single page session
+Initial page load
+ Slow 4G throttling
+ Using HeadlessChromium
+137.0.7151.119 with lr
+INSIGHTS
+Render blocking requests  —Est savings of 360 ms
+Requests are blocking the page's initial render, which may delay L CP. Deferring or inlining  can move these
+network requests out of the critical path. LCPFCPUnscored
+etti.pt 1st Party 1 3 .6  K i B 6 0 0  m s
+PageSpe ed Insights Copy Link Docs
+--- page 3 ---
+Legacy JavaScript  —Est savings of 14 KiB
+Polyfills and transforms enable older browsers to use new JavaScript features. However, many aren't necessary
+for modern browsers. Consider modifying your JavaScript build process to not transpile Baseline  features,
+unless you know you must support older browsers. Learn why most sites can deploy ES6+ code without
+transpiling LCPFCPUnscored
+Forced reflow
+A forced reflow occurs when JavaScript queries geometric properties (such as offsetWidth) after styles have
+been invalidated by a change to the DOM state. This can result in poor performance. Learn more about forced
+reflows  and possible mitigations. Unscored
+Network dependency tree
+Avoid chaining critical requests  by reducing the length of chains, reducing the download size of resources, or…chunks/cae58f36c2d1a29c.css 12.4 KiB 150 ms
+…chunks/c958bc65ebcdb565.css 1.2 KiB 450 ms
+(etti.pt)
+(etti.pt)
+etti.pt 1st Party 1 3 .7  K i B
+…chunks/aee6c7720838f8a2.js 13.7 KiB
+…chunks/aee6c7720838f8a2.js:1:6066 Array.prototype.at
+…chunks/aee6c7720838f8a2.js:1:5454 Array.prototype.flat
+…chunks/aee6c7720838f8a2.js:1:5567 Array.prototype.flatMap
+…chunks/aee6c7720838f8a2.js:1:5943 Object.fromEntries
+…chunks/aee6c7720838f8a2.js:1:6201 Object.hasOwn
+…chunks/aee6c7720838f8a2.js:1:5196 String.prototype.trimEnd
+…chunks/aee6c7720838f8a2.js:1:5111 String.prototype.trimStart
+(etti.pt)
+(etti.pt)
+(etti.pt)
+(etti.pt)
+(etti.pt)
+(etti.pt)
+(etti.pt)
+(etti.pt)
+…chunks/aee6c7720838f8a2.js:2:8056 448 ms
+(etti.pt)
+…chunks/1b853a0073bff034.js:1:53728 593 ms
+…chunks/1b853a0073bff034.js:1:59013 28 ms
+…chunks/1b853a0073bff034.js:1:70953 12 ms
+…chunks/1b853a0073bff034.js:1:80711 15 ms
+…chunks/8b886a719f5e2bdb.js:1:4882 28 ms
+…chunks/8b886a719f5e2bdb.js:6:31893 0 ms
+…chunks/8b886a719f5e2bdb.js:6:37967 1 ms
+(etti.pt)
+(etti.pt)
+(etti.pt)
+(etti.pt)
+(etti.pt)
+(etti.pt)
+(etti.pt)URL
+URLTransfer Size
+Transfer SizeDuration
+Duration
+URL Wasted by tes
+Top function call Total r eflow time
+Sour ce Total r eflow time
+PageSpe ed Insights Copy Link Docs
+--- page 4 ---
+deferring the download of unnecessary resources to improve page load. LCPUnscored
+Maximum critical path latency:  475 ms
+Initial Navigation
+/en  - 242 ms, 17.76 KiB
+…chunks/cae58f36c2d1a29c.css  - 475 ms, 12.42 KiB
+…chunks/c958bc65ebcdb565.css  - 319 ms, 1.21 KiB
+Preconnected origins
+preconnect  hints help the browser establish a connection earlier in the page load, saving time when the first request for
+that origin is made. The following are the origins that the page preconnected to.
+no origins were preconnected
+Preconnect candidates
+Add preconnect  hints to your most important origins, but try to use no more than 4.
+No additional origins are good candidates for preconnecting
+Improve image delivery  —Est savings of 6,748 KiB
+Reducing the download time of images can improve the perceived load time of the page and L CP. Learn more
+about optimizing image size LCPFCPUnscored
+(etti.pt)
+(etti.pt)
+(etti.pt)
+etti.pt 1st Party 8 ,1 1 3 .4  K i B 6 ,7 4 8 .0  K i B
+Emergency Lighting
+<h3 class="system-card-title
+text-4xl md:text-5xl lg:text-
+6xl xl:text-7xl font-bold t…"
+style="background-
+image:url(/assets/systems/sys
+temCard2.png)">…systems/systemCard2.png 4,363.6 KiB 3,681.0 KiB
+Using a modern image format (W ebP, A VIF) or
+increasing the image compression could improve this
+image's download size.3,681.0 KiB
+Early Detection
+<h3 class="system-card-title
+text-4xl md:text-5xl lg:text-
+6xl xl:text-7xl font-bold t…"
+style="background-
+image:url(/assets/systems/sys
+temCard1.png)">…systems/systemCard1.png 3,749.7 KiB 3,067.1 KiB
+Using a modern image format (W ebP, A VIF) or
+increasing the image compression could improve this
+image's download size.3,067.1 KiB
+(etti.pt)
+(etti.pt)URLResour ce
+SizeEst Savings
+PageSpe ed Insights Copy Link Docs
+--- page 5 ---
+LCP breakdown
+Each subpart has specific improvement strategies . Ideally, most of the L CP time should be spent on loading the
+resources, not within delays. LCPUnscored
+VERSÃ O EM POR TUGUÊS
+<span>
+These insights are also available in the Chrome DevT ools P erformance P anel - record a trace  to view more detailed information.Time to first byte 0 ms
+Element render delay 2,440 ms
+DIAGNOSTICS
+Minimize main-thread work  —4.8 s
+Consider reducing the time spent parsing, compiling and executing JS. Y ou may find delivering smaller JS
+payloads helps with this. Learn how to minimize main-thread work TBTUnscored
+Reduce JavaScript execution time  —1.6 s
+Consider reducing the time spent parsing, compiling, and executing JS. Y ou may find delivering smaller JS
+payloads helps with this. Learn how to reduce Javascript execution time .TBTUnscoredStyle & Layout 1,752 ms
+Script Evaluation 1,644 ms
+Other 1,024 ms
+Rendering 254 ms
+Script P arsing & Compilation 82 ms
+Parse HTML & CSS 14 ms
+Garbage Collection 14 ms
+etti.pt 1st Party 4 ,4 6 3  m s 1 ,5 9 4  m s 4 2  m s
+…chunks/aee6c7720838f8a2.js 3,203 ms 1,343 ms 23 ms
+(etti.pt)Subp art Duration
+Category Time Spent
+MobileDesktop
+PageSpe ed Insights Copy Link Docs
+--- page 6 ---
+Reduce unused JavaScript  —Est savings of 43 KiB
+Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by
+network activity. Learn how to reduce unused JavaScript .LCPFCPUnscored
+Avoid enormous network payloads  —Total size was 18,422 KiB
+Large network payloads cost users real money and are highly correlated with long load times. Learn how to
+reduce payload sizes .Unscored
+Avoid long main-thread tasks  —5 long tasks found/en 983 ms 22 ms 4 ms
+…chunks/1b853a0073bff034.js 277 ms 229 ms 14 ms
+Unattributable 2 2 6  m s 6  m s 0  m s
+Unattributable 226 ms 6 ms 0 ms
+(etti.pt)
+(etti.pt)
+etti.pt 1st Party 1 0 8 .2  K i B 4 2 .7  K i B
+…chunks/aee6c7720838f8a2.js 69.6 KiB 22.3 KiB
+…chunks/74c9ca46d80a8b03.js 38.6 KiB 20.4 KiB
+(etti.pt)
+(etti.pt)
+etti.pt 1st Party 1 8 ,0 2 4 .0  K i B
+…systems/systemCard4.png 5,370.4 KiB
+…systems/systemCard2.png 4,364.2 KiB
+…systems/systemCard1.png 3,750.3 KiB
+…systems/systemCard3.png 2,749.7 KiB
+…systems/systems-bg.mp4 1,517.3 KiB
+…chunks/aee6c7720838f8a2.js 70.3 KiB
+/_next/image?url=%2F assets%2FheroMobile.png&w=750&q=80 69.5 KiB
+…media/83afe278b6a6bb3c-s.p.3a6ba036.woff2 47.9 KiB
+…chunks/1b853a0073bff034.js 45.2 KiB
+…chunks/74c9ca46d80a8b03.js 39.3 KiB
+(etti.pt)
+(etti.pt)
+(etti.pt)
+(etti.pt)
+(etti.pt)
+(etti.pt)
+(etti.pt)
+(etti.pt)
+(etti.pt)
+(etti.pt)URL
+URLTotal CPU
+Time
+Total CPU
+TimeScript Evaluation
+Script EvaluationScript P arse
+Script P arse
+URL Transfer Size Est Savings
+URL Transfer Size
+PageSpe ed Insights Copy Link Docs
+--- page 7 ---
+Lists the longest tasks on the main thread, useful for identifying worst contributors to input delay. Learn how to
+avoid long main-thread tasks TBTUnscored
+Avoid non-composited animations  —39 animated elements found
+Animations which are not composited can be janky and increase CLS. Learn how to avoid non-composited
+animations CLSUnscoredetti.pt 1st Party 8 9 3  m s
+…chunks/aee6c7720838f8a2.js 3,176 ms 449 ms
+…chunks/aee6c7720838f8a2.js 84,901 ms 241 ms
+…chunks/aee6c7720838f8a2.js 2,401 ms 87 ms
+…chunks/aee6c7720838f8a2.js 2,507 ms 60 ms
+…chunks/aee6c7720838f8a2.js 85,142 ms 56 ms
+(etti.pt)
+(etti.pt)
+(etti.pt)
+(etti.pt)
+(etti.pt)
+Design R eportDetailed sizing calculations and technical justification for every…
+<div data-doc-card="true" class="flex flex-col items-center h-full self-end max-w-
+[500px] w-full rounded…" style="translate: none; rotate: none; scale: none;">
+Unsupported CSS Property: visibility
+Electrical DatasheetOfficial technical specifications for the electrical instal…
+<div data-doc-card="true" class="flex flex-col items-center h-full self-end max-w-
+[500px] w-full rounded…" style="translate: none; rotate: none; scale: none;">
+Unsupported CSS Property: visibility
+Statement of R esponsibilityT echnical statement that guarantees regulatory compl…
+<div data-doc-card="true" class="flex flex-col items-center h-full self-end max-w-
+[500px] w-full rounded…" style="translate: none; rotate: none; scale: none;">
+Unsupported CSS Property: visibility
+Go to certification slide 2
+<button class="h-3 w-3 rounded-full transition-all bg-[#dadada] hover:bg-white/80"
+aria-label="Go to certification slide 2">
+Unsupported CSS Property: visibility
+Go to certification slide 1
+<button class="h-3 w-3 rounded-full transition-all bg-[#EB9948]" aria-label="Go to
+certification slide 1">
+Unsupported CSS Property: visibility
+Next certification slide
+<button class="absolute right-4 top-1/2 -translate-y-1/2 z-30 flex h-12 w-12 items-
+center…" aria-label="Next certification slide">URL Start Time Duration
+Element Name
+PageSpe ed Insights Copy Link Docs
+--- page 8 ---
+Unsupported CSS Property: visibility
+Previous certification slide
+<button class="absolute left-4 top-1/2 -translate-y-1/2 flex h-12 w-12 items-center
+just…" aria-label="Previous certification slide">
+Unsupported CSS Property: visibility
+Early Detection
+<h3 class="system-card-title text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold t…"
+style="background-image:url(/assets/systems/systemCard1.png)">
+Unsupported CSS Property: visibility
+Emergency Lighting
+<h3 class="system-card-title text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold t…"
+style="background-image:url(/assets/systems/systemCard2.png)">
+Unsupported CSS Property: visibility
+Continuous Monitoring
+<h3 class="system-card-title text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold t…"
+style="background-image:url(/assets/systems/systemCard3.png)">
+Unsupported CSS Property: visibility
+Preventive Maintenance
+<h3 class="system-card-title text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold t…"
+style="background-image:url(/assets/systems/systemCard4.png)">
+Unsupported CSS Property: visibility
+Icon representing home automation
+<div class="flex justify-center items-center border-2 border-[hsl(30,50%,70%)]
+rounded…" style="border-color: rgb(217, 179, 140);">
+Unsupported CSS Property: box-shadow
+Unsupported CSS Property: box-shadow
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+color
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+color
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+color
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+color
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+colorElement Name
+PageSpe ed Insights Copy Link Docs
+--- page 9 ---
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+color
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+color
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+color
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+color
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+color
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+color
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+color
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+color
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+color
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+color
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+color
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+color
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+color
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+color
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+colorElement Name
+PageSpe ed Insights Copy Link Docs
+--- page 10 ---
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+color
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+color
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+color
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+color
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+color
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+color
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+color
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+color
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+color
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+color
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+color
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+color
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+color
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+color
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+colorElement Name
+PageSpe ed Insights Copy Link Docs
+--- page 11 ---
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+color
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+color
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+color
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+color
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+color
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+color
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+color
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+color
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+color
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+color
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+color
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+color
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+color
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+color
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+colorElement Name
+PageSpe ed Insights Copy Link Docs
+--- page 12 ---
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+color
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+color
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+color
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+color
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+color
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+color
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+color
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+color
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+color
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+color
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+color
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+color
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+color
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+color
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+colorElement Name
+PageSpe ed Insights Copy Link Docs
+--- page 13 ---
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+color
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+color
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+color
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+color
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+color
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+color
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+color
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+color
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+color
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+color
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+color
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+color
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+color
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+color
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+colorElement Name
+PageSpe ed Insights Copy Link Docs
+--- page 14 ---
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+color
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+color
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+color
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+color
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+color
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+color
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+color
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+color
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+color
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+color
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+color
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+color
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+color
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+color
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+colorElement Name
+PageSpe ed Insights Copy Link Docs
+--- page 15 ---
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+color
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+color
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+color
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+color
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+color
+Unsupported CSS Property: border-bottom-colorborder-
+bottom-
+color
+Unsupported CSS Property: border-left-colorborder-left-
+color
+Unsupported CSS Property: border-left-colorborder-left-
+color
+Unsupported CSS Property: border-left-colorborder-left-
+color
+Unsupported CSS Property: border-left-colorborder-left-
+color
+Unsupported CSS Property: border-left-colorborder-left-
+color
+Unsupported CSS Property: border-left-colorborder-left-
+color
+Unsupported CSS Property: border-left-colorborder-left-
+color
+Unsupported CSS Property: border-left-colorborder-left-
+color
+Unsupported CSS Property: border-left-colorborder-left-
+color
+Unsupported CSS Property: border-left-colorborder-left-
+color
+Unsupported CSS Property: border-left-colorborder-left-
+color
+Unsupported CSS Property: border-left-colorborder-left-
+color
+Unsupported CSS Property: border-left-colorborder-left-
+color
+Unsupported CSS Property: border-left-colorborder-left-
+colorElement Name
+PageSpe ed Insights Copy Link Docs
+--- page 16 ---
+Unsupported CSS Property: border-left-colorborder-left-
+color
+Unsupported CSS Property: border-left-colorborder-left-
+color
+Unsupported CSS Property: border-left-colorborder-left-
+color
+Unsupported CSS Property: border-left-colorborder-left-
+color
+Unsupported CSS Property: border-left-colorborder-left-
+color
+Unsupported CSS Property: border-left-colorborder-left-
+color
+Unsupported CSS Property: border-left-colorborder-left-
+color
+Unsupported CSS Property: border-left-colorborder-left-
+color
+Unsupported CSS Property: border-left-colorborder-left-
+color
+Unsupported CSS Property: border-left-colorborder-left-
+color
+Unsupported CSS Property: border-left-colorborder-left-
+color
+Unsupported CSS Property: border-left-colorborder-left-
+color
+Unsupported CSS Property: border-left-colorborder-left-
+color
+Unsupported CSS Property: border-left-colorborder-left-
+color
+Unsupported CSS Property: border-left-colorborder-left-
+color
+Unsupported CSS Property: border-left-colorborder-left-
+color
+Unsupported CSS Property: border-left-colorborder-left-
+color
+Unsupported CSS Property: border-left-colorborder-left-
+color
+Unsupported CSS Property: border-left-colorborder-left-
+color
+Unsupported CSS Property: border-left-colorborder-left-
+color
+Unsupported CSS Property: border-left-colorborder-left-
+color
+Unsupported CSS Property: border-left-colorborder-left-
+colorElement Name
+PageSpe ed Insights Copy Link Docs
+--- page 17 ---
+Unsupported CSS Property: border-left-colorborder-left-
+color
+Unsupported CSS Property: border-left-colorborder-left-
+color
+Unsupported CSS Property: border-left-colorborder-left-
+color
+Unsupported CSS Property: border-left-colorborder-left-
+color
+Unsupported CSS Property: border-left-colorborder-left-
+color
+Unsupported CSS Property: border-left-colorborder-left-
+color
+Unsupported CSS Property: border-left-colorborder-left-
+color
+Unsupported CSS Property: border-left-colorborder-left-
+color
+Unsupported CSS Property: border-left-colorborder-left-
+color
+Unsupported CSS Property: border-left-colorborder-left-
+color
+Unsupported CSS Property: border-left-colorborder-left-
+color
+Unsupported CSS Property: border-left-colorborder-left-
+color
+Unsupported CSS Property: border-left-colorborder-left-
+color
+Unsupported CSS Property: border-left-colorborder-left-
+color
+Unsupported CSS Property: border-left-colorborder-left-
+color
+Unsupported CSS Property: border-left-colorborder-left-
+color
+Unsupported CSS Property: border-left-colorborder-left-
+color
+Unsupported CSS Property: border-left-colorborder-left-
+color
+Unsupported CSS Property: border-left-colorborder-left-
+color
+Unsupported CSS Property: border-left-colorborder-left-
+color
+Unsupported CSS Property: border-left-colorborder-left-
+color
+Unsupported CSS Property: border-left-colorborder-left-
+colorElement Name
+PageSpe ed Insights Copy Link Docs
+--- page 18 ---
+Unsupported CSS Property: border-left-colorborder-left-
+color
+Unsupported CSS Property: border-left-colorborder-left-
+color
+Unsupported CSS Property: border-left-colorborder-left-
+color
+Unsupported CSS Property: border-left-colorborder-left-
+color
+Unsupported CSS Property: border-left-colorborder-left-
+color
+Unsupported CSS Property: border-left-colorborder-left-
+color
+Unsupported CSS Property: border-left-colorborder-left-
+color
+Unsupported CSS Property: border-left-colorborder-left-
+color
+Unsupported CSS Property: border-left-colorborder-left-
+color
+Unsupported CSS Property: border-left-colorborder-left-
+color
+Unsupported CSS Property: border-left-colorborder-left-
+color
+Unsupported CSS Property: border-left-colorborder-left-
+color
+Unsupported CSS Property: border-left-colorborder-left-
+color
+Unsupported CSS Property: border-left-colorborder-left-
+color
+Unsupported CSS Property: border-left-colorborder-left-
+color
+Unsupported CSS Property: border-left-colorborder-left-
+color
+Unsupported CSS Property: border-left-colorborder-left-
+color
+Unsupported CSS Property: border-left-colorborder-left-
+color
+Unsupported CSS Property: border-left-colorborder-left-
+color
+Unsupported CSS Property: border-left-colorborder-left-
+color
+Unsupported CSS Property: border-left-colorborder-left-
+color
+Unsupported CSS Property: border-left-colorborder-left-
+colorElement Name
+PageSpe ed Insights Copy Link Docs
+--- page 19 ---
+Unsupported CSS Property: border-left-colorborder-left-
+color
+Unsupported CSS Property: border-left-colorborder-left-
+color
+Unsupported CSS Property: border-left-colorborder-left-
+color
+Unsupported CSS Property: border-left-colorborder-left-
+color
+Unsupported CSS Property: border-left-colorborder-left-
+color
+Unsupported CSS Property: border-left-colorborder-left-
+color
+Unsupported CSS Property: border-left-colorborder-left-
+color
+Unsupported CSS Property: border-left-colorborder-left-
+color
+Unsupported CSS Property: border-left-colorborder-left-
+color
+Unsupported CSS Property: border-left-colorborder-left-
+color
+Unsupported CSS Property: border-left-colorborder-left-
+color
+Unsupported CSS Property: border-left-colorborder-left-
+color
+Unsupported CSS Property: border-left-colorborder-left-
+color
+Unsupported CSS Property: border-left-colorborder-left-
+color
+Unsupported CSS Property: border-left-colorborder-left-
+color
+Unsupported CSS Property: border-left-colorborder-left-
+color
+Unsupported CSS Property: border-left-colorborder-left-
+color
+Unsupported CSS Property: border-left-colorborder-left-
+color
+Unsupported CSS Property: border-left-colorborder-left-
+color
+Unsupported CSS Property: border-left-colorborder-left-
+color
+Unsupported CSS Property: border-left-colorborder-left-
+color
+Unsupported CSS Property: border-right-colorborder-
+right-colorElement Name
+PageSpe ed Insights Copy Link Docs
+--- page 20 ---
+Unsupported CSS Property: border-right-colorborder-
+right-color
+Unsupported CSS Property: border-right-colorborder-
+right-color
+Unsupported CSS Property: border-right-colorborder-
+right-color
+Unsupported CSS Property: border-right-colorborder-
+right-color
+Unsupported CSS Property: border-right-colorborder-
+right-color
+Unsupported CSS Property: border-right-colorborder-
+right-color
+Unsupported CSS Property: border-right-colorborder-
+right-color
+Unsupported CSS Property: border-right-colorborder-
+right-color
+Unsupported CSS Property: border-right-colorborder-
+right-color
+Unsupported CSS Property: border-right-colorborder-
+right-color
+Unsupported CSS Property: border-right-colorborder-
+right-color
+Unsupported CSS Property: border-right-colorborder-
+right-color
+Unsupported CSS Property: border-right-colorborder-
+right-color
+Unsupported CSS Property: border-right-colorborder-
+right-color
+Unsupported CSS Property: border-right-colorborder-
+right-color
+Unsupported CSS Property: border-right-colorborder-
+right-color
+Unsupported CSS Property: border-right-colorborder-
+right-color
+Unsupported CSS Property: border-right-colorborder-
+right-color
+Unsupported CSS Property: border-right-colorborder-
+right-color
+Unsupported CSS Property: border-right-colorborder-
+right-color
+Unsupported CSS Property: border-right-colorborder-
+right-color
+Unsupported CSS Property: border-right-colorborder-
+right-colorElement Name
+PageSpe ed Insights Copy Link Docs
+--- page 21 ---
+Unsupported CSS Property: border-right-colorborder-
+right-color
+Unsupported CSS Property: border-right-colorborder-
+right-color
+Unsupported CSS Property: border-right-colorborder-
+right-color
+Unsupported CSS Property: border-right-colorborder-
+right-color
+Unsupported CSS Property: border-right-colorborder-
+right-color
+Unsupported CSS Property: border-right-colorborder-
+right-color
+Unsupported CSS Property: border-right-colorborder-
+right-color
+Unsupported CSS Property: border-right-colorborder-
+right-color
+Unsupported CSS Property: border-right-colorborder-
+right-color
+Unsupported CSS Property: border-right-colorborder-
+right-color
+Unsupported CSS Property: border-right-colorborder-
+right-color
+Unsupported CSS Property: border-right-colorborder-
+right-color
+Unsupported CSS Property: border-right-colorborder-
+right-color
+Unsupported CSS Property: border-right-colorborder-
+right-color
+Unsupported CSS Property: border-right-colorborder-
+right-color
+Unsupported CSS Property: border-right-colorborder-
+right-color
+Unsupported CSS Property: border-right-colorborder-
+right-color
+Unsupported CSS Property: border-right-colorborder-
+right-color
+Unsupported CSS Property: border-right-colorborder-
+right-color
+Unsupported CSS Property: border-right-colorborder-
+right-color
+Unsupported CSS Property: border-right-colorborder-
+right-color
+Unsupported CSS Property: border-right-colorborder-
+right-colorElement Name
+PageSpe ed Insights Copy Link Docs
+--- page 22 ---
+Unsupported CSS Property: border-right-colorborder-
+right-color
+Unsupported CSS Property: border-right-colorborder-
+right-color
+Unsupported CSS Property: border-right-colorborder-
+right-color
+Unsupported CSS Property: border-right-colorborder-
+right-color
+Unsupported CSS Property: border-right-colorborder-
+right-color
+Unsupported CSS Property: border-right-colorborder-
+right-color
+Unsupported CSS Property: border-right-colorborder-
+right-color
+Unsupported CSS Property: border-right-colorborder-
+right-color
+Unsupported CSS Property: border-right-colorborder-
+right-color
+Unsupported CSS Property: border-right-colorborder-
+right-color
+Unsupported CSS Property: border-right-colorborder-
+right-color
+Unsupported CSS Property: border-right-colorborder-
+right-color
+Unsupported CSS Property: border-right-colorborder-
+right-color
+Unsupported CSS Property: border-right-colorborder-
+right-color
+Unsupported CSS Property: border-right-colorborder-
+right-color
+Unsupported CSS Property: border-right-colorborder-
+right-color
+Unsupported CSS Property: border-right-colorborder-
+right-color
+Unsupported CSS Property: border-right-colorborder-
+right-color
+Unsupported CSS Property: border-right-colorborder-
+right-color
+Unsupported CSS Property: border-right-colorborder-
+right-color
+Unsupported CSS Property: border-right-colorborder-
+right-color
+Unsupported CSS Property: border-right-colorborder-
+right-colorElement Name
+PageSpe ed Insights Copy Link Docs
+--- page 23 ---
+Unsupported CSS Property: border-right-colorborder-
+right-color
+Unsupported CSS Property: border-right-colorborder-
+right-color
+Unsupported CSS Property: border-right-colorborder-
+right-color
+Unsupported CSS Property: border-right-colorborder-
+right-color
+Unsupported CSS Property: border-right-colorborder-
+right-color
+Unsupported CSS Property: border-right-colorborder-
+right-color
+Unsupported CSS Property: border-right-colorborder-
+right-color
+Unsupported CSS Property: border-right-colorborder-
+right-color
+Unsupported CSS Property: border-right-colorborder-
+right-color
+Unsupported CSS Property: border-right-colorborder-
+right-color
+Unsupported CSS Property: border-right-colorborder-
+right-color
+Unsupported CSS Property: border-right-colorborder-
+right-color
+Unsupported CSS Property: border-right-colorborder-
+right-color
+Unsupported CSS Property: border-right-colorborder-
+right-color
+Unsupported CSS Property: border-right-colorborder-
+right-color
+Unsupported CSS Property: border-right-colorborder-
+right-color
+Unsupported CSS Property: border-right-colorborder-
+right-color
+Unsupported CSS Property: border-right-colorborder-
+right-color
+Unsupported CSS Property: border-right-colorborder-
+right-color
+Unsupported CSS Property: border-right-colorborder-
+right-color
+Unsupported CSS Property: border-right-colorborder-
+right-color
+Unsupported CSS Property: border-right-colorborder-
+right-colorElement Name
+PageSpe ed Insights Copy Link Docs
+--- page 24 ---
+Unsupported CSS Property: border-right-colorborder-
+right-color
+Unsupported CSS Property: border-right-colorborder-
+right-color
+Unsupported CSS Property: border-right-colorborder-
+right-color
+Unsupported CSS Property: border-right-colorborder-
+right-color
+Unsupported CSS Property: border-right-colorborder-
+right-color
+Unsupported CSS Property: border-right-colorborder-
+right-color
+Unsupported CSS Property: border-right-colorborder-
+right-color
+Unsupported CSS Property: border-right-colorborder-
+right-color
+Unsupported CSS Property: border-right-colorborder-
+right-color
+Unsupported CSS Property: border-right-colorborder-
+right-color
+Unsupported CSS Property: border-right-colorborder-
+right-color
+Unsupported CSS Property: border-right-colorborder-
+right-color
+Unsupported CSS Property: border-top-colorborder-top-
+color
+Unsupported CSS Property: border-top-colorborder-top-
+color
+Unsupported CSS Property: border-top-colorborder-top-
+color
+Unsupported CSS Property: border-top-colorborder-top-
+color
+Unsupported CSS Property: border-top-colorborder-top-
+color
+Unsupported CSS Property: border-top-colorborder-top-
+color
+Unsupported CSS Property: border-top-colorborder-top-
+color
+Unsupported CSS Property: border-top-colorborder-top-
+color
+Unsupported CSS Property: border-top-colorborder-top-
+color
+Unsupported CSS Property: border-top-colorborder-top-
+colorElement Name
+PageSpe ed Insights Copy Link Docs
+--- page 25 ---
+Unsupported CSS Property: border-top-colorborder-top-
+color
+Unsupported CSS Property: border-top-colorborder-top-
+color
+Unsupported CSS Property: border-top-colorborder-top-
+color
+Unsupported CSS Property: border-top-colorborder-top-
+color
+Unsupported CSS Property: border-top-colorborder-top-
+color
+Unsupported CSS Property: border-top-colorborder-top-
+color
+Unsupported CSS Property: border-top-colorborder-top-
+color
+Unsupported CSS Property: border-top-colorborder-top-
+color
+Unsupported CSS Property: border-top-colorborder-top-
+color
+Unsupported CSS Property: border-top-colorborder-top-
+color
+Unsupported CSS Property: border-top-colorborder-top-
+color
+Unsupported CSS Property: border-top-colorborder-top-
+color
+Unsupported CSS Property: border-top-colorborder-top-
+color
+Unsupported CSS Property: border-top-colorborder-top-
+color
+Unsupported CSS Property: border-top-colorborder-top-
+color
+Unsupported CSS Property: border-top-colorborder-top-
+color
+Unsupported CSS Property: border-top-colorborder-top-
+color
+Unsupported CSS Property: border-top-colorborder-top-
+color
+Unsupported CSS Property: border-top-colorborder-top-
+color
+Unsupported CSS Property: border-top-colorborder-top-
+color
+Unsupported CSS Property: border-top-colorborder-top-
+color
+Unsupported CSS Property: border-top-colorborder-top-
+colorElement Name
+PageSpe ed Insights Copy Link Docs
+--- page 26 ---
+Unsupported CSS Property: border-top-colorborder-top-
+color
+Unsupported CSS Property: border-top-colorborder-top-
+color
+Unsupported CSS Property: border-top-colorborder-top-
+color
+Unsupported CSS Property: border-top-colorborder-top-
+color
+Unsupported CSS Property: border-top-colorborder-top-
+color
+Unsupported CSS Property: border-top-colorborder-top-
+color
+Unsupported CSS Property: border-top-colorborder-top-
+color
+Unsupported CSS Property: border-top-colorborder-top-
+color
+Unsupported CSS Property: border-top-colorborder-top-
+color
+Unsupported CSS Property: border-top-colorborder-top-
+color
+Unsupported CSS Property: border-top-colorborder-top-
+color
+Unsupported CSS Property: border-top-colorborder-top-
+color
+Unsupported CSS Property: border-top-colorborder-top-
+color
+Unsupported CSS Property: border-top-colorborder-top-
+color
+Unsupported CSS Property: border-top-colorborder-top-
+color
+Unsupported CSS Property: border-top-colorborder-top-
+color
+Unsupported CSS Property: border-top-colorborder-top-
+color
+Unsupported CSS Property: border-top-colorborder-top-
+color
+Unsupported CSS Property: border-top-colorborder-top-
+color
+Unsupported CSS Property: border-top-colorborder-top-
+color
+Unsupported CSS Property: border-top-colorborder-top-
+color
+Unsupported CSS Property: border-top-colorborder-top-
+colorElement Name
+PageSpe ed Insights Copy Link Docs
+--- page 27 ---
+Unsupported CSS Property: border-top-colorborder-top-
+color
+Unsupported CSS Property: border-top-colorborder-top-
+color
+Unsupported CSS Property: border-top-colorborder-top-
+color
+Unsupported CSS Property: border-top-colorborder-top-
+color
+Unsupported CSS Property: border-top-colorborder-top-
+color
+Unsupported CSS Property: border-top-colorborder-top-
+color
+Unsupported CSS Property: border-top-colorborder-top-
+color
+Unsupported CSS Property: border-top-colorborder-top-
+color
+Unsupported CSS Property: border-top-colorborder-top-
+color
+Unsupported CSS Property: border-top-colorborder-top-
+color
+Unsupported CSS Property: border-top-colorborder-top-
+color
+Unsupported CSS Property: border-top-colorborder-top-
+color
+Unsupported CSS Property: border-top-colorborder-top-
+color
+Unsupported CSS Property: border-top-colorborder-top-
+color
+Unsupported CSS Property: border-top-colorborder-top-
+color
+Unsupported CSS Property: border-top-colorborder-top-
+color
+Unsupported CSS Property: border-top-colorborder-top-
+color
+Unsupported CSS Property: border-top-colorborder-top-
+color
+Unsupported CSS Property: border-top-colorborder-top-
+color
+Unsupported CSS Property: border-top-colorborder-top-
+color
+Unsupported CSS Property: border-top-colorborder-top-
+color
+Unsupported CSS Property: border-top-colorborder-top-
+colorElement Name
+PageSpe ed Insights Copy Link Docs
+--- page 28 ---
+Unsupported CSS Property: border-top-colorborder-top-
+color
+Unsupported CSS Property: border-top-colorborder-top-
+color
+Unsupported CSS Property: border-top-colorborder-top-
+color
+Unsupported CSS Property: border-top-colorborder-top-
+color
+Unsupported CSS Property: border-top-colorborder-top-
+color
+Unsupported CSS Property: border-top-colorborder-top-
+color
+Unsupported CSS Property: border-top-colorborder-top-
+color
+Unsupported CSS Property: border-top-colorborder-top-
+color
+Unsupported CSS Property: border-top-colorborder-top-
+color
+Unsupported CSS Property: border-top-colorborder-top-
+color
+Unsupported CSS Property: border-top-colorborder-top-
+color
+Unsupported CSS Property: border-top-colorborder-top-
+color
+Unsupported CSS Property: border-top-colorborder-top-
+color
+Unsupported CSS Property: border-top-colorborder-top-
+color
+Unsupported CSS Property: border-top-colorborder-top-
+color
+Unsupported CSS Property: border-top-colorborder-top-
+color
+Unsupported CSS Property: border-top-colorborder-top-
+color
+Unsupported CSS Property: border-top-colorborder-top-
+color
+Unsupported CSS Property: border-top-colorborder-top-
+color
+Unsupported CSS Property: border-top-colorborder-top-
+color
+Unsupported CSS Property: border-top-colorborder-top-
+color
+Unsupported CSS Property: border-top-colorborder-top-
+colorElement Name
+PageSpe ed Insights Copy Link Docs
+--- page 29 ---
+Unsupported CSS Property: border-top-colorborder-top-
+color
+Unsupported CSS Property: border-top-colorborder-top-
+color
+Unsupported CSS Property: border-top-colorborder-top-
+color
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadowElement Name
+PageSpe ed Insights Copy Link Docs
+--- page 30 ---
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadowElement Name
+PageSpe ed Insights Copy Link Docs
+--- page 31 ---
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadowElement Name
+PageSpe ed Insights Copy Link Docs
+--- page 32 ---
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadowElement Name
+PageSpe ed Insights Copy Link Docs
+--- page 33 ---
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: visibility visibility
+Unsupported CSS Property: visibility visibility
+Unsupported CSS Property: visibility visibility
+Icon representing home automation
+<img alt="Icon representing home automation" loading="lazy" width="40.599999999999994"
+height="40.599999999999994" decoding="async" data-nimg="1" class="object-contain
+transition-all duration-300" src="/assets/iconServices32.svg" style="color:
+transparent; translate: none; rotate: none; scale: none;">
+Filter-related property may move pixels
+Filter-related property may move pixels
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filterElement Name
+PageSpe ed Insights Copy Link Docs
+--- page 34 ---
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filterElement Name
+PageSpe ed Insights Copy Link Docs
+--- page 35 ---
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filterElement Name
+PageSpe ed Insights Copy Link Docs
+--- page 36 ---
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filterElement Name
+PageSpe ed Insights Copy Link Docs
+--- page 37 ---
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filterElement Name
+PageSpe ed Insights Copy Link Docs
+--- page 38 ---
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Filter-related property may move pixels filter
+Unsupported CSS Property: visibility visibility
+Unsupported CSS Property: visibility visibility
+Unsupported CSS Property: visibility visibility
+div.flex > div.service-card-carousel-mobile > div.flex > div.h-[5px]
+<div class="h-[5px] w-3/4 bg-[hsl(30,80%,80%)] rounded-full transition-all duration-
+300" style="background-color: rgb(245, 204, 163);">
+Unsupported CSS Property: box-shadow
+Unsupported CSS Property: box-shadow
+Unsupported CSS Property: background-colorbackground
+-color
+Unsupported CSS Property: background-colorbackground
+-color
+Unsupported CSS Property: background-colorbackground
+-color
+Unsupported CSS Property: background-colorbackground
+-color
+Unsupported CSS Property: background-colorbackground
+-color
+Unsupported CSS Property: background-colorbackground
+-color
+Unsupported CSS Property: background-colorbackground
+-color
+Unsupported CSS Property: background-colorbackground
+-color
+Unsupported CSS Property: background-colorbackground
+-color
+Unsupported CSS Property: background-colorbackground
+-color
+Unsupported CSS Property: background-colorbackground
+-colorElement Name
+PageSpe ed Insights Copy Link Docs
+--- page 39 ---
+Unsupported CSS Property: background-colorbackground
+-color
+Unsupported CSS Property: background-colorbackground
+-color
+Unsupported CSS Property: background-colorbackground
+-color
+Unsupported CSS Property: background-colorbackground
+-color
+Unsupported CSS Property: background-colorbackground
+-color
+Unsupported CSS Property: background-colorbackground
+-color
+Unsupported CSS Property: background-colorbackground
+-color
+Unsupported CSS Property: background-colorbackground
+-color
+Unsupported CSS Property: background-colorbackground
+-color
+Unsupported CSS Property: background-colorbackground
+-color
+Unsupported CSS Property: background-colorbackground
+-color
+Unsupported CSS Property: background-colorbackground
+-color
+Unsupported CSS Property: background-colorbackground
+-color
+Unsupported CSS Property: background-colorbackground
+-color
+Unsupported CSS Property: background-colorbackground
+-color
+Unsupported CSS Property: background-colorbackground
+-color
+Unsupported CSS Property: background-colorbackground
+-color
+Unsupported CSS Property: background-colorbackground
+-color
+Unsupported CSS Property: background-colorbackground
+-color
+Unsupported CSS Property: background-colorbackground
+-color
+Unsupported CSS Property: background-colorbackground
+-color
+Unsupported CSS Property: background-colorbackground
+-colorElement Name
+PageSpe ed Insights Copy Link Docs
+--- page 40 ---
+Unsupported CSS Property: background-colorbackground
+-color
+Unsupported CSS Property: background-colorbackground
+-color
+Unsupported CSS Property: background-colorbackground
+-color
+Unsupported CSS Property: background-colorbackground
+-color
+Unsupported CSS Property: background-colorbackground
+-color
+Unsupported CSS Property: background-colorbackground
+-color
+Unsupported CSS Property: background-colorbackground
+-color
+Unsupported CSS Property: background-colorbackground
+-color
+Unsupported CSS Property: background-colorbackground
+-color
+Unsupported CSS Property: background-colorbackground
+-color
+Unsupported CSS Property: background-colorbackground
+-color
+Unsupported CSS Property: background-colorbackground
+-color
+Unsupported CSS Property: background-colorbackground
+-color
+Unsupported CSS Property: background-colorbackground
+-color
+Unsupported CSS Property: background-colorbackground
+-color
+Unsupported CSS Property: background-colorbackground
+-color
+Unsupported CSS Property: background-colorbackground
+-color
+Unsupported CSS Property: background-colorbackground
+-color
+Unsupported CSS Property: background-colorbackground
+-color
+Unsupported CSS Property: background-colorbackground
+-color
+Unsupported CSS Property: background-colorbackground
+-color
+Unsupported CSS Property: background-colorbackground
+-colorElement Name
+PageSpe ed Insights Copy Link Docs
+--- page 41 ---
+Unsupported CSS Property: background-colorbackground
+-color
+Unsupported CSS Property: background-colorbackground
+-color
+Unsupported CSS Property: background-colorbackground
+-color
+Unsupported CSS Property: background-colorbackground
+-color
+Unsupported CSS Property: background-colorbackground
+-color
+Unsupported CSS Property: background-colorbackground
+-color
+Unsupported CSS Property: background-colorbackground
+-color
+Unsupported CSS Property: background-colorbackground
+-color
+Unsupported CSS Property: background-colorbackground
+-color
+Unsupported CSS Property: background-colorbackground
+-color
+Unsupported CSS Property: background-colorbackground
+-color
+Unsupported CSS Property: background-colorbackground
+-color
+Unsupported CSS Property: background-colorbackground
+-color
+Unsupported CSS Property: background-colorbackground
+-color
+Unsupported CSS Property: background-colorbackground
+-color
+Unsupported CSS Property: background-colorbackground
+-color
+Unsupported CSS Property: background-colorbackground
+-color
+Unsupported CSS Property: background-colorbackground
+-color
+Unsupported CSS Property: background-colorbackground
+-color
+Unsupported CSS Property: background-colorbackground
+-color
+Unsupported CSS Property: background-colorbackground
+-color
+Unsupported CSS Property: background-colorbackground
+-colorElement Name
+PageSpe ed Insights Copy Link Docs
+--- page 42 ---
+Unsupported CSS Property: background-colorbackground
+-color
+Unsupported CSS Property: background-colorbackground
+-color
+Unsupported CSS Property: background-colorbackground
+-color
+Unsupported CSS Property: background-colorbackground
+-color
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadowElement Name
+PageSpe ed Insights Copy Link Docs
+--- page 43 ---
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadowElement Name
+PageSpe ed Insights Copy Link Docs
+--- page 44 ---
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadowElement Name
+PageSpe ed Insights Copy Link Docs
+--- page 45 ---
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadowElement Name
+PageSpe ed Insights Copy Link Docs
+--- page 46 ---
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: box-shadow box-shadow
+Unsupported CSS Property: visibility visibility
+Unsupported CSS Property: visibility visibility
+Unsupported CSS Property: visibility visibility
+Icon representing technical certification
+<img alt="Icon representing technical certification" loading="lazy" width="25"
+height="25" decoding="async" data-nimg="1" class="object-contain transition-all
+duration-300" src="/assets/iconServices22.svg" style="">
+Unsupported CSS Property: color color
+Unsupported CSS Property: visibility visibility
+Icon representing safety systems
+<img alt="Icon representing safety systems" loading="lazy" width="26" height="26"
+decoding="async" data-nimg="1" class="object-contain transition-all duration-300"
+src="/assets/iconServices42.svg" style="">
+Unsupported CSS Property: color colorElement Name
+PageSpe ed Insights Copy Link Docs
+--- page 47 ---
+Unsupported CSS Property: visibility visibility
+Go to service card 3
+<button class="w-2 h-2 rounded-full transition-all duration-300 scale-110 bg-[#EB9948]"
+aria-label="Go to service card 3">
+Unsupported CSS Property: visibility visibility
+Icon representing safety systems
+<div class=" service-card-carousel-mobile flex flex-col items-center cursor-po…">
+Unsupported CSS Property: visibility visibility
+Icon representing home automation
+<div class=" service-card-carousel-mobile flex flex-col items-center cursor-po…">
+Unsupported CSS Property: visibility visibility
+Go to service card 4
+<button class="w-2 h-2 rounded-full transition-all duration-300 bg-white/30" aria-
+label="Go to service card 4">
+Unsupported CSS Property: visibility visibility
+Previous service card
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-[#00000080]
+bac…" aria-label="Previous service card">
+Unsupported CSS Property: visibility visibility
+Go to service card 1
+<button class="w-2 h-2 rounded-full transition-all duration-300 bg-white/30" aria-
+label="Go to service card 1">
+Unsupported CSS Property: visibility visibility
+Icon representing technical certification
+<div class=" service-card-carousel-mobile flex flex-col items-center cursor-po…">
+Unsupported CSS Property: visibility visibility
+Next service card
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-[#00000080]
+bac…" aria-label="Next service card">
+Unsupported CSS Property: visibility visibility
+Go to service card 2
+<button class="w-2 h-2 rounded-full transition-all duration-300 bg-white/30" aria-
+label="Go to service card 2">
+Unsupported CSS Property: visibility visibility
+div.w-full > div.relative > div.relative > h3.system-card-title
+<h3 class="system-card-title font-semibold text-center tracking-[0.05em] leading-tig…"
+style="background-image: url(&quot;/assets/systems/systemCard2.png&quot;);">
+Unsupported CSS Property: visibility visibility
+div.w-full > div.relative > div.relative > h3.system-card-title
+<h3 class="system-card-title font-semibold text-center tracking-[0.05em] leading-tig…"
+style="background-image: url(&quot;/assets/systems/systemCard1.png&quot;);">Element Name
+PageSpe ed Insights Copy Link Docs
+--- page 48 ---
+Unsupported CSS Property: visibility visibility
+div.w-full > div.relative > div.relative > h3.system-card-title
+<h3 class="system-card-title font-semibold text-center tracking-[0.05em] leading-tig…"
+style="background-image: url(&quot;/assets/systems/systemCard4.png&quot;);">
+Unsupported CSS Property: visibility visibility
+div.w-full > div.relative > div.relative > h3.system-card-title
+<h3 class="system-card-title font-semibold text-center tracking-[0.05em] leading-tig…"
+style="background-image: url(&quot;/assets/systems/systemCard3.png&quot;);">
+Unsupported CSS Property: visibility visibility
+div.flex > div.absolute > div.service-card-carousel-mobile > div.w-full
+<div class="w-full flex flex-col justify-center items-center font-medium text-center
+…">
+Unsupported CSS Property: visibility visibility
+div.flex > div.absolute > div.service-card-carousel-mobile > div.w-full
+<div class="w-full flex flex-col justify-center items-center font-medium text-center
+…">
+Unsupported CSS Property: visibility visibility
+div.flex > div.flex > div.service-card-carousel-mobile > div.w-full
+<div class="w-full flex flex-col justify-center items-center font-medium text-center
+…">
+Unsupported CSS Property: visibility visibility
+Icon representing technical certification
+<div class="flex flex-col gap-4 w-full justify-center items-center transition-all
+dura…">
+Unsupported CSS Property: visibility visibility
+Icon representing home automation
+<div class="flex flex-col gap-4 w-full justify-center items-center transition-all
+dura…">
+Unsupported CSS Property: visibility visibility
+Icon representing safety systems
+<div class="flex flex-col gap-4 w-full justify-center items-center transition-all
+dura…">
+Unsupported CSS Property: visibility visibility
+div.absolute > div.service-card-carousel-mobile > div.flex > div.h-[5px]
+<div class="h-[5px] w-3/4 bg-[hsl(30,80%,80%)] rounded-full transition-all duration-
+300" style="">
+Unsupported CSS Property: visibility visibility
+Icon representing technical certification
+<div class="flex justify-center items-center border-2 border-[hsl(30,50%,70%)]
+rounded…" style="">
+Unsupported CSS Property: visibility visibilityElement Name
+PageSpe ed Insights Copy Link Docs
+--- page 49 ---
+These checks highlight opportunities to improve the accessibility of your
+web app . Automatic detection can only detect a subset of issues and does
+not guarantee the accessibility of your web app, so manual testing  is also
+encouraged.More information about the performance of your application. These numbers don't directly affect  the P erformance score.div.absolute > div.service-card-carousel-mobile > div.flex > div.h-[5px]
+<div class="h-[5px] w-3/4 bg-[hsl(30,80%,80%)] rounded-full transition-all duration-
+300" style="">
+Unsupported CSS Property: visibility visibility
+Icon representing safety systems
+<div class="flex justify-center items-center border-2 border-[hsl(30,50%,70%)]
+rounded…" style="">
+Unsupported CSS Property: visibility visibility
+PASSED AUDITS (15) Show
+Accessibility
+98
+BEST PRACTICES
+Document does not have a main landmark.
+These items highlight common accessibility best practices.
+AUDIO AND VIDEO
+<video> elements contain a <track> element with [kind="captions"]
+These are opportunities to provide alternative content for audio and video. This may improve the experience for users with hearing or
+vision impairments.
+ADDITIONAL ITEMS TO MANUALLY CHECK (10) Show
+These items address areas which an automated testing tool cannot cover. Learn more in our guide on conducting an accessibility review .Element Name
+PageSpe ed Insights Copy Link Docs
+--- page 50 ---
+PASSED AUDITS (20) Show
+NOT APPLICABLE (38) Show
+Best Practices
+100
+TRUST AND SAFETY
+Ensure CSP is effective against XSS attacks
+Use a strong HST S policy
+Ensure proper origin isolation with C OOP
+Mitigate clickjacking with XFO or CSP
+Mitigate DOM-based XSS with T rusted T ypes
+PASSED AUDITS (13) Show
+NOT APPLICABLE (2) Show
+91
+PageSpe ed Insights Copy Link Docs
+--- page 51 ---
+More on PageSpeed Insights
+What's new
+Documentation
+Learn about Web Performance
+Ask questions on Stack Overflow
+Mailing listRelated Content
+Updates
+Web Fundamentals
+Case Studies
+PodcastsConnect
+Twitter
+Youtube
+Chrome Firebase All products
+Terms and Privacy Policy
+For details, see the Google Developers Site Policies.These checks ensure that your page is following basic search engine
+optimization advice. There are many additional factors Lighthouse does not
+score here that may affect your search ranking, including performance on
+Core W eb Vitals . Learn more about Google Search Essentials .SEO
+CONTENT BEST PRACTICES
+Document doesn't have a valid hreflang
+Format your HTML in a way that enables crawlers to better understand your app’s content.
+ADDITIONAL ITEMS TO MANUALLY CHECK (1) Show
+Run these additional validators on your site to check additional SEO best practices.
+PASSED AUDITS (7) Show
+NOT APPLICABLE (2) Show
+PageSpe ed Insights Copy Link Docs

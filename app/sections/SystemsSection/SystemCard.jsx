@@ -12,6 +12,14 @@ import { gsap } from 'gsap';
  * - className?: string (extra classes merged with defaults)
  * - children?: ReactNode (alternative content when description isn't provided)
  */
+const buildOptimizedImageSet = (src, width = 600, quality = 60) => {
+   if (!src) return undefined;
+   const encodedSrc = encodeURIComponent(src);
+   const baseWidth = Number.isFinite(width) && width > 0 ? Math.round(width) : 600;
+   const retinaWidth = baseWidth * 2;
+   return `image-set(url("/_next/image?url=${encodedSrc}&w=${baseWidth}&q=${quality}") 1x, url("/_next/image?url=${encodedSrc}&w=${retinaWidth}&q=${quality}") 2x)`;
+};
+
 const SystemCard = ({ index = 0, title, description, image, imagem, className = '', children }) => {
    const cardRef = useRef(null);
    const titleRef = useRef(null);
@@ -21,6 +29,7 @@ const SystemCard = ({ index = 0, title, description, image, imagem, className = 
    const isOdd = index % 2 !== 0;
    const imageData = image ?? (imagem ? { src: imagem } : undefined);
    const imageSrc = imageData?.src ?? `/assets/systems/systemCard${index + 1}.png`;
+   const backgroundImageSet = buildOptimizedImageSet(imageSrc, imageData?.width);
    const imageAlt = imageData?.alt ?? title;
 
    useEffect(() => {
@@ -161,6 +170,7 @@ const SystemCard = ({ index = 0, title, description, image, imagem, className = 
                   opacity: 0.9
                }}
                sizes="(max-width: 768px) 100vw, 50vw"
+               quality={60}
             />
          </div>
 
@@ -176,7 +186,7 @@ const SystemCard = ({ index = 0, title, description, image, imagem, className = 
                ref={titleRef}
                className="system-card-title text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-center leading-tight px-4 max-w-full relative z-20 "
                style={{
-                  backgroundImage: `url(${imageSrc})`,
+                  backgroundImage: backgroundImageSet ?? `url(${imageSrc})`,
                   
                }}
             >

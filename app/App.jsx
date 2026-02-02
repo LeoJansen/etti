@@ -7,10 +7,8 @@ import Certification from "./sections/Certification/Certification";
 import Automation from "./sections/Automation/Automation";
 import Camera from "./sections/Camera/Camera";
 import SystemsSection from "./sections/SystemsSection/SystemsSection";
-import SystemsSectionMobile from "./sections/SystemsSection/mobile/SystemsSectionMobile";
 import WhyEtti from "./sections/WhyEtti/WhyEtti";
 import Contact from "./sections/Contact/Contact";
-import ServicesMobile from "./sections/ServicesSection/mobile/ServicesMobile";
 import SuperSection from "./sections/Contact/SuperSection";
 
 const App = () => {
