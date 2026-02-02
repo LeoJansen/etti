@@ -26,7 +26,7 @@ const CameraCard = forwardRef(function CameraCard(
               alt={image.alt ?? "Imagem do sistema de câmera"}
               fill
               style={{ objectFit: "cover" }}
-              quality={80}
+              quality={75}
               className="transition-transform duration-500 hover:scale-105"
             />
             

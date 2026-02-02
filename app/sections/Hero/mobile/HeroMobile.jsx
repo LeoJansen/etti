@@ -137,7 +137,7 @@ export default function HeroMobile() {
         <Image
           src="/assets/heroMobile.png"
           alt={dictionary.hero.mobileBackgroundAlt}
-          quality={80}
+          quality={75}
           fill
           sizes="100vw"
           priority

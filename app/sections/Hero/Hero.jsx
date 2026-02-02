@@ -123,7 +123,7 @@ export default function Hero() {
           <Image
             src="/assets/hero-bg4.png"
             alt={dictionary.hero.backgroundAlt}
-            quality={80}
+            quality={75}
             fill
             sizes="100vw"
             priority

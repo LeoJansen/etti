@@ -43,7 +43,7 @@ const Services = () => {
             alt="Background Gradient"
             fill
             style={{ objectFit: 'cover', objectPosition: 'left center' }}
-            quality={80}
+            quality={70}
             sizes='100vw'
             className='-z-10'
 

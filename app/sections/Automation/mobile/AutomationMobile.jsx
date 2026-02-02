@@ -26,7 +26,7 @@ const AutomationMobile = () => {
             alt={automationContent.backgroundAlt ?? ""}
             fill
             style={{ objectFit: "cover", objectPosition: "bottom" }}
-            quality={80}
+            quality={70}
             className='-z-10 mt-[20vh]'
          />
          <div className='flex flex-col w-full items-start justify-center  my-8'>

@@ -57,7 +57,7 @@ const Documentation = () => {
                   <Image
                      alt="background"
                      src="/assets/doc-bg22.png"
-                     quality={80}
+                     quality={70}
                      fill
                      sizes="100vw"
                      style={{ objectFit: "cover", objectPosition: "bottom center" }}

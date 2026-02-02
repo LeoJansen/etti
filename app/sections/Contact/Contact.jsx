@@ -98,7 +98,7 @@ const Contact = () => {
             alt={contactContent.backgroundAlt ?? ""}
             fill
             sizes="100vw"
-            quality={80}
+            quality={70}
             style={{ objectFit: "cover", objectPosition: "center" }}
             className=" bg-image" />
          <div className="absolute z-20 top-[-50px] h-[190px] w-full flex justify-center items-end backdrop-blur-[6px] ">

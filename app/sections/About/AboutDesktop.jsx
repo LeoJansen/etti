@@ -38,7 +38,7 @@ const AboutDesktop = () => {
             <Image
               src={about.image.src}
               alt={about.image.alt}
-              quality={80}
+              quality={75}
               width={about.image.width}
               height={about.image.height}
               sizes="(min-width: 768px) 50vw, 100vw"
