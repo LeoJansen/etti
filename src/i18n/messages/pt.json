@@ -441,10 +441,21 @@
 			{
 				"id": "instagram",
 				"label": "Instagram da Etti",
-				"href": "https://www.instagram.com/etti",
+				"href": "https://www.instagram.com/ettiprojetos?igsh=bnU1anM1bDZ5YTJp",
 				"icon": {
 					"src": "/assets/contact/instagram-icon.svg",
 					"alt": "Ícone do Instagram",
+					"width": 30,
+					"height": 30
+				}
+			},
+			{
+				"id": "facebook",
+				"label": "Facebook da Etti",
+				"href": "https://www.facebook.com/share/1c1V8pBkUk/?mibextid=wwXIfr",
+				"icon": {
+					"src": "/assets/contact/facebook.svg",
+					"alt": "Ícone do Facebook",
 					"width": 30,
 					"height": 30
 				}
@@ -456,17 +467,6 @@
 				"icon": {
 					"src": "/assets/contact/whatsapp-icon.svg",
 					"alt": "Ícone do WhatsApp",
-					"width": 30,
-					"height": 30
-				}
-			},
-			{
-				"id": "linkedin",
-				"label": "LinkedIn da Etti",
-				"href": "https://www.linkedin.com/company/etti",
-				"icon": {
-					"src": "/assets/contact/linked-in-icon.svg",
-					"alt": "Ícone do LinkedIn",
 					"width": 30,
 					"height": 30
 				}
