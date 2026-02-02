@@ -71,7 +71,7 @@ const Automation = () => {
                   alt={automationContent.backgroundAlt ?? ""}
                   fill
                   style={{ objectFit: "cover", objectPosition: "center" }}
-                  quality={100}
+                  quality={80}
                   className=''
                />
 

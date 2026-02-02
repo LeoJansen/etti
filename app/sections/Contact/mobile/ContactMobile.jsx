@@ -71,7 +71,7 @@ const ContactMobile = () => {
             alt={contactContent.backgroundAlt ?? ""}
             fill
             sizes="100vw"
-            quality={100}
+            quality={80}
             style={{ objectFit: "cover", objectPosition: "center" }}
             className="bg-image-mobile"
          />

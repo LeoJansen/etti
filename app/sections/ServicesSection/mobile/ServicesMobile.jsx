@@ -105,7 +105,7 @@ const ServicesMobile = () => {
         alt="Background Gradient"
         fill
         style={{ objectFit: "cover", objectPosition: "left center" }}
-        quality={100}
+        quality={80}
         sizes="100vw"
         className="-z-10"
       />

@@ -38,9 +38,10 @@ const AboutDesktop = () => {
             <Image
               src={about.image.src}
               alt={about.image.alt}
-              quality={100}
+              quality={80}
               width={about.image.width}
               height={about.image.height}
+              sizes="(min-width: 768px) 50vw, 100vw"
             />
           </div>
           <div className="flex h-full w-full flex-col items-center justify-center  font-light tracking-tighter text-[#9e9e9e] md:w-1/2 text-2xl">

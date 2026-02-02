@@ -123,9 +123,10 @@ export default function Hero() {
           <Image
             src="/assets/hero-bg4.png"
             alt={dictionary.hero.backgroundAlt}
-            quality={100}
+            quality={80}
             fill
             sizes="100vw"
+            priority
             className="object-cover object-[25%_100%] md:object-center lg:object-bottom pointer-events-none "
           />
         </div>

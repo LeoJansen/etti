@@ -32,9 +32,10 @@ const AboutMobile = () => {
 					<Image
 									src={about.image.src}
 									alt={about.image.alt}
-						quality={100}
+							quality={80}
 									width={about.image.width}
 									height={about.image.height}
+								sizes="100vw"
 						className="h-auto w-full object-cover"
 					/>
 				</div>

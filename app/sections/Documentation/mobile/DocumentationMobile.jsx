@@ -27,7 +27,7 @@ const DocumentationMobile = () => {
             <Image
                alt="background"
                src="/assets/doc-bgm.png"
-               quality={100}
+               quality={80}
                fill
                sizes="100vw"
                style={{ objectFit: "cover", objectPosition: "bottom center" }}

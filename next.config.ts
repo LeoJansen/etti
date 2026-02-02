@@ -5,7 +5,8 @@ const nextConfig: NextConfig = {
   // Disable typed routes to avoid symlink/readlink issues under OneDrive (.next/types/*)
   typedRoutes: false,
   images:{
-    qualities: [75, 100],
+    formats: ["image/avif", "image/webp"],
+    qualities: [60, 70, 75, 80, 85, 90, 100],
   }
 };
 
