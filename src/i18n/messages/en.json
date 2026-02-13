@@ -407,7 +407,7 @@
 			{
 				"id": "contact-meeting",
 				"label": "Schedule a Meeting",
-				"href": "mailto:geral@etti.pt?subject=Schedule%20a%20Meeting",
+				"href": "mailto:ettiproject.ie@gmail.com?subject=Schedule%20a%20Meeting",
 				"type": "external",
 				"variant": "secondary",
 				"ariaLabel": "Schedule a meeting via e-mail"
@@ -427,8 +427,8 @@
 			},
 			"email": {
 				"label": "Email",
-				"value": "geral@etti.pt",
-				"href": "mailto:geral@etti.pt",
+				"value": "ettiproject.ie@gmail.com",
+				"href": "mailto:ettiproject.ie@gmail.com",
 				"icon": {
 					"src": "/assets/contact/mail-icon.svg",
 					"alt": "Mail icon",
