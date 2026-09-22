@@ -59,9 +59,9 @@ const Contact = () => {
 
    const getButtonClasses = (variant = "primary") => {
       if (variant === "secondary") {
-         return "contact-button bg-[rgb(5,11,5)] w-70  text-white font-bold py-3  rounded-[3px] shadow-lg hover:bg-transparent hover:text-[#ff7919]  transition duration-300 ";
+         return "contact-button bg-[rgb(5,11,5)] w-70 text-white font-bold py-3 rounded-[3px] shadow-lg hover:bg-transparent hover:text-[#ff7919] transition-colors duration-300";
       }
-      return "contact-button border-4 border-[#ff7919] w-70 text-white font-bold py-3 rounded-[3px] shadow-lg bg-[#ff7919] hover:text-white transition duration-300";
+      return "contact-button border-4 border-[#ff7919] w-70 text-white font-bold py-3 rounded-[3px] shadow-lg bg-[#ff7919] hover:text-white transition-colors duration-300";
    };
 
    useEffect(() => {

@@ -42,12 +42,12 @@
 /* Melhorias visuais para hover/tap effects */
 .contact-card,
 .contact-card-mobile {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease;
 }
 
 .contact-button,
 .contact-button-mobile {
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: box-shadow 0.2s ease;
 }
 
 /* Melhorias no efeito de brilho das estrelas */
