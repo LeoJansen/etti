@@ -2,8 +2,9 @@
 // components/ContactSection.js
 import dynamic from "next/dynamic";
 import Image from "next/image";
-import { useEffect, useState, useRef, useMemo } from "react";
+import { useEffect, useRef, useMemo } from "react";
 
+import useIsMobile from "@/app/hooks/useIsMobile";
 import { useDictionary } from "@/src/site/context/DictionaryContext";
 
 import { initContactAnimation } from "./contactAnimation";
@@ -14,18 +15,6 @@ const ContactMobile = dynamic(() => import("./mobile/ContactMobile"), {
    ssr: false,
 });
 
-function useIsMobile() {
-   const [isMobile, setIsMobile] = useState(false);
-   useEffect(() => {
-      const checkMobile = () => setIsMobile(window.innerWidth < 768);
-      checkMobile();
-      window.addEventListener("resize", checkMobile);
-      return () => window.removeEventListener("resize", checkMobile);
-   }, []);
-   return isMobile;
-}
-
-
 const Contact = () => {
    const isMobile = useIsMobile();
    const animationRef = useRef(null);
@@ -33,18 +22,18 @@ const Contact = () => {
    const contactContent = dictionary.contact;
    const cards = contactContent.cards ?? [];
    const buttons = contactContent.buttons ?? [];
-   const details = contactContent.details ?? {};
    const socialLinks = contactContent.social ?? [];
    const legal = contactContent.legal ?? {};
 
    const resolvedDetails = useMemo(() => {
+      const details = contactContent.details ?? {};
       return Object.entries(details).map(([id, detail = {}]) => ({
          id,
          ...detail,
          label: detail.label ?? detail.value ?? id,
          value: detail.value ?? detail.label ?? "",
       }));
-   }, [details]);
+   }, [contactContent.details]);
 
    const resolveButtonHref = (button) => {
       if (button.type === "whatsapp") {

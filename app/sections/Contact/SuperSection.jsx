@@ -1,8 +1,9 @@
 "use client"
 import dynamic from "next/dynamic";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import useIsMobile from "@/app/hooks/useIsMobile";
 import { useDictionary } from "@/src/site/context/DictionaryContext";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -10,18 +11,6 @@ gsap.registerPlugin(ScrollTrigger);
 const SuperSectionMobile = dynamic(() => import("./mobile/SuperSectionMobile"), {
    ssr: false,
 });
-
-function useIsMobile() {
-   const [isMobile, setIsMobile] = useState(false);
-   useEffect(() => {
-      const checkMobile = () => setIsMobile(window.innerWidth < 768);
-      checkMobile();
-      window.addEventListener("resize", checkMobile);
-      return () => window.removeEventListener("resize", checkMobile);
-   }, []);
-   return isMobile;
-}
-
 
 const SuperSection = () => {
    const isMobile = useIsMobile();

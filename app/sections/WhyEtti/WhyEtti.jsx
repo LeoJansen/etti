@@ -2,8 +2,9 @@
 // components/WhyEttiSection.js
 import Image from "next/image";
 import dynamic from "next/dynamic";
-import { useState, useEffect, useRef } from "react";
+import { useRef } from "react";
 
+import useIsMobile from "@/app/hooks/useIsMobile";
 import { useDictionary } from "@/src/site/context/DictionaryContext";
 
 import WhyEttiCard from "./WhyEttiCard";
@@ -12,21 +13,6 @@ import useWhyAnimation from "./useWhyAnimation";
 const WhyEttiMobile = dynamic(() => import("./mobile/WhyEttiMobile"), {
    ssr: false,
 });
-
-function useIsMobile() {
-   const [isMobile, setIsMobile] = useState(false);
-   useEffect(() => {
-      const checkMobile = () => setIsMobile(window.innerWidth < 768);
-      checkMobile();
-      window.addEventListener("resize", checkMobile);
-      return () => window.removeEventListener("resize", checkMobile);
-   }, []);
-   return isMobile;
-}
-
-
-
-
 
 const WhyEtti = () => {
    const isMobile = useIsMobile();

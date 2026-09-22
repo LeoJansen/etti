@@ -37,7 +37,7 @@ const ProjectCardMobile = ({
 	<div className='p-[5px] '>
 		
          <div className="relative h-52 w-full">
-            <Image {...imageProps} />
+            <Image {...imageProps} alt={altText ?? ""} />
          </div>
 
          <div className="flex flex-col gap-3 px-5 py-6">

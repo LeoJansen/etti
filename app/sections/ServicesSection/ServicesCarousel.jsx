@@ -5,6 +5,7 @@ import React, { useEffect, useMemo, useRef, useState } from 'react'
 import { useDictionary } from '@/src/site/context/DictionaryContext'
 
 import ServiceCardCarousel from './ServiceCardCarousel'
+import { wrapIndex } from '@/app/utils/circularIndex'
 
 const ServicesCarousel = ({ className = '', ...rest }) => {
   const [activeIndex, setActiveIndex] = useState(0)
@@ -25,29 +26,29 @@ const ServicesCarousel = ({ className = '', ...rest }) => {
 
   const cardsLength = cards.length
 
-  if (cardsLength === 0) {
-    return null
-  }
-
   const handlePrevious = () => {
-    setActiveIndex((prev) => (prev === 0 ? cardsLength - 1 : prev - 1))
+    setActiveIndex((prev) => wrapIndex(prev - 1, cardsLength))
   }
 
   const handleNext = () => {
-    setActiveIndex((prev) => (prev === cardsLength - 1 ? 0 : prev + 1))
+    setActiveIndex((prev) => wrapIndex(prev + 1, cardsLength))
   }
 
   const handleCardClick = (index) => {
-    setActiveIndex(index)
+    setActiveIndex(wrapIndex(index, cardsLength))
   }
 
   // Navegação por teclado
   useEffect(() => {
+    if (cardsLength <= 1) {
+      return undefined
+    }
+
     const handleKeyDown = (event) => {
       if (event.key === 'ArrowLeft') {
-        setActiveIndex((prev) => (prev === 0 ? cardsLength - 1 : prev - 1))
+        setActiveIndex((prev) => wrapIndex(prev - 1, cardsLength))
       } else if (event.key === 'ArrowRight') {
-        setActiveIndex((prev) => (prev === cardsLength - 1 ? 0 : prev + 1))
+        setActiveIndex((prev) => wrapIndex(prev + 1, cardsLength))
       }
     }
 
@@ -55,13 +56,21 @@ const ServicesCarousel = ({ className = '', ...rest }) => {
     return () => window.removeEventListener('keydown', handleKeyDown)
   }, [cardsLength])
 
-  
-   useEffect(() => {
+  useEffect(() => {
+    if (cardsLength <= 1) {
+      return undefined
+    }
+
     const interval = setInterval(() => {
-       handleNext()
-     }, 5000)
-     return () => clearInterval(interval)
-   }, [activeIndex, cardsLength])
+      setActiveIndex((prev) => wrapIndex(prev + 1, cardsLength))
+    }, 5000)
+
+    return () => clearInterval(interval)
+  }, [cardsLength])
+
+  if (cardsLength === 0) {
+    return null
+  }
 
   return (
     <div
@@ -99,17 +108,17 @@ const ServicesCarousel = ({ className = '', ...rest }) => {
         {cardsLength > 1 && (
           <div className="flex-shrink-0">
             <ServiceCardCarousel
-              title={cards[activeIndex === 0 ? cardsLength - 1 : activeIndex - 1].title}
-              description={cards[activeIndex === 0 ? cardsLength - 1 : activeIndex - 1].description}
-              icon={cards[activeIndex === 0 ? cardsLength - 1 : activeIndex - 1].icon}
-              iconWidth={cards[activeIndex === 0 ? cardsLength - 1 : activeIndex - 1].icon.iconWidth}
-              iconHeight={cards[activeIndex === 0 ? cardsLength - 1 : activeIndex - 1].icon.iconHeight}
+              title={cards[wrapIndex(activeIndex - 1, cardsLength)].title}
+              description={cards[wrapIndex(activeIndex - 1, cardsLength)].description}
+              icon={cards[wrapIndex(activeIndex - 1, cardsLength)].icon}
+              iconWidth={cards[wrapIndex(activeIndex - 1, cardsLength)].icon.iconWidth}
+              iconHeight={cards[wrapIndex(activeIndex - 1, cardsLength)].icon.iconHeight}
               pulseOffset={0}
               isActive={false}
               onClick={(e) => {
                 e.preventDefault()
                 e.stopPropagation()
-                handleCardClick(activeIndex === 0 ? cardsLength - 1 : activeIndex - 1)
+                handleCardClick(wrapIndex(activeIndex - 1, cardsLength))
               }}
             />
           </div>
@@ -118,11 +127,11 @@ const ServicesCarousel = ({ className = '', ...rest }) => {
         {/* Card ativo (centro) */}
         <div className="flex-shrink-0">
           <ServiceCardCarousel
-            title={cards[activeIndex].title}
-            description={cards[activeIndex].description}
-            icon={cards[activeIndex].icon}
-            iconWidth={cards[activeIndex].icon.iconWidth}
-            iconHeight={cards[activeIndex].icon.iconHeight}
+            title={cards[wrapIndex(activeIndex, cardsLength)].title}
+            description={cards[wrapIndex(activeIndex, cardsLength)].description}
+            icon={cards[wrapIndex(activeIndex, cardsLength)].icon}
+            iconWidth={cards[wrapIndex(activeIndex, cardsLength)].icon.iconWidth}
+            iconHeight={cards[wrapIndex(activeIndex, cardsLength)].icon.iconHeight}
             pulseOffset={activeIndex}
             isActive={true}
             onClick={() => {}}
@@ -133,17 +142,17 @@ const ServicesCarousel = ({ className = '', ...rest }) => {
         {cardsLength > 1 && (
           <div className="flex-shrink-0">
             <ServiceCardCarousel
-              title={cards[activeIndex === cardsLength - 1 ? 0 : activeIndex + 1].title}
-              description={cards[activeIndex === cardsLength - 1 ? 0 : activeIndex + 1].description}
-              icon={cards[activeIndex === cardsLength - 1 ? 0 : activeIndex + 1].icon}
-              iconWidth={cards[activeIndex === cardsLength - 1 ? 0 : activeIndex + 1].icon.iconWidth}
-              iconHeight={cards[activeIndex === cardsLength - 1 ? 0 : activeIndex + 1].icon.iconHeight}
+              title={cards[wrapIndex(activeIndex + 1, cardsLength)].title}
+              description={cards[wrapIndex(activeIndex + 1, cardsLength)].description}
+              icon={cards[wrapIndex(activeIndex + 1, cardsLength)].icon}
+              iconWidth={cards[wrapIndex(activeIndex + 1, cardsLength)].icon.iconWidth}
+              iconHeight={cards[wrapIndex(activeIndex + 1, cardsLength)].icon.iconHeight}
               pulseOffset={0}
               isActive={false}
               onClick={(e) => {
                 e.preventDefault()
                 e.stopPropagation()
-                handleCardClick(activeIndex === cardsLength - 1 ? 0 : activeIndex + 1)
+                handleCardClick(wrapIndex(activeIndex + 1, cardsLength))
               }}
             />
           </div>
@@ -183,7 +192,7 @@ const ServicesCarousel = ({ className = '', ...rest }) => {
               handleCardClick(index)
             }}
             className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${
-              index === activeIndex 
+                index === wrapIndex(activeIndex, cardsLength)
                 ? 'bg-[#eb9948] w-6' 
                 : 'bg-[#eb994850] hover:bg-[#eb994880] w-2 hover:w-4'
             }`}

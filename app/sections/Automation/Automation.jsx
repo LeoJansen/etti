@@ -1,8 +1,9 @@
 "use client";
-import { useEffect, useRef, useState } from 'react';
+import { useRef } from 'react';
 import dynamic from 'next/dynamic';
 import Image from "next/image";
 
+import useIsMobile from '@/app/hooks/useIsMobile';
 import { useDictionary } from '@/src/site/context/DictionaryContext';
 
 import AutomationCard from './AutomationCard';
@@ -10,17 +11,6 @@ import { useCircuitBorderAnimation } from "./useCircuitBorderAnimation";
 import { useAutomationAnimation } from "./useAutomationAnimation";
 
 const AutomationMobile = dynamic(() => import('./mobile/AutomationMobile'), { ssr: false });
-
-function useIsMobile() {
-   const [isMobile, setIsMobile] = useState(false);
-   useEffect(() => {
-      const checkMobile = () => setIsMobile(window.innerWidth < 768);
-      checkMobile();
-      window.addEventListener('resize', checkMobile);
-      return () => window.removeEventListener('resize', checkMobile);
-   }, []);
-   return isMobile;
-}
 
 const Automation = () => {
    const isMobile = useIsMobile();

@@ -2,9 +2,10 @@
 
 'use client';
 
-import { useRef, useState, useEffect } from 'react';
+import { useRef } from 'react';
 import dynamic from 'next/dynamic';
 
+import useIsMobile from '@/app/hooks/useIsMobile';
 import { useDictionary } from '@/src/site/context/DictionaryContext';
 
 import ProjectCard from './ProjectCard';
@@ -13,19 +14,6 @@ import useProjectAnimation from './useProjectAnimation';
 const ProjectsMobile = dynamic(() => import('./mobile/ProjectsMobile'), {
    ssr: false,
 });
-
-function useIsMobile() {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const checkMobile = () => setIsMobile(window.innerWidth < 768);
-    checkMobile();
-    window.addEventListener("resize", checkMobile);
-    return () => window.removeEventListener("resize", checkMobile);
-  }, []);
-
-  return isMobile;
-}
 
 const Projects = () => {
    const isMobile = useIsMobile();

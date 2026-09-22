@@ -12,18 +12,18 @@ const ContactMobile = () => {
    const contactContent = dictionary.contact;
    const cards = contactContent.cards ?? [];
    const buttons = contactContent.buttons ?? [];
-   const details = contactContent.details ?? {};
    const socialLinks = contactContent.social ?? [];
    const legal = contactContent.legal ?? {};
 
    const resolvedDetails = useMemo(() => {
+      const details = contactContent.details ?? {};
       return Object.entries(details).map(([id, detail = {}]) => ({
          id,
          ...detail,
          label: detail.label ?? detail.value ?? id,
          value: detail.value ?? detail.label ?? "",
       }));
-   }, [details]);
+   }, [contactContent.details]);
 
    useEffect(() => {
       animationRef.current = initContactMobileAnimation();

@@ -1,6 +1,5 @@
 "use client";
-import React, { useRef, useEffect } from 'react';
-import Image from 'next/image';
+import React, { useRef } from 'react';
 
 import { useDictionary } from '@/src/site/context/DictionaryContext';
 

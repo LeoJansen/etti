@@ -1,8 +1,9 @@
 "use client";
 
-import {useEffect, useRef, useState} from "react";
+import { useRef } from "react";
 import dynamic from "next/dynamic";
 
+import useIsMobile from "@/app/hooks/useIsMobile";
 import { useDictionary } from "@/src/site/context/DictionaryContext";
 
 import CertificationCarousel from "./CertificationCarousel";
@@ -11,19 +12,6 @@ import useCertificationAnimation from "./useCertificationAnimation";
 const CertificationMobile = dynamic(() => import("./mobile/CertificationMobile"), {
    ssr: false,
 });
-
-function useIsMobile() {
-   const [isMobile, setIsMobile] = useState(false);
-
-   useEffect(() => {
-      const checkMobile = () => setIsMobile(window.innerWidth < 768);
-      checkMobile();
-      window.addEventListener("resize", checkMobile);
-      return () => window.removeEventListener("resize", checkMobile);
-   }, []);
-
-   return isMobile;
-}
 
 const Certification = () => {
    const isMobile = useIsMobile();

@@ -2,8 +2,9 @@
 
 import Image from 'next/image';
 import dynamic from 'next/dynamic';
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef } from 'react';
 
+import useIsMobile from '@/app/hooks/useIsMobile';
 import { useDictionary } from '@/src/site/context/DictionaryContext';
 
 import ServicesCarousel from './ServicesCarousel';
@@ -13,17 +14,6 @@ const ServicesMobile = dynamic(() => import('./mobile/ServicesMobile'), {
    ssr: false,
    loading: () => <p>Loading...</p>,
 });
-
-function useIsMobile() {
-   const [isMobile, setIsMobile] = useState(false);
-   useEffect(() => {
-      const checkMobile = () => setIsMobile(window.innerWidth < 768);
-      checkMobile();
-      window.addEventListener('resize', checkMobile);
-      return () => window.removeEventListener('resize', checkMobile);
-   }, []);
-   return isMobile;
-}
 
 const Services = () => {
    const isMobile = useIsMobile();

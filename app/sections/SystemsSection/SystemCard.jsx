@@ -4,6 +4,8 @@ import Image from 'next/image';
 import React, { useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
 
+import { buildOptimizedImageSet } from '@/app/utils/optimizedImageSet';
+
 /**
  * SystemCard
  * Props:
@@ -12,21 +14,13 @@ import { gsap } from 'gsap';
  * - className?: string (extra classes merged with defaults)
  * - children?: ReactNode (alternative content when description isn't provided)
  */
-const buildOptimizedImageSet = (src, width = 600, quality = 60) => {
-   if (!src) return undefined;
-   const encodedSrc = encodeURIComponent(src);
-   const baseWidth = Number.isFinite(width) && width > 0 ? Math.round(width) : 600;
-   const retinaWidth = baseWidth * 2;
-   return `image-set(url("/_next/image?url=${encodedSrc}&w=${baseWidth}&q=${quality}") 1x, url("/_next/image?url=${encodedSrc}&w=${retinaWidth}&q=${quality}") 2x)`;
-};
-
 const SystemCard = ({ index = 0, title, description, image, imagem, className = '', children }) => {
    const cardRef = useRef(null);
    const titleRef = useRef(null);
    const imageRef = useRef(null);
    const overlayRef = useRef(null);
    const descriptionRef = useRef(null);
-   const isOdd = index % 2 !== 0;
+   const timelineRef = useRef(null);
    const imageData = image ?? (imagem ? { src: imagem } : undefined);
    const imageSrc = imageData?.src ?? `/assets/systems/systemCard${index + 1}.png`;
    const backgroundImageSet = buildOptimizedImageSet(imageSrc, imageData?.width);
@@ -55,8 +49,15 @@ const SystemCard = ({ index = 0, title, description, image, imagem, className = 
 
       if (!supportsHover) return;
 
+      const stopCurrentTimeline = () => {
+         timelineRef.current?.kill();
+         timelineRef.current = null;
+      };
+
       const handleMouseEnter = () => {
+         stopCurrentTimeline();
          const tl = gsap.timeline();
+         timelineRef.current = tl;
          
          // Animação: título desaparece e imagem aparece
             if (descriptionElement) {
@@ -99,7 +100,9 @@ const SystemCard = ({ index = 0, title, description, image, imagem, className = 
       };
 
       const handleMouseLeave = () => {
+         stopCurrentTimeline();
          const tl = gsap.timeline();
+         timelineRef.current = tl;
          
          // Animação reversa: imagem desaparece e título volta
          if (overlayElement) {
@@ -143,10 +146,11 @@ const SystemCard = ({ index = 0, title, description, image, imagem, className = 
       card.addEventListener('mouseleave', handleMouseLeave);
 
       return () => {
+         stopCurrentTimeline();
          card.removeEventListener('mouseenter', handleMouseEnter);
          card.removeEventListener('mouseleave', handleMouseLeave);
       };
-   }, [description]);
+   }, []);
 
    return (
       <div 

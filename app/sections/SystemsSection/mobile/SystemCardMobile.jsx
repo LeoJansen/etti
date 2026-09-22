@@ -3,6 +3,8 @@ import React, { useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
 import Image from 'next/image';
 
+import { buildOptimizedImageSet } from '@/app/utils/optimizedImageSet';
+
 /**
  * SystemCardMobile
  * Ensures mobile-specific styling for system cards while keeping the API
@@ -14,8 +16,10 @@ const SystemCardMobile = ({ index = 0, title, description, image, imagem, classN
    const imageRef = useRef(null);
    const overlayRef = useRef(null);
    const descriptionRef = useRef(null);
+   const timelineRef = useRef(null);
    const imageData = image ?? (imagem ? { src: imagem } : undefined);
    const imageSrc = imageData?.src ?? `/assets/systems/systemCard${index + 1}.png`;
+   const backgroundImageSet = buildOptimizedImageSet(imageSrc, imageData?.width);
    const imageAlt = imageData?.alt ?? title;
 
 
@@ -28,8 +32,15 @@ const SystemCardMobile = ({ index = 0, title, description, image, imagem, classN
 
       if (!card || !titleElement || !imageElement) return;
 
+      const stopCurrentTimeline = () => {
+         timelineRef.current?.kill();
+         timelineRef.current = null;
+      };
+
       const handleTouchStart = () => {
+         stopCurrentTimeline();
          const tl = gsap.timeline();
+         timelineRef.current = tl;
 
          // Anima título e descrição enquanto traz a imagem
          tl.to(descriptionElement, {
@@ -65,7 +76,9 @@ const SystemCardMobile = ({ index = 0, title, description, image, imagem, classN
       };
 
       const handleTouchEnd = () => {
+         stopCurrentTimeline();
          const tl = gsap.timeline();
+         timelineRef.current = tl;
 
          // Reverte a animação e volta ao conteúdo padrão
          tl.to(overlayElement, {
@@ -113,6 +126,7 @@ const SystemCardMobile = ({ index = 0, title, description, image, imagem, classN
       card.addEventListener('mouseleave', handleTouchEnd);
 
       return () => {
+         stopCurrentTimeline();
          card.removeEventListener('touchstart', handleTouchStart);
          card.removeEventListener('touchend', handleTouchEnd);
          card.removeEventListener('mouseenter', handleTouchStart);
@@ -158,7 +172,7 @@ const SystemCardMobile = ({ index = 0, title, description, image, imagem, classN
                   ref={titleRef}
                   className="system-card-title  font-semibold text-center tracking-[0.05em] leading-tight"
                   style={{
-                     backgroundImage: `url(${imageSrc})`,
+                     backgroundImage: backgroundImageSet ?? `url(${imageSrc})`,
                      filter: "brightness(1.2)  saturate(1.2)",
                      fontSize: '32px',
                   }}

@@ -1,8 +1,9 @@
 "use client"
 // components/SystemsSection.js
-import { useEffect, useRef, useState } from 'react';
+import { useRef } from 'react';
 import dynamic from 'next/dynamic';
 
+import useIsMobile from '@/app/hooks/useIsMobile';
 import { useDictionary } from '@/src/site/context/DictionaryContext';
 
 import SystemCard from './SystemCard';
@@ -11,18 +12,6 @@ import { useSystemsAnimation } from './useSystemsAnimation';
 const SystemsSectionMobile = dynamic(() => import('./mobile/SystemsSectionMobile'), {
    ssr: false,
 });
-
-function useIsMobile() {
-   const [isMobile, setIsMobile] = useState(false);
-   useEffect(() => {
-      const checkMobile = () => setIsMobile(window.innerWidth < 768);
-      checkMobile();
-      window.addEventListener('resize', checkMobile);
-      return () => window.removeEventListener('resize', checkMobile);
-   }, []);
-   return isMobile;
-}
-
 
 const SystemsSection = () => {
    const isMobile = useIsMobile();

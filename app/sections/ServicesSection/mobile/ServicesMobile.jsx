@@ -4,6 +4,7 @@ import Image from "next/image";
 import React, { useEffect, useMemo, useRef, useState } from "react";
 
 import { useDictionary } from "@/src/site/context/DictionaryContext";
+import { wrapIndex } from "@/app/utils/circularIndex";
 
 import ServiceCardCarouselMobile from "./ServiceCardCarouselMobile";
 import useServiceAnimation from "../useServiceAnimation";
@@ -22,7 +23,7 @@ const ServicesMobile = () => {
         iconHeight: card.icon.height,
       },
     }));
-  }, [servicesContent]);
+  }, [servicesContent.cards]);
 
   const carouselLabels = servicesContent.carousel ?? {};
   const previousAriaLabel = carouselLabels.previousAriaLabel ?? "Previous service card";
@@ -40,12 +41,7 @@ const ServicesMobile = () => {
   const sectionRef = useRef(null);
 
   useServiceAnimation(sectionRef);
-
-  useEffect(() => {
-    if (activeIndex >= cardsLength && cardsLength > 0) {
-      setActiveIndex(0);
-    }
-  }, [activeIndex, cardsLength]);
+  const currentIndex = wrapIndex(activeIndex, cardsLength);
 
   useEffect(() => {
     if (cardsLength <= 1) {
@@ -53,22 +49,23 @@ const ServicesMobile = () => {
     }
 
     const interval = setInterval(() => {
-      setActiveIndex((previous) => (previous === cardsLength - 1 ? 0 : previous + 1));
+      setActiveIndex((previous) => wrapIndex(previous + 1, cardsLength));
     }, 4000);
 
     return () => clearInterval(interval);
   }, [cardsLength]);
 
   const handlePrevious = () => {
-    setActiveIndex((previous) => (previous === 0 ? cardsLength - 1 : previous - 1));
+    setActiveIndex((previous) => wrapIndex(previous - 1, cardsLength));
   };
 
   const handleNext = () => {
-    setActiveIndex((previous) => (previous === cardsLength - 1 ? 0 : previous + 1));
+    setActiveIndex((previous) => wrapIndex(previous + 1, cardsLength));
   };
 
   const handleTouchStart = (event) => {
     touchStartX.current = event.touches[0].clientX;
+    touchEndX.current = touchStartX.current;
   };
 
   const handleTouchMove = (event) => {
@@ -135,12 +132,12 @@ const ServicesMobile = () => {
           >
             <div className="flex justify-center">
               <ServiceCardCarouselMobile
-                title={cards[activeIndex].title}
-                description={cards[activeIndex].description}
-                icon={cards[activeIndex].icon}
-                iconWidth={cards[activeIndex].icon.iconWidth}
-                iconHeight={cards[activeIndex].icon.iconHeight}
-                pulseOffset={activeIndex}
+                title={cards[currentIndex].title}
+                description={cards[currentIndex].description}
+                icon={cards[currentIndex].icon}
+                iconWidth={cards[currentIndex].icon.iconWidth}
+                iconHeight={cards[currentIndex].icon.iconHeight}
+                pulseOffset={currentIndex}
                 isActive
                 onClick={() => {}}
               />
@@ -153,11 +150,11 @@ const ServicesMobile = () => {
                   onClick={handlePrevious}
                 >
                   <ServiceCardCarouselMobile
-                    title={cards[activeIndex === 0 ? cardsLength - 1 : activeIndex - 1].title}
+                    title={cards[wrapIndex(currentIndex - 1, cardsLength)].title}
                     description=""
-                    icon={cards[activeIndex === 0 ? cardsLength - 1 : activeIndex - 1].icon}
-                    iconWidth={cards[activeIndex === 0 ? cardsLength - 1 : activeIndex - 1].icon.iconWidth}
-                    iconHeight={cards[activeIndex === 0 ? cardsLength - 1 : activeIndex - 1].icon.iconHeight}
+                    icon={cards[wrapIndex(currentIndex - 1, cardsLength)].icon}
+                    iconWidth={cards[wrapIndex(currentIndex - 1, cardsLength)].icon.iconWidth}
+                    iconHeight={cards[wrapIndex(currentIndex - 1, cardsLength)].icon.iconHeight}
                     pulseOffset={0}
                     isActive={false}
                     onClick={handlePrevious}
@@ -169,11 +166,11 @@ const ServicesMobile = () => {
                   onClick={handleNext}
                 >
                   <ServiceCardCarouselMobile
-                    title={cards[activeIndex === cardsLength - 1 ? 0 : activeIndex + 1].title}
+                    title={cards[wrapIndex(currentIndex + 1, cardsLength)].title}
                     description=""
-                    icon={cards[activeIndex === cardsLength - 1 ? 0 : activeIndex + 1].icon}
-                    iconWidth={cards[activeIndex === cardsLength - 1 ? 0 : activeIndex + 1].icon.iconWidth}
-                    iconHeight={cards[activeIndex === cardsLength - 1 ? 0 : activeIndex + 1].icon.iconHeight}
+                    icon={cards[wrapIndex(currentIndex + 1, cardsLength)].icon}
+                    iconWidth={cards[wrapIndex(currentIndex + 1, cardsLength)].icon.iconWidth}
+                    iconHeight={cards[wrapIndex(currentIndex + 1, cardsLength)].icon.iconHeight}
                     pulseOffset={0}
                     isActive={false}
                     onClick={handleNext}
@@ -223,9 +220,9 @@ const ServicesMobile = () => {
             {cards.map((_, index) => (
               <button
                 key={`services-indicator-${index}`}
-                onClick={() => setActiveIndex(index)}
+                onClick={() => setActiveIndex(wrapIndex(index, cardsLength))}
                 className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                  index === activeIndex ? "scale-110 bg-[#EB9948]" : "bg-white/30"
+                  index === currentIndex ? "scale-110 bg-[#EB9948]" : "bg-white/30"
                 }`}
                 aria-label={resolveIndicatorLabel(index)}
               />
